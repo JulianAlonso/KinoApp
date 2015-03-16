@@ -8,10 +8,13 @@
 
 #import "BillboardViewController.h"
 #import "BillboardCollectionViewCell.h"
+#import "CollectionFilmsCollectionViewCell.h"
 
 @interface BillboardViewController ()
 
 @property (weak, nonatomic) IBOutlet UICollectionView *billboardCollectionView;
+@property (weak, nonatomic) IBOutlet UIView *refereceView;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedControl;
 
 @property (nonatomic, strong) UIRefreshControl *refreshControl;
 
@@ -22,8 +25,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self configRefreshControl];
-    [self configBillboardCollection];
+    [self configBillboardCollectionView];
+    [self configDelegate];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -31,22 +34,25 @@
 }
 
 #pragma mark - Config methods.
-- (void)configBillboardCollection
+- (void)configBillboardCollectionView
 {
-    self.billboardCollectionView.dataSource = self.delegate;
+    self.billboardCollectionView.contentSize = CGSizeMake(self.refereceView.frame.size.width * 2, self.refereceView.frame.size.height);
+    self.billboardCollectionView.pagingEnabled = YES;
     self.billboardCollectionView.delegate = self.delegate;
+    self.billboardCollectionView.dataSource = self.delegate;
     self.billboardCollectionView.backgroundColor = [UIColor whiteColor];
-    self.billboardCollectionView.alwaysBounceVertical = YES;
     
-    [self.billboardCollectionView registerNib:[UINib nibWithNibName:NSStringFromClass([BillboardCollectionViewCell class]) bundle:nil] forCellWithReuseIdentifier:NSStringFromClass([BillboardCollectionViewCell class])];
-    [self.billboardCollectionView addSubview:self.refreshControl];
+    [self.billboardCollectionView registerNib:[UINib nibWithNibName:NSStringFromClass([CollectionFilmsCollectionViewCell class]) bundle:nil]
+                   forCellWithReuseIdentifier:NSStringFromClass([CollectionFilmsCollectionViewCell class])];
 }
 
-- (void)configRefreshControl
+- (void)configDelegate
 {
-    self.refreshControl = [[UIRefreshControl alloc] init];
-    [self.refreshControl addTarget:self.delegate action:@selector(refresh:) forControlEvents:UIControlEventValueChanged];
+    [self.delegate setSegmentedControl:self.segmentedControl];
+    self.delegate.billboardCollectionView = self.billboardCollectionView;
+    [self.segmentedControl addTarget:self.delegate action:@selector(valueChangedAtSelectedControl:) forControlEvents:UIControlEventValueChanged];
 }
+
 
 @end
 

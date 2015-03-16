@@ -1,5 +1,5 @@
 //
-//  LoadBillboardInteractor.h
+//  LoadPlayingNowInteractor.h
 //  KinoApp
 //
 //  Created by Julian Alonso on 16/3/15.
@@ -11,10 +11,11 @@
 
 typedef void(^CompletionBlock)(NSArray *films);
 
-@interface LoadBillboardInteractor : NSObject
+@interface LoadPlayingNowInteractor : NSObject
 
 @property (nonatomic, strong) id<ExternalFilmsProvider> externalProvider;
 
-- (void)loadBillboardFilmsWithCompletionBlock:(CompletionBlock)completionBlock;
+- (void)loadPlayingNowFilms:(CompletionBlock)completionBlock;
+
 
 @end

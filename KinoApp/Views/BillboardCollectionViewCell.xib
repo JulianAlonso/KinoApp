@@ -12,13 +12,12 @@
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                 <rect key="frame" x="0.0" y="0.0" width="156" height="155"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B0c-WC-Obj">
-                        <rect key="frame" x="0.0" y="1" width="156" height="155"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="B0c-WC-Obj">
+                        <rect key="frame" x="0.0" y="0.0" width="156" height="155"/>
                     </imageView>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
-            <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="B0c-WC-Obj" secondAttribute="trailing" id="74d-D0-ToX"/>
                 <constraint firstItem="B0c-WC-Obj" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="TOw-iO-r9s"/>

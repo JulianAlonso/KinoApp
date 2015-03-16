@@ -7,7 +7,9 @@
 //
 
 #import "BillboardCollectionDelegate.h"
-#import "BillboardCollectionViewCell.h"
+#import "CollectionFilmsCollectionViewCell.h"
+
+
 
 @interface BillboardCollectionDelegate ()
 
@@ -17,35 +19,48 @@
 
 @implementation BillboardCollectionDelegate
 
-@synthesize loadBillboardInteractor = _loadBillboardInteractor;
+@synthesize segmentedControl = _segmentedControl;
+@synthesize loadPlayingNowInteractor = _loadPlayingNowInteractor;
+@synthesize loadUpcomingInteractor = _loadUpcomingInteractor;
+@synthesize cellDelegateClasses = _cellDelegateClasses;
+@synthesize billboardCollectionView = _billboardCollectionView;
 
-#pragma mark - RefreshController methods.
-- (void)refresh:(UIRefreshControl *)sender
+
+#pragma mark - SegmentedControl methods.
+- (void)displaceSegmentedControlTo:(NSUInteger)index
 {
-    __weak typeof(self) weakSelf = self;
-    [self.loadBillboardInteractor loadBillboardFilmsWithCompletionBlock:^(NSArray *films) {
-        __strong typeof(weakSelf) strongSelf = self;
-        
-        strongSelf.films = films;
-        
-        [sender endRefreshing];
-        
-        [strongSelf.billBoardCollection reloadData];
-    }];
+    [self.segmentedControl setSelectedSegmentIndex:index];
+}
+
+- (void)valueChangedAtSelectedControl:(UISegmentedControl *)sender
+{
+    CGPoint destiny = CGPointMake(self.billboardCollectionView.frame.size.width * sender.selectedSegmentIndex, 0);
+    [self.billboardCollectionView setContentOffset:destiny animated:YES];
 }
 
 #pragma mark - Collection Datasourece methods.
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    BillboardCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([BillboardCollectionViewCell class]) forIndexPath:indexPath];
+    [self displaceSegmentedControlTo:indexPath.item];
+    CollectionFilmsCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([CollectionFilmsCollectionViewCell class]) forIndexPath:indexPath];
     
+    cell.refreshControl = nil;
+    
+    id<FilmsCollectionDelegate> collectionDelegate = [[[self.cellDelegateClasses objectAtIndex:indexPath.item] alloc] init];
+    
+    cell.delegate = collectionDelegate;
     
     return cell;
 }
 
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    return collectionView.frame.size;
+}
+
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 10;
+    return 2;
 }
 
 @end

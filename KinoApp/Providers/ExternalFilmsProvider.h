@@ -10,6 +10,10 @@
 
 @protocol ExternalFilmsProvider <NSObject>
 
-- (void)fetchUpcomingAndNowFilms:(void(^)(NSArray *films))completion;
+//- (void)fetchUpcomingAndNowFilms:(void(^)(NSArray *films))completion;
+
+- (void)fetchUpcomingFilms:(void(^)(NSArray *films))completion;
+
+- (void)fetchPlayingNowFilms:(void(^)(NSArray *films))completion;
 
 @end

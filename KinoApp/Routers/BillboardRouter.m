@@ -10,6 +10,9 @@
 #import "BillboardViewController.h"
 #import "BillboardCollectionDelegate.h"
 #import "ExternalTMDBProvider.h"
+#import "LoadPlayingNowInteractor.h"
+#import "PlayingNowCollectionDelegate.h"
+#import "UpcomingCollectionDelegate.h"
 
 @implementation BillboardRouter
 
@@ -19,12 +22,12 @@
     billboardViewController.tabBarItem.title = @"Billboard";
     billboardViewController.router = self;
     
-    LoadBillboardInteractor *loadBillboardInteractor = [LoadBillboardInteractor new];
+    LoadPlayingNowInteractor *loadPlayingNowInteractor = [LoadPlayingNowInteractor new];
     BillboardCollectionDelegate *delegate = [BillboardCollectionDelegate new];
     ExternalTMDBProvider *externalFilmProvider = [ExternalTMDBProvider new];
     
-    loadBillboardInteractor.externalProvider = externalFilmProvider;
-    delegate.loadBillboardInteractor = loadBillboardInteractor;
+    loadPlayingNowInteractor.externalProvider = externalFilmProvider;
+    delegate.cellDelegateClasses = @[[PlayingNowCollectionDelegate class], [UpcomingCollectionDelegate class]];
     billboardViewController.delegate = delegate;
     
     [tabBarController addChildViewController:billboardViewController];

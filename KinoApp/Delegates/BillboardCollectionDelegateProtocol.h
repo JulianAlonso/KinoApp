@@ -8,13 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
-@class LoadBillboardInteractor;
+@class LoadPlayingNowInteractor;
+@class LoadUpcomingFilmsInteractor;
 
 @protocol BillboardCollectionDelegateProtocol <UICollectionViewDelegate, UICollectionViewDataSource>
 
-@property (nonatomic, strong) LoadBillboardInteractor *loadBillboardInteractor;
+@property (nonatomic, strong) LoadPlayingNowInteractor *loadPlayingNowInteractor;
+@property (nonatomic, strong) LoadUpcomingFilmsInteractor *loadUpcomingInteractor;
+@property (nonatomic, strong) NSArray *cellDelegateClasses;
 
+@property (nonatomic, weak) UICollectionView *billboardCollectionView;
+@property (nonatomic, weak) UISegmentedControl *segmentedControl;
 
-- (void)refresh:(UIRefreshControl *)sender;
+- (void)valueChangedAtSelectedControl:(UISegmentedControl *)sender;
 
 @end

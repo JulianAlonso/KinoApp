@@ -7,11 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "LoadBillboardInteractor.h"
 #import "BillboardCollectionDelegateProtocol.h"
 
 @interface BillboardCollectionDelegate : NSObject <BillboardCollectionDelegateProtocol>
 
-@property (nonatomic, weak) UICollectionView *billBoardCollection;
+
 
 @end

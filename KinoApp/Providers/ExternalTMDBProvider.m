@@ -10,9 +10,14 @@
 
 @implementation ExternalTMDBProvider
 
-- (void)fetchUpcomingAndNowFilms:(void (^)(NSArray *))completion
+- (void)fetchUpcomingFilms:(void (^)(NSArray *))completion
 {
-    NSLog(@"fetching");
+    NSLog(@"Fetching upcoming films");
+}
+
+- (void)fetchPlayingNowFilms:(void (^)(NSArray *))completion
+{
+    NSLog(@"Fetching playing now films");
 }
 
 @end
