@@ -23,6 +23,10 @@
 		01068F301AB725490017F91A /* BillboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01068F2E1AB725490017F91A /* BillboardViewController.m */; };
 		01068F311AB725490017F91A /* BillboardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01068F2F1AB725490017F91A /* BillboardViewController.xib */; };
 		01068F341AB725630017F91A /* BillboardRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 01068F331AB725630017F91A /* BillboardRouter.m */; };
+		01068F371AB729E10017F91A /* LoadBillboardInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 01068F361AB729E10017F91A /* LoadBillboardInteractor.m */; };
+		01068F3B1AB72D480017F91A /* BillboardCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 01068F391AB72D480017F91A /* BillboardCollectionViewCell.m */; };
+		01068F3C1AB72D480017F91A /* BillboardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01068F3A1AB72D480017F91A /* BillboardCollectionViewCell.xib */; };
+		01068F401AB72ECB0017F91A /* BillboardCollectionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 01068F3F1AB72ECB0017F91A /* BillboardCollectionDelegate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +68,14 @@
 		01068F2F1AB725490017F91A /* BillboardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BillboardViewController.xib; path = ViewControllers/BillboardViewController.xib; sourceTree = "<group>"; };
 		01068F321AB725630017F91A /* BillboardRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BillboardRouter.h; path = Routers/BillboardRouter.h; sourceTree = "<group>"; };
 		01068F331AB725630017F91A /* BillboardRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BillboardRouter.m; path = Routers/BillboardRouter.m; sourceTree = "<group>"; };
+		01068F351AB729E10017F91A /* LoadBillboardInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoadBillboardInteractor.h; path = Interactors/LoadBillboardInteractor.h; sourceTree = "<group>"; };
+		01068F361AB729E10017F91A /* LoadBillboardInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoadBillboardInteractor.m; path = Interactors/LoadBillboardInteractor.m; sourceTree = "<group>"; };
+		01068F381AB72D480017F91A /* BillboardCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BillboardCollectionViewCell.h; path = Views/BillboardCollectionViewCell.h; sourceTree = "<group>"; };
+		01068F391AB72D480017F91A /* BillboardCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BillboardCollectionViewCell.m; path = Views/BillboardCollectionViewCell.m; sourceTree = "<group>"; };
+		01068F3A1AB72D480017F91A /* BillboardCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BillboardCollectionViewCell.xib; path = Views/BillboardCollectionViewCell.xib; sourceTree = "<group>"; };
+		01068F3E1AB72ECB0017F91A /* BillboardCollectionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BillboardCollectionDelegate.h; path = Delegates/BillboardCollectionDelegate.h; sourceTree = "<group>"; };
+		01068F3F1AB72ECB0017F91A /* BillboardCollectionDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BillboardCollectionDelegate.m; path = Delegates/BillboardCollectionDelegate.m; sourceTree = "<group>"; };
+		01068F411AB733730017F91A /* BillboardCollectionDelegateProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BillboardCollectionDelegateProtocol.h; path = Delegates/BillboardCollectionDelegateProtocol.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +122,7 @@
 				01068EF61AB701E40017F91A /* Providers */,
 				01068EF41AB701D10017F91A /* Routers */,
 				01068EF51AB701DA0017F91A /* Interactors */,
+				01068F3D1AB72EB00017F91A /* Delegates */,
 				01068EF81AB701F40017F91A /* ViewControllers */,
 				01068ECF1AB7011D0017F91A /* AppDelegate.h */,
 				01068ED01AB7011D0017F91A /* AppDelegate.m */,
@@ -166,6 +179,8 @@
 		01068EF51AB701DA0017F91A /* Interactors */ = {
 			isa = PBXGroup;
 			children = (
+				01068F351AB729E10017F91A /* LoadBillboardInteractor.h */,
+				01068F361AB729E10017F91A /* LoadBillboardInteractor.m */,
 			);
 			name = Interactors;
 			sourceTree = "<group>";
@@ -211,6 +226,9 @@
 			isa = PBXGroup;
 			children = (
 				01068EFE1AB703CE0017F91A /* Main.storyboard */,
+				01068F381AB72D480017F91A /* BillboardCollectionViewCell.h */,
+				01068F391AB72D480017F91A /* BillboardCollectionViewCell.m */,
+				01068F3A1AB72D480017F91A /* BillboardCollectionViewCell.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -220,6 +238,16 @@
 			children = (
 			);
 			name = Entitys;
+			sourceTree = "<group>";
+		};
+		01068F3D1AB72EB00017F91A /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				01068F3E1AB72ECB0017F91A /* BillboardCollectionDelegate.h */,
+				01068F3F1AB72ECB0017F91A /* BillboardCollectionDelegate.m */,
+				01068F411AB733730017F91A /* BillboardCollectionDelegateProtocol.h */,
+			);
+			name = Delegates;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -302,6 +330,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01068F3C1AB72D480017F91A /* BillboardCollectionViewCell.xib in Resources */,
 				01068EFF1AB703CE0017F91A /* Main.storyboard in Resources */,
 				01068EDF1AB7011D0017F91A /* LaunchScreen.xib in Resources */,
 				01068F2C1AB724A80017F91A /* ActivityViewController.xib in Resources */,
@@ -330,8 +359,11 @@
 				01068ED41AB7011D0017F91A /* KinoApp.xcdatamodeld in Sources */,
 				01068ED11AB7011D0017F91A /* AppDelegate.m in Sources */,
 				01068F271AB724620017F91A /* ActivityRouter.m in Sources */,
+				01068F3B1AB72D480017F91A /* BillboardCollectionViewCell.m in Sources */,
 				01068ED71AB7011D0017F91A /* ViewController.m in Sources */,
 				01068ECE1AB7011D0017F91A /* main.m in Sources */,
+				01068F371AB729E10017F91A /* LoadBillboardInteractor.m in Sources */,
+				01068F401AB72ECB0017F91A /* BillboardCollectionDelegate.m in Sources */,
 				01068F341AB725630017F91A /* BillboardRouter.m in Sources */,
 				01068F2B1AB724A80017F91A /* ActivityViewController.m in Sources */,
 			);

@@ -8,6 +8,7 @@
 
 #import "BillboardRouter.h"
 #import "BillboardViewController.h"
+#import "BillboardCollectionDelegate.h"
 
 @implementation BillboardRouter
 
@@ -15,6 +16,10 @@
 {
     BillboardViewController *billboardViewController = [[BillboardViewController alloc] init];
     billboardViewController.tabBarItem.title = @"Billboard";
+    billboardViewController.router = self;
+    
+    BillboardCollectionDelegate *delegate = [BillboardCollectionDelegate new];
+    billboardViewController.delegate = delegate;
     
     [tabBarController addChildViewController:billboardViewController];
 }

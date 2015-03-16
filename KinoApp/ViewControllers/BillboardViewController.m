@@ -7,8 +7,13 @@
 //
 
 #import "BillboardViewController.h"
+#import "BillboardCollectionViewCell.h"
 
 @interface BillboardViewController ()
+
+@property (weak, nonatomic) IBOutlet UICollectionView *billboardCollectionView;
+
+@property (nonatomic, strong) UIRefreshControl *refreshControl;
 
 @end
 
@@ -16,22 +21,30 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
+    [self configRefreshControl];
+    [self configBillboardCollection];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+#pragma mark - Config methods.
+- (void)configBillboardCollection
+{
+    self.billboardCollectionView.dataSource = self.delegate;
+    self.billboardCollectionView.delegate = self.delegate;
+    
+    [self.billboardCollectionView registerNib:[UINib nibWithNibName:NSStringFromClass([BillboardCollectionViewCell class]) bundle:nil] forCellWithReuseIdentifier:NSStringFromClass([BillboardCollectionViewCell class])];
+    [self.billboardCollectionView addSubview:self.refreshControl];
 }
-*/
+
+- (void)configRefreshControl
+{
+    self.refreshControl = [[UIRefreshControl alloc] init];
+    [self.refreshControl addTarget:self.delegate action:@selector(refresh:) forControlEvents:UIControlEventValueChanged];
+}
 
 @end
+
