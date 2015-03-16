@@ -44,11 +44,7 @@
     [self displaceSegmentedControlTo:indexPath.item];
     CollectionFilmsCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([CollectionFilmsCollectionViewCell class]) forIndexPath:indexPath];
     
-    cell.refreshControl = nil;
-    
-    id<FilmsCollectionDelegate> collectionDelegate = [[[self.cellDelegateClasses objectAtIndex:indexPath.item] alloc] init];
-    
-    cell.delegate = collectionDelegate;
+    cell.delegate = [[[self.cellDelegateClasses objectAtIndex:indexPath.item] alloc] init];
     
     return cell;
 }
