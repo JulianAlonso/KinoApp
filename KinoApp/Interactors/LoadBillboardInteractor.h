@@ -8,6 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
+typedef void(^CompletionBlock)(NSArray *films);
+
 @interface LoadBillboardInteractor : NSObject
+
+- (void)loadBillboardFilmsWithCompletionBlock:(CompletionBlock)completionBlock;
 
 @end

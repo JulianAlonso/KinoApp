@@ -12,6 +12,6 @@
 
 @interface BillboardCollectionDelegate : NSObject <BillboardCollectionDelegateProtocol>
 
-@property (nonatomic, strong) LoadBillboardInteractor *loadBillboardInteractor;
+@property (nonatomic, weak) UICollectionView *billBoardCollection;
 
 @end

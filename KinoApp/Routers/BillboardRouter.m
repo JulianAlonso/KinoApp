@@ -18,7 +18,10 @@
     billboardViewController.tabBarItem.title = @"Billboard";
     billboardViewController.router = self;
     
+    LoadBillboardInteractor *loadBillboardInteractor = [LoadBillboardInteractor new];
     BillboardCollectionDelegate *delegate = [BillboardCollectionDelegate new];
+    
+    delegate.loadBillboardInteractor = loadBillboardInteractor;
     billboardViewController.delegate = delegate;
     
     [tabBarController addChildViewController:billboardViewController];

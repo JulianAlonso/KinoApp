@@ -8,7 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+@class LoadBillboardInteractor;
+
 @protocol BillboardCollectionDelegateProtocol <UICollectionViewDelegate, UICollectionViewDataSource>
+
+@property (nonatomic, strong) LoadBillboardInteractor *loadBillboardInteractor;
+
 
 - (void)refresh:(UIRefreshControl *)sender;
 

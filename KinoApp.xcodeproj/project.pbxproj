@@ -10,7 +10,6 @@
 		01068ECE1AB7011D0017F91A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 01068ECD1AB7011D0017F91A /* main.m */; };
 		01068ED11AB7011D0017F91A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 01068ED01AB7011D0017F91A /* AppDelegate.m */; };
 		01068ED41AB7011D0017F91A /* KinoApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 01068ED21AB7011D0017F91A /* KinoApp.xcdatamodeld */; };
-		01068ED71AB7011D0017F91A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01068ED61AB7011D0017F91A /* ViewController.m */; };
 		01068EDC1AB7011D0017F91A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01068EDB1AB7011D0017F91A /* Images.xcassets */; };
 		01068EDF1AB7011D0017F91A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01068EDD1AB7011D0017F91A /* LaunchScreen.xib */; };
 		01068EEB1AB7011D0017F91A /* KinoAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 01068EEA1AB7011D0017F91A /* KinoAppTests.m */; };
@@ -46,8 +45,6 @@
 		01068ECF1AB7011D0017F91A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		01068ED01AB7011D0017F91A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		01068ED31AB7011D0017F91A /* KinoApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = KinoApp.xcdatamodel; sourceTree = "<group>"; };
-		01068ED51AB7011D0017F91A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		01068ED61AB7011D0017F91A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		01068EDB1AB7011D0017F91A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		01068EDE1AB7011D0017F91A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		01068EE41AB7011D0017F91A /* KinoAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KinoAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -128,8 +125,6 @@
 				01068ED01AB7011D0017F91A /* AppDelegate.m */,
 				01068EF91AB702A30017F91A /* CoreData */,
 				01068EFD1AB703B40017F91A /* Views */,
-				01068ED51AB7011D0017F91A /* ViewController.h */,
-				01068ED61AB7011D0017F91A /* ViewController.m */,
 				01068EDB1AB7011D0017F91A /* Images.xcassets */,
 				01068EDD1AB7011D0017F91A /* LaunchScreen.xib */,
 				01068ECB1AB7011D0017F91A /* Supporting Files */,
@@ -360,7 +355,6 @@
 				01068ED11AB7011D0017F91A /* AppDelegate.m in Sources */,
 				01068F271AB724620017F91A /* ActivityRouter.m in Sources */,
 				01068F3B1AB72D480017F91A /* BillboardCollectionViewCell.m in Sources */,
-				01068ED71AB7011D0017F91A /* ViewController.m in Sources */,
 				01068ECE1AB7011D0017F91A /* main.m in Sources */,
 				01068F371AB729E10017F91A /* LoadBillboardInteractor.m in Sources */,
 				01068F401AB72ECB0017F91A /* BillboardCollectionDelegate.m in Sources */,

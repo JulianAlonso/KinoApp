@@ -35,6 +35,8 @@
 {
     self.billboardCollectionView.dataSource = self.delegate;
     self.billboardCollectionView.delegate = self.delegate;
+    self.billboardCollectionView.backgroundColor = [UIColor whiteColor];
+    self.billboardCollectionView.alwaysBounceVertical = YES;
     
     [self.billboardCollectionView registerNib:[UINib nibWithNibName:NSStringFromClass([BillboardCollectionViewCell class]) bundle:nil] forCellWithReuseIdentifier:NSStringFromClass([BillboardCollectionViewCell class])];
     [self.billboardCollectionView addSubview:self.refreshControl];

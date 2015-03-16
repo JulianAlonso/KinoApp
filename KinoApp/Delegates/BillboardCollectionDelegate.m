@@ -17,12 +17,21 @@
 
 @implementation BillboardCollectionDelegate
 
+@synthesize loadBillboardInteractor = _loadBillboardInteractor;
+
 #pragma mark - RefreshController methods.
 - (void)refresh:(UIRefreshControl *)sender
 {
-    NSLog(@"Refresing");
-    
-    [sender endRefreshing];
+    __weak typeof(self) weakSelf = self;
+    [self.loadBillboardInteractor loadBillboardFilmsWithCompletionBlock:^(NSArray *films) {
+        __strong typeof(weakSelf) strongSelf = self;
+        
+        strongSelf.films = films;
+        
+        [sender endRefreshing];
+        
+        [strongSelf.billBoardCollection reloadData];
+    }];
 }
 
 #pragma mark - Collection Datasourece methods.
@@ -36,7 +45,7 @@
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 100;
+    return 10;
 }
 
 @end

@@ -10,4 +10,11 @@
 
 @implementation LoadBillboardInteractor
 
+- (void)loadBillboardFilmsWithCompletionBlock:(CompletionBlock)completionBlock
+{
+    NSLog(@"Reloading");
+    
+    completionBlock([NSArray array]);
+}
+
 @end
