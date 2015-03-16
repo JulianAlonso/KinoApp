@@ -11,10 +11,11 @@
 		01068ED11AB7011D0017F91A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 01068ED01AB7011D0017F91A /* AppDelegate.m */; };
 		01068ED41AB7011D0017F91A /* KinoApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 01068ED21AB7011D0017F91A /* KinoApp.xcdatamodeld */; };
 		01068ED71AB7011D0017F91A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01068ED61AB7011D0017F91A /* ViewController.m */; };
-		01068EDA1AB7011D0017F91A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01068ED81AB7011D0017F91A /* Main.storyboard */; };
 		01068EDC1AB7011D0017F91A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01068EDB1AB7011D0017F91A /* Images.xcassets */; };
 		01068EDF1AB7011D0017F91A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01068EDD1AB7011D0017F91A /* LaunchScreen.xib */; };
 		01068EEB1AB7011D0017F91A /* KinoAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 01068EEA1AB7011D0017F91A /* KinoAppTests.m */; };
+		01068EFC1AB702CC0017F91A /* CoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 01068EFB1AB702CC0017F91A /* CoreDataStack.m */; };
+		01068EFF1AB703CE0017F91A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01068EFE1AB703CE0017F91A /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,12 +37,14 @@
 		01068ED31AB7011D0017F91A /* KinoApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = KinoApp.xcdatamodel; sourceTree = "<group>"; };
 		01068ED51AB7011D0017F91A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		01068ED61AB7011D0017F91A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		01068ED91AB7011D0017F91A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		01068EDB1AB7011D0017F91A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		01068EDE1AB7011D0017F91A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		01068EE41AB7011D0017F91A /* KinoAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KinoAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		01068EE91AB7011D0017F91A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		01068EEA1AB7011D0017F91A /* KinoAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KinoAppTests.m; sourceTree = "<group>"; };
+		01068EFA1AB702CC0017F91A /* CoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CoreDataStack.h; path = CoreData/CoreDataStack.h; sourceTree = "<group>"; };
+		01068EFB1AB702CC0017F91A /* CoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CoreDataStack.m; path = CoreData/CoreDataStack.m; sourceTree = "<group>"; };
+		01068EFE1AB703CE0017F91A /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Views/Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,14 +86,20 @@
 		01068ECA1AB7011D0017F91A /* KinoApp */ = {
 			isa = PBXGroup;
 			children = (
+				01068F001AB703DB0017F91A /* Entitys */,
+				01068EF71AB701EA0017F91A /* RequestManagers */,
+				01068EF61AB701E40017F91A /* Providers */,
+				01068EF41AB701D10017F91A /* Routers */,
+				01068EF51AB701DA0017F91A /* Interactors */,
+				01068EF81AB701F40017F91A /* ViewControllers */,
 				01068ECF1AB7011D0017F91A /* AppDelegate.h */,
 				01068ED01AB7011D0017F91A /* AppDelegate.m */,
+				01068EF91AB702A30017F91A /* CoreData */,
+				01068EFD1AB703B40017F91A /* Views */,
 				01068ED51AB7011D0017F91A /* ViewController.h */,
 				01068ED61AB7011D0017F91A /* ViewController.m */,
-				01068ED81AB7011D0017F91A /* Main.storyboard */,
 				01068EDB1AB7011D0017F91A /* Images.xcassets */,
 				01068EDD1AB7011D0017F91A /* LaunchScreen.xib */,
-				01068ED21AB7011D0017F91A /* KinoApp.xcdatamodeld */,
 				01068ECB1AB7011D0017F91A /* Supporting Files */,
 			);
 			path = KinoApp;
@@ -120,6 +129,66 @@
 				01068EE91AB7011D0017F91A /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		01068EF41AB701D10017F91A /* Routers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Routers;
+			sourceTree = "<group>";
+		};
+		01068EF51AB701DA0017F91A /* Interactors */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Interactors;
+			sourceTree = "<group>";
+		};
+		01068EF61AB701E40017F91A /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Providers;
+			sourceTree = "<group>";
+		};
+		01068EF71AB701EA0017F91A /* RequestManagers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = RequestManagers;
+			sourceTree = "<group>";
+		};
+		01068EF81AB701F40017F91A /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		01068EF91AB702A30017F91A /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				01068ED21AB7011D0017F91A /* KinoApp.xcdatamodeld */,
+				01068EFA1AB702CC0017F91A /* CoreDataStack.h */,
+				01068EFB1AB702CC0017F91A /* CoreDataStack.m */,
+			);
+			name = CoreData;
+			sourceTree = "<group>";
+		};
+		01068EFD1AB703B40017F91A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				01068EFE1AB703CE0017F91A /* Main.storyboard */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		01068F001AB703DB0017F91A /* Entitys */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Entitys;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,7 +271,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01068EDA1AB7011D0017F91A /* Main.storyboard in Resources */,
+				01068EFF1AB703CE0017F91A /* Main.storyboard in Resources */,
 				01068EDF1AB7011D0017F91A /* LaunchScreen.xib in Resources */,
 				01068EDC1AB7011D0017F91A /* Images.xcassets in Resources */,
 			);
@@ -222,6 +291,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01068EFC1AB702CC0017F91A /* CoreDataStack.m in Sources */,
 				01068ED41AB7011D0017F91A /* KinoApp.xcdatamodeld in Sources */,
 				01068ED11AB7011D0017F91A /* AppDelegate.m in Sources */,
 				01068ED71AB7011D0017F91A /* ViewController.m in Sources */,
@@ -248,14 +318,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		01068ED81AB7011D0017F91A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				01068ED91AB7011D0017F91A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		01068EDD1AB7011D0017F91A /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
