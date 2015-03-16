@@ -16,6 +16,13 @@
 		01068EEB1AB7011D0017F91A /* KinoAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 01068EEA1AB7011D0017F91A /* KinoAppTests.m */; };
 		01068EFC1AB702CC0017F91A /* CoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 01068EFB1AB702CC0017F91A /* CoreDataStack.m */; };
 		01068EFF1AB703CE0017F91A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01068EFE1AB703CE0017F91A /* Main.storyboard */; };
+		01068F051AB710D70017F91A /* MainRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 01068F041AB710D70017F91A /* MainRouter.m */; };
+		01068F271AB724620017F91A /* ActivityRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 01068F261AB724620017F91A /* ActivityRouter.m */; };
+		01068F2B1AB724A80017F91A /* ActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01068F291AB724A80017F91A /* ActivityViewController.m */; };
+		01068F2C1AB724A80017F91A /* ActivityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01068F2A1AB724A80017F91A /* ActivityViewController.xib */; };
+		01068F301AB725490017F91A /* BillboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01068F2E1AB725490017F91A /* BillboardViewController.m */; };
+		01068F311AB725490017F91A /* BillboardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01068F2F1AB725490017F91A /* BillboardViewController.xib */; };
+		01068F341AB725630017F91A /* BillboardRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 01068F331AB725630017F91A /* BillboardRouter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +52,18 @@
 		01068EFA1AB702CC0017F91A /* CoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CoreDataStack.h; path = CoreData/CoreDataStack.h; sourceTree = "<group>"; };
 		01068EFB1AB702CC0017F91A /* CoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CoreDataStack.m; path = CoreData/CoreDataStack.m; sourceTree = "<group>"; };
 		01068EFE1AB703CE0017F91A /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Views/Main.storyboard; sourceTree = "<group>"; };
+		01068F031AB710D70017F91A /* MainRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainRouter.h; path = Routers/MainRouter.h; sourceTree = "<group>"; };
+		01068F041AB710D70017F91A /* MainRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainRouter.m; path = Routers/MainRouter.m; sourceTree = "<group>"; };
+		01068F251AB724620017F91A /* ActivityRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ActivityRouter.h; path = Routers/ActivityRouter.h; sourceTree = "<group>"; };
+		01068F261AB724620017F91A /* ActivityRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ActivityRouter.m; path = Routers/ActivityRouter.m; sourceTree = "<group>"; };
+		01068F281AB724A80017F91A /* ActivityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ActivityViewController.h; path = ViewControllers/ActivityViewController.h; sourceTree = "<group>"; };
+		01068F291AB724A80017F91A /* ActivityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ActivityViewController.m; path = ViewControllers/ActivityViewController.m; sourceTree = "<group>"; };
+		01068F2A1AB724A80017F91A /* ActivityViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ActivityViewController.xib; path = ViewControllers/ActivityViewController.xib; sourceTree = "<group>"; };
+		01068F2D1AB725490017F91A /* BillboardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BillboardViewController.h; path = ViewControllers/BillboardViewController.h; sourceTree = "<group>"; };
+		01068F2E1AB725490017F91A /* BillboardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BillboardViewController.m; path = ViewControllers/BillboardViewController.m; sourceTree = "<group>"; };
+		01068F2F1AB725490017F91A /* BillboardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BillboardViewController.xib; path = ViewControllers/BillboardViewController.xib; sourceTree = "<group>"; };
+		01068F321AB725630017F91A /* BillboardRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BillboardRouter.h; path = Routers/BillboardRouter.h; sourceTree = "<group>"; };
+		01068F331AB725630017F91A /* BillboardRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BillboardRouter.m; path = Routers/BillboardRouter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +153,12 @@
 		01068EF41AB701D10017F91A /* Routers */ = {
 			isa = PBXGroup;
 			children = (
+				01068F031AB710D70017F91A /* MainRouter.h */,
+				01068F041AB710D70017F91A /* MainRouter.m */,
+				01068F251AB724620017F91A /* ActivityRouter.h */,
+				01068F261AB724620017F91A /* ActivityRouter.m */,
+				01068F321AB725630017F91A /* BillboardRouter.h */,
+				01068F331AB725630017F91A /* BillboardRouter.m */,
 			);
 			name = Routers;
 			sourceTree = "<group>";
@@ -162,6 +187,12 @@
 		01068EF81AB701F40017F91A /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				01068F281AB724A80017F91A /* ActivityViewController.h */,
+				01068F291AB724A80017F91A /* ActivityViewController.m */,
+				01068F2A1AB724A80017F91A /* ActivityViewController.xib */,
+				01068F2D1AB725490017F91A /* BillboardViewController.h */,
+				01068F2E1AB725490017F91A /* BillboardViewController.m */,
+				01068F2F1AB725490017F91A /* BillboardViewController.xib */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -273,6 +304,8 @@
 			files = (
 				01068EFF1AB703CE0017F91A /* Main.storyboard in Resources */,
 				01068EDF1AB7011D0017F91A /* LaunchScreen.xib in Resources */,
+				01068F2C1AB724A80017F91A /* ActivityViewController.xib in Resources */,
+				01068F311AB725490017F91A /* BillboardViewController.xib in Resources */,
 				01068EDC1AB7011D0017F91A /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -292,10 +325,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				01068EFC1AB702CC0017F91A /* CoreDataStack.m in Sources */,
+				01068F051AB710D70017F91A /* MainRouter.m in Sources */,
+				01068F301AB725490017F91A /* BillboardViewController.m in Sources */,
 				01068ED41AB7011D0017F91A /* KinoApp.xcdatamodeld in Sources */,
 				01068ED11AB7011D0017F91A /* AppDelegate.m in Sources */,
+				01068F271AB724620017F91A /* ActivityRouter.m in Sources */,
 				01068ED71AB7011D0017F91A /* ViewController.m in Sources */,
 				01068ECE1AB7011D0017F91A /* main.m in Sources */,
+				01068F341AB725630017F91A /* BillboardRouter.m in Sources */,
+				01068F2B1AB724A80017F91A /* ActivityViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

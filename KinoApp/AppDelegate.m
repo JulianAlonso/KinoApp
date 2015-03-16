@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "CoreDataStack.h"
+#import "MainRouter.h"
 
 @interface AppDelegate ()
 
@@ -21,7 +22,10 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.coreDataStack = [[CoreDataStack alloc] init];
     
+    self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
     
+    MainRouter *mainRouter = [[MainRouter alloc] init];
+    [mainRouter showMainViewInWindow: self.window];
     
     return YES;
 }
