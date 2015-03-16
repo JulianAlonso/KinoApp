@@ -9,6 +9,7 @@
 #import "BillboardRouter.h"
 #import "BillboardViewController.h"
 #import "BillboardCollectionDelegate.h"
+#import "ExternalTMDBProvider.h"
 
 @implementation BillboardRouter
 
@@ -20,7 +21,9 @@
     
     LoadBillboardInteractor *loadBillboardInteractor = [LoadBillboardInteractor new];
     BillboardCollectionDelegate *delegate = [BillboardCollectionDelegate new];
+    ExternalTMDBProvider *externalFilmProvider = [ExternalTMDBProvider new];
     
+    loadBillboardInteractor.externalProvider = externalFilmProvider;
     delegate.loadBillboardInteractor = loadBillboardInteractor;
     billboardViewController.delegate = delegate;
     

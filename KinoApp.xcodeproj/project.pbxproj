@@ -26,6 +26,7 @@
 		01068F3B1AB72D480017F91A /* BillboardCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 01068F391AB72D480017F91A /* BillboardCollectionViewCell.m */; };
 		01068F3C1AB72D480017F91A /* BillboardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01068F3A1AB72D480017F91A /* BillboardCollectionViewCell.xib */; };
 		01068F401AB72ECB0017F91A /* BillboardCollectionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 01068F3F1AB72ECB0017F91A /* BillboardCollectionDelegate.m */; };
+		01068F471AB747F00017F91A /* ExternalTMDBProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 01068F461AB747F00017F91A /* ExternalTMDBProvider.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,9 @@
 		01068F3E1AB72ECB0017F91A /* BillboardCollectionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BillboardCollectionDelegate.h; path = Delegates/BillboardCollectionDelegate.h; sourceTree = "<group>"; };
 		01068F3F1AB72ECB0017F91A /* BillboardCollectionDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BillboardCollectionDelegate.m; path = Delegates/BillboardCollectionDelegate.m; sourceTree = "<group>"; };
 		01068F411AB733730017F91A /* BillboardCollectionDelegateProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BillboardCollectionDelegateProtocol.h; path = Delegates/BillboardCollectionDelegateProtocol.h; sourceTree = "<group>"; };
+		01068F441AB746F80017F91A /* ExternalFilmsProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExternalFilmsProvider.h; path = Providers/ExternalFilmsProvider.h; sourceTree = "<group>"; };
+		01068F451AB747F00017F91A /* ExternalTMDBProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExternalTMDBProvider.h; path = Providers/ExternalTMDBProvider.h; sourceTree = "<group>"; };
+		01068F461AB747F00017F91A /* ExternalTMDBProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ExternalTMDBProvider.m; path = Providers/ExternalTMDBProvider.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,9 +119,9 @@
 			isa = PBXGroup;
 			children = (
 				01068F001AB703DB0017F91A /* Entitys */,
+				01068EF41AB701D10017F91A /* Routers */,
 				01068EF71AB701EA0017F91A /* RequestManagers */,
 				01068EF61AB701E40017F91A /* Providers */,
-				01068EF41AB701D10017F91A /* Routers */,
 				01068EF51AB701DA0017F91A /* Interactors */,
 				01068F3D1AB72EB00017F91A /* Delegates */,
 				01068EF81AB701F40017F91A /* ViewControllers */,
@@ -183,6 +187,9 @@
 		01068EF61AB701E40017F91A /* Providers */ = {
 			isa = PBXGroup;
 			children = (
+				01068F441AB746F80017F91A /* ExternalFilmsProvider.h */,
+				01068F451AB747F00017F91A /* ExternalTMDBProvider.h */,
+				01068F461AB747F00017F91A /* ExternalTMDBProvider.m */,
 			);
 			name = Providers;
 			sourceTree = "<group>";
@@ -360,6 +367,7 @@
 				01068F401AB72ECB0017F91A /* BillboardCollectionDelegate.m in Sources */,
 				01068F341AB725630017F91A /* BillboardRouter.m in Sources */,
 				01068F2B1AB724A80017F91A /* ActivityViewController.m in Sources */,
+				01068F471AB747F00017F91A /* ExternalTMDBProvider.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

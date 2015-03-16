@@ -7,10 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ExternalFilmsProvider.h"
 
 typedef void(^CompletionBlock)(NSArray *films);
 
 @interface LoadBillboardInteractor : NSObject
+
+@property (nonatomic, strong) id<ExternalFilmsProvider> externalProvider;
 
 - (void)loadBillboardFilmsWithCompletionBlock:(CompletionBlock)completionBlock;
 

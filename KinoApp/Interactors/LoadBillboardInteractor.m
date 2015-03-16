@@ -12,7 +12,9 @@
 
 - (void)loadBillboardFilmsWithCompletionBlock:(CompletionBlock)completionBlock
 {
-    NSLog(@"Reloading");
+    [self.externalProvider fetchUpcomingAndNowFilms:^(NSArray *films) {
+        //Save films to core data;
+    }];
     
     completionBlock([NSArray array]);
 }
