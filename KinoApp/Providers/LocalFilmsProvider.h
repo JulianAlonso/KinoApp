@@ -11,8 +11,6 @@
 
 @protocol LocalFilmsProvider <NSObject>
 
-@property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
-
 - (void)saveFilms:(NSArray *)films;
 
 @end

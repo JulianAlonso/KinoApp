@@ -7,12 +7,31 @@
 //
 
 #import "LocalCoreDataFilmsProvider.h"
+#import "CoreDataManager.h"
+
+@interface LocalCoreDataFilmsProvider ()
+
+@property (nonatomic, strong) NSManagedObjectContext *privateContext;
+
+@end
 
 @implementation LocalCoreDataFilmsProvider
 
+#pragma mark - LocalFilmsProvider methods.
 - (void)saveFilms:(NSArray *)films
 {
     
+}
+
+#pragma mark - Lazy getters.
+- (NSManagedObjectContext *)privateContext
+{
+    if (!_privateContext)
+    {
+        _privateContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSPrivateQueueConcurrencyType];
+        [_privateContext setPersistentStoreCoordinator:[CoreDataManager persistenceStoreCordinator]];
+    }
+    return _privateContext;
 }
 
 @end
