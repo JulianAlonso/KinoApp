@@ -9,6 +9,7 @@
 #import "ExternalTMDBProvider.h"
 #import "RequestManagerFactory.h"
 #import "APIVars.h"
+#import "FilmDTOParser.h"
 
 @implementation ExternalTMDBProvider
 
@@ -17,10 +18,9 @@
     [self.requestManager GETendpoint:UPCOMING_ENDPOINT params:nil andCompletionBlock:^(NSData *data) {
         NSError *error;
         NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
-        //PARSE DATA
+        
+        completion([FilmDTOParser filmDTOsFromArray:dic[@"results"]]);
     }];
-    
-    completion(nil);
 }
 
 - (void)fetchPlayingNowFilms:(void (^)(NSArray *))completion

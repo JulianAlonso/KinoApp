@@ -8,6 +8,7 @@
 
 #import "UpcomingCollectionDelegate.h"
 #import "BillboardCollectionViewCell.h"
+#import "FilmDTO.h"
 
 @implementation UpcomingCollectionDelegate
 
@@ -20,7 +21,10 @@
     NSLog(@"Refresing");
     
     [self.interactor fetchFilmsWithComplectionBlock:^(NSArray *films) {
-        NSLog(@"Fetching from upcoming delegate.");
+        for (FilmDTO *film in films)
+        {
+            NSLog(@"title: %@", film.filmTitle);
+        }
     }];
     
     [sender endRefreshing];

@@ -20,10 +20,10 @@
 - (void)loadUpcomingFilms:(CompletionBlock)completionBlock
 {
     [self.externalProvider fetchUpcomingFilms:^(NSArray *films) {
-        //Save to coredata
+        completionBlock(films);
     }];
     //Read from coredata:
-    completionBlock(nil);
+//    completionBlock(nil);
 }
 
 @end

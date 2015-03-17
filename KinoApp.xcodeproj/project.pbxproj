@@ -37,6 +37,7 @@
 		015834521AB84E93007E0AC4 /* JARequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 015834511AB84E93007E0AC4 /* JARequestManager.m */; };
 		015834561AB862B4007E0AC4 /* URLHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 015834551AB862B4007E0AC4 /* URLHelper.m */; };
 		0158345B1AB86508007E0AC4 /* FilmDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = 0158345A1AB86508007E0AC4 /* FilmDTO.m */; };
+		0158345E1AB86633007E0AC4 /* FilmDTOParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 0158345D1AB86633007E0AC4 /* FilmDTOParser.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +110,8 @@
 		015834551AB862B4007E0AC4 /* URLHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = URLHelper.m; path = Helpers/URLHelper.m; sourceTree = "<group>"; };
 		015834591AB86508007E0AC4 /* FilmDTO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FilmDTO.h; path = Entities/FilmDTO.h; sourceTree = "<group>"; };
 		0158345A1AB86508007E0AC4 /* FilmDTO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FilmDTO.m; path = Entities/FilmDTO.m; sourceTree = "<group>"; };
+		0158345C1AB86633007E0AC4 /* FilmDTOParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FilmDTOParser.h; path = Parsers/FilmDTOParser.h; sourceTree = "<group>"; };
+		0158345D1AB86633007E0AC4 /* FilmDTOParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FilmDTOParser.m; path = Parsers/FilmDTOParser.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -325,6 +328,8 @@
 		015834571AB8635B007E0AC4 /* Parsers */ = {
 			isa = PBXGroup;
 			children = (
+				0158345C1AB86633007E0AC4 /* FilmDTOParser.h */,
+				0158345D1AB86633007E0AC4 /* FilmDTOParser.m */,
 			);
 			name = Parsers;
 			sourceTree = "<group>";
@@ -459,6 +464,7 @@
 				01068F4D1AB74F2F0017F91A /* LoadPlayingNowInteractor.m in Sources */,
 				01068F401AB72ECB0017F91A /* BillboardCollectionDelegate.m in Sources */,
 				01068F341AB725630017F91A /* BillboardRouter.m in Sources */,
+				0158345E1AB86633007E0AC4 /* FilmDTOParser.m in Sources */,
 				0158345B1AB86508007E0AC4 /* FilmDTO.m in Sources */,
 				01068F2B1AB724A80017F91A /* ActivityViewController.m in Sources */,
 				0158344A1AB8223B007E0AC4 /* APIVars.m in Sources */,
