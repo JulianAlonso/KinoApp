@@ -36,6 +36,7 @@
 		0158344F1AB84AAA007E0AC4 /* RequestManagerFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 0158344E1AB84AAA007E0AC4 /* RequestManagerFactory.m */; };
 		015834521AB84E93007E0AC4 /* JARequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 015834511AB84E93007E0AC4 /* JARequestManager.m */; };
 		015834561AB862B4007E0AC4 /* URLHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 015834551AB862B4007E0AC4 /* URLHelper.m */; };
+		0158345B1AB86508007E0AC4 /* FilmDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = 0158345A1AB86508007E0AC4 /* FilmDTO.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +107,8 @@
 		015834511AB84E93007E0AC4 /* JARequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JARequestManager.m; path = RequestManagers/JARequestManager.m; sourceTree = "<group>"; };
 		015834541AB862B4007E0AC4 /* URLHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = URLHelper.h; path = Helpers/URLHelper.h; sourceTree = "<group>"; };
 		015834551AB862B4007E0AC4 /* URLHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = URLHelper.m; path = Helpers/URLHelper.m; sourceTree = "<group>"; };
+		015834591AB86508007E0AC4 /* FilmDTO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FilmDTO.h; path = Entities/FilmDTO.h; sourceTree = "<group>"; };
+		0158345A1AB86508007E0AC4 /* FilmDTO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FilmDTO.m; path = Entities/FilmDTO.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,8 +153,9 @@
 				01068ECF1AB7011D0017F91A /* AppDelegate.h */,
 				01068ED01AB7011D0017F91A /* AppDelegate.m */,
 				015834471AB821D3007E0AC4 /* Master */,
-				01068F001AB703DB0017F91A /* Entitys */,
+				015834581AB864ED007E0AC4 /* Entities */,
 				01068EF41AB701D10017F91A /* Routers */,
+				015834571AB8635B007E0AC4 /* Parsers */,
 				015834531AB862A4007E0AC4 /* Helpers */,
 				01068EF71AB701EA0017F91A /* RequestManagers */,
 				0158344C1AB84A90007E0AC4 /* Factories */,
@@ -276,13 +280,6 @@
 			name = Views;
 			sourceTree = "<group>";
 		};
-		01068F001AB703DB0017F91A /* Entitys */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Entitys;
-			sourceTree = "<group>";
-		};
 		01068F3D1AB72EB00017F91A /* Delegates */ = {
 			isa = PBXGroup;
 			children = (
@@ -323,6 +320,22 @@
 				015834551AB862B4007E0AC4 /* URLHelper.m */,
 			);
 			name = Helpers;
+			sourceTree = "<group>";
+		};
+		015834571AB8635B007E0AC4 /* Parsers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Parsers;
+			sourceTree = "<group>";
+		};
+		015834581AB864ED007E0AC4 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				015834591AB86508007E0AC4 /* FilmDTO.h */,
+				0158345A1AB86508007E0AC4 /* FilmDTO.m */,
+			);
+			name = Entities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -446,6 +459,7 @@
 				01068F4D1AB74F2F0017F91A /* LoadPlayingNowInteractor.m in Sources */,
 				01068F401AB72ECB0017F91A /* BillboardCollectionDelegate.m in Sources */,
 				01068F341AB725630017F91A /* BillboardRouter.m in Sources */,
+				0158345B1AB86508007E0AC4 /* FilmDTO.m in Sources */,
 				01068F2B1AB724A80017F91A /* ActivityViewController.m in Sources */,
 				0158344A1AB8223B007E0AC4 /* APIVars.m in Sources */,
 				01068F471AB747F00017F91A /* ExternalTMDBProvider.m in Sources */,
