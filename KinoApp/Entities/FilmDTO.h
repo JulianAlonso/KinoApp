@@ -15,7 +15,7 @@
 @property (nonatomic, strong) NSString *filmTitle;
 @property (nonatomic, strong) NSString *filmReleaseDate;
 @property (nonatomic, strong) NSString *filmHomepage;
-@property (nonatomic, strong) NSString *filmOverView;
+@property (nonatomic, strong) NSString *filmOverview;
 @property (nonatomic, strong) NSString *filmTagline;
 @property (nonatomic, strong) NSString *filmPosterPath;
 @property (nonatomic, strong) NSString *filmBackdropPath;
