@@ -7,6 +7,7 @@
 //
 
 #import "JARequestManager.h"
+#import "URLHelper.h"
 
 NSString *const kBackgroundSession = @"BackgroundSession";
 
@@ -25,7 +26,7 @@ NSString *const kBackgroundSession = @"BackgroundSession";
     NSMutableDictionary *allParams = [self.defaultParams mutableCopy];
     [allParams addEntriesFromDictionary: params];
     
-    [[session dataTaskWithURL:[self urlWithString:url andParams:allParams] completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+    [[session dataTaskWithURL:[URLHelper urlWithString:url andParams:allParams] completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
        
         if (error)
         {
