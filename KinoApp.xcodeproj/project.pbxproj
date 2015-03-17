@@ -33,6 +33,8 @@
 		01068F551AB7539C0017F91A /* UpcomingCollectionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 01068F541AB7539C0017F91A /* UpcomingCollectionDelegate.m */; };
 		01068F581AB7546A0017F91A /* PlayingNowCollectionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 01068F571AB7546A0017F91A /* PlayingNowCollectionDelegate.m */; };
 		0158344A1AB8223B007E0AC4 /* APIVars.m in Sources */ = {isa = PBXBuildFile; fileRef = 015834491AB8223B007E0AC4 /* APIVars.m */; };
+		0158344F1AB84AAA007E0AC4 /* RequestManagerFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 0158344E1AB84AAA007E0AC4 /* RequestManagerFactory.m */; };
+		015834521AB84E93007E0AC4 /* JARequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 015834511AB84E93007E0AC4 /* JARequestManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +98,11 @@
 		01068F5A1AB7558F0017F91A /* BillboardFilmsInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BillboardFilmsInteractor.h; path = Interactors/BillboardFilmsInteractor.h; sourceTree = "<group>"; };
 		015834481AB8223B007E0AC4 /* APIVars.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APIVars.h; path = Master/APIVars.h; sourceTree = "<group>"; };
 		015834491AB8223B007E0AC4 /* APIVars.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = APIVars.m; path = Master/APIVars.m; sourceTree = "<group>"; };
+		0158344B1AB84A88007E0AC4 /* RequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RequestManager.h; path = RequestManagers/RequestManager.h; sourceTree = "<group>"; };
+		0158344D1AB84AAA007E0AC4 /* RequestManagerFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RequestManagerFactory.h; path = Factories/RequestManagerFactory.h; sourceTree = "<group>"; };
+		0158344E1AB84AAA007E0AC4 /* RequestManagerFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RequestManagerFactory.m; path = Factories/RequestManagerFactory.m; sourceTree = "<group>"; };
+		015834501AB84E93007E0AC4 /* JARequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JARequestManager.h; path = RequestManagers/JARequestManager.h; sourceTree = "<group>"; };
+		015834511AB84E93007E0AC4 /* JARequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JARequestManager.m; path = RequestManagers/JARequestManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +147,7 @@
 				01068ECF1AB7011D0017F91A /* AppDelegate.h */,
 				01068ED01AB7011D0017F91A /* AppDelegate.m */,
 				015834471AB821D3007E0AC4 /* Master */,
+				0158344C1AB84A90007E0AC4 /* Factories */,
 				01068F001AB703DB0017F91A /* Entitys */,
 				01068EF41AB701D10017F91A /* Routers */,
 				01068EF71AB701EA0017F91A /* RequestManagers */,
@@ -220,6 +228,9 @@
 		01068EF71AB701EA0017F91A /* RequestManagers */ = {
 			isa = PBXGroup;
 			children = (
+				0158344B1AB84A88007E0AC4 /* RequestManager.h */,
+				015834501AB84E93007E0AC4 /* JARequestManager.h */,
+				015834511AB84E93007E0AC4 /* JARequestManager.m */,
 			);
 			name = RequestManagers;
 			sourceTree = "<group>";
@@ -290,6 +301,15 @@
 				015834491AB8223B007E0AC4 /* APIVars.m */,
 			);
 			name = Master;
+			sourceTree = "<group>";
+		};
+		0158344C1AB84A90007E0AC4 /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				0158344D1AB84AAA007E0AC4 /* RequestManagerFactory.h */,
+				0158344E1AB84AAA007E0AC4 /* RequestManagerFactory.m */,
+			);
+			name = Factories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -401,12 +421,14 @@
 				01068EFC1AB702CC0017F91A /* CoreDataStack.m in Sources */,
 				01068F051AB710D70017F91A /* MainRouter.m in Sources */,
 				01068F4A1AB74E1F0017F91A /* LoadUpcomingFilmsInteractor.m in Sources */,
+				0158344F1AB84AAA007E0AC4 /* RequestManagerFactory.m in Sources */,
 				01068F301AB725490017F91A /* BillboardViewController.m in Sources */,
 				01068ED41AB7011D0017F91A /* KinoApp.xcdatamodeld in Sources */,
 				01068ED11AB7011D0017F91A /* AppDelegate.m in Sources */,
 				01068F271AB724620017F91A /* ActivityRouter.m in Sources */,
 				01068F3B1AB72D480017F91A /* BillboardCollectionViewCell.m in Sources */,
 				01068F511AB752840017F91A /* CollectionFilmsCollectionViewCell.m in Sources */,
+				015834521AB84E93007E0AC4 /* JARequestManager.m in Sources */,
 				01068ECE1AB7011D0017F91A /* main.m in Sources */,
 				01068F4D1AB74F2F0017F91A /* LoadPlayingNowInteractor.m in Sources */,
 				01068F401AB72ECB0017F91A /* BillboardCollectionDelegate.m in Sources */,

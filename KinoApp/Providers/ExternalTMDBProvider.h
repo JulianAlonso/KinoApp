@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "ExternalFilmsProvider.h"
+#import "RequestManager.h"
 
 @interface ExternalTMDBProvider : NSObject <ExternalFilmsProvider>
+
+@property (nonatomic, strong) id<RequestManager> requestManager;
 
 @end
