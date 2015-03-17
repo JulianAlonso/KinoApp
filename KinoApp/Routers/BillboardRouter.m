@@ -14,6 +14,7 @@
 #import "PlayingNowCollectionDelegate.h"
 #import "UpcomingCollectionDelegate.h"
 #import "LoadUpcomingFilmsInteractor.h"
+#import "LocalCoreDataFilmsProvider.h"
 
 @implementation BillboardRouter
 
@@ -24,17 +25,21 @@
     billboardViewController.router = self;
     
     BillboardCollectionDelegate *billboardDelegate = [BillboardCollectionDelegate new];
-    ExternalTMDBProvider *externalFilmProvider = [ExternalTMDBProvider new];
+    ExternalTMDBProvider *externalFilmsProvider = [ExternalTMDBProvider new];
+    LocalCoreDataFilmsProvider *localFilmsProvider = [LocalCoreDataFilmsProvider new];
     
     //Playing now collection delegate creation
     PlayingNowCollectionDelegate *playingNowDelegate = [PlayingNowCollectionDelegate new];
     LoadPlayingNowInteractor *loadPlayingNowInteractor = [LoadPlayingNowInteractor new];
-    loadPlayingNowInteractor.externalProvider = externalFilmProvider;
+    loadPlayingNowInteractor.externalProvider = externalFilmsProvider;
+    loadPlayingNowInteractor.localProvider = localFilmsProvider;
     playingNowDelegate.interactor = loadPlayingNowInteractor;
     
+    //Upcoming collection delegate creation
     UpcomingCollectionDelegate *upcomingDelegate = [UpcomingCollectionDelegate new];
     LoadUpcomingFilmsInteractor *loadUpcomingInteractor = [LoadUpcomingFilmsInteractor new];
-    loadUpcomingInteractor.externalProvider = externalFilmProvider;
+    loadUpcomingInteractor.externalProvider = externalFilmsProvider;
+    loadPlayingNowInteractor.localProvider = localFilmsProvider;
     upcomingDelegate.interactor = loadUpcomingInteractor;
     
     billboardDelegate.cellDelegates = @[playingNowDelegate, upcomingDelegate];

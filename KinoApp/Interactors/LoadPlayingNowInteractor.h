@@ -9,14 +9,16 @@
 #import <Foundation/Foundation.h>
 #import "ExternalFilmsProvider.h"
 #import "BillboardFilmsInteractor.h"
+#import "LocalFilmsProvider.h"
 
 typedef void(^CompletionBlock)(NSArray *films);
 
 @interface LoadPlayingNowInteractor : NSObject <BillboardFilmsInteractor>
 
 @property (nonatomic, strong) id<ExternalFilmsProvider> externalProvider;
+@property (nonatomic, strong) id<LocalFilmsProvider> localProvider;
+
 
 - (void)loadPlayingNowFilms:(CompletionBlock)completionBlock;
-
 
 @end

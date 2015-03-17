@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "CoreDataStack.h"
 #import "MainRouter.h"
+#import "CoreDataManager.h"
 
 @interface AppDelegate ()
 
@@ -20,7 +21,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    self.coreDataStack = [[CoreDataStack alloc] init];
+    self.coreDataStack = [CoreDataManager coreDataStack];
     
     self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
     
