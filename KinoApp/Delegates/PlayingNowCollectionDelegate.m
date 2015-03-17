@@ -20,6 +20,10 @@
 {
     NSLog(@"Refresing");
     
+    [self.interactor fetchFilmsWithComplectionBlock:^(NSArray *films) {
+        NSLog(@"Fetching from playing now delegate");
+    }];
+    
     [sender endRefreshing];
 }
 

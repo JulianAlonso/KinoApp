@@ -8,10 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import "ExternalFilmsProvider.h"
+#import "BillboardFilmsInteractor.h"
 
 typedef void(^CompletionBlock)(NSArray *films);
 
-@interface LoadPlayingNowInteractor : NSObject
+@interface LoadPlayingNowInteractor : NSObject <BillboardFilmsInteractor>
 
 @property (nonatomic, strong) id<ExternalFilmsProvider> externalProvider;
 

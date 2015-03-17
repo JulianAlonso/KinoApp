@@ -10,13 +10,20 @@
 
 @implementation LoadUpcomingFilmsInteractor
 
+#pragma mark - BillboardFilmsInteractor methods.
+- (void)fetchFilmsWithComplectionBlock:(void (^)(NSArray *))completionBlock
+{
+    [self loadUpcomingFilms:completionBlock];
+}
+
+#pragma mark - Own methods.
 - (void)loadUpcomingFilms:(CompletionBlock)completionBlock
 {
     [self.externalProvider fetchUpcomingFilms:^(NSArray *films) {
         //Save to coredata
     }];
     //Read from coredata:
-    //completionBlock(readedData);
+    completionBlock(nil);
 }
 
 @end

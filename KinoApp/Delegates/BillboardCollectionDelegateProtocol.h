@@ -15,7 +15,8 @@
 
 @property (nonatomic, strong) LoadPlayingNowInteractor *loadPlayingNowInteractor;
 @property (nonatomic, strong) LoadUpcomingFilmsInteractor *loadUpcomingInteractor;
-@property (nonatomic, strong) NSArray *cellDelegateClasses;
+
+@property (nonatomic, strong) NSArray *cellDelegates;
 
 @property (nonatomic, weak) UICollectionView *billboardCollectionView;
 @property (nonatomic, weak) UISegmentedControl *segmentedControl;

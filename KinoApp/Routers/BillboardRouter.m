@@ -13,6 +13,7 @@
 #import "LoadPlayingNowInteractor.h"
 #import "PlayingNowCollectionDelegate.h"
 #import "UpcomingCollectionDelegate.h"
+#import "LoadUpcomingFilmsInteractor.h"
 
 @implementation BillboardRouter
 
@@ -22,14 +23,24 @@
     billboardViewController.tabBarItem.title = @"Billboard";
     billboardViewController.router = self;
     
-    LoadPlayingNowInteractor *loadPlayingNowInteractor = [LoadPlayingNowInteractor new];
-    BillboardCollectionDelegate *delegate = [BillboardCollectionDelegate new];
+
+    BillboardCollectionDelegate *billboardDelegate = [BillboardCollectionDelegate new];
     ExternalTMDBProvider *externalFilmProvider = [ExternalTMDBProvider new];
     
+    //Playing now collection delegate creation
+    PlayingNowCollectionDelegate *playingNowDelegate = [PlayingNowCollectionDelegate new];
+    LoadPlayingNowInteractor *loadPlayingNowInteractor = [LoadPlayingNowInteractor new];
     loadPlayingNowInteractor.externalProvider = externalFilmProvider;
-    delegate.cellDelegateClasses = @[[PlayingNowCollectionDelegate class], [UpcomingCollectionDelegate class]];
-    billboardViewController.delegate = delegate;
+    playingNowDelegate.interactor = loadPlayingNowInteractor;
     
+    UpcomingCollectionDelegate *upcomingDelegate = [UpcomingCollectionDelegate new];
+    LoadUpcomingFilmsInteractor *loadUpcomingInteractor = [LoadUpcomingFilmsInteractor new];
+    loadUpcomingInteractor.externalProvider = externalFilmProvider;
+    upcomingDelegate.interactor = loadUpcomingInteractor;
+    
+    billboardDelegate.cellDelegates = @[playingNowDelegate, upcomingDelegate];
+    billboardViewController.delegate = billboardDelegate;
+
     [tabBarController addChildViewController:billboardViewController];
 }
 

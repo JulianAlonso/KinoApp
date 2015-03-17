@@ -20,13 +20,14 @@
 
 - (void)awakeFromNib
 {
+    [self configRefreshControl];
+    [self configBillboardCollection];
 }
 
 #pragma mark - Config methods.
 - (void)configBillboardCollection
 {
-    self.filmsCollectionView.delegate = self.delegate;
-    self.filmsCollectionView.dataSource = self.delegate;
+
     self.filmsCollectionView.alwaysBounceVertical = YES;
     
     [self.filmsCollectionView addSubview:self.refreshControl];
@@ -37,11 +38,8 @@
 
 - (void)configRefreshControl
 {
-    if (!_refreshControl)
-    {
-        self.refreshControl = [[UIRefreshControl alloc] init];
-        [self.refreshControl addTarget:self action:@selector(refreshActivated:) forControlEvents:UIControlEventValueChanged];
-    }
+    self.refreshControl = [[UIRefreshControl alloc] init];
+    [self.refreshControl addTarget:self action:@selector(refreshActivated:) forControlEvents:UIControlEventValueChanged];
 }
 
 #pragma mark - Action methods.
@@ -54,8 +52,8 @@
 - (void)setDelegate:(id<FilmsCollectionDelegate>)delegate
 {
     _delegate = delegate;
-    [self configRefreshControl];
-    [self configBillboardCollection];
+    self.filmsCollectionView.delegate = self.delegate;
+    self.filmsCollectionView.dataSource = self.delegate;
 }
 
 @end

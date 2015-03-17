@@ -19,6 +19,10 @@
 {
     NSLog(@"Refresing");
     
+    [self.interactor fetchFilmsWithComplectionBlock:^(NSArray *films) {
+        NSLog(@"Fetching from upcoming delegate.");
+    }];
+    
     [sender endRefreshing];
 }
 

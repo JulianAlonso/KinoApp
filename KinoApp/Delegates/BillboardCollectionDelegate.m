@@ -22,7 +22,7 @@
 @synthesize segmentedControl = _segmentedControl;
 @synthesize loadPlayingNowInteractor = _loadPlayingNowInteractor;
 @synthesize loadUpcomingInteractor = _loadUpcomingInteractor;
-@synthesize cellDelegateClasses = _cellDelegateClasses;
+@synthesize cellDelegates = _cellDelegates;
 @synthesize billboardCollectionView = _billboardCollectionView;
 
 
@@ -44,7 +44,7 @@
     [self displaceSegmentedControlTo:indexPath.item];
     CollectionFilmsCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([CollectionFilmsCollectionViewCell class]) forIndexPath:indexPath];
     
-    cell.delegate = [[[self.cellDelegateClasses objectAtIndex:indexPath.item] alloc] init];
+    cell.delegate = self.cellDelegates[indexPath.item];
     
     return cell;
 }
@@ -56,7 +56,7 @@
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 2;
+    return self.cellDelegates.count;
 }
 
 @end

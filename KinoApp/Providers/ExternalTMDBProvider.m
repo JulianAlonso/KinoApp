@@ -13,11 +13,13 @@
 - (void)fetchUpcomingFilms:(void (^)(NSArray *))completion
 {
     NSLog(@"Fetching upcoming films");
+    completion(nil);
 }
 
 - (void)fetchPlayingNowFilms:(void (^)(NSArray *))completion
 {
     NSLog(@"Fetching playing now films");
+    completion(nil);
 }
 
 @end
