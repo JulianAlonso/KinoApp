@@ -41,6 +41,7 @@
 		015834611AB86C70007E0AC4 /* Film.m in Sources */ = {isa = PBXBuildFile; fileRef = 015834601AB86C70007E0AC4 /* Film.m */; };
 		018F9DCD1AB896200046D3C4 /* LocalCoreDataFilmsProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 018F9DCC1AB896200046D3C4 /* LocalCoreDataFilmsProvider.m */; };
 		018F9DD01AB896F90046D3C4 /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 018F9DCF1AB896F90046D3C4 /* CoreDataManager.m */; };
+		018F9DD41AB89B4D0046D3C4 /* Film+Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 018F9DD31AB89B4D0046D3C4 /* Film+Model.m */; };
 		F2F038238A73F7DA954B4244 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F855DE3F67C9EF3B55C10712 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -123,6 +124,8 @@
 		018F9DCC1AB896200046D3C4 /* LocalCoreDataFilmsProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LocalCoreDataFilmsProvider.m; path = Providers/LocalCoreDataFilmsProvider.m; sourceTree = "<group>"; };
 		018F9DCE1AB896F90046D3C4 /* CoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CoreDataManager.h; path = CoreData/CoreDataManager.h; sourceTree = "<group>"; };
 		018F9DCF1AB896F90046D3C4 /* CoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CoreDataManager.m; path = CoreData/CoreDataManager.m; sourceTree = "<group>"; };
+		018F9DD21AB89B4D0046D3C4 /* Film+Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Film+Model.h"; path = "Categories/Film+Model.h"; sourceTree = "<group>"; };
+		018F9DD31AB89B4D0046D3C4 /* Film+Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Film+Model.m"; path = "Categories/Film+Model.m"; sourceTree = "<group>"; };
 		57E47FC539F669D5601D3966 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		EFBDA11DA5EC569FCCB52E47 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		F855DE3F67C9EF3B55C10712 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -174,6 +177,7 @@
 				01068ED01AB7011D0017F91A /* AppDelegate.m */,
 				015834471AB821D3007E0AC4 /* Master */,
 				015834581AB864ED007E0AC4 /* Entities */,
+				018F9DD11AB89B2A0046D3C4 /* Categories */,
 				01068EF41AB701D10017F91A /* Routers */,
 				015834571AB8635B007E0AC4 /* Parsers */,
 				015834531AB862A4007E0AC4 /* Helpers */,
@@ -367,6 +371,15 @@
 			name = Entities;
 			sourceTree = "<group>";
 		};
+		018F9DD11AB89B2A0046D3C4 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				018F9DD21AB89B4D0046D3C4 /* Film+Model.h */,
+				018F9DD31AB89B4D0046D3C4 /* Film+Model.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
 		0B24B96251924E16800F2BD5 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -530,6 +543,7 @@
 				01068F4A1AB74E1F0017F91A /* LoadUpcomingFilmsInteractor.m in Sources */,
 				0158344F1AB84AAA007E0AC4 /* RequestManagerFactory.m in Sources */,
 				01068F301AB725490017F91A /* BillboardViewController.m in Sources */,
+				018F9DD41AB89B4D0046D3C4 /* Film+Model.m in Sources */,
 				01068ED41AB7011D0017F91A /* KinoApp.xcdatamodeld in Sources */,
 				01068ED11AB7011D0017F91A /* AppDelegate.m in Sources */,
 				018F9DCD1AB896200046D3C4 /* LocalCoreDataFilmsProvider.m in Sources */,
