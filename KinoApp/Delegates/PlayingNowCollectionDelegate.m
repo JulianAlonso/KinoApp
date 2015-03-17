@@ -27,7 +27,13 @@
 - (void)refresh:(UIRefreshControl *)sender
 {
     __weak typeof(self) weakSelf = self;
-    [self.interactor fetchFilmsWithComplectionBlock:^(NSArray *films) {
+    [self.interactor fetchFilmsWithLocalData:^(NSArray *films) {
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        
+        strongSelf.films = films;
+        [strongSelf.filmsCollectionView reloadData];
+        
+    } update:^(NSArray *films) {
         __strong typeof(weakSelf) strongSelf = weakSelf;
         
         strongSelf.films = films;
@@ -46,12 +52,7 @@
     
     cell.filmTitleLabel.text = film.filmTitle;
     
-    [cell.filmImageView sd_setImageWithURL:[NSURL URLWithString:film.filmPosterPath] placeholderImage:nil options:kNilOptions progress:^(NSInteger receivedSize, NSInteger expectedSize) {
-        [cell setNeedsLayout];
-    } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
-        [cell setNeedsLayout];
-    }];
-    [cell setNeedsLayout];
+    [cell.filmImageView sd_setImageWithURL:[NSURL URLWithString:film.filmPosterPath]];
     
     return cell;
 }

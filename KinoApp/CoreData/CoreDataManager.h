@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
+@class CoreDataStack;
+
 @interface CoreDataManager : NSObject
 
 + (NSManagedObjectContext *)managedObjectContext;

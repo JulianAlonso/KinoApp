@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
+extern NSString *const TYPE_PLAYIN_NOW;
+extern NSString *const TYPE_UPCOMING;
+
 @interface FilmDTO : NSObject
 
 @property (nonatomic, strong) NSString *filmId;
@@ -19,5 +22,6 @@
 @property (nonatomic, strong) NSString *filmTagline;
 @property (nonatomic, strong) NSString *filmPosterPath;
 @property (nonatomic, strong) NSString *filmBackdropPath;
+@property (nonatomic, strong) NSString *filmType;
 
 @end

@@ -18,7 +18,4 @@ typedef void(^CompletionBlock)(NSArray *films);
 @property (nonatomic, strong) id<ExternalFilmsProvider> externalProvider;
 @property (nonatomic, strong) id<LocalFilmsProvider> localProvider;
 
-
-- (void)loadUpcomingFilms:(CompletionBlock)completionBlock;
-
 @end

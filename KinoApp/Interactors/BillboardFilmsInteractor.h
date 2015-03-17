@@ -10,6 +10,6 @@
 
 @protocol BillboardFilmsInteractor <NSObject>
 
-- (void)fetchFilmsWithComplectionBlock:(void(^)(NSArray *films))completionBlock;
+- (void)fetchFilmsWithLocalData:(void(^)(NSArray *films))localCompletionBlock update:(void(^)(NSArray *films))updateCompletionBlock;
 
 @end

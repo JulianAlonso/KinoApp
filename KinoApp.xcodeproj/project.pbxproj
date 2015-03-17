@@ -38,10 +38,10 @@
 		015834561AB862B4007E0AC4 /* URLHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 015834551AB862B4007E0AC4 /* URLHelper.m */; };
 		0158345B1AB86508007E0AC4 /* FilmDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = 0158345A1AB86508007E0AC4 /* FilmDTO.m */; };
 		0158345E1AB86633007E0AC4 /* FilmDTOParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 0158345D1AB86633007E0AC4 /* FilmDTOParser.m */; };
-		015834611AB86C70007E0AC4 /* Film.m in Sources */ = {isa = PBXBuildFile; fileRef = 015834601AB86C70007E0AC4 /* Film.m */; };
 		018F9DCD1AB896200046D3C4 /* LocalCoreDataFilmsProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 018F9DCC1AB896200046D3C4 /* LocalCoreDataFilmsProvider.m */; };
 		018F9DD01AB896F90046D3C4 /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 018F9DCF1AB896F90046D3C4 /* CoreDataManager.m */; };
 		018F9DD41AB89B4D0046D3C4 /* Film+Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 018F9DD31AB89B4D0046D3C4 /* Film+Model.m */; };
+		018F9DD71AB8AAF50046D3C4 /* Film.m in Sources */ = {isa = PBXBuildFile; fileRef = 018F9DD61AB8AAF50046D3C4 /* Film.m */; };
 		F2F038238A73F7DA954B4244 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F855DE3F67C9EF3B55C10712 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -117,8 +117,6 @@
 		0158345A1AB86508007E0AC4 /* FilmDTO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FilmDTO.m; path = Entities/FilmDTO.m; sourceTree = "<group>"; };
 		0158345C1AB86633007E0AC4 /* FilmDTOParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FilmDTOParser.h; path = Parsers/FilmDTOParser.h; sourceTree = "<group>"; };
 		0158345D1AB86633007E0AC4 /* FilmDTOParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FilmDTOParser.m; path = Parsers/FilmDTOParser.m; sourceTree = "<group>"; };
-		0158345F1AB86C70007E0AC4 /* Film.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Film.h; path = Entities/Film.h; sourceTree = "<group>"; };
-		015834601AB86C70007E0AC4 /* Film.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Film.m; path = Entities/Film.m; sourceTree = "<group>"; };
 		018F9DCA1AB88D270046D3C4 /* LocalFilmsProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocalFilmsProvider.h; path = Providers/LocalFilmsProvider.h; sourceTree = "<group>"; };
 		018F9DCB1AB896200046D3C4 /* LocalCoreDataFilmsProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocalCoreDataFilmsProvider.h; path = Providers/LocalCoreDataFilmsProvider.h; sourceTree = "<group>"; };
 		018F9DCC1AB896200046D3C4 /* LocalCoreDataFilmsProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LocalCoreDataFilmsProvider.m; path = Providers/LocalCoreDataFilmsProvider.m; sourceTree = "<group>"; };
@@ -126,6 +124,8 @@
 		018F9DCF1AB896F90046D3C4 /* CoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CoreDataManager.m; path = CoreData/CoreDataManager.m; sourceTree = "<group>"; };
 		018F9DD21AB89B4D0046D3C4 /* Film+Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Film+Model.h"; path = "Categories/Film+Model.h"; sourceTree = "<group>"; };
 		018F9DD31AB89B4D0046D3C4 /* Film+Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Film+Model.m"; path = "Categories/Film+Model.m"; sourceTree = "<group>"; };
+		018F9DD51AB8AAF50046D3C4 /* Film.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Film.h; path = Entities/Film.h; sourceTree = "<group>"; };
+		018F9DD61AB8AAF50046D3C4 /* Film.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Film.m; path = Entities/Film.m; sourceTree = "<group>"; };
 		57E47FC539F669D5601D3966 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		EFBDA11DA5EC569FCCB52E47 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		F855DE3F67C9EF3B55C10712 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -365,8 +365,8 @@
 			children = (
 				015834591AB86508007E0AC4 /* FilmDTO.h */,
 				0158345A1AB86508007E0AC4 /* FilmDTO.m */,
-				0158345F1AB86C70007E0AC4 /* Film.h */,
-				015834601AB86C70007E0AC4 /* Film.m */,
+				018F9DD51AB8AAF50046D3C4 /* Film.h */,
+				018F9DD61AB8AAF50046D3C4 /* Film.m */,
 			);
 			name = Entities;
 			sourceTree = "<group>";
@@ -547,8 +547,8 @@
 				01068ED41AB7011D0017F91A /* KinoApp.xcdatamodeld in Sources */,
 				01068ED11AB7011D0017F91A /* AppDelegate.m in Sources */,
 				018F9DCD1AB896200046D3C4 /* LocalCoreDataFilmsProvider.m in Sources */,
-				015834611AB86C70007E0AC4 /* Film.m in Sources */,
 				01068F271AB724620017F91A /* ActivityRouter.m in Sources */,
+				018F9DD71AB8AAF50046D3C4 /* Film.m in Sources */,
 				01068F3B1AB72D480017F91A /* BillboardCollectionViewCell.m in Sources */,
 				01068F511AB752840017F91A /* CollectionFilmsCollectionViewCell.m in Sources */,
 				018F9DD01AB896F90046D3C4 /* CoreDataManager.m in Sources */,

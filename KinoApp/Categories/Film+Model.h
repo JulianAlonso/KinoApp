@@ -10,8 +10,10 @@
 
 @class FilmDTO;
 
+extern NSString *const kFilmTypeProperty;
+
 @interface Film (Model)
 
-- (instancetype)initWithFilmDTO:(FilmDTO *)film andManagedObjectContext:(NSManagedObjectContext *)managedObjectContext;
++ (instancetype)initWithFilmDTO:(FilmDTO *)filmDTO andManagedObjectContext:(NSManagedObjectContext *)managedObjectContext;
 
 @end

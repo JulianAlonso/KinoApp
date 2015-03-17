@@ -7,23 +7,33 @@
 //
 
 #import "LoadPlayingNowInteractor.h"
+#import "FilmDTO.h"
+
 
 @implementation LoadPlayingNowInteractor
 
 #pragma mark - BillboardFilmsIteractor methods.
-- (void)fetchFilmsWithComplectionBlock:(void (^)(NSArray *))completionBlock
+- (void)fetchFilmsWithLocalData:(void(^)(NSArray *films))localCompletionBlock update:(void(^)(NSArray *films))updateCompletionBlock;
 {
-    [self loadPlayingNowFilms:completionBlock];
+    [self loadLocalPlayingNowFilms:localCompletionBlock];
+    
+    [self updateFilms:updateCompletionBlock];
 }
 
 #pragma mark - Own methods.
-- (void)loadPlayingNowFilms:(CompletionBlock)completionBlock
+- (void)loadLocalPlayingNowFilms:(CompletionBlock)completionBlock
 {
+    [self.localProvider fetchFilmsByFilmType:TYPE_PLAYIN_NOW andCompletion:completionBlock];
+}
+
+- (void)updateFilms:(CompletionBlock)updatedBlock
+{
+    __weak typeof(self) weakSelf = self;
     [self.externalProvider fetchPlayingNowFilms:^(NSArray *films) {
-        completionBlock(films);
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        
+        [strongSelf.localProvider saveFilms:films completion:updatedBlock];
     }];
-    //Read from coredata
-//    completionBlock(nil);
 }
 
 @end

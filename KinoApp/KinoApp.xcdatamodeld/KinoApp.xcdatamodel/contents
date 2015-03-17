@@ -10,8 +10,9 @@
         <attribute name="filmReleaseDate" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="filmTagline" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="filmTitle" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="filmType" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Film" positionX="-63" positionY="-18" width="128" height="30"/>
+        <element name="Film" positionX="-63" positionY="-18" width="128" height="195"/>
     </elements>
 </model>

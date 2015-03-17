@@ -11,6 +11,8 @@
 
 @protocol LocalFilmsProvider <NSObject>
 
-- (void)saveFilms:(NSArray *)films;
+- (void)fetchFilmsByFilmType:(NSString *)filmType andCompletion:(void (^)(NSArray *))completionBlock;
+
+- (void)saveFilms:(NSArray *)films completion:(void(^)(NSArray *films))completionBlock;
 
 @end

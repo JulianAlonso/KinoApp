@@ -7,23 +7,33 @@
 //
 
 #import "LoadUpcomingFilmsInteractor.h"
+#import "FilmDTO.h"
+
 
 @implementation LoadUpcomingFilmsInteractor
 
 #pragma mark - BillboardFilmsInteractor methods.
-- (void)fetchFilmsWithComplectionBlock:(void (^)(NSArray *))completionBlock
+- (void)fetchFilmsWithLocalData:(void(^)(NSArray *films))localCompletionBlock update:(void(^)(NSArray *films))updateCompletionBlock;
 {
-    [self loadUpcomingFilms:completionBlock];
+    [self loadUpcomingFilms:localCompletionBlock];
+    
+    [self updateFilms:updateCompletionBlock];
 }
 
 #pragma mark - Own methods.
 - (void)loadUpcomingFilms:(CompletionBlock)completionBlock
 {
+    [self.localProvider fetchFilmsByFilmType:TYPE_UPCOMING andCompletion:completionBlock];
+}
+
+- (void)updateFilms:(CompletionBlock)updatedBlock
+{
+    __weak typeof(self) weakSelf = self;
     [self.externalProvider fetchUpcomingFilms:^(NSArray *films) {
-        completionBlock(films);
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        
+        [strongSelf.localProvider saveFilms:films completion:updatedBlock];
     }];
-    //Read from coredata:
-//    completionBlock(nil);
 }
 
 @end

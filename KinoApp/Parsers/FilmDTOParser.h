@@ -7,12 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Film.h"
 
 @class FilmDTO;
 
 @interface FilmDTOParser : NSObject
 
-+ (FilmDTO *)filmDTOFromDictionary:(NSDictionary *)dictionary;
-+ (NSArray *)filmDTOsFromArray:(NSArray *)array;
++ (FilmDTO *)filmDTOFromDictionary:(NSDictionary *)dictionary filmType:(NSString *)filmType;
++ (NSArray *)filmDTOsFromArray:(NSArray *)array filmsType:(NSString *)filmsTipye;
+
++ (FilmDTO *)filmDTOFromFilm:(Film *)film;
++ (NSArray *)filmDTOsFromFilmsArray:(NSArray *)array;
 
 @end

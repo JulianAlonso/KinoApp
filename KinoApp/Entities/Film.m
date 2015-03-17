@@ -11,14 +11,15 @@
 
 @implementation Film
 
+@dynamic filmBackdropPath;
+@dynamic filmHomepage;
 @dynamic filmId;
 @dynamic filmOriginalTitle;
-@dynamic filmTitle;
-@dynamic filmReleaseDate;
-@dynamic filmHomepage;
 @dynamic filmOverview;
 @dynamic filmPosterPath;
+@dynamic filmReleaseDate;
 @dynamic filmTagline;
-@dynamic filmBackdropPath;
+@dynamic filmTitle;
+@dynamic filmType;
 
 @end

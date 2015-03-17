@@ -25,18 +25,19 @@
 #pragma mark - UIControlRefresh methods.
 - (void)refresh:(UIRefreshControl *)sender
 {
-    NSLog(@"Refresing");
     __weak typeof(self) weakSelf = self;
-    [self.interactor fetchFilmsWithComplectionBlock:^(NSArray *films) {
+    [self.interactor fetchFilmsWithLocalData:^(NSArray *films) {
         __strong typeof(weakSelf) strongSelf = weakSelf;
         
         strongSelf.films = films;
         [strongSelf.filmsCollectionView reloadData];
         
-        [sender endRefreshing];
+    } update:^(NSArray *films) {
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        
+        strongSelf.films = films;
+        [strongSelf.filmsCollectionView reloadData];
     }];
-    
-
 }
 
 #pragma mark - Collection data source methods.

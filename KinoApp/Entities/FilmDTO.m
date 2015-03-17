@@ -8,6 +8,9 @@
 
 #import "FilmDTO.h"
 
+NSString *const TYPE_PLAYIN_NOW = @"playing now";
+NSString *const TYPE_UPCOMING = @"upcoming";
+
 @implementation FilmDTO
 
 @end

@@ -22,7 +22,7 @@ NSString *const dFilmBackdropPath = @"backdrop_path";
 
 @implementation FilmDTOParser
 
-+ (FilmDTO *)filmDTOFromDictionary:(NSDictionary *)dictionary
++ (FilmDTO *)filmDTOFromDictionary:(NSDictionary *)dictionary filmType:(NSString *)filmType
 {
     FilmDTO *film = [FilmDTO new];
     
@@ -35,18 +35,48 @@ NSString *const dFilmBackdropPath = @"backdrop_path";
     film.filmTagline = dictionary[dFilmTagline];
     film.filmPosterPath = [URLHelper imageUrlWithEndpoint:dictionary[dFilmPosterPath]];
     film.filmBackdropPath = [URLHelper imageUrlWithEndpoint:dictionary[dFilmBackdropPath]];
+    film.filmType = filmType;
     
     return film;
 }
 
-+ (NSArray *)filmDTOsFromArray:(NSArray *)array
++ (NSArray *)filmDTOsFromArray:(NSArray *)array filmsType:(NSString *)filmsTipye
 {
     NSMutableArray *films = [NSMutableArray array];
     for (NSDictionary *filmDictionary in array)
     {
-        [films addObject:[FilmDTOParser filmDTOFromDictionary:filmDictionary]];
+        [films addObject:[FilmDTOParser filmDTOFromDictionary:filmDictionary filmType:filmsTipye]];
     }
     return films;
+}
+
+
++ (FilmDTO *)filmDTOFromFilm:(Film *)film
+{
+    FilmDTO *filmDTO = [FilmDTO new];
+    
+    filmDTO.filmId = film.filmId;
+    filmDTO.filmTitle = film.filmTitle;
+    filmDTO.filmOriginalTitle = film.filmOriginalTitle;
+    filmDTO.filmReleaseDate = film.filmReleaseDate;
+    filmDTO.filmHomepage = film.filmHomepage;
+    filmDTO.filmOverview = film.filmOverview;
+    filmDTO.filmTagline = film.filmTagline;
+    filmDTO.filmPosterPath = film.filmPosterPath;
+    filmDTO.filmBackdropPath = film.filmBackdropPath;
+    filmDTO.filmType = film.filmType;
+    
+    return filmDTO;
+}
+
++ (NSArray *)filmDTOsFromFilmsArray:(NSArray *)array
+{
+    NSMutableArray *filmDTOs = [NSMutableArray array];
+	for (Film *film in array)
+    {
+        [filmDTOs addObject:[FilmDTOParser filmDTOFromFilm:film]];
+    }
+    return filmDTOs;
 }
 
 @end

@@ -9,27 +9,29 @@
 #import "Film+Model.h"
 #import "FilmDTO.h"
 
+NSString *const kFilmTypeProperty = @"filmType";
 
 @implementation Film (Model)
 
-- (instancetype)initWithFilmDTO:(FilmDTO *)film andManagedObjectContext:(NSManagedObjectContext *)managedObjectContext
++ (instancetype)initWithFilmDTO:(FilmDTO *)filmDTO andManagedObjectContext:(NSManagedObjectContext *)managedObjectContext
 {
-    self = [NSEntityDescription insertNewObjectForEntityForName:NSStringFromClass([self class]) inManagedObjectContext:managedObjectContext];
+    Film *film = [NSEntityDescription insertNewObjectForEntityForName:NSStringFromClass([self class]) inManagedObjectContext:managedObjectContext];
     
-    if (self)
+    if (film)
     {
-        self.filmTitle = film.filmTitle;
-        self.filmTagline = film.filmTagline;
-        self.filmReleaseDate = film.filmReleaseDate;
-        self.filmPosterPath = film.filmPosterPath;
-        self.filmOverview = film.filmOverview;
-        self.filmOriginalTitle = film.filmOriginalTitle;
-        self.filmId = film.filmId;
-        self.filmBackdropPath = film.filmBackdropPath;
-        self.filmHomepage = film.filmHomepage;
+        film.filmTitle = filmDTO.filmTitle;
+        film.filmTagline = filmDTO.filmTagline;
+        film.filmReleaseDate = filmDTO.filmReleaseDate;
+        film.filmPosterPath = filmDTO.filmPosterPath;
+        film.filmOverview = filmDTO.filmOverview;
+        film.filmOriginalTitle = filmDTO.filmOriginalTitle;
+        film.filmId = [NSString stringWithFormat:@"%@", filmDTO.filmId];
+        film.filmBackdropPath = filmDTO.filmBackdropPath;
+        film.filmHomepage = filmDTO.filmHomepage;
+        film.filmType = filmDTO.filmType;
     }
     
-    return self;
+    return film;
 }
 
 @end

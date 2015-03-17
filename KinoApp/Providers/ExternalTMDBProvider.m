@@ -10,6 +10,7 @@
 #import "RequestManagerFactory.h"
 #import "APIVars.h"
 #import "FilmDTOParser.h"
+#import "FilmDTO.h"
 
 @implementation ExternalTMDBProvider
 
@@ -19,7 +20,7 @@
         NSError *error;
         NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
         
-        completion([FilmDTOParser filmDTOsFromArray:dic[@"results"]]);
+        completion([FilmDTOParser filmDTOsFromArray:dic[@"results"] filmsType:TYPE_UPCOMING]);
     }];
 }
 
@@ -29,7 +30,7 @@
         NSError *error;
         NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
         
-        completion([FilmDTOParser filmDTOsFromArray:dic[@"results"]]);
+        completion([FilmDTOParser filmDTOsFromArray:dic[@"results"] filmsType:TYPE_PLAYIN_NOW]);
     }];
 }
 
