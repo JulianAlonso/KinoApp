@@ -20,7 +20,6 @@
 
 - (void)awakeFromNib
 {
-
 }
 
 #pragma mark - Config methods.

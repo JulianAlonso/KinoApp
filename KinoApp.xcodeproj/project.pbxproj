@@ -32,6 +32,7 @@
 		01068F521AB752840017F91A /* CollectionFilmsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01068F501AB752840017F91A /* CollectionFilmsCollectionViewCell.xib */; };
 		01068F551AB7539C0017F91A /* UpcomingCollectionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 01068F541AB7539C0017F91A /* UpcomingCollectionDelegate.m */; };
 		01068F581AB7546A0017F91A /* PlayingNowCollectionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 01068F571AB7546A0017F91A /* PlayingNowCollectionDelegate.m */; };
+		0158344A1AB8223B007E0AC4 /* APIVars.m in Sources */ = {isa = PBXBuildFile; fileRef = 015834491AB8223B007E0AC4 /* APIVars.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +94,8 @@
 		01068F571AB7546A0017F91A /* PlayingNowCollectionDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlayingNowCollectionDelegate.m; path = Delegates/PlayingNowCollectionDelegate.m; sourceTree = "<group>"; };
 		01068F591AB754810017F91A /* FilmsCollectionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FilmsCollectionDelegate.h; path = Delegates/FilmsCollectionDelegate.h; sourceTree = "<group>"; };
 		01068F5A1AB7558F0017F91A /* BillboardFilmsInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BillboardFilmsInteractor.h; path = Interactors/BillboardFilmsInteractor.h; sourceTree = "<group>"; };
+		015834481AB8223B007E0AC4 /* APIVars.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APIVars.h; path = Master/APIVars.h; sourceTree = "<group>"; };
+		015834491AB8223B007E0AC4 /* APIVars.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = APIVars.m; path = Master/APIVars.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +139,7 @@
 			children = (
 				01068ECF1AB7011D0017F91A /* AppDelegate.h */,
 				01068ED01AB7011D0017F91A /* AppDelegate.m */,
+				015834471AB821D3007E0AC4 /* Master */,
 				01068F001AB703DB0017F91A /* Entitys */,
 				01068EF41AB701D10017F91A /* Routers */,
 				01068EF71AB701EA0017F91A /* RequestManagers */,
@@ -279,6 +283,15 @@
 			name = Delegates;
 			sourceTree = "<group>";
 		};
+		015834471AB821D3007E0AC4 /* Master */ = {
+			isa = PBXGroup;
+			children = (
+				015834481AB8223B007E0AC4 /* APIVars.h */,
+				015834491AB8223B007E0AC4 /* APIVars.m */,
+			);
+			name = Master;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -399,6 +412,7 @@
 				01068F401AB72ECB0017F91A /* BillboardCollectionDelegate.m in Sources */,
 				01068F341AB725630017F91A /* BillboardRouter.m in Sources */,
 				01068F2B1AB724A80017F91A /* ActivityViewController.m in Sources */,
+				0158344A1AB8223B007E0AC4 /* APIVars.m in Sources */,
 				01068F471AB747F00017F91A /* ExternalTMDBProvider.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -582,6 +596,7 @@
 				01068EF01AB7011D0017F91A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		01068EF11AB7011D0017F91A /* Build configuration list for PBXNativeTarget "KinoAppTests" */ = {
 			isa = XCConfigurationList;
@@ -590,6 +605,7 @@
 				01068EF31AB7011D0017F91A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
