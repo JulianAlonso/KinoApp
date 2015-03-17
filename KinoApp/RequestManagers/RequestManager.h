@@ -13,6 +13,6 @@
 @property (nonatomic, strong, readonly) NSDictionary *defaultParams;
 @property (nonatomic, strong, readonly) NSString *basePath;
 
-- (void)GETendpoint:(NSString *)endpoint params:(NSDictionary *)dictionary andCompletionBlock:(void(^)(NSData *data))completionBlock;
+- (void)GETendpoint:(NSString *)endpoint params:(NSDictionary *)params andCompletionBlock:(void(^)(NSData *data))completionBlock;
 
 @end

@@ -15,6 +15,8 @@
 - (void)fetchUpcomingFilms:(void (^)(NSArray *))completion
 {
     [self.requestManager GETendpoint:UPCOMING_ENDPOINT params:nil andCompletionBlock:^(NSData *data) {
+        NSError *error;
+        NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
         //PARSE DATA
     }];
     

@@ -35,6 +35,7 @@
 		0158344A1AB8223B007E0AC4 /* APIVars.m in Sources */ = {isa = PBXBuildFile; fileRef = 015834491AB8223B007E0AC4 /* APIVars.m */; };
 		0158344F1AB84AAA007E0AC4 /* RequestManagerFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 0158344E1AB84AAA007E0AC4 /* RequestManagerFactory.m */; };
 		015834521AB84E93007E0AC4 /* JARequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 015834511AB84E93007E0AC4 /* JARequestManager.m */; };
+		015834561AB862B4007E0AC4 /* URLHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 015834551AB862B4007E0AC4 /* URLHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +104,8 @@
 		0158344E1AB84AAA007E0AC4 /* RequestManagerFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RequestManagerFactory.m; path = Factories/RequestManagerFactory.m; sourceTree = "<group>"; };
 		015834501AB84E93007E0AC4 /* JARequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JARequestManager.h; path = RequestManagers/JARequestManager.h; sourceTree = "<group>"; };
 		015834511AB84E93007E0AC4 /* JARequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JARequestManager.m; path = RequestManagers/JARequestManager.m; sourceTree = "<group>"; };
+		015834541AB862B4007E0AC4 /* URLHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = URLHelper.h; path = Helpers/URLHelper.h; sourceTree = "<group>"; };
+		015834551AB862B4007E0AC4 /* URLHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = URLHelper.m; path = Helpers/URLHelper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,10 +150,11 @@
 				01068ECF1AB7011D0017F91A /* AppDelegate.h */,
 				01068ED01AB7011D0017F91A /* AppDelegate.m */,
 				015834471AB821D3007E0AC4 /* Master */,
-				0158344C1AB84A90007E0AC4 /* Factories */,
 				01068F001AB703DB0017F91A /* Entitys */,
 				01068EF41AB701D10017F91A /* Routers */,
+				015834531AB862A4007E0AC4 /* Helpers */,
 				01068EF71AB701EA0017F91A /* RequestManagers */,
+				0158344C1AB84A90007E0AC4 /* Factories */,
 				01068EF61AB701E40017F91A /* Providers */,
 				01068EF51AB701DA0017F91A /* Interactors */,
 				01068F3D1AB72EB00017F91A /* Delegates */,
@@ -312,6 +316,15 @@
 			name = Factories;
 			sourceTree = "<group>";
 		};
+		015834531AB862A4007E0AC4 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				015834541AB862B4007E0AC4 /* URLHelper.h */,
+				015834551AB862B4007E0AC4 /* URLHelper.m */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -436,6 +449,7 @@
 				01068F2B1AB724A80017F91A /* ActivityViewController.m in Sources */,
 				0158344A1AB8223B007E0AC4 /* APIVars.m in Sources */,
 				01068F471AB747F00017F91A /* ExternalTMDBProvider.m in Sources */,
+				015834561AB862B4007E0AC4 /* URLHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
