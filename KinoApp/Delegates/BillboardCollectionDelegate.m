@@ -26,12 +26,6 @@
 @synthesize billboardCollectionView = _billboardCollectionView;
 
 
-#pragma mark - SegmentedControl methods.
-- (void)displaceSegmentedControlTo:(NSUInteger)index
-{
-    [self.segmentedControl setSelectedSegmentIndex:index];
-}
-
 - (void)valueChangedAtSelectedControl:(UISegmentedControl *)sender
 {
     CGPoint destiny = CGPointMake(self.billboardCollectionView.frame.size.width * sender.selectedSegmentIndex, 0);
@@ -41,7 +35,6 @@
 #pragma mark - Collection Datasourece methods.
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    [self displaceSegmentedControlTo:indexPath.item];
     CollectionFilmsCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([CollectionFilmsCollectionViewCell class]) forIndexPath:indexPath];
     
     cell.delegate = self.cellDelegates[indexPath.item];
@@ -57,6 +50,20 @@
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
     return self.cellDelegates.count;
+}
+
+#pragma mark - CollectionView Delegate methods.
+- (void)collectionView:(UICollectionView *)collectionView willDisplayCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    CollectionFilmsCollectionViewCell *filmCell = (CollectionFilmsCollectionViewCell *)cell;
+    [filmCell refreshActivated:nil];
+}
+
+#pragma mark - ScrollView delegate methods.
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+{
+    CGFloat index = scrollView.contentOffset.x / scrollView.bounds.size.width;
+    [self.segmentedControl setSelectedSegmentIndex:index];
 }
 
 @end

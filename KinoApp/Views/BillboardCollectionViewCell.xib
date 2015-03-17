@@ -7,28 +7,40 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BillboardCollectionViewCell" id="gTV-IL-0wX" customClass="BillboardCollectionViewCell">
-            <rect key="frame" x="0.0" y="0.0" width="156" height="155"/>
+            <rect key="frame" x="0.0" y="0.0" width="228" height="313"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="156" height="155"/>
+                <rect key="frame" x="0.0" y="0.0" width="228" height="313"/>
                 <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SLX-rX-qTd">
+                        <rect key="frame" x="0.0" y="141" width="228" height="32"/>
+                        <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="23"/>
+                        <color key="textColor" red="0.40000000596046448" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="B0c-WC-Obj">
-                        <rect key="frame" x="0.0" y="0.0" width="156" height="155"/>
+                        <rect key="frame" x="0.0" y="0.0" width="228" height="313"/>
                     </imageView>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
+            <color key="backgroundColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="B0c-WC-Obj" secondAttribute="trailing" id="74d-D0-ToX"/>
-                <constraint firstItem="B0c-WC-Obj" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="TOw-iO-r9s"/>
-                <constraint firstAttribute="bottom" secondItem="B0c-WC-Obj" secondAttribute="bottom" id="Xq1-lo-XKX"/>
-                <constraint firstItem="B0c-WC-Obj" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="fkI-04-Pbn"/>
+                <constraint firstAttribute="centerX" secondItem="SLX-rX-qTd" secondAttribute="centerX" id="38X-t7-U2p"/>
+                <constraint firstAttribute="bottom" secondItem="B0c-WC-Obj" secondAttribute="bottom" id="74k-Gn-WAv"/>
+                <constraint firstItem="B0c-WC-Obj" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="B3N-qg-rqF"/>
+                <constraint firstAttribute="trailing" secondItem="B0c-WC-Obj" secondAttribute="trailing" id="Ffm-JS-XGw"/>
+                <constraint firstItem="SLX-rX-qTd" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="L2c-mK-pcX"/>
+                <constraint firstItem="B0c-WC-Obj" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="LE0-ni-dVa"/>
+                <constraint firstAttribute="trailing" secondItem="SLX-rX-qTd" secondAttribute="trailing" id="UkG-oN-brh"/>
+                <constraint firstAttribute="centerY" secondItem="SLX-rX-qTd" secondAttribute="centerY" id="djD-cq-67f"/>
             </constraints>
-            <size key="customSize" width="156" height="155"/>
+            <size key="customSize" width="228" height="313"/>
             <connections>
-                <outlet property="fillImageView" destination="B0c-WC-Obj" id="Orb-dO-yyC"/>
+                <outlet property="filmImageView" destination="B0c-WC-Obj" id="MzN-st-YRS"/>
+                <outlet property="filmTitleLabel" destination="SLX-rX-qTd" id="qMO-Wa-eXd"/>
             </connections>
-            <point key="canvasLocation" x="444" y="384.5"/>
+            <point key="canvasLocation" x="480" y="463.5"/>
         </collectionViewCell>
     </objects>
 </document>

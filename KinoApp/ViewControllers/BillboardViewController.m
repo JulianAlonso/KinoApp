@@ -16,6 +16,9 @@
 @property (weak, nonatomic) IBOutlet UIView *refereceView;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedControl;
 
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *topConstraint;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *bottomConstraint;
+
 @property (nonatomic, strong) UIRefreshControl *refreshControl;
 
 @end
@@ -31,6 +34,12 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+}
+
+- (void)viewDidLayoutSubviews
+{
+    self.topConstraint.constant = self.topLayoutGuide.length + 10;
+    self.bottomConstraint.constant = self.bottomLayoutGuide.length;
 }
 
 #pragma mark - Config methods.

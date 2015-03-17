@@ -14,4 +14,7 @@
 @property (nonatomic, strong) id<FilmsCollectionDelegate> delegate;
 @property (nonatomic, strong) UIRefreshControl *refreshControl;
 
+
+- (void)refreshActivated:(UIRefreshControl *)sender;
+
 @end

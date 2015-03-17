@@ -10,6 +10,7 @@
 
 @interface BillboardCollectionViewCell : UICollectionViewCell
 
-@property (weak, nonatomic) IBOutlet UIImageView *fillImageView;
+@property (weak, nonatomic) IBOutlet UIImageView *filmImageView;
+@property (weak, nonatomic) IBOutlet UILabel *filmTitleLabel;
 
 @end

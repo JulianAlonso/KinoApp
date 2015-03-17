@@ -52,6 +52,7 @@
 - (void)setDelegate:(id<FilmsCollectionDelegate>)delegate
 {
     _delegate = delegate;
+    _delegate.filmsCollectionView = self.filmsCollectionView;
     self.filmsCollectionView.delegate = self.delegate;
     self.filmsCollectionView.dataSource = self.delegate;
 }

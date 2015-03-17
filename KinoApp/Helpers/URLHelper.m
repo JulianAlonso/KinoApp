@@ -7,6 +7,7 @@
 //
 
 #import "URLHelper.h"
+#import "APIVars.h"
 
 @implementation URLHelper
 
@@ -19,6 +20,7 @@
         if (firstTime)
         {
             [finalURL appendFormat:@"?%@=%@", key, params[key]];
+            firstTime = NO;
         }
         else
         {
@@ -26,6 +28,11 @@
         }
     }
     return [NSURL URLWithString:finalURL];
+}
+
++ (NSString *)imageUrlWithEndpoint:(NSString *)endpoint
+{
+    return [NSString stringWithFormat:@"%@%@", IMAGE_BASE_PATH, endpoint];
 }
 
 @end

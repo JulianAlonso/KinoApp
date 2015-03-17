@@ -25,8 +25,12 @@
 
 - (void)fetchPlayingNowFilms:(void (^)(NSArray *))completion
 {
-    NSLog(@"Fetching playing now films");
-    completion(nil);
+    [self.requestManager GETendpoint:NOW_PLAYING_ENDPOINT params:nil andCompletionBlock:^(NSData *data) {
+        NSError *error;
+        NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+        
+        completion([FilmDTOParser filmDTOsFromArray:dic[@"results"]]);
+    }];
 }
 
 #pragma mark - Lazy getterss.

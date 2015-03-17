@@ -17,7 +17,10 @@ NSString *const kBasePath = @"basePath";
 
 + (id<RequestManager>)requestManager
 {
-    NSDictionary *defaultParams = @{ @"api_key" : API_KEY };
+    NSDictionary *defaultParams = @{
+                                    @"api_key" : API_KEY,
+                                    @"language" : @"es",
+                                    };
     
     JARequestManager *requestManager = [JARequestManager new];
     [requestManager setValue:defaultParams forKey:kDefaultParams];

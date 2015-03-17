@@ -6,9 +6,16 @@
 //  Copyright (c) 2015 Julian. All rights reserved.
 //
 
+#import <SDWebImage/UIImageView+WebCache.h>
 #import "UpcomingCollectionDelegate.h"
 #import "BillboardCollectionViewCell.h"
 #import "FilmDTO.h"
+
+@interface UpcomingCollectionDelegate ()
+
+@property (nonatomic, strong) NSArray *films;
+
+@end
 
 @implementation UpcomingCollectionDelegate
 
@@ -19,15 +26,17 @@
 - (void)refresh:(UIRefreshControl *)sender
 {
     NSLog(@"Refresing");
-    
+    __weak typeof(self) weakSelf = self;
     [self.interactor fetchFilmsWithComplectionBlock:^(NSArray *films) {
-        for (FilmDTO *film in films)
-        {
-            NSLog(@"title: %@", film.filmTitle);
-        }
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        
+        strongSelf.films = films;
+        [strongSelf.filmsCollectionView reloadData];
+        
+        [sender endRefreshing];
     }];
     
-    [sender endRefreshing];
+
 }
 
 #pragma mark - Collection data source methods.
@@ -35,14 +44,37 @@
 {
     BillboardCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([BillboardCollectionViewCell class]) forIndexPath:indexPath];
 
-    cell.backgroundColor = [UIColor greenColor];
+    FilmDTO *film = self.films[indexPath.item];
+    
+    cell.filmTitleLabel.text = film.filmTitle;
+    
+    [cell.filmImageView sd_setImageWithURL:[NSURL URLWithString:film.filmPosterPath] placeholderImage:nil];
     
     return cell;
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 50;
+    return self.films.count;
+}
+
+#pragma mark - CollectionView FlowLayout delegate methods.
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section
+{
+    return 0;
+}
+
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section
+{
+    return 0;
+}
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    CGFloat width = CGRectGetWidth(collectionView.bounds) /2;
+    CGFloat height = CGRectGetHeight(collectionView.bounds) /2;
+    
+    return CGSizeMake(width, height);
 }
 
 @end

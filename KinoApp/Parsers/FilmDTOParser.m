@@ -8,6 +8,7 @@
 
 #import "FilmDTOParser.h"
 #import "FilmDTO.h"
+#import "URLHelper.h"
 
 NSString *const dFilmId = @"id";
 NSString *const dFilmTitle = @"title";
@@ -32,8 +33,8 @@ NSString *const dFilmBackdropPath = @"backdrop_path";
     film.filmHomepage = dictionary[dFilmHomepage];
     film.filmOverview = dictionary[dFilmOverview];
     film.filmTagline = dictionary[dFilmTagline];
-    film.filmPosterPath = dictionary[dFilmPosterPath];
-    film.filmBackdropPath = dictionary[dFilmBackdropPath];
+    film.filmPosterPath = [URLHelper imageUrlWithEndpoint:dictionary[dFilmPosterPath]];
+    film.filmBackdropPath = [URLHelper imageUrlWithEndpoint:dictionary[dFilmBackdropPath]];
     
     return film;
 }

@@ -10,6 +10,7 @@
 
 extern NSString *const API_KEY;
 extern NSString *const BASE_PATH;
+extern NSString *const IMAGE_BASE_PATH;
 extern NSString *const UPCOMING_ENDPOINT;
 extern NSString *const NOW_PLAYING_ENDPOINT;
 

@@ -23,7 +23,6 @@
     billboardViewController.tabBarItem.title = @"Billboard";
     billboardViewController.router = self;
     
-
     BillboardCollectionDelegate *billboardDelegate = [BillboardCollectionDelegate new];
     ExternalTMDBProvider *externalFilmProvider = [ExternalTMDBProvider new];
     
@@ -40,7 +39,7 @@
     
     billboardDelegate.cellDelegates = @[playingNowDelegate, upcomingDelegate];
     billboardViewController.delegate = billboardDelegate;
-
+    
     [tabBarController addChildViewController:billboardViewController];
 }
 

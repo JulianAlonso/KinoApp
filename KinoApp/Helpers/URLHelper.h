@@ -12,4 +12,6 @@
 
 + (NSURL *)urlWithString:(NSString *)url andParams:(NSDictionary *)params;
 
++ (NSString *)imageUrlWithEndpoint:(NSString *)endpoint;
+
 @end

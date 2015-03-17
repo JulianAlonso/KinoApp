@@ -1,3 +1,5 @@
 *.DS_Store
 *xcuserdata*
 *APIVars.m
+Pods/*
+Podfile.lock

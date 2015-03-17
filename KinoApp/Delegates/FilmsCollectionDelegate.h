@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "BillboardFilmsInteractor.h"
 
-@protocol FilmsCollectionDelegate <UICollectionViewDelegate, UICollectionViewDataSource>
+@protocol FilmsCollectionDelegate <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 
 @property (nonatomic, strong) id<BillboardFilmsInteractor> interactor;
 
