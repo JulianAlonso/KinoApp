@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FilmDetailViewController">
             <connections>
+                <outlet property="activityIndicator" destination="APe-f3-H6n" id="MFU-8O-EbI"/>
+                <outlet property="backButton" destination="Ld1-4J-h4e" id="I4g-FH-NRn"/>
+                <outlet property="bottomConstraint" destination="m5h-7L-Yrj" id="Wc1-7M-XGm"/>
+                <outlet property="filmDescriptionLabel" destination="0QY-ab-ddX" id="uai-BL-Xnv"/>
+                <outlet property="filmImageView" destination="Ld1-4J-h4e" id="l1P-aA-ViK"/>
+                <outlet property="filmTitleLabel" destination="fSh-e9-mFQ" id="cLy-TU-JTT"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -13,7 +19,60 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ld1-4J-h4e">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                </imageView>
+                <visualEffectView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EqL-Ub-bMU">
+                    <rect key="frame" x="0.0" y="530" width="600" height="70"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="jS1-12-bYT">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="70"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fSh-e9-mFQ">
+                                <rect key="frame" x="8" y="8" width="584" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0QY-ab-ddX">
+                                <rect key="frame" x="8" y="41" width="584" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="fSh-e9-mFQ" secondAttribute="trailing" constant="8" id="4Rl-JL-K5S"/>
+                            <constraint firstAttribute="trailing" secondItem="0QY-ab-ddX" secondAttribute="trailing" constant="8" id="513-WQ-GBR"/>
+                            <constraint firstItem="fSh-e9-mFQ" firstAttribute="top" secondItem="jS1-12-bYT" secondAttribute="top" constant="8" id="853-Gh-ENg"/>
+                            <constraint firstItem="fSh-e9-mFQ" firstAttribute="leading" secondItem="jS1-12-bYT" secondAttribute="leading" constant="8" id="deF-sL-zWe"/>
+                            <constraint firstItem="0QY-ab-ddX" firstAttribute="top" secondItem="fSh-e9-mFQ" secondAttribute="bottom" constant="12" id="jOG-uu-EXs"/>
+                            <constraint firstAttribute="bottom" secondItem="0QY-ab-ddX" secondAttribute="bottom" constant="8" id="uaz-aw-Ks3"/>
+                            <constraint firstItem="0QY-ab-ddX" firstAttribute="leading" secondItem="jS1-12-bYT" secondAttribute="leading" constant="8" id="zAc-gi-WiG"/>
+                        </constraints>
+                    </view>
+                    <blurEffect style="light"/>
+                </visualEffectView>
+                <activityIndicatorView opaque="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="APe-f3-H6n">
+                    <rect key="frame" x="290" y="290" width="20" height="20"/>
+                </activityIndicatorView>
+            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="centerY" secondItem="APe-f3-H6n" secondAttribute="centerY" id="3w2-eX-gTO"/>
+                <constraint firstItem="Ld1-4J-h4e" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="8q2-eQ-qr6"/>
+                <constraint firstItem="Ld1-4J-h4e" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Dqd-DD-gDB"/>
+                <constraint firstAttribute="trailing" secondItem="Ld1-4J-h4e" secondAttribute="trailing" id="Nai-L9-1K4"/>
+                <constraint firstItem="Ld1-4J-h4e" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Qnz-Nl-AQj"/>
+                <constraint firstItem="EqL-Ub-bMU" firstAttribute="leading" secondItem="Ld1-4J-h4e" secondAttribute="leading" id="R2J-08-Jm0"/>
+                <constraint firstItem="EqL-Ub-bMU" firstAttribute="trailing" secondItem="Ld1-4J-h4e" secondAttribute="trailing" id="ebE-UB-Zk6"/>
+                <constraint firstAttribute="bottom" secondItem="Ld1-4J-h4e" secondAttribute="bottom" id="m5h-7L-Yrj"/>
+                <constraint firstItem="EqL-Ub-bMU" firstAttribute="bottom" secondItem="Ld1-4J-h4e" secondAttribute="bottom" id="oc6-bk-dnJ"/>
+                <constraint firstAttribute="centerX" secondItem="APe-f3-H6n" secondAttribute="centerX" id="thK-uX-Dtg"/>
+                <constraint firstItem="Ld1-4J-h4e" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="xS9-by-Gxg"/>
+                <constraint firstAttribute="trailing" secondItem="Ld1-4J-h4e" secondAttribute="trailing" id="xeX-zm-VLe"/>
+            </constraints>
         </view>
     </objects>
 </document>

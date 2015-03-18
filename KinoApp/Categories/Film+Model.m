@@ -9,12 +9,13 @@
 #import "Film+Model.h"
 #import "FilmDTO.h"
 
+NSString *const kFilmIdProperty = @"filmId";
 NSString *const kFilmTypeProperty = @"filmType";
 NSString *const kFilmReleaseDateProperty = @"filmReleaseDate";
 
 @implementation Film (Model)
 
-+ (instancetype)initWithFilmDTO:(FilmDTO *)filmDTO andManagedObjectContext:(NSManagedObjectContext *)managedObjectContext
++ (instancetype)filmWithFilmDTO:(FilmDTO *)filmDTO andManagedObjectContext:(NSManagedObjectContext *)managedObjectContext
 {
     Film *film = [NSEntityDescription insertNewObjectForEntityForName:NSStringFromClass([self class]) inManagedObjectContext:managedObjectContext];
     

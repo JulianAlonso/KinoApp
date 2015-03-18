@@ -88,6 +88,6 @@
     CGFloat height = CGRectGetHeight(collectionView.bounds) /2;
     
     return CGSizeMake(width, height);
-}   
+}
 
 @end

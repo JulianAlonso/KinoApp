@@ -10,11 +10,12 @@
 
 @class FilmDTO;
 
+extern NSString *const kFilmIdProperty;
 extern NSString *const kFilmTypeProperty;
 extern NSString *const kFilmReleaseDateProperty;
 
 @interface Film (Model)
 
-+ (instancetype)initWithFilmDTO:(FilmDTO *)filmDTO andManagedObjectContext:(NSManagedObjectContext *)managedObjectContext;
++ (instancetype)filmWithFilmDTO:(FilmDTO *)filmDTO andManagedObjectContext:(NSManagedObjectContext *)managedObjectContext;
 
 @end

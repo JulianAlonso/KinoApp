@@ -8,10 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
+@class FilmDTO;
+
 @protocol ExternalFilmsProvider <NSObject>
 
 - (void)fetchUpcomingFilms:(void(^)(NSArray *films))completion;
 
 - (void)fetchPlayingNowFilms:(void(^)(NSArray *films))completion;
+
+- (void)fetchFilmById:(NSString *)filmId completion:(void(^)(FilmDTO *film))completion;
 
 @end

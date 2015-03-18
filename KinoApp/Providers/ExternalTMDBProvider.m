@@ -34,6 +34,17 @@
     }];
 }
 
+- (void)fetchFilmById:(NSString *)filmId completion:(void (^)(FilmDTO *))completion
+{
+    NSString *movieEndpoint = [NSString stringWithFormat:@"%@%@", BY_ID_ENDPOINT, filmId];
+    [self.requestManager GETendpoint:movieEndpoint params:nil andCompletionBlock:^(NSData *data) {
+        NSError *error;
+        NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+        
+        completion([FilmDTOParser filmDTOFromDictionary:dic filmType:nil]);
+    }];
+}
+
 #pragma mark - Lazy getterss.
 - (id<RequestManager>)requestManager
 {

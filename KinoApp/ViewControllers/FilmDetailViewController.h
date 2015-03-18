@@ -8,6 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+@class FilmDTO;
+@class DetailFilmRouter;
+@class LoadFilmInteractor;
+
 @interface FilmDetailViewController : UIViewController
+
+@property (nonatomic, strong) DetailFilmRouter *router;
+@property (nonatomic, strong) FilmDTO *film;
+
+@property (nonatomic, strong) LoadFilmInteractor *interactor;
 
 @end

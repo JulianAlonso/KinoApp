@@ -26,13 +26,13 @@ NSString *const dFilmBackdropPath = @"backdrop_path";
 {
     FilmDTO *film = [FilmDTO new];
     
-    film.filmId = dictionary[dFilmId];
-    film.filmTitle = dictionary[dFilmTitle];
-    film.filmOriginalTitle = dictionary[dFilmOriginalTitle];
-    film.filmReleaseDate = dictionary[dFilmReleaseDate];
-    film.filmHomepage = dictionary[dFilmHomepage];
-    film.filmOverview = dictionary[dFilmOverview];
-    film.filmTagline = dictionary[dFilmTagline];
+    film.filmId = [NSString stringWithFormat:@"%@", dictionary[dFilmId]];
+    film.filmTitle = [NSString stringWithFormat:@"%@", dictionary[dFilmTitle]];
+    film.filmOriginalTitle = [NSString stringWithFormat:@"%@", dictionary[dFilmOriginalTitle]];
+    film.filmReleaseDate = [NSString stringWithFormat:@"%@", dictionary[dFilmReleaseDate]];
+    film.filmHomepage = [NSString stringWithFormat:@"%@", dictionary[dFilmHomepage]];
+    film.filmOverview = [NSString stringWithFormat:@"%@", dictionary[dFilmOverview]];
+    film.filmTagline = [NSString stringWithFormat:@"%@", dictionary[dFilmTagline]];
     film.filmPosterPath = [URLHelper imageUrlWithEndpoint:dictionary[dFilmPosterPath]];
     film.filmBackdropPath = [URLHelper imageUrlWithEndpoint:dictionary[dFilmBackdropPath]];
     film.filmType = filmType;

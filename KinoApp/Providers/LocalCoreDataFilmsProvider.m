@@ -37,7 +37,7 @@
         Film *film;
         for (FilmDTO *filmDTO in films)
         {
-            film = [Film initWithFilmDTO:filmDTO andManagedObjectContext:strongSelf.privateContext];
+            film = [Film filmWithFilmDTO:filmDTO andManagedObjectContext:strongSelf.privateContext];
         }
         
         strongSelf.lastFilmType = film.filmType;
@@ -55,6 +55,49 @@
     NSArray *films = [self.privateContext executeFetchRequest:select error:&error];
     
     completionBlock([FilmDTOParser filmDTOsFromFilmsArray:films]);
+}
+
+- (void)fetchFilmById:(NSString *)filmId completion:(void (^)(FilmDTO *))completion
+{
+    NSFetchRequest *select = [NSFetchRequest fetchRequestWithEntityName:NSStringFromClass([Film class])];
+    select.predicate = [NSPredicate predicateWithFormat:@"%K == %@", kFilmIdProperty, filmId];
+    
+    NSError *error;
+    Film *film = [[self.privateContext executeFetchRequest:select error:&error] firstObject];
+    
+    if (film)
+    {
+        completion([FilmDTOParser filmDTOFromFilm:film]);
+    }
+    else
+    {
+        completion(nil);
+    }
+}
+
+- (void)createOrUpdateFilm:(FilmDTO *)film completion:(void(^)(FilmDTO *film))completion
+{
+    NSFetchRequest *select = [NSFetchRequest fetchRequestWithEntityName:NSStringFromClass([Film class])];
+    select.predicate = [NSPredicate predicateWithFormat:@"%K == %@", kFilmIdProperty, film.filmId];
+    
+    NSError *error;
+    Film *filmMO = [[self.privateContext executeFetchRequest:select error:&error] firstObject];
+    
+    if (filmMO)
+    {
+        filmMO.filmTagline = film.filmTagline;
+        filmMO.filmHomepage = film.filmHomepage;
+        filmMO.filmOverview = film.filmOverview;
+        
+        [self.privateContext save:nil];
+    }
+    else
+    {
+        filmMO = [Film filmWithFilmDTO:film andManagedObjectContext:self.privateContext];
+        [self.privateContext save:nil];
+    }
+    
+    completion(film);
 }
 
 #pragma mark - Own methods.

@@ -16,6 +16,7 @@
 #import "LocalCoreDataFilmsProvider.h"
 #import "BillboardFilmsCollectionDelegate.h"
 #import "FilmDTO.h"
+#import "DetailFilmRouter.h"
 
 @implementation BillboardRouter
 
@@ -56,7 +57,7 @@
 
 - (void)selectedCellWithFilmDTO:(FilmDTO *)filmDTO fromViewController:(UIViewController *)fromViewController
 {
-    NSLog(@"Called from %@, with filmDTO: %@", fromViewController.title, filmDTO.filmTitle);
+    [[DetailFilmRouter new] presentFilmDetailViewControllerFrom:fromViewController.navigationController withFilmDTO:filmDTO];
 }
 
 @end
