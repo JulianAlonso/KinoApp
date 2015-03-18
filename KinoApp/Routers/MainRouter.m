@@ -7,12 +7,8 @@
 //
 
 #import "MainRouter.h"
-#import "ActivityRouter.h"
 #import "BillboardRouter.h"
-
-@interface MainRouter ()
-
-@end
+#import "ListsCollectionRouter.h"
 
 @implementation MainRouter
 
@@ -23,7 +19,7 @@
     BillboardRouter *billboardRouter = [[BillboardRouter alloc] init];
     [billboardRouter loadViewAt:tabBarController];
     
-    ActivityRouter *activityRouter = [[ActivityRouter alloc] init];
+    ListsCollectionRouter *activityRouter = [ListsCollectionRouter new];
     [activityRouter loadViewAt:tabBarController];
     
     [window setRootViewController:tabBarController];
