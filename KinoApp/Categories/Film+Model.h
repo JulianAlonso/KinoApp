@@ -11,6 +11,7 @@
 @class FilmDTO;
 
 extern NSString *const kFilmTypeProperty;
+extern NSString *const kFilmReleaseDateProperty;
 
 @interface Film (Model)
 

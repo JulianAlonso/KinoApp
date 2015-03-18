@@ -10,6 +10,7 @@
 #import "FilmDTO.h"
 
 NSString *const kFilmTypeProperty = @"filmType";
+NSString *const kFilmReleaseDateProperty = @"filmReleaseDate";
 
 @implementation Film (Model)
 

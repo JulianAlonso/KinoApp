@@ -49,6 +49,7 @@
 {
     NSFetchRequest *select = [NSFetchRequest fetchRequestWithEntityName:NSStringFromClass([Film class])];
     select.predicate = [NSPredicate predicateWithFormat:@"%K == %@", kFilmTypeProperty, filmType];
+    select.sortDescriptors = @[[[NSSortDescriptor alloc] initWithKey:@"filmOriginalTitle" ascending:YES]];
     
     NSError *error;
     NSArray *films = [self.privateContext executeFetchRequest:select error:&error];

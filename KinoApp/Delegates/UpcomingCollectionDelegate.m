@@ -48,6 +48,8 @@
 
     FilmDTO *film = self.films[indexPath.item];
     
+    cell.filmImageView.image = nil;
+    
     cell.filmTitleLabel.text = film.filmTitle;
     
     [cell.filmImageView setImageWithURL:[NSURL URLWithString:film.filmPosterPath]];

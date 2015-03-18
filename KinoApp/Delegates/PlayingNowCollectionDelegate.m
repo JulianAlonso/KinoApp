@@ -49,6 +49,9 @@
     
     FilmDTO *film = self.films[indexPath.item];
     
+    //Remove old image.
+    cell.filmImageView.image = nil;
+    
     cell.filmTitleLabel.text = film.filmTitle;
     
     [cell.filmImageView setImageWithURL:[NSURL URLWithString:film.filmPosterPath]];
@@ -62,6 +65,12 @@
 }
 
 #pragma mark - CollectionView FloatLayout delegate methods.
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    FilmDTO *film = self.films[indexPath.item];
+    NSLog(@"Title: %@", film.filmTitle);
+}
+
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section
 {
     return 0;
