@@ -6,6 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ListsCollectionViewController">
             <connections>
+                <outlet property="listsCollectionView" destination="FCo-I7-h0R" id="Eg6-f7-SY3"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -13,7 +14,24 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="FCo-I7-h0R">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="fh3-8l-hcH">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="FCo-I7-h0R" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="S9Z-6s-6OO"/>
+                <constraint firstItem="FCo-I7-h0R" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="hIc-hC-ycY"/>
+                <constraint firstAttribute="bottom" secondItem="FCo-I7-h0R" secondAttribute="bottom" id="iKt-SM-obQ"/>
+                <constraint firstAttribute="trailing" secondItem="FCo-I7-h0R" secondAttribute="trailing" id="xxX-rc-GdU"/>
+            </constraints>
         </view>
     </objects>
 </document>

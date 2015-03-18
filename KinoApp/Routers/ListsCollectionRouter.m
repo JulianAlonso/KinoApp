@@ -16,6 +16,8 @@
     ListsCollectionViewController *listsCollectionViewController = [ListsCollectionViewController new];
     listsCollectionViewController.tabBarItem.title = @"Lists";
     
+    listsCollectionViewController.router = self;
+    
     [tabBarCotroller addChildViewController:listsCollectionViewController];
 }
 
