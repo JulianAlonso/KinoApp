@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Julian. All rights reserved.
 //
 
-#import <SDWebImage/UIImageView+WebCache.h>
+#import <AFNetworking/UIImageView+AFNetworking.h>
 #import "PlayingNowCollectionDelegate.h"
 #import "CollectionFilmsCollectionViewCell.h"
 #import "BillboardCollectionViewCell.h"
@@ -32,14 +32,12 @@
         
         strongSelf.films = films;
         [strongSelf.filmsCollectionView reloadData];
-        [strongSelf.filmsCollectionView layoutIfNeeded];
         
     } update:^(NSArray *films) {
         __strong typeof(weakSelf) strongSelf = weakSelf;
         
         strongSelf.films = films;
         [strongSelf.filmsCollectionView reloadData];
-        [strongSelf.filmsCollectionView layoutIfNeeded];
         [sender endRefreshing];
     }];
 }
@@ -53,10 +51,7 @@
     
     cell.filmTitleLabel.text = film.filmTitle;
     
-    [cell.filmImageView sd_setImageWithURL:[NSURL URLWithString:film.filmPosterPath] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
-        [cell layoutIfNeeded];
-        [collectionView layoutIfNeeded];
-    }];
+    [cell.filmImageView setImageWithURL:[NSURL URLWithString:film.filmPosterPath]];
     
     return cell;
 }

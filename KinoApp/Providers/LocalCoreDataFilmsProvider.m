@@ -29,37 +29,52 @@
 {
     [self registerToUpdate];
     self.updatedBlock = completionBlock;
-//    __weak typeof(self) weakSelf = self;
-//    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
-//        __strong typeof(weakSelf) strongSelf = weakSelf;
-    
+
+    __weak typeof(self) weakSelf = self;
+    [self deleteFilmsByFilmType:[[films firstObject] valueForKey:kFilmTypeProperty] andCompletion:^{
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        
         Film *film;
         for (FilmDTO *filmDTO in films)
         {
-            film = [Film initWithFilmDTO:filmDTO andManagedObjectContext:self.privateContext];
+            film = [Film initWithFilmDTO:filmDTO andManagedObjectContext:strongSelf.privateContext];
         }
-        self.lastFilmType = film.filmType;
-        [self.privateContext save:nil];
-//    });
+        
+        strongSelf.lastFilmType = film.filmType;
+        [strongSelf.privateContext save:nil];
+    }];
 }
 
-- (void)fetchFilmsByFilmType:(NSString *)filmType andCompletion:(void (^)(NSArray *))completionBlock
+- (void)fetchFilmsByFilmType:(NSString *)filmType andCompletion:(void (^)(NSArray *films))completionBlock
 {
     NSFetchRequest *select = [NSFetchRequest fetchRequestWithEntityName:NSStringFromClass([Film class])];
     select.predicate = [NSPredicate predicateWithFormat:@"%K == %@", kFilmTypeProperty, filmType];
-    
-//    __weak typeof(self) weakSelf = self;
-//    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
-//        __strong typeof(weakSelf) strongSelf = weakSelf;
     
     NSError *error;
     NSArray *films = [self.privateContext executeFetchRequest:select error:&error];
     
     completionBlock([FilmDTOParser filmDTOsFromFilmsArray:films]);
-//    });
 }
 
 #pragma mark - Own methods.
+- (void)deleteFilmsByFilmType:(NSString *)filmType andCompletion:(void (^)())completionBlock
+{
+    NSFetchRequest *select = [NSFetchRequest fetchRequestWithEntityName:NSStringFromClass([Film class])];
+    select.predicate = [NSPredicate predicateWithFormat:@"%K == %@", kFilmTypeProperty, filmType];
+    
+    NSError *error;
+    NSArray *films = [self.privateContext executeFetchRequest:select error:&error];
+    if (!error)
+    {
+        for (Film *film in films)
+        {
+            [self.privateContext deleteObject:film];
+        }
+        
+        completionBlock();
+    }
+}
+
 - (void)registerToUpdate
 {
     [[NSNotificationCenter defaultCenter] addObserver:self
@@ -72,6 +87,7 @@
     [self fetchFilmsByFilmType:self.lastFilmType andCompletion:self.updatedBlock];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:NSManagedObjectContextDidSaveNotification object:self.privateContext];
 }
+
 
 #pragma mark - Lazy getters.
 - (NSManagedObjectContext *)privateContext

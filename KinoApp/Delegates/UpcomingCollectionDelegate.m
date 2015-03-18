@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Julian. All rights reserved.
 //
 
-#import <SDWebImage/UIImageView+WebCache.h>
+#import <AFNetworking/UIImageView+AFNetworking.h>
 #import "UpcomingCollectionDelegate.h"
 #import "BillboardCollectionViewCell.h"
 #import "FilmDTO.h"
@@ -37,6 +37,7 @@
         
         strongSelf.films = films;
         [strongSelf.filmsCollectionView reloadData];
+        [sender endRefreshing]; 
     }];
 }
 
@@ -49,7 +50,7 @@
     
     cell.filmTitleLabel.text = film.filmTitle;
     
-    [cell.filmImageView sd_setImageWithURL:[NSURL URLWithString:film.filmPosterPath] placeholderImage:nil];
+    [cell.filmImageView setImageWithURL:[NSURL URLWithString:film.filmPosterPath]];
     
     return cell;
 }
