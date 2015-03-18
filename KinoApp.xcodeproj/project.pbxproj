@@ -35,6 +35,7 @@
 		012C6B801AB99F580060A49C /* FilmDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 012C6B7E1AB99F580060A49C /* FilmDetailViewController.xib */; };
 		012C6B851AB9C3EE0060A49C /* DetailFilmRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 012C6B841AB9C3EE0060A49C /* DetailFilmRouter.m */; };
 		012C6B881AB9D3290060A49C /* LoadFilmInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 012C6B871AB9D3290060A49C /* LoadFilmInteractor.m */; };
+		012C6B8B1ABA000E0060A49C /* FetchAllFilmsInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 012C6B8A1ABA000E0060A49C /* FetchAllFilmsInteractor.m */; };
 		0158344A1AB8223B007E0AC4 /* APIVars.m in Sources */ = {isa = PBXBuildFile; fileRef = 015834491AB8223B007E0AC4 /* APIVars.m */; };
 		0158344F1AB84AAA007E0AC4 /* RequestManagerFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 0158344E1AB84AAA007E0AC4 /* RequestManagerFactory.m */; };
 		015834521AB84E93007E0AC4 /* JARequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 015834511AB84E93007E0AC4 /* JARequestManager.m */; };
@@ -113,6 +114,8 @@
 		012C6B841AB9C3EE0060A49C /* DetailFilmRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailFilmRouter.m; path = Routers/DetailFilmRouter.m; sourceTree = "<group>"; };
 		012C6B861AB9D3290060A49C /* LoadFilmInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoadFilmInteractor.h; path = Interactors/LoadFilmInteractor.h; sourceTree = "<group>"; };
 		012C6B871AB9D3290060A49C /* LoadFilmInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoadFilmInteractor.m; path = Interactors/LoadFilmInteractor.m; sourceTree = "<group>"; };
+		012C6B891ABA000E0060A49C /* FetchAllFilmsInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FetchAllFilmsInteractor.h; path = Interactors/FetchAllFilmsInteractor.h; sourceTree = "<group>"; };
+		012C6B8A1ABA000E0060A49C /* FetchAllFilmsInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FetchAllFilmsInteractor.m; path = Interactors/FetchAllFilmsInteractor.m; sourceTree = "<group>"; };
 		015834481AB8223B007E0AC4 /* APIVars.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APIVars.h; path = Master/APIVars.h; sourceTree = "<group>"; };
 		015834491AB8223B007E0AC4 /* APIVars.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = APIVars.m; path = Master/APIVars.m; sourceTree = "<group>"; };
 		0158344B1AB84A88007E0AC4 /* RequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RequestManager.h; path = RequestManagers/RequestManager.h; sourceTree = "<group>"; };
@@ -256,6 +259,8 @@
 				01068F5A1AB7558F0017F91A /* BillboardFilmsInteractor.h */,
 				012C6B861AB9D3290060A49C /* LoadFilmInteractor.h */,
 				012C6B871AB9D3290060A49C /* LoadFilmInteractor.m */,
+				012C6B891ABA000E0060A49C /* FetchAllFilmsInteractor.h */,
+				012C6B8A1ABA000E0060A49C /* FetchAllFilmsInteractor.m */,
 			);
 			name = Interactors;
 			sourceTree = "<group>";
@@ -575,6 +580,7 @@
 				018F9DD71AB8AAF50046D3C4 /* Film.m in Sources */,
 				01068F3B1AB72D480017F91A /* BillboardFilmCollectionViewCell.m in Sources */,
 				01068F511AB752840017F91A /* CollectionFilmsCollectionViewCell.m in Sources */,
+				012C6B8B1ABA000E0060A49C /* FetchAllFilmsInteractor.m in Sources */,
 				012C6B881AB9D3290060A49C /* LoadFilmInteractor.m in Sources */,
 				018F9DD01AB896F90046D3C4 /* CoreDataManager.m in Sources */,
 				015834521AB84E93007E0AC4 /* JARequestManager.m in Sources */,
