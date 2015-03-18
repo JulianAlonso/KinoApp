@@ -7,7 +7,7 @@
 //
 
 #import "CollectionFilmsCollectionViewCell.h"
-#import "BillboardCollectionViewCell.h"
+#import "BillboardFilmCollectionViewCell.h"
 
 @interface CollectionFilmsCollectionViewCell ()
 
@@ -32,8 +32,8 @@
     
     [self.filmsCollectionView addSubview:self.refreshControl];
     
-    [self.filmsCollectionView registerNib:[UINib nibWithNibName:NSStringFromClass([BillboardCollectionViewCell class]) bundle:nil]
-               forCellWithReuseIdentifier:NSStringFromClass([BillboardCollectionViewCell class])];
+    [self.filmsCollectionView registerNib:[UINib nibWithNibName:NSStringFromClass([BillboardFilmCollectionViewCell class]) bundle:nil]
+               forCellWithReuseIdentifier:NSStringFromClass([BillboardFilmCollectionViewCell class])];
 }
 
 - (void)configRefreshControl

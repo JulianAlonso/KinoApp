@@ -9,8 +9,8 @@
 #import <AFNetworking/UIImageView+AFNetworking.h>
 #import "BillboardFilmsCollectionDelegate.h"
 #import "CollectionFilmsCollectionViewCell.h"
-#import "BillboardCollectionViewCell.h"
 #import "FilmDTO.h"
+#import "BillboardFilmCollectionViewCell.h"
 
 @interface BillboardFilmsCollectionDelegate ()
 
@@ -20,7 +20,6 @@
 
 @implementation BillboardFilmsCollectionDelegate
 
-@synthesize router = _router;
 @synthesize interactor = _interactor;
 @synthesize filmsCollectionView = _filmsCollectionView;
 
@@ -41,12 +40,13 @@
         [strongSelf.filmsCollectionView reloadData];
         [sender endRefreshing];
     }];
+    
 }
 
 #pragma mark - Collection data source methods.
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    BillboardCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([BillboardCollectionViewCell class]) forIndexPath:indexPath];
+    BillboardFilmCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([BillboardFilmCollectionViewCell class]) forIndexPath:indexPath];
     
     FilmDTO *film = self.films[indexPath.item];
     
@@ -69,7 +69,7 @@
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     FilmDTO *film = self.films[indexPath.item];
-    NSLog(@"Title: %@", film.filmTitle);
+    [self.eventReceiver billboardFilmCollectionViewCellSelectedWithFilmDTO:film];
 }
 
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section
@@ -88,6 +88,6 @@
     CGFloat height = CGRectGetHeight(collectionView.bounds) /2;
     
     return CGSizeMake(width, height);
-}
+}   
 
 @end

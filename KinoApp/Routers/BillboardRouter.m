@@ -15,6 +15,7 @@
 #import "LoadUpcomingFilmsInteractor.h"
 #import "LocalCoreDataFilmsProvider.h"
 #import "BillboardFilmsCollectionDelegate.h"
+#import "FilmDTO.h"
 
 @implementation BillboardRouter
 
@@ -22,6 +23,7 @@
 {
     BillboardViewController *billboardViewController = [[BillboardViewController alloc] init];
     billboardViewController.tabBarItem.title = @"Billboard";
+    billboardViewController.router = self;
     
     BillboardCollectionDelegate *billboardDelegate = [BillboardCollectionDelegate new];
     ExternalTMDBProvider *externalFilmsProvider = [ExternalTMDBProvider new];
@@ -32,21 +34,29 @@
     LoadPlayingNowInteractor *loadPlayingNowInteractor = [LoadPlayingNowInteractor new];
     loadPlayingNowInteractor.externalProvider = externalFilmsProvider;
     loadPlayingNowInteractor.localProvider = localFilmsProvider;
-    playingNowDelegate.router = self;
     playingNowDelegate.interactor = loadPlayingNowInteractor;
+    playingNowDelegate.eventReceiver = billboardViewController;
     
     //Upcoming collection delegate creation
     BillboardFilmsCollectionDelegate *upcomingDelegate = [BillboardFilmsCollectionDelegate new];
     LoadUpcomingFilmsInteractor *loadUpcomingInteractor = [LoadUpcomingFilmsInteractor new];
     loadUpcomingInteractor.externalProvider = externalFilmsProvider;
     loadUpcomingInteractor.localProvider = localFilmsProvider;
-    upcomingDelegate.router = self;
     upcomingDelegate.interactor = loadUpcomingInteractor;
+    upcomingDelegate.eventReceiver = billboardViewController;
     
     billboardDelegate.cellDelegates = @[playingNowDelegate, upcomingDelegate];
     billboardViewController.delegate = billboardDelegate;
     
-    [tabBarController addChildViewController:billboardViewController];
+    UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:billboardViewController];
+    nc.navigationBarHidden = YES;
+    
+    [tabBarController addChildViewController:nc];
+}
+
+- (void)selectedCellWithFilmDTO:(FilmDTO *)filmDTO fromViewController:(UIViewController *)fromViewController
+{
+    NSLog(@"Called from %@, with filmDTO: %@", fromViewController.title, filmDTO.filmTitle);
 }
 
 @end

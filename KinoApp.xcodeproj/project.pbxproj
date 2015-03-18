@@ -22,8 +22,8 @@
 		01068F301AB725490017F91A /* BillboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01068F2E1AB725490017F91A /* BillboardViewController.m */; };
 		01068F311AB725490017F91A /* BillboardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01068F2F1AB725490017F91A /* BillboardViewController.xib */; };
 		01068F341AB725630017F91A /* BillboardRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 01068F331AB725630017F91A /* BillboardRouter.m */; };
-		01068F3B1AB72D480017F91A /* BillboardCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 01068F391AB72D480017F91A /* BillboardCollectionViewCell.m */; };
-		01068F3C1AB72D480017F91A /* BillboardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01068F3A1AB72D480017F91A /* BillboardCollectionViewCell.xib */; };
+		01068F3B1AB72D480017F91A /* BillboardFilmCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 01068F391AB72D480017F91A /* BillboardFilmCollectionViewCell.m */; };
+		01068F3C1AB72D480017F91A /* BillboardFilmCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01068F3A1AB72D480017F91A /* BillboardFilmCollectionViewCell.xib */; };
 		01068F401AB72ECB0017F91A /* BillboardCollectionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 01068F3F1AB72ECB0017F91A /* BillboardCollectionDelegate.m */; };
 		01068F471AB747F00017F91A /* ExternalTMDBProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 01068F461AB747F00017F91A /* ExternalTMDBProvider.m */; };
 		01068F4A1AB74E1F0017F91A /* LoadUpcomingFilmsInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 01068F491AB74E1F0017F91A /* LoadUpcomingFilmsInteractor.m */; };
@@ -31,6 +31,8 @@
 		01068F511AB752840017F91A /* CollectionFilmsCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 01068F4F1AB752840017F91A /* CollectionFilmsCollectionViewCell.m */; };
 		01068F521AB752840017F91A /* CollectionFilmsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01068F501AB752840017F91A /* CollectionFilmsCollectionViewCell.xib */; };
 		01068F581AB7546A0017F91A /* BillboardFilmsCollectionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 01068F571AB7546A0017F91A /* BillboardFilmsCollectionDelegate.m */; };
+		012C6B7F1AB99F580060A49C /* FilmDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 012C6B7D1AB99F580060A49C /* FilmDetailViewController.m */; };
+		012C6B801AB99F580060A49C /* FilmDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 012C6B7E1AB99F580060A49C /* FilmDetailViewController.xib */; };
 		0158344A1AB8223B007E0AC4 /* APIVars.m in Sources */ = {isa = PBXBuildFile; fileRef = 015834491AB8223B007E0AC4 /* APIVars.m */; };
 		0158344F1AB84AAA007E0AC4 /* RequestManagerFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 0158344E1AB84AAA007E0AC4 /* RequestManagerFactory.m */; };
 		015834521AB84E93007E0AC4 /* JARequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 015834511AB84E93007E0AC4 /* JARequestManager.m */; };
@@ -81,9 +83,9 @@
 		01068F2F1AB725490017F91A /* BillboardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BillboardViewController.xib; path = ViewControllers/BillboardViewController.xib; sourceTree = "<group>"; };
 		01068F321AB725630017F91A /* BillboardRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BillboardRouter.h; path = Routers/BillboardRouter.h; sourceTree = "<group>"; };
 		01068F331AB725630017F91A /* BillboardRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BillboardRouter.m; path = Routers/BillboardRouter.m; sourceTree = "<group>"; };
-		01068F381AB72D480017F91A /* BillboardCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BillboardCollectionViewCell.h; path = Views/BillboardCollectionViewCell.h; sourceTree = "<group>"; };
-		01068F391AB72D480017F91A /* BillboardCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BillboardCollectionViewCell.m; path = Views/BillboardCollectionViewCell.m; sourceTree = "<group>"; };
-		01068F3A1AB72D480017F91A /* BillboardCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BillboardCollectionViewCell.xib; path = Views/BillboardCollectionViewCell.xib; sourceTree = "<group>"; };
+		01068F381AB72D480017F91A /* BillboardFilmCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BillboardFilmCollectionViewCell.h; path = Views/BillboardFilmCollectionViewCell.h; sourceTree = "<group>"; };
+		01068F391AB72D480017F91A /* BillboardFilmCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BillboardFilmCollectionViewCell.m; path = Views/BillboardFilmCollectionViewCell.m; sourceTree = "<group>"; };
+		01068F3A1AB72D480017F91A /* BillboardFilmCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BillboardFilmCollectionViewCell.xib; path = Views/BillboardFilmCollectionViewCell.xib; sourceTree = "<group>"; };
 		01068F3E1AB72ECB0017F91A /* BillboardCollectionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BillboardCollectionDelegate.h; path = Delegates/BillboardCollectionDelegate.h; sourceTree = "<group>"; };
 		01068F3F1AB72ECB0017F91A /* BillboardCollectionDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BillboardCollectionDelegate.m; path = Delegates/BillboardCollectionDelegate.m; sourceTree = "<group>"; };
 		01068F411AB733730017F91A /* BillboardCollectionDelegateProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BillboardCollectionDelegateProtocol.h; path = Delegates/BillboardCollectionDelegateProtocol.h; sourceTree = "<group>"; };
@@ -101,6 +103,10 @@
 		01068F571AB7546A0017F91A /* BillboardFilmsCollectionDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BillboardFilmsCollectionDelegate.m; path = Delegates/BillboardFilmsCollectionDelegate.m; sourceTree = "<group>"; };
 		01068F591AB754810017F91A /* FilmsCollectionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FilmsCollectionDelegate.h; path = Delegates/FilmsCollectionDelegate.h; sourceTree = "<group>"; };
 		01068F5A1AB7558F0017F91A /* BillboardFilmsInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BillboardFilmsInteractor.h; path = Interactors/BillboardFilmsInteractor.h; sourceTree = "<group>"; };
+		012C6B7C1AB99F580060A49C /* FilmDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FilmDetailViewController.h; path = ViewControllers/FilmDetailViewController.h; sourceTree = "<group>"; };
+		012C6B7D1AB99F580060A49C /* FilmDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FilmDetailViewController.m; path = ViewControllers/FilmDetailViewController.m; sourceTree = "<group>"; };
+		012C6B7E1AB99F580060A49C /* FilmDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FilmDetailViewController.xib; path = ViewControllers/FilmDetailViewController.xib; sourceTree = "<group>"; };
+		012C6B821AB9A3D00060A49C /* BillboardFilmCollectionEventReceiver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BillboardFilmCollectionEventReceiver.h; path = Delegates/EventReceiver/BillboardFilmCollectionEventReceiver.h; sourceTree = "<group>"; };
 		015834481AB8223B007E0AC4 /* APIVars.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APIVars.h; path = Master/APIVars.h; sourceTree = "<group>"; };
 		015834491AB8223B007E0AC4 /* APIVars.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = APIVars.m; path = Master/APIVars.m; sourceTree = "<group>"; };
 		0158344B1AB84A88007E0AC4 /* RequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RequestManager.h; path = RequestManagers/RequestManager.h; sourceTree = "<group>"; };
@@ -276,6 +282,9 @@
 				01068F2D1AB725490017F91A /* BillboardViewController.h */,
 				01068F2E1AB725490017F91A /* BillboardViewController.m */,
 				01068F2F1AB725490017F91A /* BillboardViewController.xib */,
+				012C6B7C1AB99F580060A49C /* FilmDetailViewController.h */,
+				012C6B7D1AB99F580060A49C /* FilmDetailViewController.m */,
+				012C6B7E1AB99F580060A49C /* FilmDetailViewController.xib */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -296,9 +305,9 @@
 			isa = PBXGroup;
 			children = (
 				01068EFE1AB703CE0017F91A /* Main.storyboard */,
-				01068F381AB72D480017F91A /* BillboardCollectionViewCell.h */,
-				01068F391AB72D480017F91A /* BillboardCollectionViewCell.m */,
-				01068F3A1AB72D480017F91A /* BillboardCollectionViewCell.xib */,
+				01068F381AB72D480017F91A /* BillboardFilmCollectionViewCell.h */,
+				01068F391AB72D480017F91A /* BillboardFilmCollectionViewCell.m */,
+				01068F3A1AB72D480017F91A /* BillboardFilmCollectionViewCell.xib */,
 				01068F4E1AB752840017F91A /* CollectionFilmsCollectionViewCell.h */,
 				01068F4F1AB752840017F91A /* CollectionFilmsCollectionViewCell.m */,
 				01068F501AB752840017F91A /* CollectionFilmsCollectionViewCell.xib */,
@@ -309,6 +318,7 @@
 		01068F3D1AB72EB00017F91A /* Delegates */ = {
 			isa = PBXGroup;
 			children = (
+				012C6B811AB9A37D0060A49C /* EventsReceivers */,
 				01068F3E1AB72ECB0017F91A /* BillboardCollectionDelegate.h */,
 				01068F3F1AB72ECB0017F91A /* BillboardCollectionDelegate.m */,
 				01068F411AB733730017F91A /* BillboardCollectionDelegateProtocol.h */,
@@ -317,6 +327,14 @@
 				01068F591AB754810017F91A /* FilmsCollectionDelegate.h */,
 			);
 			name = Delegates;
+			sourceTree = "<group>";
+		};
+		012C6B811AB9A37D0060A49C /* EventsReceivers */ = {
+			isa = PBXGroup;
+			children = (
+				012C6B821AB9A3D00060A49C /* BillboardFilmCollectionEventReceiver.h */,
+			);
+			name = EventsReceivers;
 			sourceTree = "<group>";
 		};
 		015834471AB821D3007E0AC4 /* Master */ = {
@@ -474,13 +492,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01068F3C1AB72D480017F91A /* BillboardCollectionViewCell.xib in Resources */,
+				01068F3C1AB72D480017F91A /* BillboardFilmCollectionViewCell.xib in Resources */,
 				01068EFF1AB703CE0017F91A /* Main.storyboard in Resources */,
 				01068EDF1AB7011D0017F91A /* LaunchScreen.xib in Resources */,
 				01068F521AB752840017F91A /* CollectionFilmsCollectionViewCell.xib in Resources */,
 				01068F2C1AB724A80017F91A /* ActivityViewController.xib in Resources */,
 				01068F311AB725490017F91A /* BillboardViewController.xib in Resources */,
 				01068EDC1AB7011D0017F91A /* Images.xcassets in Resources */,
+				012C6B801AB99F580060A49C /* FilmDetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -542,8 +561,9 @@
 				01068ED11AB7011D0017F91A /* AppDelegate.m in Sources */,
 				018F9DCD1AB896200046D3C4 /* LocalCoreDataFilmsProvider.m in Sources */,
 				01068F271AB724620017F91A /* ActivityRouter.m in Sources */,
+				012C6B7F1AB99F580060A49C /* FilmDetailViewController.m in Sources */,
 				018F9DD71AB8AAF50046D3C4 /* Film.m in Sources */,
-				01068F3B1AB72D480017F91A /* BillboardCollectionViewCell.m in Sources */,
+				01068F3B1AB72D480017F91A /* BillboardFilmCollectionViewCell.m in Sources */,
 				01068F511AB752840017F91A /* CollectionFilmsCollectionViewCell.m in Sources */,
 				018F9DD01AB896F90046D3C4 /* CoreDataManager.m in Sources */,
 				015834521AB84E93007E0AC4 /* JARequestManager.m in Sources */,

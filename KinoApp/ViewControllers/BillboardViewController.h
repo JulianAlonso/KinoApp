@@ -8,11 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import "BillboardCollectionDelegateProtocol.h"
+#import "BillboardFilmCollectionEventReceiver.h"
 
 @class BillboardRouter;
 
 
-@interface BillboardViewController : UIViewController
+@interface BillboardViewController : UIViewController <BillboardFilmCollectionEventReceiver>
+
+@property (nonatomic, strong) BillboardRouter *router;
 
 @property (nonatomic, strong) id<BillboardCollectionDelegateProtocol> delegate;
 

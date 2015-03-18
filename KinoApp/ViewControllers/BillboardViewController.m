@@ -7,8 +7,10 @@
 //
 
 #import "BillboardViewController.h"
-#import "BillboardCollectionViewCell.h"
+#import "BillboardFilmCollectionViewCell.h"
 #import "CollectionFilmsCollectionViewCell.h"
+#import "FilmDTO.h"
+#import "BillboardRouter.h"
 
 @interface BillboardViewController ()
 
@@ -62,6 +64,11 @@
     [self.segmentedControl addTarget:self.delegate action:@selector(valueChangedAtSelectedControl:) forControlEvents:UIControlEventValueChanged];
 }
 
+#pragma mark - BillboardFilmCollectionEventReceiver.
+- (void)billboardFilmCollectionViewCellSelectedWithFilmDTO:(id)filmDTO
+{
+    [self.router selectedCellWithFilmDTO:filmDTO fromViewController:self];
+}
 
 @end
 

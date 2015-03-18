@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BillboardCollectionViewCell : UICollectionViewCell
+@interface BillboardFilmCollectionViewCell : UICollectionViewCell
 
 @property (weak, nonatomic) IBOutlet UIImageView *filmImageView;
 @property (weak, nonatomic) IBOutlet UILabel *filmTitleLabel;

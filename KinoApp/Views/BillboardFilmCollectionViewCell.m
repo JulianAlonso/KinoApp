@@ -6,9 +6,9 @@
 //  Copyright (c) 2015 Julian. All rights reserved.
 //
 
-#import "BillboardCollectionViewCell.h"
+#import "BillboardFilmCollectionViewCell.h"
 
-@implementation BillboardCollectionViewCell
+@implementation BillboardFilmCollectionViewCell
 
 - (void)awakeFromNib {
     // Initialization code

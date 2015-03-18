@@ -8,10 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+@class FilmDTO;
+
 @interface BillboardRouter : NSObject
 
 - (void)loadViewAt:(UITabBarController *)tabBarController;
 
-- (void)cellSelected;
+- (void)selectedCellWithFilmDTO:(FilmDTO *)filmDTO fromViewController:(UIViewController *)fromViewController;
 
 @end

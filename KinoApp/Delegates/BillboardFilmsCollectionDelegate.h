@@ -8,7 +8,10 @@
 
 #import <Foundation/Foundation.h>
 #import "FilmsCollectionDelegate.h"
+#import "BillboardFilmCollectionEventReceiver.h"
 
 @interface BillboardFilmsCollectionDelegate : NSObject <FilmsCollectionDelegate>
+
+@property (nonatomic, weak) id<BillboardFilmCollectionEventReceiver> eventReceiver;
 
 @end
