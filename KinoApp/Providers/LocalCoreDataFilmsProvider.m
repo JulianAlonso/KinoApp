@@ -29,18 +29,18 @@
 {
     [self registerToUpdate];
     self.updatedBlock = completionBlock;
-    __weak typeof(self) weakSelf = self;
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
-        __strong typeof(weakSelf) strongSelf = weakSelf;
-        
+//    __weak typeof(self) weakSelf = self;
+//    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
+//        __strong typeof(weakSelf) strongSelf = weakSelf;
+    
         Film *film;
         for (FilmDTO *filmDTO in films)
         {
             film = [Film initWithFilmDTO:filmDTO andManagedObjectContext:self.privateContext];
         }
         self.lastFilmType = film.filmType;
-        [strongSelf.privateContext save:nil];
-    });
+        [self.privateContext save:nil];
+//    });
 }
 
 - (void)fetchFilmsByFilmType:(NSString *)filmType andCompletion:(void (^)(NSArray *))completionBlock
@@ -48,15 +48,15 @@
     NSFetchRequest *select = [NSFetchRequest fetchRequestWithEntityName:NSStringFromClass([Film class])];
     select.predicate = [NSPredicate predicateWithFormat:@"%K == %@", kFilmTypeProperty, filmType];
     
-    __weak typeof(self) weakSelf = self;
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
-        __strong typeof(weakSelf) strongSelf = weakSelf;
-        
-        NSError *error;
-        NSArray *films = [strongSelf.privateContext executeFetchRequest:select error:&error];
-        
-        completionBlock([FilmDTOParser filmDTOsFromFilmsArray:films]);
-    });
+//    __weak typeof(self) weakSelf = self;
+//    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
+//        __strong typeof(weakSelf) strongSelf = weakSelf;
+    
+    NSError *error;
+    NSArray *films = [self.privateContext executeFetchRequest:select error:&error];
+    
+    completionBlock([FilmDTOParser filmDTOsFromFilmsArray:films]);
+//    });
 }
 
 #pragma mark - Own methods.
