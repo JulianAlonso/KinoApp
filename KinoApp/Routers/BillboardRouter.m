@@ -11,10 +11,10 @@
 #import "BillboardCollectionDelegate.h"
 #import "ExternalTMDBProvider.h"
 #import "LoadPlayingNowInteractor.h"
-#import "PlayingNowCollectionDelegate.h"
-#import "UpcomingCollectionDelegate.h"
+#import "FilmsCollectionDelegate.h"
 #import "LoadUpcomingFilmsInteractor.h"
 #import "LocalCoreDataFilmsProvider.h"
+#import "BillboardFilmsCollectionDelegate.h"
 
 @implementation BillboardRouter
 
@@ -22,24 +22,25 @@
 {
     BillboardViewController *billboardViewController = [[BillboardViewController alloc] init];
     billboardViewController.tabBarItem.title = @"Billboard";
-    billboardViewController.router = self;
     
     BillboardCollectionDelegate *billboardDelegate = [BillboardCollectionDelegate new];
     ExternalTMDBProvider *externalFilmsProvider = [ExternalTMDBProvider new];
     LocalCoreDataFilmsProvider *localFilmsProvider = [LocalCoreDataFilmsProvider new];
     
     //Playing now collection delegate creation
-    PlayingNowCollectionDelegate *playingNowDelegate = [PlayingNowCollectionDelegate new];
+    BillboardFilmsCollectionDelegate *playingNowDelegate = [BillboardFilmsCollectionDelegate new];
     LoadPlayingNowInteractor *loadPlayingNowInteractor = [LoadPlayingNowInteractor new];
     loadPlayingNowInteractor.externalProvider = externalFilmsProvider;
     loadPlayingNowInteractor.localProvider = localFilmsProvider;
+    playingNowDelegate.router = self;
     playingNowDelegate.interactor = loadPlayingNowInteractor;
     
     //Upcoming collection delegate creation
-    UpcomingCollectionDelegate *upcomingDelegate = [UpcomingCollectionDelegate new];
+    BillboardFilmsCollectionDelegate *upcomingDelegate = [BillboardFilmsCollectionDelegate new];
     LoadUpcomingFilmsInteractor *loadUpcomingInteractor = [LoadUpcomingFilmsInteractor new];
     loadUpcomingInteractor.externalProvider = externalFilmsProvider;
     loadUpcomingInteractor.localProvider = localFilmsProvider;
+    upcomingDelegate.router = self;
     upcomingDelegate.interactor = loadUpcomingInteractor;
     
     billboardDelegate.cellDelegates = @[playingNowDelegate, upcomingDelegate];

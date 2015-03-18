@@ -7,19 +7,20 @@
 //
 
 #import <AFNetworking/UIImageView+AFNetworking.h>
-#import "PlayingNowCollectionDelegate.h"
+#import "BillboardFilmsCollectionDelegate.h"
 #import "CollectionFilmsCollectionViewCell.h"
 #import "BillboardCollectionViewCell.h"
 #import "FilmDTO.h"
 
-@interface PlayingNowCollectionDelegate ()
+@interface BillboardFilmsCollectionDelegate ()
 
 @property (nonatomic, strong) NSArray *films;
 
 @end
 
-@implementation PlayingNowCollectionDelegate
+@implementation BillboardFilmsCollectionDelegate
 
+@synthesize router = _router;
 @synthesize interactor = _interactor;
 @synthesize filmsCollectionView = _filmsCollectionView;
 

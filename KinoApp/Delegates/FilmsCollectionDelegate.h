@@ -8,10 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "BillboardFilmsInteractor.h"
+#import "BillboardRouter.h"
 
 @protocol FilmsCollectionDelegate <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 
 @property (nonatomic, strong) id<BillboardFilmsInteractor> interactor;
+@property (nonatomic, strong) BillboardRouter *router;
 
 @property (nonatomic, weak) UICollectionView *filmsCollectionView;
 

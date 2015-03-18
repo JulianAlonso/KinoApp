@@ -12,4 +12,6 @@
 
 - (void)loadViewAt:(UITabBarController *)tabBarController;
 
+- (void)cellSelected;
+
 @end

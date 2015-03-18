@@ -14,8 +14,6 @@
 
 @interface BillboardViewController : UIViewController
 
-@property (nonatomic, strong) BillboardRouter *router;
-
 @property (nonatomic, strong) id<BillboardCollectionDelegateProtocol> delegate;
 
 @end

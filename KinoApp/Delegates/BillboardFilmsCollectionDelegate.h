@@ -9,6 +9,6 @@
 #import <Foundation/Foundation.h>
 #import "FilmsCollectionDelegate.h"
 
-@interface PlayingNowCollectionDelegate : NSObject <FilmsCollectionDelegate>
+@interface BillboardFilmsCollectionDelegate : NSObject <FilmsCollectionDelegate>
 
 @end
