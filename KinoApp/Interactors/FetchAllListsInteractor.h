@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface FetchAllFilmsInteractor : NSObject
+@interface FetchAllListsInteractor : NSObject
 
 
 

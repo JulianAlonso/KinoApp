@@ -6,8 +6,8 @@
 //  Copyright (c) 2015 Julian. All rights reserved.
 //
 
-#import "FetchAllFilmsInteractor.h"
+#import "FetchAllListsInteractor.h"
 
-@implementation FetchAllFilmsInteractor
+@implementation FetchAllListsInteractor
 
 @end
