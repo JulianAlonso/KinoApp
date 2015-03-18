@@ -32,15 +32,16 @@
         
         strongSelf.films = films;
         [strongSelf.filmsCollectionView reloadData];
+        [strongSelf.filmsCollectionView layoutIfNeeded];
         
     } update:^(NSArray *films) {
         __strong typeof(weakSelf) strongSelf = weakSelf;
         
         strongSelf.films = films;
         [strongSelf.filmsCollectionView reloadData];
+        [strongSelf.filmsCollectionView layoutIfNeeded];
+        [sender endRefreshing];
     }];
-    
-    [sender endRefreshing];
 }
 
 #pragma mark - Collection data source methods.
@@ -52,7 +53,10 @@
     
     cell.filmTitleLabel.text = film.filmTitle;
     
-    [cell.filmImageView sd_setImageWithURL:[NSURL URLWithString:film.filmPosterPath]];
+    [cell.filmImageView sd_setImageWithURL:[NSURL URLWithString:film.filmPosterPath] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+        [cell layoutIfNeeded];
+        [collectionView layoutIfNeeded];
+    }];
     
     return cell;
 }

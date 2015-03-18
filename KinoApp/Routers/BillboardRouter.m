@@ -39,7 +39,7 @@
     UpcomingCollectionDelegate *upcomingDelegate = [UpcomingCollectionDelegate new];
     LoadUpcomingFilmsInteractor *loadUpcomingInteractor = [LoadUpcomingFilmsInteractor new];
     loadUpcomingInteractor.externalProvider = externalFilmsProvider;
-    loadPlayingNowInteractor.localProvider = localFilmsProvider;
+    loadUpcomingInteractor.localProvider = localFilmsProvider;
     upcomingDelegate.interactor = loadUpcomingInteractor;
     
     billboardDelegate.cellDelegates = @[playingNowDelegate, upcomingDelegate];
