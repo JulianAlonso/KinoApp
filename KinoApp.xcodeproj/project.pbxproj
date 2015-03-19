@@ -35,6 +35,7 @@
 		0117597B1ABB3B1200724BC5 /* ListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 011759791ABB3B1200724BC5 /* ListTableViewCell.m */; };
 		0117597C1ABB3B1200724BC5 /* ListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0117597A1ABB3B1200724BC5 /* ListTableViewCell.xib */; };
 		0117597F1ABB410600724BC5 /* SelectListRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0117597E1ABB410600724BC5 /* SelectListRouter.m */; };
+		011759831ABB429E00724BC5 /* SelectListModalTransitionAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 011759821ABB429E00724BC5 /* SelectListModalTransitionAnimator.m */; };
 		012C6B7F1AB99F580060A49C /* FilmDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 012C6B7D1AB99F580060A49C /* FilmDetailViewController.m */; };
 		012C6B801AB99F580060A49C /* FilmDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 012C6B7E1AB99F580060A49C /* FilmDetailViewController.xib */; };
 		012C6B851AB9C3EE0060A49C /* DetailFilmRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 012C6B841AB9C3EE0060A49C /* DetailFilmRouter.m */; };
@@ -127,6 +128,8 @@
 		0117597A1ABB3B1200724BC5 /* ListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ListTableViewCell.xib; path = Views/ListTableViewCell.xib; sourceTree = "<group>"; };
 		0117597D1ABB410600724BC5 /* SelectListRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SelectListRouter.h; path = Routers/SelectListRouter.h; sourceTree = "<group>"; };
 		0117597E1ABB410600724BC5 /* SelectListRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SelectListRouter.m; path = Routers/SelectListRouter.m; sourceTree = "<group>"; };
+		011759811ABB429E00724BC5 /* SelectListModalTransitionAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SelectListModalTransitionAnimator.h; path = Transitions/SelectListModalTransitionAnimator.h; sourceTree = "<group>"; };
+		011759821ABB429E00724BC5 /* SelectListModalTransitionAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SelectListModalTransitionAnimator.m; path = Transitions/SelectListModalTransitionAnimator.m; sourceTree = "<group>"; };
 		012C6B7C1AB99F580060A49C /* FilmDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FilmDetailViewController.h; path = ViewControllers/FilmDetailViewController.h; sourceTree = "<group>"; };
 		012C6B7D1AB99F580060A49C /* FilmDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FilmDetailViewController.m; path = ViewControllers/FilmDetailViewController.m; sourceTree = "<group>"; };
 		012C6B7E1AB99F580060A49C /* FilmDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FilmDetailViewController.xib; path = ViewControllers/FilmDetailViewController.xib; sourceTree = "<group>"; };
@@ -231,6 +234,7 @@
 				015834581AB864ED007E0AC4 /* Entities */,
 				018F9DD11AB89B2A0046D3C4 /* Categories */,
 				01068EF41AB701D10017F91A /* Routers */,
+				011759801ABB424E00724BC5 /* Transitions */,
 				015834571AB8635B007E0AC4 /* Parsers */,
 				015834531AB862A4007E0AC4 /* Helpers */,
 				01068EF71AB701EA0017F91A /* RequestManagers */,
@@ -238,9 +242,9 @@
 				01068EF61AB701E40017F91A /* Providers */,
 				01068EF51AB701DA0017F91A /* Interactors */,
 				01068F3D1AB72EB00017F91A /* Delegates */,
+				012C6B9D1ABA0EBA0060A49C /* Controllers */,
 				01068EF81AB701F40017F91A /* ViewControllers */,
 				01068EFD1AB703B40017F91A /* Views */,
-				012C6B9D1ABA0EBA0060A49C /* Controllers */,
 				01068EF91AB702A30017F91A /* CoreData */,
 				01068EDB1AB7011D0017F91A /* Images.xcassets */,
 				01068EDD1AB7011D0017F91A /* LaunchScreen.xib */,
@@ -394,6 +398,15 @@
 				01068F591AB754810017F91A /* FilmsCollectionDelegate.h */,
 			);
 			name = Delegates;
+			sourceTree = "<group>";
+		};
+		011759801ABB424E00724BC5 /* Transitions */ = {
+			isa = PBXGroup;
+			children = (
+				011759811ABB429E00724BC5 /* SelectListModalTransitionAnimator.h */,
+				011759821ABB429E00724BC5 /* SelectListModalTransitionAnimator.m */,
+			);
+			name = Transitions;
 			sourceTree = "<group>";
 		};
 		012C6B811AB9A37D0060A49C /* EventsReceivers */ = {
@@ -656,6 +669,7 @@
 				01068F581AB7546A0017F91A /* BillboardFilmsCollectionDelegate.m in Sources */,
 				01068EFC1AB702CC0017F91A /* CoreDataStack.m in Sources */,
 				01068F051AB710D70017F91A /* MainRouter.m in Sources */,
+				011759831ABB429E00724BC5 /* SelectListModalTransitionAnimator.m in Sources */,
 				01068F4A1AB74E1F0017F91A /* LoadUpcomingFilmsInteractor.m in Sources */,
 				0158344F1AB84AAA007E0AC4 /* RequestManagerFactory.m in Sources */,
 				01068F301AB725490017F91A /* BillboardViewController.m in Sources */,

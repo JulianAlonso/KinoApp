@@ -16,6 +16,6 @@
 
 @property (nonatomic, strong) id<LocalListsProvider> localProvider;
 
-- (void)addFilm:(FilmDTO *)film toList:(ListDTO *)list completion:(void (^)(NSError *))completion;
+- (void)addFilm:(FilmDTO *)film toList:(ListDTO *)list completion:(void (^)(NSError *error))completion;
 
 @end

@@ -11,6 +11,8 @@
 @class FilmDTO;
 @class DetailFilmRouter;
 @class LoadFilmInteractor;
+@class AddFilmToListInteractor;
+@class ListDTO;
 
 @interface FilmDetailViewController : UIViewController
 
@@ -18,5 +20,8 @@
 @property (nonatomic, strong) FilmDTO *film;
 
 @property (nonatomic, strong) LoadFilmInteractor *interactor;
+@property (nonatomic, strong) AddFilmToListInteractor *addFilmInteractor;
+
+- (void)saveFilmToList:(ListDTO *)list;
 
 @end

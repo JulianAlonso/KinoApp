@@ -6,8 +6,15 @@
 //  Copyright (c) 2015 Julian. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+
+@class ListDTO;
+@class SelectListViewController;
 
 @interface SelectListRouter : NSObject
+
+- (void)presentModallyFromViewController:(UINavigationController *)fromNavigationController andRouter:(id)router;
+
+- (void)selectedList:(ListDTO *)list fromViewController:(SelectListViewController *)fromViewController;
 
 @end

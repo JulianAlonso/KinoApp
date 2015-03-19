@@ -11,6 +11,8 @@
 #import "FilmDTO.h"
 #import "LoadFilmInteractor.h"
 #import "DetailFilmRouter.h"
+#import "AddFilmToListInteractor.h"
+#import "ListDTO.h"
 
 @interface FilmDetailViewController ()
 
@@ -42,6 +44,11 @@
 - (void)viewDidLayoutSubviews
 {
     self.bottomConstraint.constant = self.bottomLayoutGuide.length;
+}
+
+- (void) viewDidAppear:(BOOL)animated
+{
+    [self.navigationController setNavigationBarHidden:NO animated:animated];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -104,6 +111,15 @@
 - (void)addButtonPressed:(UIBarButtonItem *)sender
 {
     [self.router addButtonPressedFrom:self withFilmDTO:self.film];
+}
+
+#pragma mark - Extern methods.
+- (void)saveFilmToList:(ListDTO *)list
+{
+    __weak typeof(self) weakSelf = self;
+    [self.addFilmInteractor addFilm:self.film toList:list completion:^(NSError *error) {
+        NSLog(@"Saved film: %@ to list: %@", weakSelf.film.filmTitle, list.listName);
+    }];
 }
 
 @end

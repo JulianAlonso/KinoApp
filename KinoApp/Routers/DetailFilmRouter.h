@@ -9,11 +9,14 @@
 #import <UIKit/UIKit.h>
 
 @class FilmDTO;
+@class ListDTO;
 
 @interface DetailFilmRouter : UIViewController
 
 - (void)presentFilmDetailViewControllerFrom:(UINavigationController *)navigationController withFilmDTO:(FilmDTO *)film;
 
 - (void)addButtonPressedFrom:(UIViewController *)fromViewController withFilmDTO:(FilmDTO *)film;
+
+- (void)dismissedSelectListViewControllerWithSelectedList:(ListDTO *)list;
 
 @end

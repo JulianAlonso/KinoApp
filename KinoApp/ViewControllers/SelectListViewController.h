@@ -7,11 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "FetchAllListsInteractor.h"
+
+@class SelectListRouter;
+@class FetchAllListsInteractor;
 
 @interface SelectListViewController : UIViewController
 
-@property (nonatomic, strong) id router;
+@property (nonatomic, strong) SelectListRouter *router;
+@property (nonatomic, strong) id presentingRouter;
 
 @property (nonatomic, strong) FetchAllListsInteractor *interactor;
 

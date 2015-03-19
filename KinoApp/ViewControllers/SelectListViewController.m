@@ -9,8 +9,12 @@
 #import "SelectListViewController.h"
 #import "ListTableViewCell.h"
 #import "ListDTO.h"
+#import "SelectListRouter.h"
+#import "FetchAllListsInteractor.h"
 
 @interface SelectListViewController () <UITableViewDataSource, UITableViewDelegate>
+
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *topConstraint;
 
 @property (weak, nonatomic) IBOutlet UITableView *selectListTableView;
 
@@ -22,10 +26,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self configTableView];
+    [self updateLists];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+}
+
+- (void)viewDidLayoutSubviews
+{
+    self.topConstraint.constant = self.topLayoutGuide.length;
 }
 
 #pragma mark - Config methods.
@@ -70,7 +82,7 @@
 #pragma mark - Delegate methods.
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-//    [self.router selectedList:self.lists[indexPath.row]];
+    [self.router selectedList:self.lists[indexPath.row] fromViewController:self];
 }
 
 @end

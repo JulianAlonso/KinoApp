@@ -46,9 +46,9 @@
     [self fetchListWithName:list.listName completion:^(List *list) {
         __strong typeof(weakSelf) strongSelf = weakSelf;
         
-        Film *film = [strongSelf fetchFilmById:film.filmId];
+        Film *filmMO = [strongSelf fetchFilmById:film.filmId];
         
-        [list addListFilmsObject:film];
+        [list addListFilmsObject:filmMO];
         
         NSError *error;
         [strongSelf.privateContext save:&error];
