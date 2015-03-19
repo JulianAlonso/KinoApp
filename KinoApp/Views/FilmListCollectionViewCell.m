@@ -6,9 +6,9 @@
 //  Copyright (c) 2015 Julian. All rights reserved.
 //
 
-#import "ListCollectionViewCell.h"
+#import "FilmListCollectionViewCell.h"
 
-@implementation ListCollectionViewCell
+@implementation FilmListCollectionViewCell
 
 - (void)awakeFromNib
 {

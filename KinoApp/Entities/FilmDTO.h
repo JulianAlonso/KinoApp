@@ -11,6 +11,8 @@
 extern NSString *const TYPE_PLAYIN_NOW;
 extern NSString *const TYPE_UPCOMING;
 
+extern NSString *const kPosterPathProperty;
+
 @interface FilmDTO : NSObject
 
 @property (nonatomic, strong) NSString *filmId;

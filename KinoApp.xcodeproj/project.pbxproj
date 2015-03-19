@@ -28,6 +28,7 @@
 		01068F511AB752840017F91A /* CollectionFilmsCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 01068F4F1AB752840017F91A /* CollectionFilmsCollectionViewCell.m */; };
 		01068F521AB752840017F91A /* CollectionFilmsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01068F501AB752840017F91A /* CollectionFilmsCollectionViewCell.xib */; };
 		01068F581AB7546A0017F91A /* BillboardFilmsCollectionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 01068F571AB7546A0017F91A /* BillboardFilmsCollectionDelegate.m */; };
+		0117596F1ABAF5E700724BC5 /* ControllersFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 0117596E1ABAF5E700724BC5 /* ControllersFactory.m */; };
 		012C6B7F1AB99F580060A49C /* FilmDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 012C6B7D1AB99F580060A49C /* FilmDetailViewController.m */; };
 		012C6B801AB99F580060A49C /* FilmDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 012C6B7E1AB99F580060A49C /* FilmDetailViewController.xib */; };
 		012C6B851AB9C3EE0060A49C /* DetailFilmRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 012C6B841AB9C3EE0060A49C /* DetailFilmRouter.m */; };
@@ -36,12 +37,13 @@
 		012C6B8F1ABA006D0060A49C /* ListsCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 012C6B8D1ABA006D0060A49C /* ListsCollectionViewController.m */; };
 		012C6B901ABA006D0060A49C /* ListsCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 012C6B8E1ABA006D0060A49C /* ListsCollectionViewController.xib */; };
 		012C6B931ABA01560060A49C /* ListsCollectionRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 012C6B921ABA01560060A49C /* ListsCollectionRouter.m */; };
-		012C6B971ABA0A070060A49C /* ListCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 012C6B951ABA0A070060A49C /* ListCollectionViewCell.m */; };
-		012C6B981ABA0A070060A49C /* ListCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 012C6B961ABA0A070060A49C /* ListCollectionViewCell.xib */; };
-		012C6BA01ABA0EE70060A49C /* ListCollectionViewCellController.m in Sources */ = {isa = PBXBuildFile; fileRef = 012C6B9F1ABA0EE70060A49C /* ListCollectionViewCellController.m */; };
+		012C6B971ABA0A070060A49C /* FilmListCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 012C6B951ABA0A070060A49C /* FilmListCollectionViewCell.m */; };
+		012C6B981ABA0A070060A49C /* FilmListCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 012C6B961ABA0A070060A49C /* FilmListCollectionViewCell.xib */; };
+		012C6BA01ABA0EE70060A49C /* FilmListCollectionViewCellController.m in Sources */ = {isa = PBXBuildFile; fileRef = 012C6B9F1ABA0EE70060A49C /* FilmListCollectionViewCellController.m */; };
 		012C6BA61ABA107D0060A49C /* ListDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = 012C6BA51ABA107D0060A49C /* ListDTO.m */; };
 		012C6BAB1ABA14A70060A49C /* LocalCoreDataListsProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 012C6BAA1ABA14A70060A49C /* LocalCoreDataListsProvider.m */; };
 		013955681ABAD7A500BC745D /* List.m in Sources */ = {isa = PBXBuildFile; fileRef = 013955671ABAD7A500BC745D /* List.m */; };
+		0139556B1ABAD8EA00BC745D /* ListDTOParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 0139556A1ABAD8EA00BC745D /* ListDTOParser.m */; };
 		0158344A1AB8223B007E0AC4 /* APIVars.m in Sources */ = {isa = PBXBuildFile; fileRef = 015834491AB8223B007E0AC4 /* APIVars.m */; };
 		0158344F1AB84AAA007E0AC4 /* RequestManagerFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 0158344E1AB84AAA007E0AC4 /* RequestManagerFactory.m */; };
 		015834521AB84E93007E0AC4 /* JARequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 015834511AB84E93007E0AC4 /* JARequestManager.m */; };
@@ -107,6 +109,8 @@
 		01068F571AB7546A0017F91A /* BillboardFilmsCollectionDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BillboardFilmsCollectionDelegate.m; path = Delegates/BillboardFilmsCollectionDelegate.m; sourceTree = "<group>"; };
 		01068F591AB754810017F91A /* FilmsCollectionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FilmsCollectionDelegate.h; path = Delegates/FilmsCollectionDelegate.h; sourceTree = "<group>"; };
 		01068F5A1AB7558F0017F91A /* BillboardFilmsInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BillboardFilmsInteractor.h; path = Interactors/BillboardFilmsInteractor.h; sourceTree = "<group>"; };
+		0117596D1ABAF5E700724BC5 /* ControllersFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ControllersFactory.h; path = Factories/ControllersFactory.h; sourceTree = "<group>"; };
+		0117596E1ABAF5E700724BC5 /* ControllersFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ControllersFactory.m; path = Factories/ControllersFactory.m; sourceTree = "<group>"; };
 		012C6B7C1AB99F580060A49C /* FilmDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FilmDetailViewController.h; path = ViewControllers/FilmDetailViewController.h; sourceTree = "<group>"; };
 		012C6B7D1AB99F580060A49C /* FilmDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FilmDetailViewController.m; path = ViewControllers/FilmDetailViewController.m; sourceTree = "<group>"; };
 		012C6B7E1AB99F580060A49C /* FilmDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FilmDetailViewController.xib; path = ViewControllers/FilmDetailViewController.xib; sourceTree = "<group>"; };
@@ -122,11 +126,11 @@
 		012C6B8E1ABA006D0060A49C /* ListsCollectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ListsCollectionViewController.xib; path = ViewControllers/ListsCollectionViewController.xib; sourceTree = "<group>"; };
 		012C6B911ABA01560060A49C /* ListsCollectionRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ListsCollectionRouter.h; path = Routers/ListsCollectionRouter.h; sourceTree = "<group>"; };
 		012C6B921ABA01560060A49C /* ListsCollectionRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ListsCollectionRouter.m; path = Routers/ListsCollectionRouter.m; sourceTree = "<group>"; };
-		012C6B941ABA0A070060A49C /* ListCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ListCollectionViewCell.h; path = Views/ListCollectionViewCell.h; sourceTree = "<group>"; };
-		012C6B951ABA0A070060A49C /* ListCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ListCollectionViewCell.m; path = Views/ListCollectionViewCell.m; sourceTree = "<group>"; };
-		012C6B961ABA0A070060A49C /* ListCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ListCollectionViewCell.xib; path = Views/ListCollectionViewCell.xib; sourceTree = "<group>"; };
-		012C6B9E1ABA0EE70060A49C /* ListCollectionViewCellController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ListCollectionViewCellController.h; path = Controllers/ListCollectionViewCellController.h; sourceTree = "<group>"; };
-		012C6B9F1ABA0EE70060A49C /* ListCollectionViewCellController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ListCollectionViewCellController.m; path = Controllers/ListCollectionViewCellController.m; sourceTree = "<group>"; };
+		012C6B941ABA0A070060A49C /* FilmListCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FilmListCollectionViewCell.h; path = Views/FilmListCollectionViewCell.h; sourceTree = "<group>"; };
+		012C6B951ABA0A070060A49C /* FilmListCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FilmListCollectionViewCell.m; path = Views/FilmListCollectionViewCell.m; sourceTree = "<group>"; };
+		012C6B961ABA0A070060A49C /* FilmListCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FilmListCollectionViewCell.xib; path = Views/FilmListCollectionViewCell.xib; sourceTree = "<group>"; };
+		012C6B9E1ABA0EE70060A49C /* FilmListCollectionViewCellController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FilmListCollectionViewCellController.h; path = Controllers/FilmListCollectionViewCellController.h; sourceTree = "<group>"; };
+		012C6B9F1ABA0EE70060A49C /* FilmListCollectionViewCellController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FilmListCollectionViewCellController.m; path = Controllers/FilmListCollectionViewCellController.m; sourceTree = "<group>"; };
 		012C6BA41ABA107D0060A49C /* ListDTO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ListDTO.h; path = Entities/ListDTO.h; sourceTree = "<group>"; };
 		012C6BA51ABA107D0060A49C /* ListDTO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ListDTO.m; path = Entities/ListDTO.m; sourceTree = "<group>"; };
 		012C6BA81ABA13C30060A49C /* LocalListsProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocalListsProvider.h; path = Providers/LocalListsProvider.h; sourceTree = "<group>"; };
@@ -134,6 +138,8 @@
 		012C6BAA1ABA14A70060A49C /* LocalCoreDataListsProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LocalCoreDataListsProvider.m; path = Providers/LocalCoreDataListsProvider.m; sourceTree = "<group>"; };
 		013955661ABAD7A500BC745D /* List.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = List.h; path = Entities/List.h; sourceTree = "<group>"; };
 		013955671ABAD7A500BC745D /* List.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = List.m; path = Entities/List.m; sourceTree = "<group>"; };
+		013955691ABAD8EA00BC745D /* ListDTOParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ListDTOParser.h; path = Parsers/ListDTOParser.h; sourceTree = "<group>"; };
+		0139556A1ABAD8EA00BC745D /* ListDTOParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ListDTOParser.m; path = Parsers/ListDTOParser.m; sourceTree = "<group>"; };
 		015834481AB8223B007E0AC4 /* APIVars.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APIVars.h; path = Master/APIVars.h; sourceTree = "<group>"; };
 		015834491AB8223B007E0AC4 /* APIVars.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = APIVars.m; path = Master/APIVars.m; sourceTree = "<group>"; };
 		0158344B1AB84A88007E0AC4 /* RequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RequestManager.h; path = RequestManagers/RequestManager.h; sourceTree = "<group>"; };
@@ -348,9 +354,7 @@
 				01068F4E1AB752840017F91A /* CollectionFilmsCollectionViewCell.h */,
 				01068F4F1AB752840017F91A /* CollectionFilmsCollectionViewCell.m */,
 				01068F501AB752840017F91A /* CollectionFilmsCollectionViewCell.xib */,
-				012C6B941ABA0A070060A49C /* ListCollectionViewCell.h */,
-				012C6B951ABA0A070060A49C /* ListCollectionViewCell.m */,
-				012C6B961ABA0A070060A49C /* ListCollectionViewCell.xib */,
+				013955721ABAE05800BC745D /* ListsCells */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -380,10 +384,20 @@
 		012C6B9D1ABA0EBA0060A49C /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				012C6B9E1ABA0EE70060A49C /* ListCollectionViewCellController.h */,
-				012C6B9F1ABA0EE70060A49C /* ListCollectionViewCellController.m */,
+				012C6B9E1ABA0EE70060A49C /* FilmListCollectionViewCellController.h */,
+				012C6B9F1ABA0EE70060A49C /* FilmListCollectionViewCellController.m */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		013955721ABAE05800BC745D /* ListsCells */ = {
+			isa = PBXGroup;
+			children = (
+				012C6B941ABA0A070060A49C /* FilmListCollectionViewCell.h */,
+				012C6B951ABA0A070060A49C /* FilmListCollectionViewCell.m */,
+				012C6B961ABA0A070060A49C /* FilmListCollectionViewCell.xib */,
+			);
+			name = ListsCells;
 			sourceTree = "<group>";
 		};
 		015834471AB821D3007E0AC4 /* Master */ = {
@@ -400,6 +414,8 @@
 			children = (
 				0158344D1AB84AAA007E0AC4 /* RequestManagerFactory.h */,
 				0158344E1AB84AAA007E0AC4 /* RequestManagerFactory.m */,
+				0117596D1ABAF5E700724BC5 /* ControllersFactory.h */,
+				0117596E1ABAF5E700724BC5 /* ControllersFactory.m */,
 			);
 			name = Factories;
 			sourceTree = "<group>";
@@ -418,6 +434,8 @@
 			children = (
 				0158345C1AB86633007E0AC4 /* FilmDTOParser.h */,
 				0158345D1AB86633007E0AC4 /* FilmDTOParser.m */,
+				013955691ABAD8EA00BC745D /* ListDTOParser.h */,
+				0139556A1ABAD8EA00BC745D /* ListDTOParser.m */,
 			);
 			name = Parsers;
 			sourceTree = "<group>";
@@ -550,7 +568,7 @@
 				01068EDF1AB7011D0017F91A /* LaunchScreen.xib in Resources */,
 				012C6B901ABA006D0060A49C /* ListsCollectionViewController.xib in Resources */,
 				01068F521AB752840017F91A /* CollectionFilmsCollectionViewCell.xib in Resources */,
-				012C6B981ABA0A070060A49C /* ListCollectionViewCell.xib in Resources */,
+				012C6B981ABA0A070060A49C /* FilmListCollectionViewCell.xib in Resources */,
 				01068F311AB725490017F91A /* BillboardViewController.xib in Resources */,
 				01068EDC1AB7011D0017F91A /* Images.xcassets in Resources */,
 				012C6B801AB99F580060A49C /* FilmDetailViewController.xib in Resources */,
@@ -612,8 +630,10 @@
 				01068F4A1AB74E1F0017F91A /* LoadUpcomingFilmsInteractor.m in Sources */,
 				0158344F1AB84AAA007E0AC4 /* RequestManagerFactory.m in Sources */,
 				01068F301AB725490017F91A /* BillboardViewController.m in Sources */,
+				0117596F1ABAF5E700724BC5 /* ControllersFactory.m in Sources */,
 				018F9DD41AB89B4D0046D3C4 /* Film+Model.m in Sources */,
-				012C6B971ABA0A070060A49C /* ListCollectionViewCell.m in Sources */,
+				012C6B971ABA0A070060A49C /* FilmListCollectionViewCell.m in Sources */,
+				0139556B1ABAD8EA00BC745D /* ListDTOParser.m in Sources */,
 				01068ED41AB7011D0017F91A /* KinoApp.xcdatamodeld in Sources */,
 				01068ED11AB7011D0017F91A /* AppDelegate.m in Sources */,
 				012C6BAB1ABA14A70060A49C /* LocalCoreDataListsProvider.m in Sources */,
@@ -626,7 +646,7 @@
 				012C6B8B1ABA000E0060A49C /* FetchAllListsInteractor.m in Sources */,
 				012C6B881AB9D3290060A49C /* LoadFilmInteractor.m in Sources */,
 				018F9DD01AB896F90046D3C4 /* CoreDataManager.m in Sources */,
-				012C6BA01ABA0EE70060A49C /* ListCollectionViewCellController.m in Sources */,
+				012C6BA01ABA0EE70060A49C /* FilmListCollectionViewCellController.m in Sources */,
 				015834521AB84E93007E0AC4 /* JARequestManager.m in Sources */,
 				01068ECE1AB7011D0017F91A /* main.m in Sources */,
 				01068F4D1AB74F2F0017F91A /* LoadPlayingNowInteractor.m in Sources */,

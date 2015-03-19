@@ -7,11 +7,16 @@
 //
 
 #import "ListsCollectionViewController.h"
-#import "ListCollectionViewCell.h"
-#import "ListCollectionViewCellController.h"
+#import "FilmListCollectionViewCell.h"
+#import "FilmListCollectionViewCellController.h"
 #import "FetchAllListsInteractor.h"
+#import "ControllersFactory.h"
+
+NSString *const kListsProperty = @"lists";
 
 @interface ListsCollectionViewController ()
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *topConstraint;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *bottomConstraint;
 
 @property (weak, nonatomic) IBOutlet UICollectionView *listsCollectionView;
 
@@ -39,6 +44,7 @@
 {
     [super viewDidLoad];
     
+    [self registerToObserveFilms];
     [self configListsCollectionView];
     [self loadLists];
 }
@@ -48,16 +54,34 @@
     [super didReceiveMemoryWarning];
 }
 
+- (void)viewDidLayoutSubviews
+{
+    self.topConstraint.constant = self.topLayoutGuide.length;
+    self.bottomConstraint.constant = self.bottomLayoutGuide.length;
+}
+
 #pragma mark - Config methods.
 - (void)configListsCollectionView
 {
     self.listsCollectionView.pagingEnabled = YES;
-    [self.listsCollectionView registerNib:[UINib nibWithNibName:NSStringFromClass([ListCollectionViewCell class]) bundle:nil] forCellWithReuseIdentifier:NSStringFromClass([ListCollectionViewCell class])];
+    [self.listsCollectionView registerNib:[UINib nibWithNibName:NSStringFromClass([FilmListCollectionViewCell class]) bundle:nil] forCellWithReuseIdentifier:NSStringFromClass([FilmListCollectionViewCell class])];
     self.listsCollectionView.delegate = self;
     self.listsCollectionView.dataSource = self;
 }
 
 #pragma mark - Load methods.
+- (void)loadControllers
+{
+    NSMutableArray *controllers = [NSMutableArray array];
+    
+    for (__unused ListDTO *l in self.lists)
+    {
+        [controllers addObject:[ControllersFactory controllerForCellClass:[FilmListCollectionViewCell class]]];
+    }
+    
+    self.controllers = controllers;
+}
+
 - (void)loadLists
 {
     __weak typeof(self) weakSelf = self;
@@ -72,19 +96,50 @@
     }];
 }
 
+#pragma mark - Observation methods.
+- (void)registerToObserveFilms
+{
+    [self addObserver:self forKeyPath:kListsProperty options:NSKeyValueObservingOptionInitial context:nil];
+}
+
+- (void)unregisterToObserveFilms
+{
+    [self removeObserver:self forKeyPath:kListsProperty];
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
+{
+    if ([keyPath isEqualToString:kListsProperty])
+    {
+        [self changedValueOfFilms];
+    }
+}
+
+#pragma mark - Action methods.
+- (void)changedValueOfFilms
+{
+    [self loadControllers];
+}
+
+#pragma mark - Dealloc methods.
+-(void)dealloc
+{
+    [self unregisterToObserveFilms];
+}
+
 @end
 
 @implementation ListsCollectionViewController (DataSource)
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    ListCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([ListCollectionViewCell class]) forIndexPath:indexPath];
+    FilmListCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([FilmListCollectionViewCell class]) forIndexPath:indexPath];
     
-    ListCollectionViewCellController *controller = self.controllers[indexPath.item];
+    FilmListCollectionViewCellController *controller = self.controllers[indexPath.item];
     
     controller.cell = cell;
     
-    return [controller cellConfigured];
+    return (UICollectionViewCell *)[controller cellConfigured];
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
@@ -99,5 +154,13 @@
 @end
 
 @implementation ListsCollectionViewController (FlowLayoutDelegate)
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    CGFloat width = CGRectGetWidth(self.listsCollectionView.bounds) - 100;
+    CGFloat height = CGRectGetHeight(self.listsCollectionView.bounds) - 100;
+    
+    return CGSizeMake(width, height);
+}
 
 @end

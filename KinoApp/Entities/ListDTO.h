@@ -10,4 +10,7 @@
 
 @interface ListDTO : NSObject
 
+@property (nonatomic, strong) NSString *listName;
+@property (nonatomic, strong) NSSet *listFilms;
+
 @end

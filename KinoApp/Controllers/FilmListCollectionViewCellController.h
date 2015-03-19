@@ -8,14 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
-@class ListCollectionViewCell;
+@class FilmListCollectionViewCell;
 @class ListDTO;
 
-@interface ListCollectionViewCellController : NSObject
+@interface FilmListCollectionViewCellController : NSObject
 
-@property (nonatomic, weak) ListCollectionViewCell *cell;
+@property (nonatomic, weak) FilmListCollectionViewCell *cell;
 @property (nonatomic, strong) ListDTO *list;
 
-- (ListCollectionViewCell *)cellConfigured;
+- (FilmListCollectionViewCell *)cellConfigured;
 
 @end

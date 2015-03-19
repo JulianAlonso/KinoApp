@@ -11,6 +11,8 @@
 NSString *const TYPE_PLAYIN_NOW = @"playing now";
 NSString *const TYPE_UPCOMING = @"upcoming";
 
+NSString *const kPosterPathProperty = @"filmPosterPath";
+
 @implementation FilmDTO
 
 @end
