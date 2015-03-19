@@ -64,6 +64,7 @@ NSString *const kListsProperty = @"lists";
 - (void)configListsCollectionView
 {
     self.listsCollectionView.pagingEnabled = YES;
+    self.listsCollectionView.backgroundColor = [UIColor clearColor];
     [self.listsCollectionView registerNib:[UINib nibWithNibName:NSStringFromClass([FilmListCollectionViewCell class]) bundle:nil] forCellWithReuseIdentifier:NSStringFromClass([FilmListCollectionViewCell class])];
     self.listsCollectionView.delegate = self;
     self.listsCollectionView.dataSource = self;
@@ -138,6 +139,7 @@ NSString *const kListsProperty = @"lists";
     FilmListCollectionViewCellController *controller = self.controllers[indexPath.item];
     
     controller.cell = cell;
+    controller.list = self.lists[indexPath.item];
     
     return (UICollectionViewCell *)[controller cellConfigured];
 }

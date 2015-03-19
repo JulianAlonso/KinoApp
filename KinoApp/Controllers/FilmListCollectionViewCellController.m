@@ -18,6 +18,10 @@
 {
     self.cell.listNameLabel.text = self.list.listName;
     
+    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapGestureAction:)];
+    
+    [self.cell addGestureRecognizer:tapGesture];
+    
     if (self.list.listFilms > 0)
     {
         UIImageView *imageView = [[UIImageView alloc] initWithFrame:self.cell.bounds];
@@ -25,6 +29,11 @@
     }
     
     return self.cell;
+}
+
+- (void)tapGestureAction:(UITapGestureRecognizer *)sender
+{
+    NSLog(@"TAP ACTION");
 }
 
 @end

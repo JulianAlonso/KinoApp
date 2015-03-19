@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Julian. All rights reserved.
 //
 
-#import <AFNetworking/UIImageView+AFNetworking.h>
+#import <SDWebImage/UIImageView+WebCache.h>
 #import "BillboardFilmsCollectionDelegate.h"
 #import "CollectionFilmsCollectionViewCell.h"
 #import "FilmDTO.h"
@@ -59,8 +59,7 @@
     
     cell.filmTitleLabel.text = film.filmTitle;
     
-    [cell.filmImageView setImageWithURL:[NSURL URLWithString:film.filmPosterPath]];
-    
+    [cell.filmImageView sd_setImageWithURL:[NSURL URLWithString:film.filmPosterPath]];
     return cell;
 }
 

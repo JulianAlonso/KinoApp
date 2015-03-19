@@ -23,7 +23,6 @@
 - (void)loadViewAt:(UITabBarController *)tabBarController
 {
     BillboardViewController *billboardViewController = [[BillboardViewController alloc] init];
-    billboardViewController.tabBarItem.title = @"Billboard";
     billboardViewController.router = self;
     
     BillboardCollectionDelegate *billboardDelegate = [BillboardCollectionDelegate new];
@@ -50,6 +49,7 @@
     billboardViewController.delegate = billboardDelegate;
     
     UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:billboardViewController];
+    nc.tabBarItem.title = @"Billboard";
     nc.navigationBarHidden = YES;
     
     [tabBarController addChildViewController:nc];
