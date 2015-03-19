@@ -8,6 +8,9 @@
 
 #import "ListsCollectionRouter.h"
 #import "ListsCollectionViewController.h"
+#import "FetchAllListsInteractor.h"
+#import "LocalListsProvider.h"
+#import "LocalCoreDataListsProvider.h"
 
 @implementation ListsCollectionRouter
 
@@ -15,6 +18,13 @@
 {
     ListsCollectionViewController *listsCollectionViewController = [ListsCollectionViewController new];
     listsCollectionViewController.tabBarItem.title = @"Lists";
+    
+    //DI
+    FetchAllListsInteractor *fetchAllListsInteractor = [FetchAllListsInteractor new];
+    id<LocalListsProvider> localListProvider = [LocalCoreDataListsProvider new];
+    
+    fetchAllListsInteractor.localListProvider = localListProvider;
+    listsCollectionViewController.fetchAllListsInteractor = fetchAllListsInteractor;
     
     listsCollectionViewController.router = self;
     

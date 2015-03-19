@@ -30,15 +30,19 @@
     [self.interactor fetchFilmsWithLocalData:^(NSArray *films) {
         __strong typeof(weakSelf) strongSelf = weakSelf;
         
-        strongSelf.films = films;
-        [strongSelf.filmsCollectionView reloadData];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            strongSelf.films = films;
+            [strongSelf.filmsCollectionView reloadData];
+        });
         
     } update:^(NSArray *films) {
         __strong typeof(weakSelf) strongSelf = weakSelf;
         
-        strongSelf.films = films;
-        [strongSelf.filmsCollectionView reloadData];
-        [sender endRefreshing];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            strongSelf.films = films;
+            [strongSelf.filmsCollectionView reloadData];
+            [sender endRefreshing];
+        });
     }];
     
 }

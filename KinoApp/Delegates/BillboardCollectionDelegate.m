@@ -55,8 +55,8 @@
 #pragma mark - CollectionView Delegate methods.
 - (void)collectionView:(UICollectionView *)collectionView willDisplayCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath
 {
-//    CollectionFilmsCollectionViewCell *filmCell = (CollectionFilmsCollectionViewCell *)cell;
-//    [filmCell refreshActivated:nil];
+    CollectionFilmsCollectionViewCell *filmCell = (CollectionFilmsCollectionViewCell *)cell;
+    [filmCell refreshActivated:nil];
 }
 
 #pragma mark - ScrollView delegate methods.

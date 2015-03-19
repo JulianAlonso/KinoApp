@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class ListCollectionViewCellController;
+
 @interface ListCollectionViewCell : UICollectionViewCell
+
+@property (nonatomic, strong) ListCollectionViewCellController *controller;
 
 @end

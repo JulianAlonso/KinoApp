@@ -10,4 +10,11 @@
 
 @implementation FetchAllListsInteractor
 
+- (void)fetchAllListsWithCompletion:(void(^)(NSArray *lists))completion
+{
+    [self.localListProvider fetchAllListsWithCompletion:^(NSArray *films) {
+        completion(films);
+    }];
+}
+
 @end

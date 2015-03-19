@@ -7,9 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "LocalListsProvider.h"
+
 
 @interface FetchAllListsInteractor : NSObject
 
+@property (nonatomic, strong) id<LocalListsProvider> localListProvider;
 
+- (void)fetchAllListsWithCompletion:(void(^)(NSArray *lists))completion;
 
 @end

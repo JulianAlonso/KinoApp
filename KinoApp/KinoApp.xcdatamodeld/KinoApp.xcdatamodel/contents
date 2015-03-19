@@ -13,6 +13,6 @@
         <attribute name="filmType" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Film" positionX="-63" positionY="-18" width="128" height="195"/>
+        <element name="Film" positionX="-63" positionY="-18" width="128" height="193"/>
     </elements>
 </model>

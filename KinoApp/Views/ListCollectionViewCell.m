@@ -10,8 +10,8 @@
 
 @implementation ListCollectionViewCell
 
-- (void)awakeFromNib {
-    // Initialization code
+- (void)awakeFromNib
+{
 }
 
 @end
