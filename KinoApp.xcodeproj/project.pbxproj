@@ -30,6 +30,10 @@
 		01068F581AB7546A0017F91A /* BillboardFilmsCollectionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 01068F571AB7546A0017F91A /* BillboardFilmsCollectionDelegate.m */; };
 		0117596F1ABAF5E700724BC5 /* ControllersFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 0117596E1ABAF5E700724BC5 /* ControllersFactory.m */; };
 		011759721ABB291F00724BC5 /* AddFilmToListInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 011759711ABB291F00724BC5 /* AddFilmToListInteractor.m */; };
+		011759761ABB390600724BC5 /* SelectListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 011759741ABB390600724BC5 /* SelectListViewController.m */; };
+		011759771ABB390600724BC5 /* SelectListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 011759751ABB390600724BC5 /* SelectListViewController.xib */; };
+		0117597B1ABB3B1200724BC5 /* ListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 011759791ABB3B1200724BC5 /* ListTableViewCell.m */; };
+		0117597C1ABB3B1200724BC5 /* ListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0117597A1ABB3B1200724BC5 /* ListTableViewCell.xib */; };
 		012C6B7F1AB99F580060A49C /* FilmDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 012C6B7D1AB99F580060A49C /* FilmDetailViewController.m */; };
 		012C6B801AB99F580060A49C /* FilmDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 012C6B7E1AB99F580060A49C /* FilmDetailViewController.xib */; };
 		012C6B851AB9C3EE0060A49C /* DetailFilmRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 012C6B841AB9C3EE0060A49C /* DetailFilmRouter.m */; };
@@ -114,6 +118,12 @@
 		0117596E1ABAF5E700724BC5 /* ControllersFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ControllersFactory.m; path = Factories/ControllersFactory.m; sourceTree = "<group>"; };
 		011759701ABB291F00724BC5 /* AddFilmToListInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddFilmToListInteractor.h; path = Interactors/AddFilmToListInteractor.h; sourceTree = "<group>"; };
 		011759711ABB291F00724BC5 /* AddFilmToListInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddFilmToListInteractor.m; path = Interactors/AddFilmToListInteractor.m; sourceTree = "<group>"; };
+		011759731ABB390600724BC5 /* SelectListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SelectListViewController.h; path = ViewControllers/SelectListViewController.h; sourceTree = "<group>"; };
+		011759741ABB390600724BC5 /* SelectListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SelectListViewController.m; path = ViewControllers/SelectListViewController.m; sourceTree = "<group>"; };
+		011759751ABB390600724BC5 /* SelectListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SelectListViewController.xib; path = ViewControllers/SelectListViewController.xib; sourceTree = "<group>"; };
+		011759781ABB3B1200724BC5 /* ListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ListTableViewCell.h; path = Views/ListTableViewCell.h; sourceTree = "<group>"; };
+		011759791ABB3B1200724BC5 /* ListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ListTableViewCell.m; path = Views/ListTableViewCell.m; sourceTree = "<group>"; };
+		0117597A1ABB3B1200724BC5 /* ListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ListTableViewCell.xib; path = Views/ListTableViewCell.xib; sourceTree = "<group>"; };
 		012C6B7C1AB99F580060A49C /* FilmDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FilmDetailViewController.h; path = ViewControllers/FilmDetailViewController.h; sourceTree = "<group>"; };
 		012C6B7D1AB99F580060A49C /* FilmDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FilmDetailViewController.m; path = ViewControllers/FilmDetailViewController.m; sourceTree = "<group>"; };
 		012C6B7E1AB99F580060A49C /* FilmDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FilmDetailViewController.xib; path = ViewControllers/FilmDetailViewController.xib; sourceTree = "<group>"; };
@@ -333,6 +343,9 @@
 				012C6B8C1ABA006D0060A49C /* ListsCollectionViewController.h */,
 				012C6B8D1ABA006D0060A49C /* ListsCollectionViewController.m */,
 				012C6B8E1ABA006D0060A49C /* ListsCollectionViewController.xib */,
+				011759731ABB390600724BC5 /* SelectListViewController.h */,
+				011759741ABB390600724BC5 /* SelectListViewController.m */,
+				011759751ABB390600724BC5 /* SelectListViewController.xib */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -401,6 +414,9 @@
 				012C6B941ABA0A070060A49C /* FilmListCollectionViewCell.h */,
 				012C6B951ABA0A070060A49C /* FilmListCollectionViewCell.m */,
 				012C6B961ABA0A070060A49C /* FilmListCollectionViewCell.xib */,
+				011759781ABB3B1200724BC5 /* ListTableViewCell.h */,
+				011759791ABB3B1200724BC5 /* ListTableViewCell.m */,
+				0117597A1ABB3B1200724BC5 /* ListTableViewCell.xib */,
 			);
 			name = ListsCells;
 			sourceTree = "<group>";
@@ -576,6 +592,8 @@
 				012C6B981ABA0A070060A49C /* FilmListCollectionViewCell.xib in Resources */,
 				01068F311AB725490017F91A /* BillboardViewController.xib in Resources */,
 				01068EDC1AB7011D0017F91A /* Images.xcassets in Resources */,
+				0117597C1ABB3B1200724BC5 /* ListTableViewCell.xib in Resources */,
+				011759771ABB390600724BC5 /* SelectListViewController.xib in Resources */,
 				012C6B801AB99F580060A49C /* FilmDetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -656,11 +674,13 @@
 				015834521AB84E93007E0AC4 /* JARequestManager.m in Sources */,
 				01068ECE1AB7011D0017F91A /* main.m in Sources */,
 				01068F4D1AB74F2F0017F91A /* LoadPlayingNowInteractor.m in Sources */,
+				0117597B1ABB3B1200724BC5 /* ListTableViewCell.m in Sources */,
 				01068F401AB72ECB0017F91A /* BillboardCollectionDelegate.m in Sources */,
 				01068F341AB725630017F91A /* BillboardRouter.m in Sources */,
 				0158345E1AB86633007E0AC4 /* FilmDTOParser.m in Sources */,
 				0158345B1AB86508007E0AC4 /* FilmDTO.m in Sources */,
 				0158344A1AB8223B007E0AC4 /* APIVars.m in Sources */,
+				011759761ABB390600724BC5 /* SelectListViewController.m in Sources */,
 				012C6B851AB9C3EE0060A49C /* DetailFilmRouter.m in Sources */,
 				012C6BA61ABA107D0060A49C /* ListDTO.m in Sources */,
 				01068F471AB747F00017F91A /* ExternalTMDBProvider.m in Sources */,
