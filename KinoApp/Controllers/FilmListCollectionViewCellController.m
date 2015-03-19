@@ -11,6 +11,7 @@
 #import "FilmListCollectionViewCell.h"
 #import "ListDTO.h"
 #import "FilmDTO.h"
+#import "ListsCollectionRouter.h"
 
 @implementation FilmListCollectionViewCellController
 
@@ -33,7 +34,7 @@
 
 - (void)tapGestureAction:(UITapGestureRecognizer *)sender
 {
-    NSLog(@"TAP ACTION");
+    [self.router tapAtCellWithListDTO:self.list];
 }
 
 @end

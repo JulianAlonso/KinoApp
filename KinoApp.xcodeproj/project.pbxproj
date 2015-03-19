@@ -29,6 +29,7 @@
 		01068F521AB752840017F91A /* CollectionFilmsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01068F501AB752840017F91A /* CollectionFilmsCollectionViewCell.xib */; };
 		01068F581AB7546A0017F91A /* BillboardFilmsCollectionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 01068F571AB7546A0017F91A /* BillboardFilmsCollectionDelegate.m */; };
 		0117596F1ABAF5E700724BC5 /* ControllersFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 0117596E1ABAF5E700724BC5 /* ControllersFactory.m */; };
+		011759721ABB291F00724BC5 /* AddFilmToListInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 011759711ABB291F00724BC5 /* AddFilmToListInteractor.m */; };
 		012C6B7F1AB99F580060A49C /* FilmDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 012C6B7D1AB99F580060A49C /* FilmDetailViewController.m */; };
 		012C6B801AB99F580060A49C /* FilmDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 012C6B7E1AB99F580060A49C /* FilmDetailViewController.xib */; };
 		012C6B851AB9C3EE0060A49C /* DetailFilmRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 012C6B841AB9C3EE0060A49C /* DetailFilmRouter.m */; };
@@ -111,6 +112,8 @@
 		01068F5A1AB7558F0017F91A /* BillboardFilmsInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BillboardFilmsInteractor.h; path = Interactors/BillboardFilmsInteractor.h; sourceTree = "<group>"; };
 		0117596D1ABAF5E700724BC5 /* ControllersFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ControllersFactory.h; path = Factories/ControllersFactory.h; sourceTree = "<group>"; };
 		0117596E1ABAF5E700724BC5 /* ControllersFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ControllersFactory.m; path = Factories/ControllersFactory.m; sourceTree = "<group>"; };
+		011759701ABB291F00724BC5 /* AddFilmToListInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddFilmToListInteractor.h; path = Interactors/AddFilmToListInteractor.h; sourceTree = "<group>"; };
+		011759711ABB291F00724BC5 /* AddFilmToListInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddFilmToListInteractor.m; path = Interactors/AddFilmToListInteractor.m; sourceTree = "<group>"; };
 		012C6B7C1AB99F580060A49C /* FilmDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FilmDetailViewController.h; path = ViewControllers/FilmDetailViewController.h; sourceTree = "<group>"; };
 		012C6B7D1AB99F580060A49C /* FilmDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FilmDetailViewController.m; path = ViewControllers/FilmDetailViewController.m; sourceTree = "<group>"; };
 		012C6B7E1AB99F580060A49C /* FilmDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FilmDetailViewController.xib; path = ViewControllers/FilmDetailViewController.xib; sourceTree = "<group>"; };
@@ -286,6 +289,8 @@
 				012C6B871AB9D3290060A49C /* LoadFilmInteractor.m */,
 				012C6B891ABA000E0060A49C /* FetchAllListsInteractor.h */,
 				012C6B8A1ABA000E0060A49C /* FetchAllListsInteractor.m */,
+				011759701ABB291F00724BC5 /* AddFilmToListInteractor.h */,
+				011759711ABB291F00724BC5 /* AddFilmToListInteractor.m */,
 			);
 			name = Interactors;
 			sourceTree = "<group>";
@@ -645,6 +650,7 @@
 				01068F511AB752840017F91A /* CollectionFilmsCollectionViewCell.m in Sources */,
 				012C6B8B1ABA000E0060A49C /* FetchAllListsInteractor.m in Sources */,
 				012C6B881AB9D3290060A49C /* LoadFilmInteractor.m in Sources */,
+				011759721ABB291F00724BC5 /* AddFilmToListInteractor.m in Sources */,
 				018F9DD01AB896F90046D3C4 /* CoreDataManager.m in Sources */,
 				012C6BA01ABA0EE70060A49C /* FilmListCollectionViewCellController.m in Sources */,
 				015834521AB84E93007E0AC4 /* JARequestManager.m in Sources */,

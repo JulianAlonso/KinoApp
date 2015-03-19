@@ -8,8 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+@class ListDTO;
+
 @interface ListsCollectionRouter : NSObject
 
 - (void)loadViewAt:(UITabBarController *)tabBarCotroller;
+
+- (void)tapAtCellWithListDTO:(ListDTO *)list;
 
 @end

@@ -8,8 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
+@class FilmDTO;
+@class ListDTO;
+
 @protocol LocalListsProvider <NSObject>
 
 - (void)fetchAllListsWithCompletion:(void(^)(NSArray *films))completion;
+
+- (void)addFilm:(FilmDTO *)film toList:(ListDTO *)list completion:(void(^)(NSError *error))completion;
 
 @end

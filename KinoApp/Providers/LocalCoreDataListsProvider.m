@@ -10,6 +10,10 @@
 #import "CoreDataManager.h"
 #import "List.h"
 #import "ListDTOParser.h"
+#import "ListDTO.h"
+#import "Film.h"
+#import "Film+Model.h"
+#import "FilmDTO.h"
 
 @implementation LocalCoreDataListsProvider
 
@@ -34,6 +38,47 @@
     }
     
     completion([ListDTOParser listDTOsFromLists:lists]);
+}
+
+- (void)addFilm:(FilmDTO *)film toList:(ListDTO *)list completion:(void (^)(NSError *))completion
+{
+    __weak typeof(self) weakSelf = self;
+    [self fetchListWithName:list.listName completion:^(List *list) {
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        
+        Film *film = [strongSelf fetchFilmById:film.filmId];
+        
+        [list addListFilmsObject:film];
+        
+        NSError *error;
+        [strongSelf.privateContext save:&error];
+        
+        completion(error);
+    }];
+}
+
+#pragma mark - Own methods.
+- (void)fetchListWithName:(NSString *)listName completion:(void(^)(List *list))completion
+{
+    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:NSStringFromClass([List class])];
+    request.predicate = [NSPredicate predicateWithFormat:@"%K == %@", kListNameProperty, listName];
+    
+    NSError *error;
+    List *list = [[self.privateContext executeFetchRequest:request error:&error] firstObject];
+    
+    completion(list);
+}
+
+/*
+    ¡¡THIS MUST NOT BE HERE!!
+ */
+- (Film *)fetchFilmById:(NSString *)filmId
+{
+    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:NSStringFromClass([Film class])];
+    request.predicate = [NSPredicate predicateWithFormat:@"%K == %@", kFilmIdProperty, filmId];
+    
+    NSError *error;
+    return [[self.privateContext executeFetchRequest:request error:&error] firstObject];
 }
 
 - (void)saveListWithName:(NSString *)name completion:(void(^)(NSArray *lists))completion

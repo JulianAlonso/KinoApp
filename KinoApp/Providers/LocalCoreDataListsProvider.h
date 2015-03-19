@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 #import "LocalListsProvider.h"
+#import "LocalFilmsProvider.h"
 
 
 @interface LocalCoreDataListsProvider : NSObject <LocalListsProvider>

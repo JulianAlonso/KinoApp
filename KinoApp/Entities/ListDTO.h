@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+extern NSString *const kListNameProperty;
+
 @interface ListDTO : NSObject
 
 @property (nonatomic, strong) NSString *listName;

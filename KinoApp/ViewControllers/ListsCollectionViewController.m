@@ -77,7 +77,9 @@ NSString *const kListsProperty = @"lists";
     
     for (__unused ListDTO *l in self.lists)
     {
-        [controllers addObject:[ControllersFactory controllerForCellClass:[FilmListCollectionViewCell class]]];
+        FilmListCollectionViewCellController *controller = [ControllersFactory controllerForCellClass:[FilmListCollectionViewCell class]];
+        controller.router = self.router;
+        [controllers addObject:controller];
     }
     
     self.controllers = controllers;

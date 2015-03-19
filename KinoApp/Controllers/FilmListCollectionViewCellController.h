@@ -8,13 +8,16 @@
 
 #import <Foundation/Foundation.h>
 
+@class ListsCollectionRouter;
 @class FilmListCollectionViewCell;
 @class ListDTO;
 
 @interface FilmListCollectionViewCellController : NSObject
 
+@property (nonatomic, weak) ListsCollectionRouter *router;
 @property (nonatomic, weak) FilmListCollectionViewCell *cell;
 @property (nonatomic, strong) ListDTO *list;
+
 
 - (FilmListCollectionViewCell *)cellConfigured;
 

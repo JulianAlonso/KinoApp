@@ -8,6 +8,8 @@
 
 #import "ListDTO.h"
 
+NSString *const kListNameProperty = @"listName";
+
 @implementation ListDTO
 
 @end

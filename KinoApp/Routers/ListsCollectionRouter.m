@@ -11,6 +11,7 @@
 #import "FetchAllListsInteractor.h"
 #import "LocalListsProvider.h"
 #import "LocalCoreDataListsProvider.h"
+#import "ListDTO.h"
 
 @implementation ListsCollectionRouter
 
@@ -29,6 +30,11 @@
     listsCollectionViewController.router = self;
     
     [tabBarCotroller addChildViewController:listsCollectionViewController];
+}
+
+- (void)tapAtCellWithListDTO:(ListDTO *)list
+{
+    NSLog(@"Present list table view controller with list: %@", list.listName);
 }
 
 @end

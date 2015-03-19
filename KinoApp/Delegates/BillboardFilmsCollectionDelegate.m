@@ -44,7 +44,6 @@
             [sender endRefreshing];
         });
     }];
-    
 }
 
 #pragma mark - Collection data source methods.

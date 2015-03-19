@@ -14,4 +14,6 @@
 
 - (void)presentFilmDetailViewControllerFrom:(UINavigationController *)navigationController withFilmDTO:(FilmDTO *)film;
 
+- (void)addButtonPressedFrom:(UIViewController *)fromViewController withFilmDTO:(FilmDTO *)film;
+
 @end

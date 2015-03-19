@@ -10,6 +10,7 @@
 #import <AFNetworking/UIImageView+AFNetworking.h>
 #import "FilmDTO.h"
 #import "LoadFilmInteractor.h"
+#import "DetailFilmRouter.h"
 
 @interface FilmDetailViewController ()
 
@@ -28,7 +29,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self.navigationController setNavigationBarHidden:NO animated:YES];
+    [self configNavBar];
     
     [self configItemsWithFilm:self.film];
     [self updateFilm];
@@ -36,7 +37,6 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (void)viewDidLayoutSubviews
@@ -50,6 +50,15 @@
 }
 
 #pragma mark - Config methods.
+- (void)configNavBar
+{
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
+    
+    UIBarButtonItem *addFilmButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addButtonPressed:)];
+    
+    self.navigationItem.rightBarButtonItem = addFilmButton;
+}
+
 - (void)configItemsWithFilm:(FilmDTO *)film
 {
     self.filmTitleLabel.text = film.filmTitle;
@@ -89,6 +98,12 @@
 {
     [self.activityIndicator stopAnimating];
     self.activityIndicator.alpha = 0.0f;
+}
+
+#pragma mark - Action methods.
+- (void)addButtonPressed:(UIBarButtonItem *)sender
+{
+    [self.router addButtonPressedFrom:self withFilmDTO:self.film];
 }
 
 @end
