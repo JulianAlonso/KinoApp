@@ -9,6 +9,8 @@
 #import "ControllersFactory.h"
 #import "FilmListCollectionViewCell.h"
 #import "FilmListCollectionViewCellController.h"
+#import "FilmTableViewCell.h"
+#import "FilmTableViewCellController.h"
 
 @implementation ControllersFactory
 
@@ -25,9 +27,9 @@
     {
         classes = @{
                     NSStringFromClass([FilmListCollectionViewCell class]) : [FilmListCollectionViewCellController class],
+                    NSStringFromClass([FilmTableViewCell class]) : [FilmTableViewCellController class],
                     };
     }
-    
     return classes[NSStringFromClass(cellClass)];
 }
 

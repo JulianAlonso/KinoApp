@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+@class ListDTO;
+@class DetailListRouter;
+
 @interface ListDetailViewController : UIViewController
+
+@property (nonatomic, strong) DetailListRouter *router;
+@property (nonatomic, strong) ListDTO *list;
 
 @end

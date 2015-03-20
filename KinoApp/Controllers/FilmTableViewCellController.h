@@ -6,8 +6,17 @@
 //  Copyright (c) 2015 Julian. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+
+@class FilmTableViewCell;
+@class FilmDTO;
 
 @interface FilmTableViewCellController : NSObject
+
+@property (nonatomic, strong) FilmDTO *film;
+@property (nonatomic, weak) FilmTableViewCell *cell;
+
+
+- (UITableViewCell *)configuredCell;
 
 @end

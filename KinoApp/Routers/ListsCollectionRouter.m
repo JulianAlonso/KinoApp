@@ -12,6 +12,13 @@
 #import "LocalListsProvider.h"
 #import "LocalCoreDataListsProvider.h"
 #import "ListDTO.h"
+#import "DetailListRouter.h"
+
+@interface ListsCollectionRouter ()
+
+@property (nonatomic, weak) ListsCollectionViewController *listCollectionViewController;
+
+@end
 
 @implementation ListsCollectionRouter
 
@@ -28,13 +35,19 @@
     listsCollectionViewController.fetchAllListsInteractor = fetchAllListsInteractor;
     
     listsCollectionViewController.router = self;
+    self.listCollectionViewController = listsCollectionViewController;
     
-    [tabBarCotroller addChildViewController:listsCollectionViewController];
+    UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:listsCollectionViewController];
+    
+    [tabBarCotroller addChildViewController:nc];
 }
 
 - (void)tapAtCellWithListDTO:(ListDTO *)list
 {
     NSLog(@"Present list table view controller with list: %@", list.listName);
+    
+    DetailListRouter *detailListRouter = [DetailListRouter new];
+    [detailListRouter presentDetailListViewControllerFrom:self.listCollectionViewController withList:list];
 }
 
 @end

@@ -75,6 +75,7 @@
     }
 }
 
+
 - (void)createOrUpdateFilm:(FilmDTO *)film completion:(void(^)(FilmDTO *film))completion
 {
     NSFetchRequest *select = [NSFetchRequest fetchRequestWithEntityName:NSStringFromClass([Film class])];
@@ -93,6 +94,7 @@
     }
     else
     {
+        #pragma unused(filmMO)
         filmMO = [Film filmWithFilmDTO:film andManagedObjectContext:self.privateContext];
         [self.privateContext save:nil];
     }

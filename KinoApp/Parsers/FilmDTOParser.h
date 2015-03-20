@@ -19,6 +19,6 @@
 + (FilmDTO *)filmDTOFromFilm:(Film *)film;
 + (NSArray *)filmDTOsFromFilmsArray:(NSArray *)array;
 
-+ (NSSet *)filmDTOsFromFilmsSet:(NSSet *)set;
++ (NSArray *)filmDTOsFromFilmsSet:(NSSet *)set;
 
 @end

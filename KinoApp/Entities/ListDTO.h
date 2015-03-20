@@ -13,6 +13,6 @@ extern NSString *const kListNameProperty;
 @interface ListDTO : NSObject
 
 @property (nonatomic, strong) NSString *listName;
-@property (nonatomic, strong) NSSet *listFilms;
+@property (nonatomic, strong) NSArray *listFilms;
 
 @end

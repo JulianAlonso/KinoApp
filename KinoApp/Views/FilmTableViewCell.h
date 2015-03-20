@@ -8,9 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
+@class FilmTableViewCell;
+
+@protocol FilmTableViewCellDelegate <NSObject>
+
+- (void)filmTableViewCell:(FilmTableViewCell *)filmTableViewCell didTapWithSender:(UITapGestureRecognizer *)sender;
+
+@end
+
 @interface FilmTableViewCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UIImageView *filmImageView;
 @property (weak, nonatomic) IBOutlet UILabel *filmTitleLabel;
+
+@property (nonatomic, strong) id<FilmTableViewCellDelegate> delegate;
 
 @end

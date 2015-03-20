@@ -47,7 +47,16 @@ NSString *const kListsProperty = @"lists";
 
 - (void)viewWillAppear:(BOOL)animated
 {
+    [self.navigationController setNavigationBarHidden:YES animated:animated];
+    [super viewWillAppear:animated];
     [self loadLists];
+}
+
+- (void)viewDidDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:animated];
+    
+    [self.navigationController setNavigationBarHidden:NO animated:animated];
 }
 
 - (void)viewDidLayoutSubviews
@@ -125,7 +134,7 @@ NSString *const kListsProperty = @"lists";
     [self loadControllers];
 }
 
-#pragma mark - Dealloc methods.
+#pragma mark - Dealloc method.
 -(void)dealloc
 {
     [self unregisterToObserveFilms];

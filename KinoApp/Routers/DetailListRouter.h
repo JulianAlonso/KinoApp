@@ -6,8 +6,12 @@
 //  Copyright (c) 2015 Julian. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+
+@class ListDTO;
 
 @interface DetailListRouter : NSObject
+
+- (void)presentDetailListViewControllerFrom:(UIViewController *)fromViewController withList:(ListDTO *)list;
 
 @end

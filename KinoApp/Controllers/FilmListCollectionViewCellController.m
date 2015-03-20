@@ -26,7 +26,7 @@
     if (self.list.listFilms > 0)
     {
         UIImageView *imageView = [[UIImageView alloc] initWithFrame:self.cell.bounds];
-        [imageView sd_setImageWithURL:[[self.list.listFilms anyObject] valueForKey:kPosterPathProperty]];
+        [imageView sd_setImageWithURL:[[self.list.listFilms firstObject] valueForKey:kPosterPathProperty]];
         [self.cell addSubview:imageView];
     }
     

@@ -79,14 +79,14 @@ NSString *const dFilmBackdropPath = @"backdrop_path";
     return filmDTOs;
 }
 
-+ (NSSet *)filmDTOsFromFilmsSet:(NSSet *)set
++ (NSArray *)filmDTOsFromFilmsSet:(NSSet *)set
 {
-    NSMutableSet *resultSet = [NSMutableSet set];
+    NSMutableArray *resultArray = [NSMutableArray array];
     for (Film *film in set)
     {
-        [resultSet addObject:[FilmDTOParser filmDTOFromFilm:film]];
+        [resultArray addObject:[FilmDTOParser filmDTOFromFilm:film]];
     }
-    return resultSet;
+    return resultArray;
 }
 
 @end
