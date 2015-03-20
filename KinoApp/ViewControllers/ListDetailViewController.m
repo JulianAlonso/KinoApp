@@ -15,7 +15,7 @@
 
 NSString *const kListProperty = @"list";
 
-@interface ListDetailViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface ListDetailViewController () <UITableViewDataSource, UITableViewDelegate, FilmTableViewControllerCellDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *filmsTableView;
 
@@ -64,7 +64,9 @@ NSString *const kListProperty = @"list";
     NSMutableArray *controllers = [NSMutableArray array];
     for (__unused FilmDTO *film in self.list.listFilms)
     {
-        [controllers addObject:[ControllersFactory controllerForCellClass:[FilmTableViewCell class]]];
+        FilmTableViewCellController *controller = [ControllersFactory controllerForCellClass:[FilmTableViewCell class]];
+        controller.delegate = self;
+        [controllers addObject:controller];
     }
     self.controllers = controllers;
 }
@@ -120,6 +122,12 @@ NSString *const kListProperty = @"list";
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return 200;
+}
+
+#pragma mark - FilmTableViewControllerCellDelegate methods.
+- (void)filmTableViewCellController:(FilmTableViewCellController *)filmTableViewCellController tappedCellWithFilm:(FilmDTO *)film
+{
+    [self.router tappedCellWithFilm:film];
 }
 
 #pragma mark - Dealloc methods.

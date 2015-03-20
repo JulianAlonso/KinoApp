@@ -10,6 +10,8 @@
 #import "ListDTO.h"
 #import "ListDetailViewController.h"
 #import "SearchFilmRouter.h"
+#import "FilmDTO.h"
+#import "DetailFilmRouter.h"
 
 @interface DetailListRouter ()
 
@@ -35,6 +37,11 @@
     SearchFilmRouter *searchRouter = [SearchFilmRouter new];
     
     [searchRouter presentSearchFrom:self.listDetailViewController.navigationController andList:self.listDetailViewController.list];
+}
+
+- (void)tappedCellWithFilm:(FilmDTO *)film
+{    
+    [[DetailFilmRouter new] presentFilmDetailViewControllerFrom:self.listDetailViewController.navigationController withFilmDTO:film];
 }
 
 @end

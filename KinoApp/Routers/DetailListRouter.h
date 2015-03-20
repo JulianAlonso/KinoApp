@@ -9,11 +9,14 @@
 #import <UIKit/UIKit.h>
 
 @class ListDTO;
+@class FilmDTO;
 
 @interface DetailListRouter : NSObject
 
 - (void)presentDetailListViewControllerFrom:(UIViewController *)fromViewController withList:(ListDTO *)list;
 
 - (void)searchButtonPressed;
+
+- (void)tappedCellWithFilm:(FilmDTO *)film;
 
 @end

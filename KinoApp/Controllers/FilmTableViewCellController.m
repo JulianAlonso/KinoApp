@@ -30,7 +30,7 @@
 #pragma mark - FilmTableViewCellDelegate methods.
 - (void)filmTableViewCell:(FilmTableViewCell *)filmTableViewCell didTapWithSender:(UITapGestureRecognizer *)sender
 {
-    NSLog(@"Tapped cell: %@   with sender: %@", filmTableViewCell, sender);
+    [self.delegate filmTableViewCellController:self tappedCellWithFilm:self.film];
 }
 
 @end

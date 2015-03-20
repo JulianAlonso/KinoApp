@@ -10,12 +10,19 @@
 
 @class FilmTableViewCell;
 @class FilmDTO;
+@class FilmTableViewCellController;
+
+@protocol FilmTableViewControllerCellDelegate <NSObject>
+
+- (void)filmTableViewCellController:(FilmTableViewCellController *)filmTableViewCellController tappedCellWithFilm:(FilmDTO *)film;
+
+@end
 
 @interface FilmTableViewCellController : NSObject
 
 @property (nonatomic, strong) FilmDTO *film;
 @property (nonatomic, weak) FilmTableViewCell *cell;
-
+@property (nonatomic, weak) id<FilmTableViewControllerCellDelegate> delegate;
 
 - (UITableViewCell *)configuredCell;
 
