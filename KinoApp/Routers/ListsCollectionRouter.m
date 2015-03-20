@@ -38,6 +38,7 @@
     self.listCollectionViewController = listsCollectionViewController;
     
     UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:listsCollectionViewController];
+    nc.tabBarItem.title = @"Lists";
     
     [tabBarCotroller addChildViewController:nc];
 }

@@ -136,6 +136,11 @@ NSString *const kFilmsProperty = @"films";
     }];
 }
 
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
+{
+    [self.view endEditing:YES];
+}
+
 #pragma mark - Observe methods.
 - (void)registerToObserveFilms
 {
