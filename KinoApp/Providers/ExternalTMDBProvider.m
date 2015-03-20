@@ -45,6 +45,16 @@
     }];
 }
 
+- (void)fetchPopularFilms:(void (^)(NSArray *))completion
+{
+    [self.requestManager GETendpoint:POPULAR_ENDPOINT params:nil andCompletionBlock:^(NSData *data) {
+        NSError *error;
+        NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+        
+        completion([FilmDTOParser filmDTOsFromArray:dic[@"results"] filmsType:nil]);
+    }];
+}
+
 #pragma mark - Lazy getterss.
 - (id<RequestManager>)requestManager
 {

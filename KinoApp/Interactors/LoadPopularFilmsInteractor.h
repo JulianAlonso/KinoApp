@@ -7,7 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ExternalFilmsProvider.h"
 
 @interface LoadPopularFilmsInteractor : NSObject
+
+@property (nonatomic, strong) id<ExternalFilmsProvider> externalProvider;
+
+- (void)loadPopularFilms:(void(^)(NSArray *films))completion;
 
 @end

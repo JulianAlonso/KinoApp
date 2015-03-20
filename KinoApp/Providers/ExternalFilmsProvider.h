@@ -18,4 +18,6 @@
 
 - (void)fetchFilmById:(NSString *)filmId completion:(void(^)(FilmDTO *film))completion;
 
+- (void)fetchPopularFilms:(void(^)(NSArray *films))completion;
+
 @end

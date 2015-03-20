@@ -10,4 +10,9 @@
 
 @implementation LoadPopularFilmsInteractor
 
+- (void)loadPopularFilms:(void(^)(NSArray *films))completion
+{
+    [self.externalProvider fetchPopularFilms:completion];
+}
+
 @end

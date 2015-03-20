@@ -13,6 +13,7 @@ extern NSString *const BASE_PATH;
 extern NSString *const IMAGE_BASE_PATH;
 extern NSString *const UPCOMING_ENDPOINT;
 extern NSString *const NOW_PLAYING_ENDPOINT;
+extern NSString *const POPULAR_ENDPOINT;
 extern NSString *const BY_ID_ENDPOINT;
 
 @interface APIVars : NSObject
