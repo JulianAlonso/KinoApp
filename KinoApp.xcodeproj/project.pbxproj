@@ -64,8 +64,8 @@
 		0158345B1AB86508007E0AC4 /* FilmDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = 0158345A1AB86508007E0AC4 /* FilmDTO.m */; };
 		0158345E1AB86633007E0AC4 /* FilmDTOParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 0158345D1AB86633007E0AC4 /* FilmDTOParser.m */; };
 		015AB1791ABC3F0100D2CBAA /* DetailListRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 015AB1781ABC3F0100D2CBAA /* DetailListRouter.m */; };
-		015AB17D1ABC6A3000D2CBAA /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 015AB17B1ABC6A3000D2CBAA /* SearchViewController.m */; };
-		015AB17E1ABC6A3000D2CBAA /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 015AB17C1ABC6A3000D2CBAA /* SearchViewController.xib */; };
+		015AB17D1ABC6A3000D2CBAA /* SearchFilmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 015AB17B1ABC6A3000D2CBAA /* SearchFilmViewController.m */; };
+		015AB17E1ABC6A3000D2CBAA /* SearchFilmViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 015AB17C1ABC6A3000D2CBAA /* SearchFilmViewController.xib */; };
 		018F9DCD1AB896200046D3C4 /* LocalCoreDataFilmsProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 018F9DCC1AB896200046D3C4 /* LocalCoreDataFilmsProvider.m */; };
 		018F9DD01AB896F90046D3C4 /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 018F9DCF1AB896F90046D3C4 /* CoreDataManager.m */; };
 		018F9DD41AB89B4D0046D3C4 /* Film+Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 018F9DD31AB89B4D0046D3C4 /* Film+Model.m */; };
@@ -193,9 +193,9 @@
 		0158345D1AB86633007E0AC4 /* FilmDTOParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FilmDTOParser.m; path = Parsers/FilmDTOParser.m; sourceTree = "<group>"; };
 		015AB1771ABC3F0100D2CBAA /* DetailListRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailListRouter.h; path = Routers/DetailListRouter.h; sourceTree = "<group>"; };
 		015AB1781ABC3F0100D2CBAA /* DetailListRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailListRouter.m; path = Routers/DetailListRouter.m; sourceTree = "<group>"; };
-		015AB17A1ABC6A3000D2CBAA /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SearchViewController.h; path = ViewControllers/SearchViewController.h; sourceTree = "<group>"; };
-		015AB17B1ABC6A3000D2CBAA /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchViewController.m; path = ViewControllers/SearchViewController.m; sourceTree = "<group>"; };
-		015AB17C1ABC6A3000D2CBAA /* SearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SearchViewController.xib; path = ViewControllers/SearchViewController.xib; sourceTree = "<group>"; };
+		015AB17A1ABC6A3000D2CBAA /* SearchFilmViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SearchFilmViewController.h; path = ViewControllers/SearchFilmViewController.h; sourceTree = "<group>"; };
+		015AB17B1ABC6A3000D2CBAA /* SearchFilmViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchFilmViewController.m; path = ViewControllers/SearchFilmViewController.m; sourceTree = "<group>"; };
+		015AB17C1ABC6A3000D2CBAA /* SearchFilmViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SearchFilmViewController.xib; path = ViewControllers/SearchFilmViewController.xib; sourceTree = "<group>"; };
 		018F9DCA1AB88D270046D3C4 /* LocalFilmsProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocalFilmsProvider.h; path = Providers/LocalFilmsProvider.h; sourceTree = "<group>"; };
 		018F9DCB1AB896200046D3C4 /* LocalCoreDataFilmsProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocalCoreDataFilmsProvider.h; path = Providers/LocalCoreDataFilmsProvider.h; sourceTree = "<group>"; };
 		018F9DCC1AB896200046D3C4 /* LocalCoreDataFilmsProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LocalCoreDataFilmsProvider.m; path = Providers/LocalCoreDataFilmsProvider.m; sourceTree = "<group>"; };
@@ -384,9 +384,9 @@
 				012176521ABC330D00EDA095 /* ListDetailViewController.h */,
 				012176531ABC330D00EDA095 /* ListDetailViewController.m */,
 				012176541ABC330D00EDA095 /* ListDetailViewController.xib */,
-				015AB17A1ABC6A3000D2CBAA /* SearchViewController.h */,
-				015AB17B1ABC6A3000D2CBAA /* SearchViewController.m */,
-				015AB17C1ABC6A3000D2CBAA /* SearchViewController.xib */,
+				015AB17A1ABC6A3000D2CBAA /* SearchFilmViewController.h */,
+				015AB17B1ABC6A3000D2CBAA /* SearchFilmViewController.m */,
+				015AB17C1ABC6A3000D2CBAA /* SearchFilmViewController.xib */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -655,7 +655,7 @@
 				01068EDF1AB7011D0017F91A /* LaunchScreen.xib in Resources */,
 				012C6B901ABA006D0060A49C /* ListsCollectionViewController.xib in Resources */,
 				01068F521AB752840017F91A /* CollectionFilmsCollectionViewCell.xib in Resources */,
-				015AB17E1ABC6A3000D2CBAA /* SearchViewController.xib in Resources */,
+				015AB17E1ABC6A3000D2CBAA /* SearchFilmViewController.xib in Resources */,
 				012C6B981ABA0A070060A49C /* FilmListCollectionViewCell.xib in Resources */,
 				01068F311AB725490017F91A /* BillboardViewController.xib in Resources */,
 				01068EDC1AB7011D0017F91A /* Images.xcassets in Resources */,
@@ -735,7 +735,7 @@
 				012C6B7F1AB99F580060A49C /* FilmDetailViewController.m in Sources */,
 				012176591ABC3D6700EDA095 /* FilmTableViewCellController.m in Sources */,
 				018F9DD71AB8AAF50046D3C4 /* Film.m in Sources */,
-				015AB17D1ABC6A3000D2CBAA /* SearchViewController.m in Sources */,
+				015AB17D1ABC6A3000D2CBAA /* SearchFilmViewController.m in Sources */,
 				012C6B931ABA01560060A49C /* ListsCollectionRouter.m in Sources */,
 				01068F3B1AB72D480017F91A /* BillboardFilmCollectionViewCell.m in Sources */,
 				01068F511AB752840017F91A /* CollectionFilmsCollectionViewCell.m in Sources */,

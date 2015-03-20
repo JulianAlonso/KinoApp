@@ -6,16 +6,16 @@
 //  Copyright (c) 2015 Julian. All rights reserved.
 //
 
-#import "SearchViewController.h"
+#import "SearchFilmViewController.h"
 
-@interface SearchViewController ()
+@interface SearchFilmViewController ()
 
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 @property (weak, nonatomic) IBOutlet UITableView *searchTableView;
 
 @end
 
-@implementation SearchViewController
+@implementation SearchFilmViewController
 
 #pragma mark - Lifecycle methods.
 - (void)viewDidLoad
