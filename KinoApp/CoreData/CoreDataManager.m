@@ -11,6 +11,17 @@
 
 @implementation CoreDataManager
 
++ (NSManagedObjectContext *)privateObjectContext
+{
+    static NSManagedObjectContext *privateContext = nil;
+    if (!privateContext)
+    {
+        privateContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSPrivateQueueConcurrencyType];
+        [privateContext setPersistentStoreCoordinator:[CoreDataManager persistenceStoreCordinator]];
+    }
+    return privateContext;
+}
+
 + (NSManagedObjectContext *)managedObjectContext
 {
     return [[CoreDataManager coreDataStack] managedObjectContext];

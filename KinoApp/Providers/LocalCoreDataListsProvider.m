@@ -122,8 +122,9 @@
 {
     if (!_privateContext)
     {
-        _privateContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSPrivateQueueConcurrencyType];
-        _privateContext.persistentStoreCoordinator = [CoreDataManager persistenceStoreCordinator];
+//        _privateContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSPrivateQueueConcurrencyType];
+//        _privateContext.persistentStoreCoordinator = [CoreDataManager persistenceStoreCordinator];
+        _privateContext = [CoreDataManager privateObjectContext];
     }
     return _privateContext;
 }

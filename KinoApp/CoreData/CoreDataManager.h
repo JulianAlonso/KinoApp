@@ -13,6 +13,8 @@
 
 @interface CoreDataManager : NSObject
 
++ (NSManagedObjectContext *)privateObjectContext;
+
 + (NSManagedObjectContext *)managedObjectContext;
 
 + (NSPersistentStoreCoordinator *)persistenceStoreCordinator;
