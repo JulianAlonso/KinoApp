@@ -9,6 +9,7 @@
 #import "ListDTOParser.h"
 #import "ListDTO.h"
 #import "List.h"
+#import "FilmDTOParser.h"
 
 @implementation ListDTOParser
 
@@ -17,7 +18,7 @@
     ListDTO *listDTO = [ListDTO new];
     
     listDTO.listName = list.listName;
-    listDTO.listFilms = list.listFilms;
+    listDTO.listFilms = [FilmDTOParser filmDTOsFromFilmsSet:list.listFilms];
     
     return listDTO;
 }

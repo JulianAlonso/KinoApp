@@ -36,4 +36,9 @@ NSString *const kFilmReleaseDateProperty = @"filmReleaseDate";
     return film;
 }
 
+- (NSString *)description
+{
+    return [NSString stringWithFormat:@"Name: %@", self.filmTitle];
+}
+
 @end

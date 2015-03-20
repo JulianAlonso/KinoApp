@@ -29,35 +29,36 @@ NSString *const kListsProperty = @"lists";
 
 @end
 
-@interface ListsCollectionViewController (Delegate) <UICollectionViewDelegate>
-
-@end
-
-@interface ListsCollectionViewController (FlowLayoutDelegate) <UICollectionViewDelegateFlowLayout>
+@interface ListsCollectionViewController (DelegateAndFlowLayoutDelegate) <UICollectionViewDelegate ,UICollectionViewDelegateFlowLayout>
 
 @end
 
 
 @implementation ListsCollectionViewController
 
+#pragma mark - VC lifecycle methods.
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
     [self registerToObserveFilms];
     [self configListsCollectionView];
-    [self loadLists];
 }
 
-- (void)didReceiveMemoryWarning
+- (void)viewWillAppear:(BOOL)animated
 {
-    [super didReceiveMemoryWarning];
+    [self loadLists];
 }
 
 - (void)viewDidLayoutSubviews
 {
     self.topConstraint.constant = self.topLayoutGuide.length;
     self.bottomConstraint.constant = self.bottomLayoutGuide.length;
+}
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
 }
 
 #pragma mark - Config methods.
@@ -153,11 +154,7 @@ NSString *const kListsProperty = @"lists";
 
 @end
 
-@implementation ListsCollectionViewController (Delegate)
-
-@end
-
-@implementation ListsCollectionViewController (FlowLayoutDelegate)
+@implementation ListsCollectionViewController (DelegateAndFlowLayoutDelegate)
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {

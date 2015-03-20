@@ -27,6 +27,7 @@
     {
         UIImageView *imageView = [[UIImageView alloc] initWithFrame:self.cell.bounds];
         [imageView sd_setImageWithURL:[[self.list.listFilms anyObject] valueForKey:kPosterPathProperty]];
+        [self.cell addSubview:imageView];
     }
     
     return self.cell;

@@ -30,6 +30,16 @@
         return;
     }
     
+    for (List *list in lists)
+    {
+        NSLog(@"list: %@", list);
+        for (Film *film in list.listFilms)
+        {
+            NSLog(@"         Film: %@", film);
+        }
+
+    }
+    
     if (lists.count == 0)
     {
         [self createPrincipalLists];
@@ -43,12 +53,12 @@
 - (void)addFilm:(FilmDTO *)film toList:(ListDTO *)list completion:(void (^)(NSError *))completion
 {
     __weak typeof(self) weakSelf = self;
-    [self fetchListWithName:list.listName completion:^(List *list) {
+    [self fetchListWithName:list.listName completion:^(List *listMO) {
         __strong typeof(weakSelf) strongSelf = weakSelf;
         
         Film *filmMO = [strongSelf fetchFilmById:film.filmId];
         
-        [list addListFilmsObject:filmMO];
+        [listMO addListFilmsObject:filmMO];
         
         NSError *error;
         [strongSelf.privateContext save:&error];
@@ -58,15 +68,15 @@
 }
 
 #pragma mark - Own methods.
-- (void)fetchListWithName:(NSString *)listName completion:(void(^)(List *list))completion
+- (void)fetchListWithName:(NSString *)listName completion:(void(^)(List *listMO))completion
 {
     NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:NSStringFromClass([List class])];
     request.predicate = [NSPredicate predicateWithFormat:@"%K == %@", kListNameProperty, listName];
     
     NSError *error;
-    List *list = [[self.privateContext executeFetchRequest:request error:&error] firstObject];
+    List *listMO = [[self.privateContext executeFetchRequest:request error:&error] firstObject];
     
-    completion(list);
+    completion(listMO);
 }
 
 /*
