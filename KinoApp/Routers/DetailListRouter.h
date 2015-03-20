@@ -14,4 +14,6 @@
 
 - (void)presentDetailListViewControllerFrom:(UIViewController *)fromViewController withList:(ListDTO *)list;
 
+- (void)searchButtonPressed;
+
 @end

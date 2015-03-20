@@ -29,4 +29,9 @@
     [fromViewController.navigationController pushViewController:listDetailViewController animated:YES];
 }
 
+- (void)searchButtonPressed
+{
+    NSLog(@"search button pressed");
+}
+
 @end

@@ -11,6 +11,7 @@
 #import "FilmTableViewCellController.h"
 #import "ListDTO.h"
 #import "ControllersFactory.h"
+#import "DetailListRouter.h"
 
 NSString *const kListProperty = @"list";
 
@@ -31,6 +32,7 @@ NSString *const kListProperty = @"list";
     
     [self registerToObserveList];
     [self configTableView];
+    [self configNavBarItems];
 }
 
 - (void)didReceiveMemoryWarning
@@ -46,6 +48,14 @@ NSString *const kListProperty = @"list";
     
     [self.filmsTableView registerNib:[UINib nibWithNibName:NSStringFromClass([FilmTableViewCell class]) bundle:nil]
               forCellReuseIdentifier:NSStringFromClass([FilmTableViewCell class])];
+}
+
+- (void)configNavBarItems
+{
+    UIBarButtonItem *searchButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSearch
+                                                                                  target:self
+                                                                                  action:@selector(searchButtonPressed)];
+    self.navigationItem.rightBarButtonItem = searchButton;
 }
 
 #pragma mark - Update methods.
@@ -82,6 +92,11 @@ NSString *const kListProperty = @"list";
 - (void)listChanged
 {
     [self updateControllers];
+}
+
+- (void)searchButtonPressed
+{
+    [self.router searchButtonPressed];
 }
 
 #pragma mark - Datasource methods.
