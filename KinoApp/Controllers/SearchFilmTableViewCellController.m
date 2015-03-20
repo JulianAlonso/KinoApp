@@ -6,8 +6,10 @@
 //  Copyright (c) 2015 Julian. All rights reserved.
 //
 
+#import <SDWebImage/UIImageView+WebCache.h>
 #import "SearchFilmTableViewCellController.h"
 #import "FilmTableViewCell.h"
+#import "FilmDTO.h"
 
 @interface SearchFilmTableViewCellController () <FilmTableViewCellDelegate>
 
@@ -15,9 +17,19 @@
 
 @implementation SearchFilmTableViewCellController
 
+- (UITableViewCell *)configuredCell
+{
+    self.cell.delegate = self;
+    
+    self.cell.filmTitleLabel.text = self.film.filmTitle;
+    [self.cell.filmImageView sd_setImageWithURL:[NSURL URLWithString:self.film.filmBackdropPath]];
+    
+    return self.cell;
+}
+
 - (void)filmTableViewCell:(FilmTableViewCell *)filmTableViewCell didTapWithSender:(UITapGestureRecognizer *)sender
 {
-    
+    NSLog(@"tap at cel: %@ with title: %@", self.cell, self.film.filmTitle);
 }
 
 @end

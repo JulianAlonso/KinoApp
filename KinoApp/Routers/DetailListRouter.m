@@ -9,6 +9,7 @@
 #import "DetailListRouter.h"
 #import "ListDTO.h"
 #import "ListDetailViewController.h"
+#import "SearchFilmRouter.h"
 
 @interface DetailListRouter ()
 
@@ -31,7 +32,9 @@
 
 - (void)searchButtonPressed
 {
-    NSLog(@"search button pressed");
+    SearchFilmRouter *searchRouter = [SearchFilmRouter new];
+    
+    [searchRouter presentSearchFrom:self.listDetailViewController.navigationController andList:self.listDetailViewController.list];
 }
 
 @end

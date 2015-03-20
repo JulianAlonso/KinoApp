@@ -8,6 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+@class ListDTO;
+@class LoadPopularFilmsInteractor;
+@class SearchFilmRouter;
+
 @interface SearchFilmViewController : UIViewController
+
+@property (nonatomic, strong) LoadPopularFilmsInteractor *popularInteractor;
+@property (nonatomic, strong) SearchFilmRouter *router;
+
+@property (nonatomic, strong) ListDTO *fromList;
 
 @end

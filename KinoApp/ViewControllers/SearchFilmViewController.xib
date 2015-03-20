@@ -9,6 +9,7 @@
                 <outlet property="searchBar" destination="ZP5-s1-JP6" id="hw5-4f-Gv5"/>
                 <outlet property="searchDisplayController" destination="KSO-pJ-ZqL" id="Ems-iz-cIN"/>
                 <outlet property="searchTableView" destination="F7F-ub-yQH" id="gEC-2F-nUw"/>
+                <outlet property="topConstraint" destination="xp6-VL-bdR" id="w71-Uq-4bc"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
