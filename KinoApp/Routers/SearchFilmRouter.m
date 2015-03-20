@@ -10,6 +10,7 @@
 #import "SearchFilmViewController.h"
 #import "LoadPopularFilmsInteractor.h"
 #import "ExternalTMDBProvider.h"
+#import "SearchFilmInteractor.h"
 
 @interface SearchFilmRouter ()
 
@@ -25,8 +26,11 @@
     
     LoadPopularFilmsInteractor *loadPopularInteractor = [LoadPopularFilmsInteractor new];
     loadPopularInteractor.externalProvider = [ExternalTMDBProvider new];
+    SearchFilmInteractor *searchInteractor = [SearchFilmInteractor new];
+    searchInteractor.externalProvider = [ExternalTMDBProvider new];
     
     searchFilmViewController.popularInteractor = loadPopularInteractor;
+    searchFilmViewController.searchInteractor = searchInteractor;
     searchFilmViewController.fromList = list;
     searchFilmViewController.router = self;
     self.searchFilmViewController = searchFilmViewController;

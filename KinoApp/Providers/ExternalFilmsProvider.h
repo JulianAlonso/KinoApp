@@ -20,4 +20,6 @@
 
 - (void)fetchPopularFilms:(void(^)(NSArray *films))completion;
 
+- (void)searchFilm:(NSString *)text completion:(void(^)(NSArray *films))completion;
+
 @end

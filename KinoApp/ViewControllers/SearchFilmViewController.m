@@ -11,12 +11,14 @@
 #import "ControllersFactory.h"
 #import "FilmTableViewCell.h"
 #import "LoadPopularFilmsInteractor.h"
+#import "SearchFilmInteractor.h"
 
 NSString *const kFilmsProperty = @"films";
 
 @interface SearchFilmViewController () <UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate>
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *topConstraint;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *middleConstraint;
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 @property (weak, nonatomic) IBOutlet UITableView *searchTableView;
 
@@ -43,6 +45,7 @@ NSString *const kFilmsProperty = @"films";
     [super viewDidLayoutSubviews];
     
     self.topConstraint.constant = self.topLayoutGuide.length;
+    self.middleConstraint.constant = 0.0f;
 }
 
 - (void)didReceiveMemoryWarning
@@ -116,7 +119,21 @@ NSString *const kFilmsProperty = @"films";
 #pragma mark - SearchBar delegate methods.
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText
 {
-    NSLog(@"text change");
+    if ([searchText isEqualToString:@""])
+    {
+        [self loadPopularFilms];
+        return;
+    }
+    __weak typeof(self) weakSelf = self;
+    [self.searchInteractor searchFilm:searchText completion:^(NSArray *films) {
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            strongSelf.films = films;
+            
+            [strongSelf.searchTableView reloadData];
+        });
+    }];
 }
 
 #pragma mark - Observe methods.

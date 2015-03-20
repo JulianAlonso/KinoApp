@@ -55,6 +55,19 @@
     }];
 }
 
+- (void)searchFilm:(NSString *)text completion:(void(^)(NSArray *films))completion
+{
+    [self.requestManager GETendpoint:SEARCH_ENDPOINT params:@{@"query" : text} andCompletionBlock:^(NSData *data) {
+        if (data)
+        {
+            NSError *error;
+            NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+        
+            completion([FilmDTOParser filmDTOsFromArray:dic[@"results"] filmsType:nil]);
+        }
+    }];
+}
+
 #pragma mark - Lazy getterss.
 - (id<RequestManager>)requestManager
 {

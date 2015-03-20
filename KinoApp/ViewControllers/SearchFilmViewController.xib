@@ -6,6 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchFilmViewController">
             <connections>
+                <outlet property="middleConstraint" destination="1r7-pk-4Vw" id="dn0-uv-OqX"/>
                 <outlet property="searchBar" destination="ZP5-s1-JP6" id="hw5-4f-Gv5"/>
                 <outlet property="searchDisplayController" destination="KSO-pJ-ZqL" id="Ems-iz-cIN"/>
                 <outlet property="searchTableView" destination="F7F-ub-yQH" id="gEC-2F-nUw"/>

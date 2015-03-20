@@ -11,9 +11,11 @@
 @class ListDTO;
 @class LoadPopularFilmsInteractor;
 @class SearchFilmRouter;
+@class SearchFilmInteractor;
 
 @interface SearchFilmViewController : UIViewController
 
+@property (nonatomic, strong) SearchFilmInteractor *searchInteractor;
 @property (nonatomic, strong) LoadPopularFilmsInteractor *popularInteractor;
 @property (nonatomic, strong) SearchFilmRouter *router;
 

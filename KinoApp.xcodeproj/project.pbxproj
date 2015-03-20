@@ -69,6 +69,7 @@
 		015AB1811ABC6C3800D2CBAA /* LoadPopularFilmsInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 015AB1801ABC6C3800D2CBAA /* LoadPopularFilmsInteractor.m */; };
 		015AB1841ABC6E7E00D2CBAA /* SearchFilmTableViewCellController.m in Sources */ = {isa = PBXBuildFile; fileRef = 015AB1831ABC6E7E00D2CBAA /* SearchFilmTableViewCellController.m */; };
 		015AB1871ABC78BD00D2CBAA /* SearchFilmRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 015AB1861ABC78BD00D2CBAA /* SearchFilmRouter.m */; };
+		015AB18A1ABC827C00D2CBAA /* SearchFilmInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 015AB1891ABC827C00D2CBAA /* SearchFilmInteractor.m */; };
 		018F9DCD1AB896200046D3C4 /* LocalCoreDataFilmsProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 018F9DCC1AB896200046D3C4 /* LocalCoreDataFilmsProvider.m */; };
 		018F9DD01AB896F90046D3C4 /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 018F9DCF1AB896F90046D3C4 /* CoreDataManager.m */; };
 		018F9DD41AB89B4D0046D3C4 /* Film+Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 018F9DD31AB89B4D0046D3C4 /* Film+Model.m */; };
@@ -205,6 +206,8 @@
 		015AB1831ABC6E7E00D2CBAA /* SearchFilmTableViewCellController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchFilmTableViewCellController.m; path = Controllers/SearchFilmTableViewCellController.m; sourceTree = "<group>"; };
 		015AB1851ABC78BD00D2CBAA /* SearchFilmRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SearchFilmRouter.h; path = Routers/SearchFilmRouter.h; sourceTree = "<group>"; };
 		015AB1861ABC78BD00D2CBAA /* SearchFilmRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchFilmRouter.m; path = Routers/SearchFilmRouter.m; sourceTree = "<group>"; };
+		015AB1881ABC827C00D2CBAA /* SearchFilmInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SearchFilmInteractor.h; path = Interactors/SearchFilmInteractor.h; sourceTree = "<group>"; };
+		015AB1891ABC827C00D2CBAA /* SearchFilmInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchFilmInteractor.m; path = Interactors/SearchFilmInteractor.m; sourceTree = "<group>"; };
 		018F9DCA1AB88D270046D3C4 /* LocalFilmsProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocalFilmsProvider.h; path = Providers/LocalFilmsProvider.h; sourceTree = "<group>"; };
 		018F9DCB1AB896200046D3C4 /* LocalCoreDataFilmsProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocalCoreDataFilmsProvider.h; path = Providers/LocalCoreDataFilmsProvider.h; sourceTree = "<group>"; };
 		018F9DCC1AB896200046D3C4 /* LocalCoreDataFilmsProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LocalCoreDataFilmsProvider.m; path = Providers/LocalCoreDataFilmsProvider.m; sourceTree = "<group>"; };
@@ -349,6 +352,8 @@
 				011759711ABB291F00724BC5 /* AddFilmToListInteractor.m */,
 				015AB17F1ABC6C3800D2CBAA /* LoadPopularFilmsInteractor.h */,
 				015AB1801ABC6C3800D2CBAA /* LoadPopularFilmsInteractor.m */,
+				015AB1881ABC827C00D2CBAA /* SearchFilmInteractor.h */,
+				015AB1891ABC827C00D2CBAA /* SearchFilmInteractor.m */,
 			);
 			name = Interactors;
 			sourceTree = "<group>";
@@ -734,6 +739,7 @@
 				01068F581AB7546A0017F91A /* BillboardFilmsCollectionDelegate.m in Sources */,
 				01068EFC1AB702CC0017F91A /* CoreDataStack.m in Sources */,
 				01068F051AB710D70017F91A /* MainRouter.m in Sources */,
+				015AB18A1ABC827C00D2CBAA /* SearchFilmInteractor.m in Sources */,
 				015AB1791ABC3F0100D2CBAA /* DetailListRouter.m in Sources */,
 				011759831ABB429E00724BC5 /* SelectListModalTransitionAnimator.m in Sources */,
 				01068F4A1AB74E1F0017F91A /* LoadUpcomingFilmsInteractor.m in Sources */,
