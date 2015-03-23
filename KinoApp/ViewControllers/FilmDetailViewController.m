@@ -112,4 +112,10 @@
     }];
 }
 
+#pragma mark - Override methods.
+- (BOOL)hidesBottomBarWhenPushed
+{
+    return YES;
+}
+
 @end

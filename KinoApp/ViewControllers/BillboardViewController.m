@@ -11,11 +11,17 @@
 #import "CollectionFilmsCollectionViewCell.h"
 #import "FilmDTO.h"
 #import "BillboardRouter.h"
+#import "UIColor+Custom.h"
+#import "UIFont+Custom.h"
 
 @interface BillboardViewController ()
 
 @property (weak, nonatomic) IBOutlet UICollectionView *billboardCollectionView;
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *marquerBarLeftSpace;
+@property (weak, nonatomic) IBOutlet UIView *topView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *markerViewLeftSpace;
+@property (weak, nonatomic) IBOutlet UIView *markerView;
+@property (weak, nonatomic) IBOutlet UILabel *playingNowLabel;
+@property (weak, nonatomic) IBOutlet UILabel *upcomingLabel;
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *topConstraint;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *bottomConstraint;
@@ -32,6 +38,11 @@
     
     [self configBillboardCollectionView];
     [self configDelegate];
+    
+    [self configPlayingNowLabel];
+    [self configUpcomingLabel];
+    
+    [self configStyles];
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle
@@ -57,11 +68,20 @@
 
 - (void)viewDidLayoutSubviews
 {
-    self.topConstraint.constant = self.topLayoutGuide.length + 10;
-    self.bottomConstraint.constant = self.bottomLayoutGuide.length;
+    self.topConstraint.constant = self.topLayoutGuide.length;
 }
 
 #pragma mark - Config methods.
+
+- (void)configStyles
+{
+    [self.view setBackgroundColor:[UIColor appBGColor]];
+    [self.markerView setBackgroundColor:[UIColor selectedItemColor]];
+    self.topView.alpha = 0.9f;
+    self.upcomingLabel.alpha = 1.0f;
+    self.playingNowLabel.alpha = 1.0f;
+}
+
 - (void)configBillboardCollectionView
 {
     self.billboardCollectionView.contentSize = CGSizeMake(self.billboardCollectionView.frame.size.width * 2, self.billboardCollectionView.frame.size.height);
@@ -69,7 +89,6 @@
     self.billboardCollectionView.showsHorizontalScrollIndicator = NO;
     self.billboardCollectionView.delegate = self.delegate;
     self.billboardCollectionView.dataSource = self.delegate;
-    self.billboardCollectionView.backgroundColor = [UIColor whiteColor];
     
     [self.billboardCollectionView registerNib:[UINib nibWithNibName:NSStringFromClass([CollectionFilmsCollectionViewCell class]) bundle:nil]
                    forCellWithReuseIdentifier:NSStringFromClass([CollectionFilmsCollectionViewCell class])];
@@ -77,9 +96,39 @@
 
 - (void)configDelegate
 {
-//    [self.delegate setSegmentedControl:self.segmentedControl];
-//    self.delegate.billboardCollectionView = self.billboardCollectionView;
-//    [self.segmentedControl addTarget:self.delegate action:@selector(valueChangedAtSelectedControl:) forControlEvents:UIControlEventValueChanged];
+    [self.delegate setMarkerViewLeftSpace:self.markerViewLeftSpace];
+    self.delegate.billboardCollectionView = self.billboardCollectionView;
+    [self.delegate setPlayingNowLabel:self.playingNowLabel];
+    [self.delegate setUpcomingLabel:self.upcomingLabel];
+}
+
+- (void)configUpcomingLabel
+{
+    [self.upcomingLabel setUserInteractionEnabled:YES];
+    self.upcomingLabel.textColor = [UIColor unselectedItemColor];
+    self.upcomingLabel.font = [UIFont appFontWithSize:30];
+    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(upcomfingLabelPressed:)];
+    [self.upcomingLabel addGestureRecognizer:tapGesture];
+}
+
+- (void)configPlayingNowLabel
+{
+    self.playingNowLabel.userInteractionEnabled = YES;
+    self.playingNowLabel.font = [UIFont appFontWithSize:30];
+    self.playingNowLabel.textColor = [UIColor selectedItemColor];
+    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(playingNowLabelPressed:)];
+    [self.playingNowLabel addGestureRecognizer:tapGesture];
+}
+
+#pragma mark - Action methods.
+- (void)upcomfingLabelPressed:(UITapGestureRecognizer *)sender
+{
+    [self.delegate upcomingLabelPressed:self.upcomingLabel];
+}
+
+- (void)playingNowLabelPressed:(UITapGestureRecognizer *)sender
+{
+    [self.delegate playingNowLabelPressed:self.playingNowLabel];
 }
 
 #pragma mark - BillboardFilmCollectionEventReceiver.

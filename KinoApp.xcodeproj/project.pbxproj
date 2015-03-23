@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01038D1F1AC0516200B88A8A /* UIColor+Custom.m in Sources */ = {isa = PBXBuildFile; fileRef = 01038D1E1AC0516200B88A8A /* UIColor+Custom.m */; };
+		01038D221AC05A2800B88A8A /* UIFont+Custom.m in Sources */ = {isa = PBXBuildFile; fileRef = 01038D211AC05A2800B88A8A /* UIFont+Custom.m */; };
 		01068ECE1AB7011D0017F91A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 01068ECD1AB7011D0017F91A /* main.m */; };
 		01068ED11AB7011D0017F91A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 01068ED01AB7011D0017F91A /* AppDelegate.m */; };
 		01068ED41AB7011D0017F91A /* KinoApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 01068ED21AB7011D0017F91A /* KinoApp.xcdatamodeld */; };
@@ -88,6 +90,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		01038D1D1AC0516200B88A8A /* UIColor+Custom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+Custom.h"; path = "Categories/UIColor+Custom.h"; sourceTree = "<group>"; };
+		01038D1E1AC0516200B88A8A /* UIColor+Custom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+Custom.m"; path = "Categories/UIColor+Custom.m"; sourceTree = "<group>"; };
+		01038D201AC05A2800B88A8A /* UIFont+Custom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIFont+Custom.h"; path = "Categories/UIFont+Custom.h"; sourceTree = "<group>"; };
+		01038D211AC05A2800B88A8A /* UIFont+Custom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIFont+Custom.m"; path = "Categories/UIFont+Custom.m"; sourceTree = "<group>"; };
 		01068EC81AB7011D0017F91A /* KinoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KinoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01068ECC1AB7011D0017F91A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		01068ECD1AB7011D0017F91A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -566,6 +572,10 @@
 				018F9DD31AB89B4D0046D3C4 /* Film+Model.m */,
 				012176451ABC1FE700EDA095 /* List+Model.h */,
 				012176461ABC1FE700EDA095 /* List+Model.m */,
+				01038D1D1AC0516200B88A8A /* UIColor+Custom.h */,
+				01038D1E1AC0516200B88A8A /* UIColor+Custom.m */,
+				01038D201AC05A2800B88A8A /* UIFont+Custom.h */,
+				01038D211AC05A2800B88A8A /* UIFont+Custom.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -736,6 +746,7 @@
 				013955681ABAD7A500BC745D /* List.m in Sources */,
 				012C6B8F1ABA006D0060A49C /* ListsCollectionViewController.m in Sources */,
 				0117597F1ABB410600724BC5 /* SelectListRouter.m in Sources */,
+				01038D221AC05A2800B88A8A /* UIFont+Custom.m in Sources */,
 				01068F581AB7546A0017F91A /* BillboardFilmsCollectionDelegate.m in Sources */,
 				01068EFC1AB702CC0017F91A /* CoreDataStack.m in Sources */,
 				01068F051AB710D70017F91A /* MainRouter.m in Sources */,
@@ -757,6 +768,7 @@
 				012176591ABC3D6700EDA095 /* FilmTableViewCellController.m in Sources */,
 				018F9DD71AB8AAF50046D3C4 /* Film.m in Sources */,
 				015AB17D1ABC6A3000D2CBAA /* SearchFilmViewController.m in Sources */,
+				01038D1F1AC0516200B88A8A /* UIColor+Custom.m in Sources */,
 				012C6B931ABA01560060A49C /* ListsCollectionRouter.m in Sources */,
 				01068F3B1AB72D480017F91A /* BillboardFilmCollectionViewCell.m in Sources */,
 				01068F511AB752840017F91A /* CollectionFilmsCollectionViewCell.m in Sources */,

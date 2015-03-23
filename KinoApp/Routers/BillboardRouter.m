@@ -50,6 +50,8 @@
     
     UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:billboardViewController];
     nc.tabBarItem.title = @"Billboard";
+    UIImage *image = [UIImage imageNamed:@"Films"];
+    nc.tabBarItem.image = image;
     
     [tabBarController addChildViewController:nc];
 }

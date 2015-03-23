@@ -9,8 +9,12 @@
             <connections>
                 <outlet property="billboardCollectionView" destination="Tbq-gc-4T4" id="1Di-pT-EU8"/>
                 <outlet property="bottomConstraint" destination="rdl-ZO-YtE" id="RtJ-9I-9Qi"/>
-                <outlet property="marquerBarLeftSpace" destination="3vW-v6-lb5" id="CIq-3k-qq6"/>
+                <outlet property="markerView" destination="Wwk-WR-j9F" id="tiG-cD-hEQ"/>
+                <outlet property="markerViewLeftSpace" destination="3vW-v6-lb5" id="yzg-un-X39"/>
+                <outlet property="playingNowLabel" destination="nKN-rG-nv4" id="5Qb-cf-hRR"/>
                 <outlet property="topConstraint" destination="rS2-RJ-pij" id="Xkx-Sh-aFy"/>
+                <outlet property="topView" destination="Obd-Ba-lXU" id="Y4r-hO-TYh"/>
+                <outlet property="upcomingLabel" destination="hWF-7S-2hm" id="hcj-Pm-RW4"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -20,33 +24,32 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Obd-Ba-lXU">
-                    <rect key="frame" x="0.0" y="0.0" width="600" height="48"/>
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="49"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wwk-WR-j9F">
-                            <rect key="frame" x="0.0" y="44" width="300" height="4"/>
+                            <rect key="frame" x="0.0" y="45" width="300" height="4"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="4" id="Jyh-HF-Sc1"/>
                             </constraints>
                         </view>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Playing now" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nKN-rG-nv4">
-                            <rect key="frame" x="0.0" y="13" width="300" height="21"/>
+                            <rect key="frame" x="0.0" y="14" width="300" height="21"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upcoming" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hWF-7S-2hm">
-                            <rect key="frame" x="300" y="13" width="300" height="21"/>
+                            <rect key="frame" x="300" y="14" width="300" height="21"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
-                    <color key="backgroundColor" red="1" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstItem="hWF-7S-2hm" firstAttribute="leading" secondItem="nKN-rG-nv4" secondAttribute="trailing" id="3Uy-pK-RMq"/>
                         <constraint firstItem="Wwk-WR-j9F" firstAttribute="leading" secondItem="Obd-Ba-lXU" secondAttribute="leading" id="3vW-v6-lb5"/>
-                        <constraint firstItem="nKN-rG-nv4" firstAttribute="top" secondItem="Obd-Ba-lXU" secondAttribute="top" constant="13" id="R7N-Ov-Fva"/>
+                        <constraint firstItem="nKN-rG-nv4" firstAttribute="top" secondItem="Obd-Ba-lXU" secondAttribute="top" constant="14" id="R7N-Ov-Fva"/>
                         <constraint firstItem="hWF-7S-2hm" firstAttribute="width" secondItem="nKN-rG-nv4" secondAttribute="width" id="Xt7-JV-vjz"/>
                         <constraint firstAttribute="bottom" secondItem="Wwk-WR-j9F" secondAttribute="bottom" id="cDh-Oc-35M"/>
                         <constraint firstItem="Wwk-WR-j9F" firstAttribute="top" secondItem="nKN-rG-nv4" secondAttribute="bottom" constant="10" id="qX5-M0-G6A"/>
@@ -57,7 +60,7 @@
                     </constraints>
                 </view>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Tbq-gc-4T4">
-                    <rect key="frame" x="0.0" y="48" width="600" height="552"/>
+                    <rect key="frame" x="0.0" y="49" width="600" height="551"/>
                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="4cB-Y1-KXE">
                         <size key="itemSize" width="50" height="50"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -66,7 +69,6 @@
                     </collectionViewFlowLayout>
                 </collectionView>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="Obd-Ba-lXU" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="B6j-lZ-5SL"/>
                 <constraint firstItem="Tbq-gc-4T4" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="JHw-ap-CPu"/>

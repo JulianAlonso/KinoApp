@@ -16,11 +16,16 @@
 @property (nonatomic, strong) LoadPlayingNowInteractor *loadPlayingNowInteractor;
 @property (nonatomic, strong) LoadUpcomingFilmsInteractor *loadUpcomingInteractor;
 
+@property (nonatomic, strong) NSLayoutConstraint *markerViewLeftSpace;
+
 @property (nonatomic, strong) NSArray *cellDelegates;
 
 @property (nonatomic, weak) UICollectionView *billboardCollectionView;
-@property (nonatomic, weak) UISegmentedControl *segmentedControl;
+@property (nonatomic, weak) UILabel *playingNowLabel;
+@property (nonatomic, weak) UILabel *upcomingLabel;
 
-- (void)valueChangedAtSelectedControl:(UISegmentedControl *)sender;
+
+- (void)upcomingLabelPressed:(UILabel *)sender;
+- (void)playingNowLabelPressed:(UILabel *)sender;
 
 @end

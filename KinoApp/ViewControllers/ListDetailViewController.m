@@ -130,7 +130,13 @@ NSString *const kListProperty = @"list";
     [self.router tappedCellWithFilm:film];
 }
 
-#pragma mark - Dealloc methods.
+#pragma mark - Override methods.
+- (BOOL)hidesBottomBarWhenPushed
+{
+    return YES;
+}
+
+#pragma mark - Dealloc method.
 - (void)dealloc
 {
     NSLog(@"dealoc at %@", self);

@@ -8,6 +8,7 @@
 
 #import "CollectionFilmsCollectionViewCell.h"
 #import "BillboardFilmCollectionViewCell.h"
+#import "UIColor+Custom.h"
 
 @interface CollectionFilmsCollectionViewCell ()
 
@@ -31,6 +32,7 @@
     self.filmsCollectionView.alwaysBounceVertical = YES;
     
     [self.filmsCollectionView addSubview:self.refreshControl];
+    self.filmsCollectionView.backgroundColor = [UIColor appBGColor];
     
     [self.filmsCollectionView registerNib:[UINib nibWithNibName:NSStringFromClass([BillboardFilmCollectionViewCell class]) bundle:nil]
                forCellWithReuseIdentifier:NSStringFromClass([BillboardFilmCollectionViewCell class])];

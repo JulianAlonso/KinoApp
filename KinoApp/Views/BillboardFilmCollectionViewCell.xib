@@ -19,19 +19,18 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="B0c-WC-Obj">
-                        <rect key="frame" x="0.0" y="0.0" width="228" height="313"/>
+                        <rect key="frame" x="5" y="5" width="218" height="303"/>
                     </imageView>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
-            <color key="backgroundColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstAttribute="centerX" secondItem="SLX-rX-qTd" secondAttribute="centerX" id="38X-t7-U2p"/>
-                <constraint firstAttribute="bottom" secondItem="B0c-WC-Obj" secondAttribute="bottom" id="74k-Gn-WAv"/>
-                <constraint firstItem="B0c-WC-Obj" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="B3N-qg-rqF"/>
-                <constraint firstAttribute="trailing" secondItem="B0c-WC-Obj" secondAttribute="trailing" id="Ffm-JS-XGw"/>
+                <constraint firstAttribute="bottom" secondItem="B0c-WC-Obj" secondAttribute="bottom" constant="5" id="74k-Gn-WAv"/>
+                <constraint firstItem="B0c-WC-Obj" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="B3N-qg-rqF"/>
+                <constraint firstAttribute="trailing" secondItem="B0c-WC-Obj" secondAttribute="trailing" constant="5" id="Ffm-JS-XGw"/>
                 <constraint firstItem="SLX-rX-qTd" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="L2c-mK-pcX"/>
-                <constraint firstItem="B0c-WC-Obj" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="LE0-ni-dVa"/>
+                <constraint firstItem="B0c-WC-Obj" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="LE0-ni-dVa"/>
                 <constraint firstAttribute="trailing" secondItem="SLX-rX-qTd" secondAttribute="trailing" id="UkG-oN-brh"/>
                 <constraint firstAttribute="centerY" secondItem="SLX-rX-qTd" secondAttribute="centerY" id="djD-cq-67f"/>
             </constraints>

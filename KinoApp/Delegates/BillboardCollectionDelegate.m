@@ -8,8 +8,7 @@
 
 #import "BillboardCollectionDelegate.h"
 #import "CollectionFilmsCollectionViewCell.h"
-
-
+#import "UIColor+Custom.h"
 
 @interface BillboardCollectionDelegate ()
 
@@ -19,17 +18,25 @@
 
 @implementation BillboardCollectionDelegate
 
-@synthesize segmentedControl = _segmentedControl;
+@synthesize markerViewLeftSpace = _markerViewLeftSpace;
 @synthesize loadPlayingNowInteractor = _loadPlayingNowInteractor;
 @synthesize loadUpcomingInteractor = _loadUpcomingInteractor;
 @synthesize cellDelegates = _cellDelegates;
 @synthesize billboardCollectionView = _billboardCollectionView;
+@synthesize playingNowLabel = _playingNowLabel;
+@synthesize upcomingLabel = _upcomingLabel;
 
-
-- (void)valueChangedAtSelectedControl:(UISegmentedControl *)sender
+- (void)upcomingLabelPressed:(UILabel *)sender
 {
-    CGPoint destiny = CGPointMake(self.billboardCollectionView.frame.size.width * sender.selectedSegmentIndex, 0);
-    [self.billboardCollectionView setContentOffset:destiny animated:YES];
+    CGFloat upcomingRef = self.billboardCollectionView.frame.size.width;
+    [self.billboardCollectionView setContentOffset:CGPointMake(upcomingRef, 0) animated:YES];
+    [self selectedUpcomingLabel];
+}
+- (void)playingNowLabelPressed:(UILabel *)sender
+{
+    CGFloat playingNowRef = 0;
+    [self.billboardCollectionView setContentOffset:CGPointMake(playingNowRef, 0) animated:YES];
+    [self selectedPlayingNowLabel];
 }
 
 #pragma mark - Collection Datasourece methods.
@@ -62,8 +69,36 @@
 #pragma mark - ScrollView delegate methods.
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
-    CGFloat index = scrollView.contentOffset.x / scrollView.bounds.size.width;
-    [self.segmentedControl setSelectedSegmentIndex:index];
+    CGFloat index = (scrollView.contentOffset.x / CGRectGetWidth(scrollView.frame));
+    if (index == 0)
+    {
+        [self selectedPlayingNowLabel];
+    }
+    else
+    {
+        [self selectedUpcomingLabel];
+    }
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    CGFloat movedContent = scrollView.contentOffset.x;
+    [UIView animateWithDuration:0.1f animations:^{
+        self.markerViewLeftSpace.constant = movedContent / 2;
+    }];
+}
+
+#pragma mark - OWN methods.
+- (void)selectedUpcomingLabel
+{
+    [self.upcomingLabel setTextColor:[UIColor selectedItemColor]];
+    [self.playingNowLabel setTextColor:[UIColor unselectedItemColor]];
+}
+
+- (void)selectedPlayingNowLabel
+{
+    [self.playingNowLabel setTextColor:[UIColor selectedItemColor]];
+    [self.upcomingLabel setTextColor:[UIColor unselectedItemColor]];
 }
 
 @end
