@@ -8,16 +8,18 @@
 
 #import "ListDetailViewController.h"
 #import "FilmTableViewCell.h"
-#import "FilmTableViewCellController.h"
+#import "FilmCollectionViewCellController.h"
 #import "ListDTO.h"
 #import "ControllersFactory.h"
 #import "DetailListRouter.h"
+#import "BillboardFilmCollectionViewCell.h"
 
 NSString *const kListProperty = @"list";
 
-@interface ListDetailViewController () <UITableViewDataSource, UITableViewDelegate, FilmTableViewControllerCellDelegate>
+@interface ListDetailViewController () <UICollectionViewDataSource, UICollectionViewDelegate, FilmCollectionViewControllerCellDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *filmsTableView;
+@property (weak, nonatomic) IBOutlet UICollectionView *filmsCollectionView;
 
 @property (nonatomic, strong) NSArray *controllers;
 
@@ -31,7 +33,7 @@ NSString *const kListProperty = @"list";
     [super viewDidLoad];
     
     [self registerToObserveList];
-    [self configTableView];
+    [self configCollectionView];
     [self configNavBarItems];
 }
 
@@ -41,13 +43,13 @@ NSString *const kListProperty = @"list";
 }
 
 #pragma mark - Config methods.
-- (void)configTableView
+- (void)configCollectionView
 {
-    self.filmsTableView.delegate = self;
-    self.filmsTableView.dataSource = self;
+    self.filmsCollectionView.delegate = self;
+    self.filmsCollectionView.dataSource = self;
     
-    [self.filmsTableView registerNib:[UINib nibWithNibName:NSStringFromClass([FilmTableViewCell class]) bundle:nil]
-              forCellReuseIdentifier:NSStringFromClass([FilmTableViewCell class])];
+    [self.filmsCollectionView registerNib:[UINib nibWithNibName:NSStringFromClass([BillboardFilmCollectionViewCell class]) bundle:nil]
+               forCellWithReuseIdentifier:NSStringFromClass([BillboardFilmCollectionViewCell class])];
 }
 
 - (void)configNavBarItems
@@ -64,7 +66,7 @@ NSString *const kListProperty = @"list";
     NSMutableArray *controllers = [NSMutableArray array];
     for (__unused FilmDTO *film in self.list.listFilms)
     {
-        FilmTableViewCellController *controller = [ControllersFactory controllerForCellClass:[FilmTableViewCell class]];
+        FilmCollectionViewCellController *controller = [ControllersFactory controllerForCellClass:[BillboardFilmCollectionViewCell class]];
         controller.delegate = self;
         [controllers addObject:controller];
     }
@@ -102,18 +104,18 @@ NSString *const kListProperty = @"list";
 }
 
 #pragma mark - Datasource methods.
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    FilmTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([FilmTableViewCell class])];
+    BillboardFilmCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([BillboardFilmCollectionViewCell class]) forIndexPath:indexPath];
     
-    FilmTableViewCellController *controller = self.controllers[indexPath.row];
+    FilmCollectionViewCellController *controller = self.controllers[indexPath.row];
     controller.cell = cell;
     controller.film = self.list.listFilms[indexPath.row];
     
     return [controller configuredCell];
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
     return self.list.listFilms.count;
 }
@@ -124,8 +126,27 @@ NSString *const kListProperty = @"list";
     return 200;
 }
 
+#pragma mark - CollectionView FloatLayout delegate methods.
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section
+{
+    return 0;
+}
+
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section
+{
+    return 0;
+}
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    CGFloat width = CGRectGetWidth(collectionView.bounds) /2;
+    CGFloat height = CGRectGetHeight(collectionView.bounds) /2;
+    
+    return CGSizeMake(width, height);
+}
+
 #pragma mark - FilmTableViewControllerCellDelegate methods.
-- (void)filmTableViewCellController:(FilmTableViewCellController *)filmTableViewCellController tappedCellWithFilm:(FilmDTO *)film
+- (void)filmCollectionViewCellController:(FilmCollectionViewCellController *)filmTableViewCellController tappedCellWithFilm:(FilmDTO *)film
 {
     [self.router tappedCellWithFilm:film];
 }

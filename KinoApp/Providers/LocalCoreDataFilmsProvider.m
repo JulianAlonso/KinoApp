@@ -30,7 +30,7 @@
         select.predicate = [NSPredicate predicateWithFormat:@"%K == %@", kFilmIdProperty, f.filmId];
         
         NSError *error;
-        Film *film = [[self.privateContext executeFetchRequest:select error:&error] firstObject];
+        __unused Film *film = [[self.privateContext executeFetchRequest:select error:&error] firstObject];
         
         if (!film)
         {

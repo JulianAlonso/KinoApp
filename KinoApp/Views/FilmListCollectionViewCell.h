@@ -15,6 +15,9 @@
 @property (weak, nonatomic) IBOutlet UIView *listPostersView;
 @property (weak, nonatomic) IBOutlet UILabel *listNameLabel;
 
+@property (weak, nonatomic) IBOutlet UIImageView *oneImageView;
+@property (strong, nonatomic) IBOutletCollection(UIImageView) NSArray *variousImagesViewCollection;
+
 @property (nonatomic, strong) FilmListCollectionViewCellController *controller;
 
 @end

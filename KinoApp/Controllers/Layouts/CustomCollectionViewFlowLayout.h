@@ -1,5 +1,5 @@
 //
-//  UIFont+Custom.h
+//  CustomCollectionViewFlowLayout.h
 //  KinoApp
 //
 //  Created by Julian Alonso on 23/3/15.
@@ -8,10 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIFont (Custom)
-
-+ (UIFont *)appFontWithSize:(CGFloat)size;
-
-+ (UIFont *)appBoldFontWithSize:(CGFloat)size;
+@interface CustomCollectionViewFlowLayout : UICollectionViewFlowLayout
 
 @end

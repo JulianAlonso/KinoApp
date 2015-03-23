@@ -6,9 +6,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ListsCollectionViewController">
             <connections>
-                <outlet property="bottomConstraint" destination="iKt-SM-obQ" id="xZO-ec-6pe"/>
-                <outlet property="listsCollectionView" destination="FCo-I7-h0R" id="Eg6-f7-SY3"/>
-                <outlet property="topConstraint" destination="S9Z-6s-6OO" id="Vg4-8x-PDP"/>
+                <outlet property="backgroundImage" destination="l9m-qs-cWI" id="CUO-dS-gRc"/>
+                <outlet property="bottomConstraint" destination="hZ6-HG-hj0" id="5DG-Z5-mQG"/>
+                <outlet property="listsCollectionView" destination="xL7-2C-mnZ" id="Kj3-sk-qQb"/>
+                <outlet property="topConstraint" destination="bSH-dG-fGV" id="F8b-oz-oXz"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -17,9 +18,21 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="FCo-I7-h0R" userLabel="CollectionView">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="l9m-qs-cWI">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="fh3-8l-hcH">
+                </imageView>
+                <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kx3-sx-deU">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="y22-7u-H9B">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    </view>
+                    <blurEffect style="dark"/>
+                </visualEffectView>
+                <collectionView multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="xL7-2C-mnZ">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="67j-dE-9jd">
                         <size key="itemSize" width="50" height="50"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -29,10 +42,18 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="FCo-I7-h0R" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="S9Z-6s-6OO"/>
-                <constraint firstItem="FCo-I7-h0R" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="hIc-hC-ycY"/>
-                <constraint firstAttribute="bottom" secondItem="FCo-I7-h0R" secondAttribute="bottom" id="iKt-SM-obQ"/>
-                <constraint firstAttribute="trailing" secondItem="FCo-I7-h0R" secondAttribute="trailing" id="xxX-rc-GdU"/>
+                <constraint firstAttribute="bottom" secondItem="Kx3-sx-deU" secondAttribute="bottom" id="4HD-zh-r9z"/>
+                <constraint firstItem="l9m-qs-cWI" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="CF7-z5-Yqh"/>
+                <constraint firstItem="l9m-qs-cWI" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="ENV-eB-6NK"/>
+                <constraint firstAttribute="bottom" secondItem="l9m-qs-cWI" secondAttribute="bottom" id="XZj-8O-I2H"/>
+                <constraint firstItem="xL7-2C-mnZ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="bSH-dG-fGV"/>
+                <constraint firstItem="xL7-2C-mnZ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="cZR-8C-ZyS"/>
+                <constraint firstAttribute="trailing" secondItem="l9m-qs-cWI" secondAttribute="trailing" id="cgI-D2-RIC"/>
+                <constraint firstItem="Kx3-sx-deU" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="d3W-C8-Xqk"/>
+                <constraint firstAttribute="bottom" secondItem="xL7-2C-mnZ" secondAttribute="bottom" id="hZ6-HG-hj0"/>
+                <constraint firstItem="Kx3-sx-deU" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="jKt-Ah-PY3"/>
+                <constraint firstAttribute="trailing" secondItem="xL7-2C-mnZ" secondAttribute="trailing" id="mvf-Dq-sVg"/>
+                <constraint firstAttribute="trailing" secondItem="Kx3-sx-deU" secondAttribute="trailing" id="tj6-WX-TgA"/>
             </constraints>
         </view>
     </objects>

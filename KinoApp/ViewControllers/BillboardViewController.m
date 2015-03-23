@@ -106,7 +106,7 @@
 {
     [self.upcomingLabel setUserInteractionEnabled:YES];
     self.upcomingLabel.textColor = [UIColor unselectedItemColor];
-    self.upcomingLabel.font = [UIFont appFontWithSize:30];
+    self.upcomingLabel.font = [UIFont appFontWithSize:20];
     UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(upcomfingLabelPressed:)];
     [self.upcomingLabel addGestureRecognizer:tapGesture];
 }
@@ -114,7 +114,7 @@
 - (void)configPlayingNowLabel
 {
     self.playingNowLabel.userInteractionEnabled = YES;
-    self.playingNowLabel.font = [UIFont appFontWithSize:30];
+    self.playingNowLabel.font = [UIFont appFontWithSize:20];
     self.playingNowLabel.textColor = [UIColor selectedItemColor];
     UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(playingNowLabelPressed:)];
     [self.playingNowLabel addGestureRecognizer:tapGesture];

@@ -30,15 +30,15 @@
         return;
     }
     
-    for (List *list in lists)
-    {
-        NSLog(@"list: %@", list);
-        for (Film *film in list.listFilms)
-        {
-            NSLog(@"         Film: %@", film);
-        }
-
-    }
+//    for (List *list in lists)
+//    {
+//        NSLog(@"list: %@", list);
+//        for (Film *film in list.listFilms)
+//        {
+//            NSLog(@"         Film: %@", film);
+//        }
+//
+//    }
     
     if (lists.count == 0)
     {

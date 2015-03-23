@@ -6,7 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ListDetailViewController">
             <connections>
-                <outlet property="filmsTableView" destination="AZb-tz-P01" id="0ju-NM-Sj0"/>
+                <outlet property="filmsCollectionView" destination="tcA-nf-v7D" id="22W-EM-EOw"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -15,12 +15,24 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="AZb-tz-P01">
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="tcA-nf-v7D">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                </tableView>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="J7b-Cw-jFr">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="tcA-nf-v7D" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="5WG-YL-uYo"/>
+                <constraint firstItem="tcA-nf-v7D" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="fJv-Ub-GVB"/>
+                <constraint firstAttribute="trailing" secondItem="tcA-nf-v7D" secondAttribute="trailing" id="wEa-kc-QRt"/>
+                <constraint firstAttribute="bottom" secondItem="tcA-nf-v7D" secondAttribute="bottom" id="yqo-gA-vJS"/>
+            </constraints>
         </view>
     </objects>
 </document>

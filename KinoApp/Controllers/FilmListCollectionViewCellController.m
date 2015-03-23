@@ -23,11 +23,18 @@
     
     [self.cell addGestureRecognizer:tapGesture];
     
-    if (self.list.listFilms > 0)
+    if (self.list.listFilms.count > 0 && self.list.listFilms.count < 4)
     {
-        UIImageView *imageView = [[UIImageView alloc] initWithFrame:self.cell.bounds];
-        [imageView sd_setImageWithURL:[[self.list.listFilms firstObject] valueForKey:kPosterPathProperty]];
-        [self.cell addSubview:imageView];
+        [self.cell.oneImageView sd_setImageWithURL:[NSURL URLWithString:[[self.list.listFilms firstObject] valueForKey:kPosterPathProperty]]];
+    }
+    else if (self.list.listFilms.count > 3)
+    {
+        int cont = 0;
+        for (UIImageView *iv in self.cell.variousImagesViewCollection)
+        {
+            [iv sd_setImageWithURL:[NSURL URLWithString:[[self.list.listFilms objectAtIndex:cont] valueForKey:kPosterPathProperty]]];
+            cont++;
+        }
     }
     
     return self.cell;

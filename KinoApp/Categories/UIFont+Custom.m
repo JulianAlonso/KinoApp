@@ -12,7 +12,12 @@
 
 + (UIFont *)appFontWithSize:(CGFloat)size
 {
-    return [UIFont fontWithName:@"Heveltica-light" size:size];
+    return [UIFont fontWithName:@"Helvetica-Light" size:size];
+}
+
++ (UIFont *)appBoldFontWithSize:(CGFloat)size
+{
+    return [UIFont fontWithName:@"Helvetica-Bold" size:size];
 }
 
 @end

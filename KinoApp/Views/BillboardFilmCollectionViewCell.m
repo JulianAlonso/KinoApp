@@ -10,8 +10,16 @@
 
 @implementation BillboardFilmCollectionViewCell
 
-- (void)awakeFromNib {
-    // Initialization code
+- (void)awakeFromNib
+{
+    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(cellPressed:)];
+    [self addGestureRecognizer:tapGesture];
+}
+
+#pragma mark - Action methods.
+- (void)cellPressed:(UITapGestureRecognizer *)sender
+{
+    [self.delegate billboardFilmCollectionViewCell:self didTapWithSender:sender];
 }
 
 @end
