@@ -47,15 +47,14 @@ NSString *const kListsProperty = @"lists";
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    [self.navigationController setNavigationBarHidden:YES animated:animated];
     [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES animated:animated];
     [self loadLists];
 }
 
 - (void)viewDidDisappear:(BOOL)animated
 {
     [super viewDidDisappear:animated];
-    
     [self.navigationController setNavigationBarHidden:NO animated:animated];
 }
 

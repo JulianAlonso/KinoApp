@@ -27,6 +27,7 @@
 
 @implementation BillboardViewController
 
+#pragma mark - Lifecycle methods.
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -36,6 +37,18 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES animated:animated];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    [self.navigationController setNavigationBarHidden:NO animated:animated];
 }
 
 - (void)viewDidLayoutSubviews
@@ -49,6 +62,7 @@
 {
     self.billboardCollectionView.contentSize = CGSizeMake(self.refereceView.frame.size.width * 2, self.refereceView.frame.size.height);
     self.billboardCollectionView.pagingEnabled = YES;
+    self.billboardCollectionView.showsHorizontalScrollIndicator = NO;
     self.billboardCollectionView.delegate = self.delegate;
     self.billboardCollectionView.dataSource = self.delegate;
     self.billboardCollectionView.backgroundColor = [UIColor whiteColor];

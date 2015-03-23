@@ -30,6 +30,7 @@
 - (void)filmTableViewCell:(FilmTableViewCell *)filmTableViewCell didTapWithSender:(UITapGestureRecognizer *)sender
 {
     NSLog(@"tap at cel: %@ with title: %@", self.cell, self.film.filmTitle);
+    [self.delegate searchFilmTableViewCellController:self tappedCellWithFilm:self.film];
 }
 
 @end

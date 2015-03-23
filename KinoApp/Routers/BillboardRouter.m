@@ -50,7 +50,6 @@
     
     UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:billboardViewController];
     nc.tabBarItem.title = @"Billboard";
-    nc.navigationBarHidden = YES;
     
     [tabBarController addChildViewController:nc];
 }

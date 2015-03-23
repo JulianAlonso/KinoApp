@@ -11,6 +11,7 @@
 #import "LoadPopularFilmsInteractor.h"
 #import "ExternalTMDBProvider.h"
 #import "SearchFilmInteractor.h"
+#import "DetailFilmRouter.h"
 
 @interface SearchFilmRouter ()
 
@@ -36,6 +37,11 @@
     self.searchFilmViewController = searchFilmViewController;
     
     [fromNavigationController pushViewController:searchFilmViewController animated:YES];
+}
+
+- (void)tappedCellWithFilm:(FilmDTO *)film
+{
+    [[DetailFilmRouter new] presentFilmDetailViewControllerFrom:self.searchFilmViewController.navigationController withFilmDTO:film];
 }
 
 @end

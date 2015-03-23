@@ -9,9 +9,12 @@
 #import <UIKit/UIKit.h>
 
 @class ListDTO;
+@class FilmDTO;
 
 @interface SearchFilmRouter : NSObject
 
 - (void)presentSearchFrom:(UINavigationController *)fromNavigationController andList:(ListDTO *)list;
+
+- (void)tappedCellWithFilm:(FilmDTO *)film;
 
 @end

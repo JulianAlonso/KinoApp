@@ -15,7 +15,7 @@
 {
     [self.localProvider fetchFilmById:filmId completion:^(FilmDTO *film) {
 
-        if (![film.filmOverview isEqualToString:@"(null)"])
+        if (film && ![film.filmOverview isEqualToString:@"(null)"])
         {
             update(film);
         }

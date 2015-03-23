@@ -12,10 +12,11 @@
 #import "FilmTableViewCell.h"
 #import "LoadPopularFilmsInteractor.h"
 #import "SearchFilmInteractor.h"
+#import "SearchFilmRouter.h"
 
 NSString *const kFilmsProperty = @"films";
 
-@interface SearchFilmViewController () <UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate>
+@interface SearchFilmViewController () <UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate, SearchFilmTableViewCellControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *topConstraint;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *middleConstraint;
@@ -74,7 +75,9 @@ NSString *const kFilmsProperty = @"films";
     NSMutableArray *controllers = [NSMutableArray array];
     for (__unused FilmDTO *f in self.films)
     {
-        [controllers addObject:[SearchFilmTableViewCellController new]];
+        SearchFilmTableViewCellController *controller = [SearchFilmTableViewCellController new];
+        controller.delegate = self;
+        [controllers addObject:controller];
     }
     self.controllers = controllers;
 }
@@ -139,6 +142,12 @@ NSString *const kFilmsProperty = @"films";
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
 {
     [self.view endEditing:YES];
+}
+
+#pragma mark - SearchFilmTableViewCellControllerDelegate methods.
+- (void)searchFilmTableViewCellController:(SearchFilmTableViewCellController *)earchFilmTableViewCellController tappedCellWithFilm:(FilmDTO *)film
+{
+    [self.router tappedCellWithFilm:film];
 }
 
 #pragma mark - Observe methods.

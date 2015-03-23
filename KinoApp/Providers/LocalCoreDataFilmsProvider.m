@@ -17,9 +17,6 @@
 
 @property (nonatomic, strong) NSManagedObjectContext *privateContext;
 
-@property (nonatomic, copy) void(^updatedBlock)(NSArray *films);
-@property (nonatomic, strong) NSString *lastFilmType;
-
 @end
 
 @implementation LocalCoreDataFilmsProvider
@@ -27,21 +24,23 @@
 #pragma mark - LocalFilmsProvider methods.
 - (void)saveFilms:(NSArray *)films completion:(void(^)(NSArray *films))completionBlock
 {
-    [self registerToUpdate];
-    self.updatedBlock = completionBlock;
-
-    __weak typeof(self) weakSelf = self;
-    [self deleteFilmsByFilmType:[[films firstObject] valueForKey:kFilmTypeProperty] andCompletion:^{
-        __strong typeof(weakSelf) strongSelf = weakSelf;
+    for (FilmDTO *f in films)
+    {
+        NSFetchRequest *select = [NSFetchRequest fetchRequestWithEntityName:NSStringFromClass([Film class])];
+        select.predicate = [NSPredicate predicateWithFormat:@"%K == %@", kFilmIdProperty, f.filmId];
         
-        Film *film;
-        for (FilmDTO *filmDTO in films)
+        NSError *error;
+        Film *film = [[self.privateContext executeFetchRequest:select error:&error] firstObject];
+        
+        if (!film)
         {
-            film = [Film filmWithFilmDTO:filmDTO andManagedObjectContext:strongSelf.privateContext];
+            film = [Film filmWithFilmDTO:f andManagedObjectContext:self.privateContext];
         }
-        
-        strongSelf.lastFilmType = film.filmType;
-        [strongSelf.privateContext save:nil];
+    }
+    [self.privateContext save:nil];
+    
+    [self fetchFilmsByFilmType:[[films lastObject] valueForKey:kFilmTypeProperty]  andCompletion:^(NSArray *films) {
+        completionBlock(films);
     }];
 }
 
@@ -74,7 +73,6 @@
         completion(nil);
     }
 }
-
 
 - (void)createOrUpdateFilm:(FilmDTO *)film completion:(void(^)(FilmDTO *film))completion
 {
@@ -121,27 +119,11 @@
     }
 }
 
-- (void)registerToUpdate
-{
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(executeUpdateblock)
-                                                 name:NSManagedObjectContextDidSaveNotification
-                                               object:self.privateContext];
-}
-- (void)executeUpdateblock
-{
-    [self fetchFilmsByFilmType:self.lastFilmType andCompletion:self.updatedBlock];
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:NSManagedObjectContextDidSaveNotification object:self.privateContext];
-}
-
-
 #pragma mark - Lazy getters.
 - (NSManagedObjectContext *)privateContext
 {
     if (!_privateContext)
     {
-//        _privateContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSPrivateQueueConcurrencyType];
-//        [_privateContext setPersistentStoreCoordinator:[CoreDataManager persistenceStoreCordinator]];
         _privateContext = [CoreDataManager privateObjectContext];
     }
     return _privateContext;
