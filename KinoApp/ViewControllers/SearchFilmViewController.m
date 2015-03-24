@@ -39,6 +39,7 @@ NSString *const kFilmsProperty = @"films";
     [self loadPopularFilms];
     [self configSearchBar];
     [self configSearchTableView];
+    [self configNavBar];
 }
 
 - (void)viewDidLayoutSubviews
@@ -67,6 +68,12 @@ NSString *const kFilmsProperty = @"films";
     
     [self.searchTableView registerNib:[UINib nibWithNibName:NSStringFromClass([FilmTableViewCell class]) bundle:nil]
                forCellReuseIdentifier:NSStringFromClass([FilmTableViewCell class])];
+}
+
+- (void)configNavBar
+{
+    UISearchBar *searchBar = [[UISearchBar alloc] init];
+    self.navigationItem.titleView = searchBar;
 }
 
 #pragma mark - Load methods.

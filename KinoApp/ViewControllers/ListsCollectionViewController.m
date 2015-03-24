@@ -30,6 +30,10 @@ NSString *const kListsProperty = @"lists";
 @property (nonatomic, strong) NSArray *controllers;
 
 @property (nonatomic, assign) CGFloat actualIndex;
+@property (nonatomic, assign) CGFloat scrollStart;
+@property (nonatomic, assign) CGFloat scrollEnd;
+@property (nonatomic, assign) CGFloat itemWidth;
+@property (nonatomic, assign) CGFloat headerWidth;
 
 @end
 
@@ -87,6 +91,7 @@ NSString *const kListsProperty = @"lists";
     self.listsCollectionView.delegate = self;
     self.listsCollectionView.dataSource = self;
     self.listsCollectionView.showsHorizontalScrollIndicator = NO;
+    self.listsCollectionView.decelerationRate = UIScrollViewDecelerationRateFast;
 }
 
 - (void)configStyles
@@ -188,31 +193,44 @@ NSString *const kListsProperty = @"lists";
     return self.lists.count;
 }
 
-- (void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset
-{
-    CGFloat cellWidth = CGRectGetWidth(self.listsCollectionView.frame) - 88.5f;
-    
-    if (scrollView.contentOffset.x < targetContentOffset->x)
-    {
-        if (targetContentOffset->x != 0.0f)
-        {
-            self.actualIndex == self.lists.count + 5 ? self.actualIndex : self.actualIndex ++;
-            targetContentOffset->x = cellWidth * self.actualIndex;//(int)(targetContentOffset->x / cellWidth);
-        }
-    }
-    else
-    {
-        if (targetContentOffset->x < (cellWidth + 50) * (self.lists.count + 3))
-        {
-            self.actualIndex > 0 ? self.actualIndex -- : self.actualIndex;
-            targetContentOffset->x = cellWidth * self.actualIndex;//(int)(targetContentOffset->x / cellWidth);
-        }
-    }
-}
-
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
     [self configBackground];
+}
+
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
+{
+    self.scrollStart = scrollView.contentOffset.x;
+}
+
+- (void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset
+{
+    self.scrollEnd = scrollView.contentOffset.x;
+    CGFloat posVelocity = velocity.x;
+    if (posVelocity < 0)
+    {
+        posVelocity = posVelocity * -1;
+    }
+    
+    if (self.scrollEnd > self.scrollStart)
+    {
+        CGFloat desplaced = self.scrollEnd - self.scrollStart;
+        if (desplaced > CGRectGetWidth(scrollView.frame) / 3 || posVelocity > 0.3)
+        {
+            (self.actualIndex < self.lists.count) ? self.actualIndex ++ : self.actualIndex;
+        }
+       targetContentOffset->x = self.actualIndex * (self.itemWidth + self.headerWidth - 1);
+    }
+    else
+    {
+        CGFloat desplaced = self.scrollStart - self.scrollEnd;
+        if (desplaced > CGRectGetWidth(scrollView.frame) / 3 || posVelocity > 0.3)
+        {
+            (self.actualIndex > 0) ? self.actualIndex -- : self.actualIndex;
+        }
+        targetContentOffset->x = self.actualIndex * (self.itemWidth + self.headerWidth - 1);
+    }
+    NSLog(@"velocity: %f", velocity.x);
 }
 
 @end
@@ -224,6 +242,8 @@ NSString *const kListsProperty = @"lists";
     CGFloat width = CGRectGetWidth(self.listsCollectionView.bounds) - 100;
     CGFloat height = CGRectGetHeight(self.listsCollectionView.bounds) - 100;
     
+    self.itemWidth = width - 40;
+    
     return CGSizeMake(width, height);
 }
 
@@ -234,6 +254,7 @@ NSString *const kListsProperty = @"lists";
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section
 {
+    self.headerWidth = 50;
     return CGSizeMake(50, CGRectGetHeight(collectionView.frame));
 }
 
@@ -242,4 +263,4 @@ NSString *const kListsProperty = @"lists";
     return CGSizeMake(50, CGRectGetHeight(collectionView.frame));
 }
 
-@end
+@end				
