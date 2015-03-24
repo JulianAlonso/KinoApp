@@ -25,6 +25,7 @@ extern NSString *const kPosterPathProperty;
 @property (nonatomic, strong) NSString *filmPosterPath;
 @property (nonatomic, strong) NSString *filmBackdropPath;
 @property (nonatomic, strong) NSString *filmType;
+@property (nonatomic, strong) NSString *filmRuntime;
 @property (nonatomic, strong, readonly) NSString *filmYear;
 
 @end

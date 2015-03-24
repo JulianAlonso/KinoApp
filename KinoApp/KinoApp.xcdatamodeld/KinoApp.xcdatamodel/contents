@@ -8,6 +8,7 @@
         <attribute name="filmOverview" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="filmPosterPath" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="filmReleaseDate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="filmRuntime" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="filmTagline" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="filmTitle" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="filmType" optional="YES" attributeType="String" syncable="YES"/>
@@ -18,7 +19,7 @@
         <relationship name="listFilms" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Film" inverseName="filmLists" inverseEntity="Film" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Film" positionX="-63" positionY="-18" width="128" height="210"/>
+        <element name="Film" positionX="-63" positionY="-18" width="128" height="225"/>
         <element name="List" positionX="-54" positionY="63" width="128" height="73"/>
     </elements>
 </model>

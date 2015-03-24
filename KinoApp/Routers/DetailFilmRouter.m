@@ -48,7 +48,7 @@
 }
 
 - (void)addButtonPressedFrom:(UIViewController *)fromViewController withFilmDTO:(FilmDTO *)film
-{    
+{
     SelectListRouter *router = [SelectListRouter new];
     [router presentModallyFromViewController:fromViewController.navigationController andRouter:self];
 }
@@ -56,6 +56,11 @@
 - (void)dismissedSelectListViewControllerWithSelectedList:(ListDTO *)list
 {
     [self.detailViewController saveFilmToList:list];
+}
+
+- (void)popFilmDetailViewController
+{
+    [self.detailViewController.navigationController popViewControllerAnimated:YES];
 }
 
 @end

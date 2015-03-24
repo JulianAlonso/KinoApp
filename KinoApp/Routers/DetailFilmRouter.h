@@ -19,4 +19,6 @@
 
 - (void)dismissedSelectListViewControllerWithSelectedList:(ListDTO *)list;
 
+- (void)popFilmDetailViewController;
+
 @end

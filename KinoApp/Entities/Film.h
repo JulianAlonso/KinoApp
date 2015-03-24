@@ -2,13 +2,14 @@
 //  Film.h
 //  KinoApp
 //
-//  Created by Julian Alonso on 17/3/15.
+//  Created by Julian Alonso on 24/3/15.
 //  Copyright (c) 2015 Julian. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
+@class List;
 
 @interface Film : NSManagedObject
 
@@ -22,5 +23,15 @@
 @property (nonatomic, retain) NSString * filmTagline;
 @property (nonatomic, retain) NSString * filmTitle;
 @property (nonatomic, retain) NSString * filmType;
+@property (nonatomic, retain) NSString * filmRuntime;
+@property (nonatomic, retain) NSSet *filmLists;
+@end
+
+@interface Film (CoreDataGeneratedAccessors)
+
+- (void)addFilmListsObject:(List *)value;
+- (void)removeFilmListsObject:(List *)value;
+- (void)addFilmLists:(NSSet *)values;
+- (void)removeFilmLists:(NSSet *)values;
 
 @end

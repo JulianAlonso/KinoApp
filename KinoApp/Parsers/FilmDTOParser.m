@@ -19,6 +19,7 @@ NSString *const dFilmOverview = @"overview";
 NSString *const dFilmTagline = @"tagline";
 NSString *const dFilmPosterPath = @"poster_path";
 NSString *const dFilmBackdropPath = @"backdrop_path";
+NSString *const dFilmRuntime = @"runtime";
 
 @implementation FilmDTOParser
 
@@ -33,6 +34,7 @@ NSString *const dFilmBackdropPath = @"backdrop_path";
     film.filmHomepage = [NSString stringWithFormat:@"%@", dictionary[dFilmHomepage]];
     film.filmOverview = [NSString stringWithFormat:@"%@", dictionary[dFilmOverview]];
     film.filmTagline = [NSString stringWithFormat:@"%@", dictionary[dFilmTagline]];
+    film.filmRuntime = [NSString stringWithFormat:@"%@", dictionary[dFilmRuntime]];
     film.filmPosterPath = [URLHelper imageUrlWithEndpoint:dictionary[dFilmPosterPath]];
     film.filmBackdropPath = [URLHelper imageUrlWithEndpoint:dictionary[dFilmBackdropPath]];
     film.filmType = filmType;
@@ -65,6 +67,7 @@ NSString *const dFilmBackdropPath = @"backdrop_path";
     filmDTO.filmPosterPath = film.filmPosterPath;
     filmDTO.filmBackdropPath = film.filmBackdropPath;
     filmDTO.filmType = film.filmType;
+    filmDTO.filmRuntime = film.filmRuntime;
     
     return filmDTO;
 }
