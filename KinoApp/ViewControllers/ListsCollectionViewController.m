@@ -67,9 +67,9 @@ NSString *const kListsProperty = @"lists";
     [self loadLists];
 }
 
-- (void)viewDidDisappear:(BOOL)animated
+- (void)viewWillDisappear:(BOOL)animated
 {
-    [super viewDidDisappear:animated];
+    [super viewWillDisappear:animated];
     [self.navigationController setNavigationBarHidden:NO animated:animated];
 }
 
@@ -230,7 +230,6 @@ NSString *const kListsProperty = @"lists";
         }
         targetContentOffset->x = self.actualIndex * (self.itemWidth + self.headerWidth - 1);
     }
-    NSLog(@"velocity: %f", velocity.x);
 }
 
 @end

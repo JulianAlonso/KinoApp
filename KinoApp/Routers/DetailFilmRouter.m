@@ -48,9 +48,7 @@
 }
 
 - (void)addButtonPressedFrom:(UIViewController *)fromViewController withFilmDTO:(FilmDTO *)film
-{
-    NSLog(@"add button pressed from %@, with FilmDTO: %@", fromViewController, film.filmTitle);
-    
+{    
     SelectListRouter *router = [SelectListRouter new];
     [router presentModallyFromViewController:fromViewController.navigationController andRouter:self];
 }

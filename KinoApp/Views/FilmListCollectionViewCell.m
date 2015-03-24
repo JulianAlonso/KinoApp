@@ -39,7 +39,6 @@
 //    dashedLayer.backgroundColor = [[UIColor clearColor] CGColor];
 //    
 //    [self.oneImageView.layer addSublayer:dashedLayer];
-    
 }
 
 @end
