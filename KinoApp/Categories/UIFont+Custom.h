@@ -14,4 +14,6 @@
 
 + (UIFont *)appBoldFontWithSize:(CGFloat)size;
 
++ (UIFont *)appSemiBoldFontWithSize:(CGFloat)size;
+
 @end

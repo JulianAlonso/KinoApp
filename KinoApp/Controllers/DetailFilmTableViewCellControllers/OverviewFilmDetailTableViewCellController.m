@@ -7,6 +7,8 @@
 //
 
 #import "OverviewFilmDetailTableViewCellController.h"
+#import "OverviewFilmDetailTableViewCell.h"
+#import "FilmDTO.h"
 
 @implementation OverviewFilmDetailTableViewCellController
 
@@ -15,6 +17,10 @@
 
 - (UITableViewCell *)configuredCell
 {
+    OverviewFilmDetailTableViewCell *cell = self.cell;
+    
+    cell.filmOverviewLabel.text = self.film.filmOverview;
+    
     return self.cell;
 }
 

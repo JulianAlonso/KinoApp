@@ -19,16 +19,22 @@
 #import "OverviewFilmDetailTableViewCell.h"
 #import "FilmDetailViewCell.h"
 #import "FilmDetailTableViewCellFactory.h"
+#import "GenresFilmDetailTableViewCell.h"
+#import "ListFilmDetailTableViewCell.h"
+#import "GrayBackgroundLayer.h"
 
 @interface FilmDetailViewController ()
 
 @property (weak, nonatomic) IBOutlet UIButton *backButton;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *topHeightConstraint;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *topTableViewConstraint;
 @property (weak, nonatomic) IBOutlet UIVisualEffectView *customNavBarView;
 @property (weak, nonatomic) IBOutlet UITableView *filmDetailTableView;
 
 @property (weak, nonatomic) IBOutlet UILabel *filmTitleLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *filmImageView;
+
+@property (nonatomic, strong) GrayBackgroundLayer *grayLayer;
 
 @end
 
@@ -44,6 +50,8 @@
     [self configNavBar];
     [self configStyles];
     [self configBackButton];
+    [self configGrayLayer];
+    [self configTableView];
     
     [self configItemsWithFilm:self.film];
     [self updateFilm];
@@ -65,6 +73,11 @@
     [super didReceiveMemoryWarning];
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+
+}
+
 - (void)viewDidLayoutSubviews
 {
     static CGFloat topHeight;
@@ -73,12 +86,18 @@
         topHeight = self.topHeightConstraint.constant;
     }
     self.topHeightConstraint.constant = self.topLayoutGuide.length + topHeight;
+    self.topTableViewConstraint.constant = CGRectGetHeight(self.view.frame) - 40;
 }
 
 #pragma mark - Config methods.
 - (void)configNavBar
 {
     [self.navigationController setNavigationBarHidden:NO animated:YES];
+}
+
+- (void)configGrayLayer
+{
+    self.grayLayer = [[GrayBackgroundLayer alloc] init];
 }
 
 - (void)configBackButton
@@ -108,6 +127,8 @@
     
     [self registerCellWithClass:[TitleFilmDetailTableViewCell class]];
     [self registerCellWithClass:[OverviewFilmDetailTableViewCell class]];
+    [self registerCellWithClass:[GenresFilmDetailTableViewCell class]];
+    [self registerCellWithClass:[ListFilmDetailTableViewCell class]];
 }
 
 - (void)updateFilm
@@ -168,7 +189,7 @@
     
     controller.cell = cell;
     controller.film = self.film;
-    
+
     return [controller configuredCell];
 }
 
@@ -177,6 +198,12 @@
     return 4;
 }
 
-
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [UIView animateWithDuration:3.5f animations:^{
+        self.topTableViewConstraint.constant = 200 ;
+        [self.view layoutIfNeeded];
+    }];
+}
 
 @end

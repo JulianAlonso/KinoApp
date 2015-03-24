@@ -12,6 +12,7 @@
                 <outlet property="filmImageView" destination="HAF-fo-tE4" id="Gkx-eV-yNv"/>
                 <outlet property="filmTitleLabel" destination="eUd-tm-ogP" id="hzq-S9-Caf"/>
                 <outlet property="topHeightConstraint" destination="lRb-EO-DMX" id="gZ9-NM-Qwg"/>
+                <outlet property="topTableViewConstraint" destination="WVb-Lw-ezu" id="kth-SW-fcc"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

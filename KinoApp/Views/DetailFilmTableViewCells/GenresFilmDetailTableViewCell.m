@@ -12,14 +12,20 @@
 
 @synthesize controller = _controller;
 
-- (void)awakeFromNib {
-    // Initialization code
+- (void)awakeFromNib
+{
+    [self configStyles];
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated
+{
     [super setSelected:selected animated:animated];
+}
 
-    // Configure the view for the selected state
+#pragma mark - Config methods.
+- (void)configStyles
+{
+    self.backgroundColor = [UIColor clearColor];
 }
 
 @end

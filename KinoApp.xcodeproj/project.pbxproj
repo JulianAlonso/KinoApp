@@ -89,6 +89,7 @@
 		01F0C11E1AC1DEDC0009E061 /* GenresFilmDetailTableViewCellController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F0C11D1AC1DEDC0009E061 /* GenresFilmDetailTableViewCellController.m */; };
 		01F0C1211AC1DEF60009E061 /* OverviewFilmDetailTableViewCellController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F0C1201AC1DEF60009E061 /* OverviewFilmDetailTableViewCellController.m */; };
 		01F0C1241AC1DF050009E061 /* ListsFilmDetailTableViewCellController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F0C1231AC1DF050009E061 /* ListsFilmDetailTableViewCellController.m */; };
+		01F0C1291AC1EBF40009E061 /* GrayBackgroundLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F0C1281AC1EBF40009E061 /* GrayBackgroundLayer.m */; };
 		F2F038238A73F7DA954B4244 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F855DE3F67C9EF3B55C10712 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -261,6 +262,8 @@
 		01F0C1221AC1DF050009E061 /* ListsFilmDetailTableViewCellController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ListsFilmDetailTableViewCellController.h; path = Controllers/DetailFilmTableViewCellControllers/ListsFilmDetailTableViewCellController.h; sourceTree = "<group>"; };
 		01F0C1231AC1DF050009E061 /* ListsFilmDetailTableViewCellController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ListsFilmDetailTableViewCellController.m; path = Controllers/DetailFilmTableViewCellControllers/ListsFilmDetailTableViewCellController.m; sourceTree = "<group>"; };
 		01F0C1251AC1DF8C0009E061 /* DetailFilmTableViewCellController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailFilmTableViewCellController.h; path = Controllers/DetailFilmTableViewCellControllers/DetailFilmTableViewCellController.h; sourceTree = "<group>"; };
+		01F0C1271AC1EBF40009E061 /* GrayBackgroundLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GrayBackgroundLayer.h; path = Views/Layers/GrayBackgroundLayer.h; sourceTree = "<group>"; };
+		01F0C1281AC1EBF40009E061 /* GrayBackgroundLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GrayBackgroundLayer.m; path = Views/Layers/GrayBackgroundLayer.m; sourceTree = "<group>"; };
 		57E47FC539F669D5601D3966 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		EFBDA11DA5EC569FCCB52E47 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		F855DE3F67C9EF3B55C10712 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -471,6 +474,7 @@
 				01068F4E1AB752840017F91A /* CollectionFilmsCollectionViewCell.h */,
 				01068F4F1AB752840017F91A /* CollectionFilmsCollectionViewCell.m */,
 				01068F501AB752840017F91A /* CollectionFilmsCollectionViewCell.xib */,
+				01F0C1261AC1EB2D0009E061 /* Layers */,
 				01F0C0FC1AC1D5850009E061 /* DetailFilmTableViewCells */,
 				013955721ABAE05800BC745D /* ListsCells */,
 				0121765F1ABC3D9300EDA095 /* FilmCells */,
@@ -648,15 +652,24 @@
 			children = (
 				01F0C1161AC1DEAC0009E061 /* TitleFilmDetailTableViewCellController.h */,
 				01F0C1171AC1DEAC0009E061 /* TitleFilmDetailTableViewCellController.m */,
-				01F0C11C1AC1DEDC0009E061 /* GenresFilmDetailTableViewCellController.h */,
-				01F0C11D1AC1DEDC0009E061 /* GenresFilmDetailTableViewCellController.m */,
 				01F0C11F1AC1DEF60009E061 /* OverviewFilmDetailTableViewCellController.h */,
 				01F0C1201AC1DEF60009E061 /* OverviewFilmDetailTableViewCellController.m */,
+				01F0C11C1AC1DEDC0009E061 /* GenresFilmDetailTableViewCellController.h */,
+				01F0C11D1AC1DEDC0009E061 /* GenresFilmDetailTableViewCellController.m */,
 				01F0C1221AC1DF050009E061 /* ListsFilmDetailTableViewCellController.h */,
 				01F0C1231AC1DF050009E061 /* ListsFilmDetailTableViewCellController.m */,
 				01F0C1251AC1DF8C0009E061 /* DetailFilmTableViewCellController.h */,
 			);
 			name = DetailFilmTableViewCellControllers;
+			sourceTree = "<group>";
+		};
+		01F0C1261AC1EB2D0009E061 /* Layers */ = {
+			isa = PBXGroup;
+			children = (
+				01F0C1271AC1EBF40009E061 /* GrayBackgroundLayer.h */,
+				01F0C1281AC1EBF40009E061 /* GrayBackgroundLayer.m */,
+			);
+			name = Layers;
 			sourceTree = "<group>";
 		};
 		0B24B96251924E16800F2BD5 /* Pods */ = {
@@ -862,6 +875,7 @@
 				012C6B931ABA01560060A49C /* ListsCollectionRouter.m in Sources */,
 				01068F3B1AB72D480017F91A /* BillboardFilmCollectionViewCell.m in Sources */,
 				01068F511AB752840017F91A /* CollectionFilmsCollectionViewCell.m in Sources */,
+				01F0C1291AC1EBF40009E061 /* GrayBackgroundLayer.m in Sources */,
 				012C6B8B1ABA000E0060A49C /* FetchAllListsInteractor.m in Sources */,
 				015AB1841ABC6E7E00D2CBAA /* SearchFilmTableViewCellController.m in Sources */,
 				015AB1811ABC6C3800D2CBAA /* LoadPopularFilmsInteractor.m in Sources */,

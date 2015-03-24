@@ -7,6 +7,8 @@
 //
 
 #import "TitleFilmDetailTableViewCellController.h"
+#import "TitleFilmDetailTableViewCell.h"
+#import "FilmDTO.h"
 
 @implementation TitleFilmDetailTableViewCellController
 
@@ -15,6 +17,11 @@
 
 - (UITableViewCell *)configuredCell
 {
+    TitleFilmDetailTableViewCell *cell = self.cell;
+    
+    cell.filmTitleLabel.text = self.film.filmTitle;
+    cell.filmPrincipalDataLabel.text = [NSString stringWithFormat:@"%@ minutes  ·  %@", self.film.filmRuntime, self.film.filmYear];
+    
     return self.cell;
 }
 

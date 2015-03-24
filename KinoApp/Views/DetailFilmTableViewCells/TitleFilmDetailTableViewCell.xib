@@ -30,6 +30,7 @@
                 <constraints>
                     <constraint firstItem="tag-Xx-uDf" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="A20-tI-p79"/>
                     <constraint firstItem="ZiG-fI-EJS" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="FvQ-aN-rag"/>
+                    <constraint firstItem="tag-Xx-uDf" firstAttribute="top" relation="greaterThanOrEqual" secondItem="ZiG-fI-EJS" secondAttribute="bottom" constant="10" id="Ktu-Eh-FQ4"/>
                     <constraint firstAttribute="trailingMargin" secondItem="tag-Xx-uDf" secondAttribute="trailing" id="RVb-I1-Elg"/>
                     <constraint firstAttribute="trailingMargin" secondItem="ZiG-fI-EJS" secondAttribute="trailing" id="het-nU-gza"/>
                     <constraint firstItem="ZiG-fI-EJS" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="s1z-d7-slZ"/>
@@ -37,8 +38,8 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="principalDataLabel" destination="tag-Xx-uDf" id="yKV-Uq-NwH"/>
-                <outlet property="titleLabel" destination="ZiG-fI-EJS" id="IHd-GN-H1W"/>
+                <outlet property="filmPrincipalDataLabel" destination="tag-Xx-uDf" id="Liu-hH-pVJ"/>
+                <outlet property="filmTitleLabel" destination="ZiG-fI-EJS" id="Gsd-Gs-VkF"/>
             </connections>
             <point key="canvasLocation" x="230.5" y="393.5"/>
         </tableViewCell>

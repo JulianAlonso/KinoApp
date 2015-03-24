@@ -13,10 +13,8 @@
 
 @interface OverviewFilmDetailTableViewCell : UITableViewCell <FilmDetailViewCell>
 
-@property (weak, nonatomic) IBOutlet UILabel *overviewLabel;
+@property (weak, nonatomic) IBOutlet UILabel *filmOverviewLabel;
 
 @property (nonatomic, strong) FilmDTO *film;
-
-- (UITableViewCell *)configured;
 
 @end

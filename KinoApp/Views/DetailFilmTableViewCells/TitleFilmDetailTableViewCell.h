@@ -13,11 +13,9 @@
 
 @interface TitleFilmDetailTableViewCell : UITableViewCell <FilmDetailViewCell>
 
-@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
-@property (weak, nonatomic) IBOutlet UILabel *principalDataLabel;
+@property (weak, nonatomic) IBOutlet UILabel *filmTitleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *filmPrincipalDataLabel;
 
 @property (nonatomic, strong) FilmDTO *film;
-
-- (UITableViewCell *)configured;
 
 @end
