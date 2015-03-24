@@ -15,6 +15,7 @@
 #import "SearchFilmRouter.h"
 #import "UIColor+Custom.h"
 #import "UISearchBar+Custom.h"
+#import "UIFont+Custom.h"
 
 NSString *const kFilmsProperty = @"films";
 
@@ -56,12 +57,16 @@ NSString *const kFilmsProperty = @"films";
 }
 
 #pragma mark - Config methods.
+- (void)configStyles
+{
+    self.view.backgroundColor = [UIColor appBGColor];
+}
+
 - (void)configSearchTableView
 {
     self.searchTableView.delegate = self;
     self.searchTableView.dataSource = self;
     self.searchTableView.backgroundColor = [UIColor appBGColor];
-
     
     [self.searchTableView registerNib:[UINib nibWithNibName:NSStringFromClass([FilmTableViewCell class]) bundle:nil]
                forCellReuseIdentifier:NSStringFromClass([FilmTableViewCell class])];
@@ -69,16 +74,20 @@ NSString *const kFilmsProperty = @"films";
 
 - (void)configSearchBar
 {
-    self.searchBar = [[UISearchBar alloc] init];
+    self.searchBar =
+    [[UISearchBar alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 44)];
     self.searchBar.delegate = self;
-    
+    self.searchBar.placeholder = @"Search";
+    self.navigationItem.titleView = self.searchBar;
+    [self.searchBar setBackgroundImage:[[UIImage alloc]init]];
     [self.searchBar setTextBackgroundColor:[UIColor appBGColor]];
     [self.searchBar setTextColor:[UIColor unselectedItemColor]];
+    [self.searchBar setTextFont:[UIFont appFontWithSize:15]];
+    [self.searchBar setPlaceholderColor:[UIColor unselectedItemColor]];
 }
 
 - (void)configNavBar
 {
-    self.navigationItem.titleView = self.searchBar;
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel
                                                                                            target:self
                                                                                            action:@selector(cancelButtonPressed)];
