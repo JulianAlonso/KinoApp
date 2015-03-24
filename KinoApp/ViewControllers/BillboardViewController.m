@@ -45,11 +45,6 @@
     [self configStyles];
 }
 
-- (UIStatusBarStyle)preferredStatusBarStyle
-{
-    return UIStatusBarStyleLightContent;
-}
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
@@ -69,6 +64,7 @@
 - (void)viewDidLayoutSubviews
 {
     self.topConstraint.constant = self.topLayoutGuide.length;
+    self.bottomConstraint.constant = self.bottomLayoutGuide.length;
 }
 
 #pragma mark - Config methods.

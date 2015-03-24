@@ -23,13 +23,25 @@
     ListsCollectionRouter *activityRouter = [ListsCollectionRouter new];
     [activityRouter loadViewAt:tabBarController];
     
+    [self configApearance];
+    
+    [window setRootViewController:tabBarController];
+    [window makeKeyAndVisible];
+}
+
+- (void)configApearance
+{
     [[UITabBar appearance] setBarTintColor:[UIColor appBGColor]];
     [[UITabBar appearance] setTintColor:[UIColor selectedItemColor]];
     [[UITabBar appearance] setTranslucent:NO];
     [[UITabBar appearance] setAlpha:0.9f];
     
-    [window setRootViewController:tabBarController];
-    [window makeKeyAndVisible];
+    [[UINavigationBar appearance] setTintColor:[UIColor selectedItemColor]];
+    [[UINavigationBar appearance] setBarTintColor:[UIColor appBGColor]];
+    [[UINavigationBar appearance] setTranslucent:NO];
+    [[UINavigationBar appearance] setAlpha:0.9f];
+    
+    [[UINavigationBar appearance] setTitleTextAttributes: @{NSForegroundColorAttributeName : [UIColor selectedItemColor]}];
 }
 
 @end

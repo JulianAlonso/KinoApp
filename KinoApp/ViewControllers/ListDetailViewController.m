@@ -13,6 +13,7 @@
 #import "ControllersFactory.h"
 #import "DetailListRouter.h"
 #import "BillboardFilmCollectionViewCell.h"
+#import "UIColor+Custom.h"
 
 NSString *const kListProperty = @"list";
 
@@ -35,6 +36,8 @@ NSString *const kListProperty = @"list";
     [self registerToObserveList];
     [self configCollectionView];
     [self configNavBarItems];
+    [self configStyles];
+    self.title = self.list.listName;
 }
 
 - (void)didReceiveMemoryWarning
@@ -47,6 +50,7 @@ NSString *const kListProperty = @"list";
 {
     self.filmsCollectionView.delegate = self;
     self.filmsCollectionView.dataSource = self;
+    self.filmsCollectionView.alwaysBounceVertical = YES;
     
     [self.filmsCollectionView registerNib:[UINib nibWithNibName:NSStringFromClass([BillboardFilmCollectionViewCell class]) bundle:nil]
                forCellWithReuseIdentifier:NSStringFromClass([BillboardFilmCollectionViewCell class])];
@@ -58,6 +62,11 @@ NSString *const kListProperty = @"list";
                                                                                   target:self
                                                                                   action:@selector(searchButtonPressed)];
     self.navigationItem.rightBarButtonItem = searchButton;
+}
+
+- (void)configStyles
+{
+    self.view.backgroundColor = [UIColor appBGColor];
 }
 
 #pragma mark - Update methods.
@@ -139,8 +148,8 @@ NSString *const kListProperty = @"list";
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    CGFloat width = CGRectGetWidth(collectionView.bounds) /2;
-    CGFloat height = CGRectGetHeight(collectionView.bounds) /2;
+    CGFloat width = CGRectGetWidth(collectionView.bounds) / 2;
+    CGFloat height = CGRectGetHeight(collectionView.bounds) / 2.5;
     
     return CGSizeMake(width, height);
 }

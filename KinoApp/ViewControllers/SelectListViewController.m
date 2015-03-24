@@ -11,6 +11,7 @@
 #import "ListDTO.h"
 #import "SelectListRouter.h"
 #import "FetchAllListsInteractor.h"
+#import "UIColor+Custom.h"
 
 @interface SelectListViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -29,6 +30,7 @@
     
     [self configTableView];
     [self updateLists];
+    [self configStyles];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -48,6 +50,11 @@
     
     [self.selectListTableView registerNib:[UINib nibWithNibName:NSStringFromClass([ListTableViewCell class]) bundle:nil]
                    forCellReuseIdentifier:NSStringFromClass([ListTableViewCell class])];
+}
+
+- (void)configStyles
+{
+    self.view.backgroundColor = [UIColor appBGColor];
 }
 
 #pragma mark - Update methods.
