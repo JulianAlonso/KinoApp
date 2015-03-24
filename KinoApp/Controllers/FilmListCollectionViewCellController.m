@@ -17,6 +17,10 @@
 
 - (FilmListCollectionViewCell *)cellConfigured
 {
+    //Clean methods
+    [self cleanImages];
+    
+    //Sets
     self.cell.listNameLabel.text = self.list.listName;
     
     UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapGestureAction:)];
@@ -36,13 +40,24 @@
             cont++;
         }
     }
-    
     return self.cell;
 }
 
+
+#pragma mark - Action methods.
 - (void)tapGestureAction:(UITapGestureRecognizer *)sender
 {
     [self.router tapAtCellWithListDTO:self.list];
+}
+
+#pragma mark - Own methods.
+- (void)cleanImages
+{
+    self.cell.oneImageView.image = nil;
+    for (UIImageView *iv in self.cell.variousImagesViewCollection)
+    {
+        iv.image = nil;
+    }
 }
 
 @end
