@@ -10,6 +10,8 @@
 
 @implementation TitleFilmDetailTableViewCell
 
+@synthesize controller = _controller;
+
 - (void)awakeFromNib {
     // Initialization code
 }

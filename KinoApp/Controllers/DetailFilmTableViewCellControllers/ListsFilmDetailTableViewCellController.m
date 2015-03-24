@@ -10,4 +10,13 @@
 
 @implementation ListsFilmDetailTableViewCellController
 
+@synthesize cell = _cell;
+@synthesize film = _film;
+
+- (UITableViewCell *)configuredCell
+{
+    return self.cell;
+}
+
+
 @end

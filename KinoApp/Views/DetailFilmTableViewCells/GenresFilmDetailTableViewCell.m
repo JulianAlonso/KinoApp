@@ -10,6 +10,8 @@
 
 @implementation GenresFilmDetailTableViewCell
 
+@synthesize controller = _controller;
+
 - (void)awakeFromNib {
     // Initialization code
 }

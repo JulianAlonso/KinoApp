@@ -10,6 +10,8 @@
 
 @implementation ListFilmDetailTableViewCell
 
+@synthesize controller = _controller;
+
 - (void)awakeFromNib {
     // Initialization code
 }

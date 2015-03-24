@@ -7,7 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "DetailFilmRouter.h"
+#import "DetailFilmTableViewCellController.h"
 
-@interface ListsFilmDetailTableViewCellController : NSObject
+@interface ListsFilmDetailTableViewCellController : NSObject <DetailFilmTableViewCellController>
 
 @end
