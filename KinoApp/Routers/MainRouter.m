@@ -41,6 +41,8 @@
     [[UINavigationBar appearance] setTranslucent:NO];
     [[UINavigationBar appearance] setAlpha:0.9f];
     
+    [[UISearchBar appearance] setTintColor:[UIColor unselectedItemColor]];
+    
     [[UINavigationBar appearance] setTitleTextAttributes: @{NSForegroundColorAttributeName : [UIColor selectedItemColor]}];
 }
 

@@ -13,15 +13,16 @@
 #import "LoadPopularFilmsInteractor.h"
 #import "SearchFilmInteractor.h"
 #import "SearchFilmRouter.h"
+#import "UIColor+Custom.h"
+#import "UISearchBar+Custom.h"
 
 NSString *const kFilmsProperty = @"films";
 
 @interface SearchFilmViewController () <UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate, SearchFilmTableViewCellControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *topConstraint;
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *middleConstraint;
-@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 @property (weak, nonatomic) IBOutlet UITableView *searchTableView;
+@property (nonatomic, strong) UISearchBar *searchBar;
 
 @property (nonatomic, strong) NSArray *films;
 @property (nonatomic, strong) NSArray *controllers;
@@ -37,8 +38,8 @@ NSString *const kFilmsProperty = @"films";
     
     [self registerToObserveFilms];
     [self loadPopularFilms];
-    [self configSearchBar];
     [self configSearchTableView];
+    [self configSearchBar];
     [self configNavBar];
 }
 
@@ -47,7 +48,6 @@ NSString *const kFilmsProperty = @"films";
     [super viewDidLayoutSubviews];
     
     self.topConstraint.constant = self.topLayoutGuide.length;
-    self.middleConstraint.constant = 0.0f;
 }
 
 - (void)didReceiveMemoryWarning
@@ -56,24 +56,33 @@ NSString *const kFilmsProperty = @"films";
 }
 
 #pragma mark - Config methods.
-- (void)configSearchBar
-{
-    self.searchBar.delegate = self;
-}
-
 - (void)configSearchTableView
 {
     self.searchTableView.delegate = self;
     self.searchTableView.dataSource = self;
+    self.searchTableView.backgroundColor = [UIColor appBGColor];
+
     
     [self.searchTableView registerNib:[UINib nibWithNibName:NSStringFromClass([FilmTableViewCell class]) bundle:nil]
                forCellReuseIdentifier:NSStringFromClass([FilmTableViewCell class])];
 }
 
+- (void)configSearchBar
+{
+    self.searchBar = [[UISearchBar alloc] init];
+    self.searchBar.delegate = self;
+    
+    [self.searchBar setTextBackgroundColor:[UIColor appBGColor]];
+    [self.searchBar setTextColor:[UIColor unselectedItemColor]];
+}
+
 - (void)configNavBar
 {
-    UISearchBar *searchBar = [[UISearchBar alloc] init];
-    self.navigationItem.titleView = searchBar;
+    self.navigationItem.titleView = self.searchBar;
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel
+                                                                                           target:self
+                                                                                           action:@selector(cancelButtonPressed)];
+    self.navigationItem.hidesBackButton = YES;
 }
 
 #pragma mark - Load methods.
@@ -123,7 +132,7 @@ NSString *const kFilmsProperty = @"films";
 #pragma mark - TableView Delegate methods.
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 200.0f;
+    return 140.0f;
 }
 
 #pragma mark - SearchBar delegate methods.
@@ -148,7 +157,7 @@ NSString *const kFilmsProperty = @"films";
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
 {
-    [self.view endEditing:YES];
+    [self.navigationController.view endEditing:YES];
 }
 
 #pragma mark - SearchFilmTableViewCellControllerDelegate methods.
@@ -180,6 +189,12 @@ NSString *const kFilmsProperty = @"films";
 - (void)filmsValueChanged
 {
     [self loadControllers];
+}
+
+- (void)cancelButtonPressed
+{
+    [self.navigationController.view endEditing:YES];
+    [self.router popSearchFilmViewController];
 }
 
 #pragma mark - Dealloc.

@@ -44,4 +44,9 @@
     [[DetailFilmRouter new] presentFilmDetailViewControllerFrom:self.searchFilmViewController.navigationController withFilmDTO:film];
 }
 
+- (void)popSearchFilmViewController
+{
+    [self.searchFilmViewController.navigationController popViewControllerAnimated:YES];
+}
+
 @end

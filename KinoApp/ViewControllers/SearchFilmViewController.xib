@@ -6,11 +6,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchFilmViewController">
             <connections>
-                <outlet property="middleConstraint" destination="1r7-pk-4Vw" id="dn0-uv-OqX"/>
-                <outlet property="searchBar" destination="ZP5-s1-JP6" id="hw5-4f-Gv5"/>
                 <outlet property="searchDisplayController" destination="KSO-pJ-ZqL" id="Ems-iz-cIN"/>
                 <outlet property="searchTableView" destination="F7F-ub-yQH" id="gEC-2F-nUw"/>
-                <outlet property="topConstraint" destination="xp6-VL-bdR" id="w71-Uq-4bc"/>
+                <outlet property="topConstraint" destination="tFu-45-JNt" id="I9I-fx-zWM"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,24 +17,17 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="F7F-ub-yQH">
-                    <rect key="frame" x="0.0" y="183" width="600" height="417"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="F7F-ub-yQH">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </tableView>
-                <searchBar contentMode="redraw" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZP5-s1-JP6">
-                    <rect key="frame" x="0.0" y="139" width="600" height="44"/>
-                    <textInputTraits key="textInputTraits"/>
-                </searchBar>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="F7F-ub-yQH" firstAttribute="top" secondItem="ZP5-s1-JP6" secondAttribute="bottom" id="1r7-pk-4Vw"/>
                 <constraint firstAttribute="bottom" secondItem="F7F-ub-yQH" secondAttribute="bottom" id="NmY-YS-dna"/>
-                <constraint firstItem="ZP5-s1-JP6" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="SLZ-f3-pVn"/>
                 <constraint firstAttribute="trailing" secondItem="F7F-ub-yQH" secondAttribute="trailing" id="XOu-B4-sHg"/>
-                <constraint firstAttribute="trailing" secondItem="ZP5-s1-JP6" secondAttribute="trailing" id="YE6-a4-duB"/>
+                <constraint firstItem="F7F-ub-yQH" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="tFu-45-JNt"/>
                 <constraint firstItem="F7F-ub-yQH" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="uTQ-5Z-cvC"/>
-                <constraint firstItem="ZP5-s1-JP6" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="xp6-VL-bdR"/>
             </constraints>
         </view>
         <searchDisplayController id="KSO-pJ-ZqL">

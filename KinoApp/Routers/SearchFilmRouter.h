@@ -15,6 +15,8 @@
 
 - (void)presentSearchFrom:(UINavigationController *)fromNavigationController andList:(ListDTO *)list;
 
+- (void)popSearchFilmViewController;
+
 - (void)tappedCellWithFilm:(FilmDTO *)film;
 
 @end

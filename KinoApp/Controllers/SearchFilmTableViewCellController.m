@@ -22,7 +22,8 @@
     self.cell.delegate = self;
     
     self.cell.filmTitleLabel.text = self.film.filmTitle;
-    [self.cell.filmImageView sd_setImageWithURL:[NSURL URLWithString:self.film.filmBackdropPath]];
+    self.cell.filmYearLabel.text = self.film.filmYear;
+    [self.cell.filmImageView sd_setImageWithURL:[NSURL URLWithString:self.film.filmPosterPath]];
     
     return self.cell;
 }

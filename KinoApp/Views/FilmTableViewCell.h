@@ -20,6 +20,7 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *filmImageView;
 @property (weak, nonatomic) IBOutlet UILabel *filmTitleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *filmYearLabel;
 
 @property (nonatomic, strong) id<FilmTableViewCellDelegate> delegate;
 

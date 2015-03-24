@@ -15,4 +15,9 @@ NSString *const kPosterPathProperty = @"filmPosterPath";
 
 @implementation FilmDTO
 
+- (NSString *)filmYear
+{
+    return [[self.filmReleaseDate componentsSeparatedByString:@"-"] firstObject];
+}
+
 @end

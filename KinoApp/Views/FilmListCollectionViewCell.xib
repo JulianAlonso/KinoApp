@@ -31,7 +31,6 @@
                                 <rect key="frame" x="0.0" y="0.0" width="314" height="394"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="gom-cG-Opb" firstAttribute="height" secondItem="SfS-2M-CYe" secondAttribute="height" id="9h7-YG-cUg"/>
                             <constraint firstItem="tAE-vR-NPO" firstAttribute="top" secondItem="muY-Ak-NeT" secondAttribute="top" id="Bk0-XM-6TF"/>
@@ -80,6 +79,7 @@
             </constraints>
             <size key="customSize" width="314" height="464"/>
             <connections>
+                <outlet property="imagesContentView" destination="muY-Ak-NeT" id="VPh-cC-5KP"/>
                 <outlet property="listNameLabel" destination="BDL-Ed-GN5" id="k6g-bx-vcZ"/>
                 <outlet property="listPostersView" destination="muY-Ak-NeT" id="pgI-hl-2oT"/>
                 <outlet property="oneImageView" destination="Azy-9q-yXV" id="kao-nI-bHH"/>

@@ -76,6 +76,7 @@
 		018F9DD01AB896F90046D3C4 /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 018F9DCF1AB896F90046D3C4 /* CoreDataManager.m */; };
 		018F9DD41AB89B4D0046D3C4 /* Film+Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 018F9DD31AB89B4D0046D3C4 /* Film+Model.m */; };
 		018F9DD71AB8AAF50046D3C4 /* Film.m in Sources */ = {isa = PBXBuildFile; fileRef = 018F9DD61AB8AAF50046D3C4 /* Film.m */; };
+		01F0C0F21AC1A0220009E061 /* UISearchBar+Custom.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F0C0F11AC1A0220009E061 /* UISearchBar+Custom.m */; };
 		F2F038238A73F7DA954B4244 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F855DE3F67C9EF3B55C10712 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -223,6 +224,8 @@
 		018F9DD31AB89B4D0046D3C4 /* Film+Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Film+Model.m"; path = "Categories/Film+Model.m"; sourceTree = "<group>"; };
 		018F9DD51AB8AAF50046D3C4 /* Film.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Film.h; path = Entities/Film.h; sourceTree = "<group>"; };
 		018F9DD61AB8AAF50046D3C4 /* Film.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Film.m; path = Entities/Film.m; sourceTree = "<group>"; };
+		01F0C0F01AC1A0220009E061 /* UISearchBar+Custom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UISearchBar+Custom.h"; path = "Categories/UISearchBar+Custom.h"; sourceTree = "<group>"; };
+		01F0C0F11AC1A0220009E061 /* UISearchBar+Custom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UISearchBar+Custom.m"; path = "Categories/UISearchBar+Custom.m"; sourceTree = "<group>"; };
 		57E47FC539F669D5601D3966 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		EFBDA11DA5EC569FCCB52E47 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		F855DE3F67C9EF3B55C10712 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -576,6 +579,8 @@
 				01038D1E1AC0516200B88A8A /* UIColor+Custom.m */,
 				01038D201AC05A2800B88A8A /* UIFont+Custom.h */,
 				01038D211AC05A2800B88A8A /* UIFont+Custom.m */,
+				01F0C0F01AC1A0220009E061 /* UISearchBar+Custom.h */,
+				01F0C0F11AC1A0220009E061 /* UISearchBar+Custom.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -769,6 +774,7 @@
 				018F9DD71AB8AAF50046D3C4 /* Film.m in Sources */,
 				015AB17D1ABC6A3000D2CBAA /* SearchFilmViewController.m in Sources */,
 				01038D1F1AC0516200B88A8A /* UIColor+Custom.m in Sources */,
+				01F0C0F21AC1A0220009E061 /* UISearchBar+Custom.m in Sources */,
 				012C6B931ABA01560060A49C /* ListsCollectionRouter.m in Sources */,
 				01068F3B1AB72D480017F91A /* BillboardFilmCollectionViewCell.m in Sources */,
 				01068F511AB752840017F91A /* CollectionFilmsCollectionViewCell.m in Sources */,
@@ -864,7 +870,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -899,7 +905,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
