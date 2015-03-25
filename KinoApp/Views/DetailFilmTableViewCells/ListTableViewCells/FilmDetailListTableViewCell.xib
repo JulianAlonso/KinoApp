@@ -21,7 +21,7 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sot-lg-Us6">
-                        <rect key="frame" x="8" y="8" width="269" height="40"/>
+                        <rect key="frame" x="8" y="18" width="269" height="20"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
@@ -29,12 +29,12 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="vHP-Dp-Gdn" firstAttribute="leading" secondItem="Sot-lg-Us6" secondAttribute="trailing" constant="10" id="1q4-vQ-XKf"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="Sot-lg-Us6" secondAttribute="bottom" id="9ay-SV-m9S"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="Sot-lg-Us6" secondAttribute="bottom" constant="10" id="9ay-SV-m9S"/>
                     <constraint firstItem="vHP-Dp-Gdn" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" id="EbS-6F-kMt"/>
                     <constraint firstItem="vHP-Dp-Gdn" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="F4b-ho-tX8"/>
                     <constraint firstItem="vHP-Dp-Gdn" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="KvX-ue-DyO"/>
                     <constraint firstItem="Sot-lg-Us6" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="eAD-7S-hd4"/>
-                    <constraint firstItem="Sot-lg-Us6" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="r0g-ax-AlQ"/>
+                    <constraint firstItem="Sot-lg-Us6" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="10" id="r0g-ax-AlQ"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>

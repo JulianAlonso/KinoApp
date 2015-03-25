@@ -27,7 +27,7 @@
 - (void)configStyles
 {
     self.backgroundColor = [UIColor clearColor];
-    self.listNameLabel.font = [UIFont appSemiBoldFontWithSize:15.0f];
+    self.listNameLabel.font = [UIFont appSemiBoldFontWithSize:20.0f];
     self.listNameLabel.textColor = [UIColor whiteColor];
 }
 

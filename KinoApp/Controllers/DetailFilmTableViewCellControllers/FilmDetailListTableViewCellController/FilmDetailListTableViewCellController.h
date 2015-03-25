@@ -11,11 +11,13 @@
 
 @class FilmDetailListTableViewCell;
 @class ListDTO;
+@class FilmDTO;
 
 @interface FilmDetailListTableViewCellController : NSObject <FilmDetailListTableViewCellDelegate>
 
 @property (nonatomic, weak) FilmDetailListTableViewCell *cell;
 @property (nonatomic, strong) ListDTO *list;
+@property (nonatomic, strong) FilmDTO *film;
 
 - (UITableViewCell *)configuredCell;
 
