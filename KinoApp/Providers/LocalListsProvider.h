@@ -19,4 +19,6 @@
 
 - (void)removeFilm:(FilmDTO *)film fromList:(ListDTO *)list completion:(void(^)(ListDTO *list, NSError *error))completion;
 
+- (void)updateList:(ListDTO *)list completion:(void(^)(ListDTO *list))completion;
+
 @end

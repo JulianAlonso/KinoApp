@@ -20,4 +20,7 @@
 
 @property (nonatomic, strong) FilmListCollectionViewCellController *controller;
 
+- (void)addBackgroundLayer;
+- (void)removeBackgroundLayer;
+
 @end

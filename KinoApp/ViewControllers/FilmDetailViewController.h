@@ -21,6 +21,4 @@
 
 @property (nonatomic, strong) LoadFilmInteractor *interactor;
 
-- (void)saveFilmToList:(ListDTO *)list;
-
 @end

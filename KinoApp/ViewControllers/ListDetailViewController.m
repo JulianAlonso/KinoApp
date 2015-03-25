@@ -14,12 +14,12 @@
 #import "DetailListRouter.h"
 #import "BillboardFilmCollectionViewCell.h"
 #import "UIColor+Custom.h"
+#import "UpdateListInteractor.h"
 
 NSString *const kListProperty = @"list";
 
 @interface ListDetailViewController () <UICollectionViewDataSource, UICollectionViewDelegate, FilmCollectionViewControllerCellDelegate>
 
-@property (weak, nonatomic) IBOutlet UITableView *filmsTableView;
 @property (weak, nonatomic) IBOutlet UICollectionView *filmsCollectionView;
 
 @property (nonatomic, strong) NSArray *controllers;
@@ -38,6 +38,11 @@ NSString *const kListProperty = @"list";
     [self configNavBarItems];
     [self configStyles];
     self.title = self.list.listName;
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [self updateListFilms];
 }
 
 - (void)didReceiveMemoryWarning
@@ -80,6 +85,16 @@ NSString *const kListProperty = @"list";
         [controllers addObject:controller];
     }
     self.controllers = controllers;
+}
+
+- (void)updateListFilms
+{
+    __weak typeof(self) weakSelf = self;
+    [self.updateListInteractor updateList:self.list completion:^(ListDTO *list) {
+        
+        weakSelf.list = list;
+        [weakSelf.filmsCollectionView reloadData];
+    }];
 }
 
 #pragma mark - Obervation methods.

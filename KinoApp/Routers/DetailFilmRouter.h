@@ -15,10 +15,6 @@
 
 - (void)presentFilmDetailViewControllerFrom:(UINavigationController *)navigationController withFilmDTO:(FilmDTO *)film;
 
-- (void)addButtonPressedFrom:(UIViewController *)fromViewController withFilmDTO:(FilmDTO *)film;
-
-- (void)dismissedSelectListViewControllerWithSelectedList:(ListDTO *)list;
-
 - (void)popFilmDetailViewController;
 
 @end

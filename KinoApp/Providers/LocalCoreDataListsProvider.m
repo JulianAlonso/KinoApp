@@ -74,6 +74,14 @@
     }];
 }
 
+- (void)updateList:(ListDTO *)list completion:(void(^)(ListDTO *list))completion
+{
+    [self fetchListWithName:list.listName completion:^(List *listMO) {
+        
+        completion([ListDTOParser listDTOFromList:listMO]);
+    }];
+}
+
 #pragma mark - Own methods.
 - (void)fetchListWithName:(NSString *)listName completion:(void(^)(List *listMO))completion
 {

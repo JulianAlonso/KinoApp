@@ -15,6 +15,4 @@
 
 - (void)presentModallyFromViewController:(UINavigationController *)fromNavigationController andRouter:(id)router;
 
-- (void)selectedList:(ListDTO *)list fromViewController:(SelectListViewController *)fromViewController;
-
 @end

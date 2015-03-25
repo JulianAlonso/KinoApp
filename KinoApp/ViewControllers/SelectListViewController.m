@@ -86,10 +86,4 @@
     return self.lists.count;
 }
 
-#pragma mark - Delegate methods.
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    [self.router selectedList:self.lists[indexPath.row] fromViewController:self];
-}
-
 @end

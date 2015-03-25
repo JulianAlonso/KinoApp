@@ -33,14 +33,6 @@
     [fromNavigationController presentViewController:selectListViewController animated:YES completion:nil];
 }
 
-- (void)selectedList:(ListDTO *)list fromViewController:(SelectListViewController *)fromViewController
-{
-    DetailFilmRouter *detailRouter = fromViewController.presentingRouter;
-    [detailRouter dismissedSelectListViewControllerWithSelectedList:list];
-    
-    [fromViewController dismissViewControllerAnimated:YES completion:nil];
-}
-
 #pragma mark - Transition delegate methods.
 - (id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source
 {

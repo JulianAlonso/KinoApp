@@ -12,6 +12,8 @@
 #import "SearchFilmRouter.h"
 #import "FilmDTO.h"
 #import "DetailFilmRouter.h"
+#import "LocalCoreDataListsProvider.h"
+#import "UpdateListInteractor.h"
 
 @interface DetailListRouter ()
 
@@ -25,6 +27,11 @@
 {
     ListDetailViewController *listDetailViewController = [ListDetailViewController new];
     
+    UpdateListInteractor *updateListInteractor = [UpdateListInteractor new];
+    updateListInteractor.localListProvider = [LocalCoreDataListsProvider new];
+    
+    
+    listDetailViewController.updateListInteractor = updateListInteractor;
     listDetailViewController.list = list;
     listDetailViewController.router = self;
     self.listDetailViewController = listDetailViewController;

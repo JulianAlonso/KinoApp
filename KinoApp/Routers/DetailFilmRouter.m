@@ -34,28 +34,14 @@
     LoadFilmInteractor *interactor = [LoadFilmInteractor new];
     interactor.localProvider = [LocalCoreDataFilmsProvider new];
     interactor.externalProvider = [ExternalTMDBProvider new];
-    AddFilmToListInteractor *addInteractor = [AddFilmToListInteractor new];
-    addInteractor.localProvider = [LocalCoreDataListsProvider new];
     
     //DI
     filmDetail.interactor = interactor;
-    filmDetail.addFilmInteractor = addInteractor;
     filmDetail.router = self;
     
     self.detailViewController = filmDetail;
     
     [navigationController pushViewController:filmDetail animated:YES];
-}
-
-- (void)addButtonPressedFrom:(UIViewController *)fromViewController withFilmDTO:(FilmDTO *)film
-{
-    SelectListRouter *router = [SelectListRouter new];
-    [router presentModallyFromViewController:fromViewController.navigationController andRouter:self];
-}
-
-- (void)dismissedSelectListViewControllerWithSelectedList:(ListDTO *)list
-{
-    [self.detailViewController saveFilmToList:list];
 }
 
 - (void)popFilmDetailViewController

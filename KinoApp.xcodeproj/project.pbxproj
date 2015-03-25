@@ -29,6 +29,7 @@
 		01068F511AB752840017F91A /* CollectionFilmsCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 01068F4F1AB752840017F91A /* CollectionFilmsCollectionViewCell.m */; };
 		01068F521AB752840017F91A /* CollectionFilmsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01068F501AB752840017F91A /* CollectionFilmsCollectionViewCell.xib */; };
 		01068F581AB7546A0017F91A /* BillboardFilmsCollectionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 01068F571AB7546A0017F91A /* BillboardFilmsCollectionDelegate.m */; };
+		0115B7251AC3630800F38A7D /* UpdateListInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 0115B7241AC3630800F38A7D /* UpdateListInteractor.m */; };
 		0117596F1ABAF5E700724BC5 /* ControllersFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 0117596E1ABAF5E700724BC5 /* ControllersFactory.m */; };
 		011759721ABB291F00724BC5 /* AddFilmToListInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 011759711ABB291F00724BC5 /* AddFilmToListInteractor.m */; };
 		011759761ABB390600724BC5 /* SelectListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 011759741ABB390600724BC5 /* SelectListViewController.m */; };
@@ -157,6 +158,8 @@
 		01068F571AB7546A0017F91A /* BillboardFilmsCollectionDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BillboardFilmsCollectionDelegate.m; path = Delegates/BillboardFilmsCollectionDelegate.m; sourceTree = "<group>"; };
 		01068F591AB754810017F91A /* FilmsCollectionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FilmsCollectionDelegate.h; path = Delegates/FilmsCollectionDelegate.h; sourceTree = "<group>"; };
 		01068F5A1AB7558F0017F91A /* BillboardFilmsInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BillboardFilmsInteractor.h; path = Interactors/BillboardFilmsInteractor.h; sourceTree = "<group>"; };
+		0115B7231AC3630800F38A7D /* UpdateListInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UpdateListInteractor.h; path = Interactors/UpdateListInteractor.h; sourceTree = "<group>"; };
+		0115B7241AC3630800F38A7D /* UpdateListInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UpdateListInteractor.m; path = Interactors/UpdateListInteractor.m; sourceTree = "<group>"; };
 		0117596D1ABAF5E700724BC5 /* ControllersFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ControllersFactory.h; path = Factories/ControllersFactory.h; sourceTree = "<group>"; };
 		0117596E1ABAF5E700724BC5 /* ControllersFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ControllersFactory.m; path = Factories/ControllersFactory.m; sourceTree = "<group>"; };
 		011759701ABB291F00724BC5 /* AddFilmToListInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddFilmToListInteractor.h; path = Interactors/AddFilmToListInteractor.h; sourceTree = "<group>"; };
@@ -428,6 +431,8 @@
 				015AB1891ABC827C00D2CBAA /* SearchFilmInteractor.m */,
 				01453E7C1AC348BD00F8ADC6 /* RemoveFilmFromListInteractor.h */,
 				01453E7D1AC348BD00F8ADC6 /* RemoveFilmFromListInteractor.m */,
+				0115B7231AC3630800F38A7D /* UpdateListInteractor.h */,
+				0115B7241AC3630800F38A7D /* UpdateListInteractor.m */,
 			);
 			name = Interactors;
 			sourceTree = "<group>";
@@ -964,6 +969,7 @@
 				012C6B851AB9C3EE0060A49C /* DetailFilmRouter.m in Sources */,
 				012C6BA61ABA107D0060A49C /* ListDTO.m in Sources */,
 				01FC73A91AC3084D003DC161 /* PrincipalDataFilmDetailTableViewCell.m in Sources */,
+				0115B7251AC3630800F38A7D /* UpdateListInteractor.m in Sources */,
 				01068F471AB747F00017F91A /* ExternalTMDBProvider.m in Sources */,
 				015834561AB862B4007E0AC4 /* URLHelper.m in Sources */,
 				01FC73A21AC2D358003DC161 /* FilmFilter.m in Sources */,
