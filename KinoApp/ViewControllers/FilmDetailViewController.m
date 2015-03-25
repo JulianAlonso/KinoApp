@@ -53,7 +53,7 @@
     [self configGrayLayer];
     [self configTableView];
     
-    [self configItemsWithFilm:self.film];
+    [self configItems];
     [self updateFilm];
 }
 
@@ -97,10 +97,10 @@
     [self.backButton addTarget:self action:@selector(backButtonPressed) forControlEvents:UIControlEventTouchUpInside];
 }
 
-- (void)configItemsWithFilm:(FilmDTO *)film
+- (void)configItems
 {
-    self.filmTitleLabel.text = film.filmTitle;
-    [self.filmImageView sd_setImageWithURL:[NSURL URLWithString:film.filmPosterPath]];
+    self.filmTitleLabel.text = self.film.filmTitle;
+    [self.filmImageView sd_setImageWithURL:[NSURL URLWithString:self.film.filmPosterPath]];
 }
 
 - (void)configStyles
@@ -134,14 +134,19 @@
     __weak typeof(self) weakSelf = self;
     [self.interactor loadFilmWithId:self.film.filmId completion:^(FilmDTO *film) {
         
-        dispatch_async(dispatch_get_main_queue(), ^{
-           [weakSelf configItemsWithFilm:film];
-        });
+        if (!film)
+        {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                weakSelf.film = film;
+                [weakSelf.filmDetailTableView reloadData];
+            });
+        }
         
     } update:^(FilmDTO *film) {
         
         dispatch_async(dispatch_get_main_queue(), ^{
-            [weakSelf configItemsWithFilm:film];
+            weakSelf.film = film;
+            [weakSelf.filmDetailTableView reloadData];
         });
         
     }];
