@@ -36,6 +36,8 @@
 
 @property (nonatomic, strong) GrayBackgroundLayer *grayLayer;
 
+@property (nonatomic, assign) CGFloat scrollOrigin;
+
 @end
 
 @interface FilmDetailViewController (DataSourceDelegate) <UITableViewDataSource, UITableViewDelegate>
@@ -61,6 +63,8 @@
 {
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:YES animated:animated];
+    
+    self.topTableViewConstraint.constant = CGRectGetHeight(self.view.frame) - 1;
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -73,11 +77,6 @@
     [super didReceiveMemoryWarning];
 }
 
-- (void)viewDidAppear:(BOOL)animated
-{
-
-}
-
 - (void)viewDidLayoutSubviews
 {
     static CGFloat topHeight;
@@ -86,7 +85,6 @@
         topHeight = self.topHeightConstraint.constant;
     }
     self.topHeightConstraint.constant = self.topLayoutGuide.length + topHeight;
-    self.topTableViewConstraint.constant = CGRectGetHeight(self.view.frame) - 40;
 }
 
 #pragma mark - Config methods.
@@ -149,6 +147,27 @@
     }];
 }
 
+- (void)updateConstraint:(CGFloat)number animate:(BOOL)animate
+{
+    if (self.topTableViewConstraint.constant + number < 0)
+    {
+        return;
+    }
+    
+    if (animate)
+    {
+        [UIView animateWithDuration:0.5f animations:^{
+            self.topTableViewConstraint.constant += number;
+            [self.filmDetailTableView layoutIfNeeded];
+        }];
+    }
+    else
+    {
+        self.topTableViewConstraint.constant += number;
+        [self.filmDetailTableView layoutIfNeeded];
+    }
+}
+
 #pragma mark - Extern methods.
 - (void)saveFilmToList:(ListDTO *)list
 {
@@ -200,10 +219,30 @@
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [UIView animateWithDuration:3.5f animations:^{
-        self.topTableViewConstraint.constant = 200 ;
-        [self.view layoutIfNeeded];
-    }];
+    if (indexPath.row < 2)
+    {
+        [self updateConstraint:-1*CGRectGetHeight(cell.bounds) animate:YES];
+    }
+}
+
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
+{
+    self.scrollOrigin = scrollView.contentOffset.y;
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    CGFloat actual = scrollView.contentOffset.y;
+   
+    if (self.scrollOrigin < actual)
+    {
+        [self updateConstraint: -1 * (actual - self.scrollOrigin) animate:NO];
+    }
+    else
+    {
+        [self updateConstraint:(self.scrollOrigin - actual) animate:NO];
+    }
+    NSLog(@"origin: %f, Actual: %f", self.scrollOrigin, actual);
 }
 
 @end

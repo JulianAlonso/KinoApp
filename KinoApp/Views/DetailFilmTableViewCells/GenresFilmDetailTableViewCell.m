@@ -25,6 +25,7 @@
 #pragma mark - Config methods.
 - (void)configStyles
 {
+    self.selectionStyle = UITableViewCellSelectionStyleNone;
     self.backgroundColor = [UIColor clearColor];
 }
 

@@ -29,6 +29,7 @@
 #pragma mark - Config methods.
 - (void)configStyles
 {
+    self.selectionStyle = UITableViewCellSelectionStyleNone;
     self.backgroundColor = RGBA(51, 51, 51, 0.7f);
     
     self.filmOverviewLabel.textColor = [UIColor whiteColor];
