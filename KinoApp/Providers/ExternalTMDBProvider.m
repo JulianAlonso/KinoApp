@@ -11,6 +11,7 @@
 #import "APIVars.h"
 #import "FilmDTOParser.h"
 #import "FilmDTO.h"
+#import "FilmFilter.h"
 
 @implementation ExternalTMDBProvider
 
@@ -20,7 +21,11 @@
         NSError *error;
         NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
         
-        completion([FilmDTOParser filmDTOsFromArray:dic[@"results"] filmsType:TYPE_UPCOMING]);
+        NSArray *films = [FilmDTOParser filmDTOsFromArray:dic[@"results"] filmsType:TYPE_UPCOMING];
+        
+        [self completeFilmsFields:films completion:^(NSArray *completedFilms) {
+            completion([FilmFilter filterInvalidFilms:completedFilms]);
+        }];
     }];
 }
 
@@ -30,7 +35,11 @@
         NSError *error;
         NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
         
-        completion([FilmDTOParser filmDTOsFromArray:dic[@"results"] filmsType:TYPE_PLAYIN_NOW]);
+        NSArray *films = [FilmDTOParser filmDTOsFromArray:dic[@"results"] filmsType:TYPE_PLAYIN_NOW];
+        
+        [self completeFilmsFields:films completion:^(NSArray *completedFilms) {
+            completion([FilmFilter filterInvalidFilms:completedFilms]);
+        }];
     }];
 }
 
@@ -66,6 +75,22 @@
             completion([FilmDTOParser filmDTOsFromArray:dic[@"results"] filmsType:nil]);
         }
     }];
+}
+
+- (void)completeFilmsFields:(NSArray *)films completion:(void(^)(NSArray *completedFilms))completion
+{
+    NSMutableArray *completedFilms = [NSMutableArray array];
+    for (FilmDTO *f in films)
+    {
+        [self fetchFilmById:f.filmId completion:^(FilmDTO *film) {
+            film.filmType = f.filmType;
+            [completedFilms addObject:film];
+            if (completedFilms.count == films.count)
+            {
+                completion(completedFilms);
+            }
+        }];
+    }
 }
 
 #pragma mark - Lazy getterss.

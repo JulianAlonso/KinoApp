@@ -90,6 +90,7 @@
 		01F0C1211AC1DEF60009E061 /* OverviewFilmDetailTableViewCellController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F0C1201AC1DEF60009E061 /* OverviewFilmDetailTableViewCellController.m */; };
 		01F0C1241AC1DF050009E061 /* ListsFilmDetailTableViewCellController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F0C1231AC1DF050009E061 /* ListsFilmDetailTableViewCellController.m */; };
 		01F0C1291AC1EBF40009E061 /* GrayBackgroundLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F0C1281AC1EBF40009E061 /* GrayBackgroundLayer.m */; };
+		01FC73A21AC2D358003DC161 /* FilmFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 01FC73A11AC2D358003DC161 /* FilmFilter.m */; };
 		F2F038238A73F7DA954B4244 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F855DE3F67C9EF3B55C10712 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -264,6 +265,8 @@
 		01F0C1251AC1DF8C0009E061 /* DetailFilmTableViewCellController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailFilmTableViewCellController.h; path = Controllers/DetailFilmTableViewCellControllers/DetailFilmTableViewCellController.h; sourceTree = "<group>"; };
 		01F0C1271AC1EBF40009E061 /* GrayBackgroundLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GrayBackgroundLayer.h; path = Views/Layers/GrayBackgroundLayer.h; sourceTree = "<group>"; };
 		01F0C1281AC1EBF40009E061 /* GrayBackgroundLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GrayBackgroundLayer.m; path = Views/Layers/GrayBackgroundLayer.m; sourceTree = "<group>"; };
+		01FC73A01AC2D358003DC161 /* FilmFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FilmFilter.h; path = Helpers/FilmFilter.h; sourceTree = "<group>"; };
+		01FC73A11AC2D358003DC161 /* FilmFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FilmFilter.m; path = Helpers/FilmFilter.m; sourceTree = "<group>"; };
 		57E47FC539F669D5601D3966 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		EFBDA11DA5EC569FCCB52E47 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		F855DE3F67C9EF3B55C10712 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -580,6 +583,8 @@
 			children = (
 				015834541AB862B4007E0AC4 /* URLHelper.h */,
 				015834551AB862B4007E0AC4 /* URLHelper.m */,
+				01FC73A01AC2D358003DC161 /* FilmFilter.h */,
+				01FC73A11AC2D358003DC161 /* FilmFilter.m */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -901,6 +906,7 @@
 				012C6BA61ABA107D0060A49C /* ListDTO.m in Sources */,
 				01068F471AB747F00017F91A /* ExternalTMDBProvider.m in Sources */,
 				015834561AB862B4007E0AC4 /* URLHelper.m in Sources */,
+				01FC73A21AC2D358003DC161 /* FilmFilter.m in Sources */,
 				012176471ABC1FE700EDA095 /* List+Model.m in Sources */,
 				012176551ABC330D00EDA095 /* ListDetailViewController.m in Sources */,
 			);

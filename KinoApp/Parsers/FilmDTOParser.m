@@ -37,7 +37,7 @@ NSString *const dFilmRuntime = @"runtime";
     film.filmRuntime = [NSString stringWithFormat:@"%@", dictionary[dFilmRuntime]];
     film.filmPosterPath = [URLHelper imageUrlWithEndpoint:dictionary[dFilmPosterPath]];
     film.filmBackdropPath = [URLHelper imageUrlWithEndpoint:dictionary[dFilmBackdropPath]];
-    film.filmType = filmType;
+    filmType ? film.filmType = filmType : film.filmType;
     
     return film;
 }

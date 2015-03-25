@@ -31,6 +31,7 @@ NSString *const kFilmReleaseDateProperty = @"filmReleaseDate";
         film.filmBackdropPath = filmDTO.filmBackdropPath;
         film.filmHomepage = filmDTO.filmHomepage;
         film.filmType = filmDTO.filmType;
+        film.filmRuntime = filmDTO.filmRuntime;
     }
     
     return film;
