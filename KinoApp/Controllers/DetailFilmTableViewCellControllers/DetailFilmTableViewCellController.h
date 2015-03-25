@@ -17,4 +17,6 @@
 
 - (UITableViewCell *)configuredCell;
 
+- (CGFloat)cellHeightWithWidth:(CGFloat)width;
+
 @end

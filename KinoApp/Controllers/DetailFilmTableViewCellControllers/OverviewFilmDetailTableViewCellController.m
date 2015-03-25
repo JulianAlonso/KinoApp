@@ -24,5 +24,16 @@
     return self.cell;
 }
 
+- (CGFloat)cellHeightWithWidth:(CGFloat)width
+{
+    OverviewFilmDetailTableViewCell *cell = (OverviewFilmDetailTableViewCell *)[self configuredCell];
+    CGFloat height = CGRectGetHeight(cell.contentView.frame) - CGRectGetHeight(cell.filmOverviewLabel.frame);
+    CGRect labelHeight = [cell.filmOverviewLabel.text boundingRectWithSize:CGSizeMake(width, 0)
+                                                                options:NSStringDrawingUsesLineFragmentOrigin
+                                                             attributes:@{NSFontAttributeName : cell.filmOverviewLabel.font}
+                                                                context:nil];
+    
+    return CGRectGetHeight(labelHeight) - height;
+}
 
 @end

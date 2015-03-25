@@ -58,6 +58,8 @@
 		012C6BAB1ABA14A70060A49C /* LocalCoreDataListsProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 012C6BAA1ABA14A70060A49C /* LocalCoreDataListsProvider.m */; };
 		013955681ABAD7A500BC745D /* List.m in Sources */ = {isa = PBXBuildFile; fileRef = 013955671ABAD7A500BC745D /* List.m */; };
 		0139556B1ABAD8EA00BC745D /* ListDTOParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 0139556A1ABAD8EA00BC745D /* ListDTOParser.m */; };
+		01453E6E1AC3243F00F8ADC6 /* ListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 01453E6C1AC3243F00F8ADC6 /* ListTableViewCell.m */; };
+		01453E6F1AC3243F00F8ADC6 /* ListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01453E6D1AC3243F00F8ADC6 /* ListTableViewCell.xib */; };
 		0158344A1AB8223B007E0AC4 /* APIVars.m in Sources */ = {isa = PBXBuildFile; fileRef = 015834491AB8223B007E0AC4 /* APIVars.m */; };
 		0158344F1AB84AAA007E0AC4 /* RequestManagerFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 0158344E1AB84AAA007E0AC4 /* RequestManagerFactory.m */; };
 		015834521AB84E93007E0AC4 /* JARequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 015834511AB84E93007E0AC4 /* JARequestManager.m */; };
@@ -91,6 +93,9 @@
 		01F0C1241AC1DF050009E061 /* ListsFilmDetailTableViewCellController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F0C1231AC1DF050009E061 /* ListsFilmDetailTableViewCellController.m */; };
 		01F0C1291AC1EBF40009E061 /* GrayBackgroundLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F0C1281AC1EBF40009E061 /* GrayBackgroundLayer.m */; };
 		01FC73A21AC2D358003DC161 /* FilmFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 01FC73A11AC2D358003DC161 /* FilmFilter.m */; };
+		01FC73A91AC3084D003DC161 /* PrincipalDataFilmDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 01FC73A71AC3084D003DC161 /* PrincipalDataFilmDetailTableViewCell.m */; };
+		01FC73AA1AC3084D003DC161 /* PrincipalDataFilmDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01FC73A81AC3084D003DC161 /* PrincipalDataFilmDetailTableViewCell.xib */; };
+		01FC73AD1AC3089B003DC161 /* PrincipalDataFilmDetailTableViewCellController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01FC73AC1AC3089B003DC161 /* PrincipalDataFilmDetailTableViewCellController.m */; };
 		F2F038238A73F7DA954B4244 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F855DE3F67C9EF3B55C10712 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -202,6 +207,9 @@
 		013955671ABAD7A500BC745D /* List.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = List.m; path = Entities/List.m; sourceTree = "<group>"; };
 		013955691ABAD8EA00BC745D /* ListDTOParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ListDTOParser.h; path = Parsers/ListDTOParser.h; sourceTree = "<group>"; };
 		0139556A1ABAD8EA00BC745D /* ListDTOParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ListDTOParser.m; path = Parsers/ListDTOParser.m; sourceTree = "<group>"; };
+		01453E6B1AC3243F00F8ADC6 /* ListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ListTableViewCell.h; path = Views/DetailFilmTableViewCells/ListTableViewCells/ListTableViewCell.h; sourceTree = "<group>"; };
+		01453E6C1AC3243F00F8ADC6 /* ListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ListTableViewCell.m; path = Views/DetailFilmTableViewCells/ListTableViewCells/ListTableViewCell.m; sourceTree = "<group>"; };
+		01453E6D1AC3243F00F8ADC6 /* ListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ListTableViewCell.xib; path = Views/DetailFilmTableViewCells/ListTableViewCells/ListTableViewCell.xib; sourceTree = "<group>"; };
 		015834481AB8223B007E0AC4 /* APIVars.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APIVars.h; path = Master/APIVars.h; sourceTree = "<group>"; };
 		015834491AB8223B007E0AC4 /* APIVars.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = APIVars.m; path = Master/APIVars.m; sourceTree = "<group>"; };
 		0158344B1AB84A88007E0AC4 /* RequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RequestManager.h; path = RequestManagers/RequestManager.h; sourceTree = "<group>"; };
@@ -267,6 +275,11 @@
 		01F0C1281AC1EBF40009E061 /* GrayBackgroundLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GrayBackgroundLayer.m; path = Views/Layers/GrayBackgroundLayer.m; sourceTree = "<group>"; };
 		01FC73A01AC2D358003DC161 /* FilmFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FilmFilter.h; path = Helpers/FilmFilter.h; sourceTree = "<group>"; };
 		01FC73A11AC2D358003DC161 /* FilmFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FilmFilter.m; path = Helpers/FilmFilter.m; sourceTree = "<group>"; };
+		01FC73A61AC3084D003DC161 /* PrincipalDataFilmDetailTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PrincipalDataFilmDetailTableViewCell.h; path = Views/DetailFilmTableViewCells/PrincipalDataFilmDetailTableViewCell.h; sourceTree = "<group>"; };
+		01FC73A71AC3084D003DC161 /* PrincipalDataFilmDetailTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PrincipalDataFilmDetailTableViewCell.m; path = Views/DetailFilmTableViewCells/PrincipalDataFilmDetailTableViewCell.m; sourceTree = "<group>"; };
+		01FC73A81AC3084D003DC161 /* PrincipalDataFilmDetailTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PrincipalDataFilmDetailTableViewCell.xib; path = Views/DetailFilmTableViewCells/PrincipalDataFilmDetailTableViewCell.xib; sourceTree = "<group>"; };
+		01FC73AB1AC3089B003DC161 /* PrincipalDataFilmDetailTableViewCellController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PrincipalDataFilmDetailTableViewCellController.h; path = Controllers/DetailFilmTableViewCellControllers/PrincipalDataFilmDetailTableViewCellController.h; sourceTree = "<group>"; };
+		01FC73AC1AC3089B003DC161 /* PrincipalDataFilmDetailTableViewCellController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PrincipalDataFilmDetailTableViewCellController.m; path = Controllers/DetailFilmTableViewCellControllers/PrincipalDataFilmDetailTableViewCellController.m; sourceTree = "<group>"; };
 		57E47FC539F669D5601D3966 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		EFBDA11DA5EC569FCCB52E47 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		F855DE3F67C9EF3B55C10712 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -556,6 +569,16 @@
 			name = ListsCells;
 			sourceTree = "<group>";
 		};
+		01453E6A1AC3241000F8ADC6 /* ListTableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				01453E6B1AC3243F00F8ADC6 /* ListTableViewCell.h */,
+				01453E6C1AC3243F00F8ADC6 /* ListTableViewCell.m */,
+				01453E6D1AC3243F00F8ADC6 /* ListTableViewCell.xib */,
+			);
+			name = ListTableViewCells;
+			sourceTree = "<group>";
+		};
 		015834471AB821D3007E0AC4 /* Master */ = {
 			isa = PBXGroup;
 			children = (
@@ -635,9 +658,13 @@
 		01F0C0FC1AC1D5850009E061 /* DetailFilmTableViewCells */ = {
 			isa = PBXGroup;
 			children = (
+				01F0C1111AC1DDB50009E061 /* FilmDetailViewCell.h */,
 				01F0C0FD1AC1D8F80009E061 /* TitleFilmDetailTableViewCell.h */,
 				01F0C0FE1AC1D8F80009E061 /* TitleFilmDetailTableViewCell.m */,
 				01F0C0FF1AC1D8F80009E061 /* TitleFilmDetailTableViewCell.xib */,
+				01FC73A61AC3084D003DC161 /* PrincipalDataFilmDetailTableViewCell.h */,
+				01FC73A71AC3084D003DC161 /* PrincipalDataFilmDetailTableViewCell.m */,
+				01FC73A81AC3084D003DC161 /* PrincipalDataFilmDetailTableViewCell.xib */,
 				01F0C1021AC1D9140009E061 /* OverviewFilmDetailTableViewCell.h */,
 				01F0C1031AC1D9140009E061 /* OverviewFilmDetailTableViewCell.m */,
 				01F0C1041AC1D9140009E061 /* OverviewFilmDetailTableViewCell.xib */,
@@ -647,7 +674,7 @@
 				01F0C10C1AC1D94B0009E061 /* ListFilmDetailTableViewCell.h */,
 				01F0C10D1AC1D94B0009E061 /* ListFilmDetailTableViewCell.m */,
 				01F0C10E1AC1D94B0009E061 /* ListFilmDetailTableViewCell.xib */,
-				01F0C1111AC1DDB50009E061 /* FilmDetailViewCell.h */,
+				01453E6A1AC3241000F8ADC6 /* ListTableViewCells */,
 			);
 			name = DetailFilmTableViewCells;
 			sourceTree = "<group>";
@@ -655,15 +682,17 @@
 		01F0C1151AC1DE690009E061 /* DetailFilmTableViewCellControllers */ = {
 			isa = PBXGroup;
 			children = (
+				01F0C1251AC1DF8C0009E061 /* DetailFilmTableViewCellController.h */,
 				01F0C1161AC1DEAC0009E061 /* TitleFilmDetailTableViewCellController.h */,
 				01F0C1171AC1DEAC0009E061 /* TitleFilmDetailTableViewCellController.m */,
+				01FC73AB1AC3089B003DC161 /* PrincipalDataFilmDetailTableViewCellController.h */,
+				01FC73AC1AC3089B003DC161 /* PrincipalDataFilmDetailTableViewCellController.m */,
 				01F0C11F1AC1DEF60009E061 /* OverviewFilmDetailTableViewCellController.h */,
 				01F0C1201AC1DEF60009E061 /* OverviewFilmDetailTableViewCellController.m */,
 				01F0C11C1AC1DEDC0009E061 /* GenresFilmDetailTableViewCellController.h */,
 				01F0C11D1AC1DEDC0009E061 /* GenresFilmDetailTableViewCellController.m */,
 				01F0C1221AC1DF050009E061 /* ListsFilmDetailTableViewCellController.h */,
 				01F0C1231AC1DF050009E061 /* ListsFilmDetailTableViewCellController.m */,
-				01F0C1251AC1DF8C0009E061 /* DetailFilmTableViewCellController.h */,
 			);
 			name = DetailFilmTableViewCellControllers;
 			sourceTree = "<group>";
@@ -785,6 +814,8 @@
 				01F0C1061AC1D9140009E061 /* OverviewFilmDetailTableViewCell.xib in Resources */,
 				01068F521AB752840017F91A /* CollectionFilmsCollectionViewCell.xib in Resources */,
 				015AB17E1ABC6A3000D2CBAA /* SearchFilmViewController.xib in Resources */,
+				01FC73AA1AC3084D003DC161 /* PrincipalDataFilmDetailTableViewCell.xib in Resources */,
+				01453E6F1AC3243F00F8ADC6 /* ListTableViewCell.xib in Resources */,
 				012C6B981ABA0A070060A49C /* FilmListCollectionViewCell.xib in Resources */,
 				01068F311AB725490017F91A /* BillboardViewController.xib in Resources */,
 				01068EDC1AB7011D0017F91A /* Images.xcassets in Resources */,
@@ -855,7 +886,9 @@
 				015AB18A1ABC827C00D2CBAA /* SearchFilmInteractor.m in Sources */,
 				015AB1791ABC3F0100D2CBAA /* DetailListRouter.m in Sources */,
 				011759831ABB429E00724BC5 /* SelectListModalTransitionAnimator.m in Sources */,
+				01453E6E1AC3243F00F8ADC6 /* ListTableViewCell.m in Sources */,
 				01068F4A1AB74E1F0017F91A /* LoadUpcomingFilmsInteractor.m in Sources */,
+				01FC73AD1AC3089B003DC161 /* PrincipalDataFilmDetailTableViewCellController.m in Sources */,
 				0158344F1AB84AAA007E0AC4 /* RequestManagerFactory.m in Sources */,
 				01F0C11E1AC1DEDC0009E061 /* GenresFilmDetailTableViewCellController.m in Sources */,
 				01F0C1141AC1DE230009E061 /* FilmDetailTableViewCellFactory.m in Sources */,
@@ -904,6 +937,7 @@
 				011759761ABB390600724BC5 /* SelectListViewController.m in Sources */,
 				012C6B851AB9C3EE0060A49C /* DetailFilmRouter.m in Sources */,
 				012C6BA61ABA107D0060A49C /* ListDTO.m in Sources */,
+				01FC73A91AC3084D003DC161 /* PrincipalDataFilmDetailTableViewCell.m in Sources */,
 				01068F471AB747F00017F91A /* ExternalTMDBProvider.m in Sources */,
 				015834561AB862B4007E0AC4 /* URLHelper.m in Sources */,
 				01FC73A21AC2D358003DC161 /* FilmFilter.m in Sources */,

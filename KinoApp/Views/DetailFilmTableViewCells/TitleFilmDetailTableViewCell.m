@@ -31,9 +31,6 @@
     
     self.filmTitleLabel.textColor = [UIColor whiteColor];
     self.filmTitleLabel.font = [UIFont appFontWithSize:30];
-    
-    self.filmPrincipalDataLabel.textColor = [UIColor whiteColor];
-    self.filmPrincipalDataLabel.font = [UIFont appFontWithSize:18];
 }
 
 @end

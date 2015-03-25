@@ -20,9 +20,19 @@
     TitleFilmDetailTableViewCell *cell = self.cell;
     
     cell.filmTitleLabel.text = self.film.filmTitle;
-    cell.filmPrincipalDataLabel.text = [NSString stringWithFormat:@"%@ minutes  ·  %@", self.film.filmRuntime, self.film.filmYear];
     
     return self.cell;
+}
+
+- (CGFloat)cellHeightWithWidth:(CGFloat)width
+{
+    TitleFilmDetailTableViewCell *cell = (TitleFilmDetailTableViewCell *)[self configuredCell];
+    CGFloat height = CGRectGetHeight(cell.contentView.frame) - CGRectGetHeight(cell.filmTitleLabel.frame);
+    CGRect labelHeight = [cell.filmTitleLabel.text boundingRectWithSize:CGSizeMake(width, 0)
+                                                                     options:NSStringDrawingUsesLineFragmentOrigin
+                                                                  attributes:@{NSFontAttributeName : cell.filmTitleLabel.font}
+                                                                     context:nil];
+    return CGRectGetHeight(labelHeight) + height;
 }
 
 @end

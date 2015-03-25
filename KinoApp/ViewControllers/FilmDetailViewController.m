@@ -22,6 +22,7 @@
 #import "GenresFilmDetailTableViewCell.h"
 #import "ListFilmDetailTableViewCell.h"
 #import "GrayBackgroundLayer.h"
+#import "PrincipalDataFilmDetailTableViewCell.h"
 
 @interface FilmDetailViewController ()
 
@@ -35,8 +36,6 @@
 @property (weak, nonatomic) IBOutlet UIImageView *filmImageView;
 
 @property (nonatomic, strong) GrayBackgroundLayer *grayLayer;
-
-@property (nonatomic, assign) CGFloat scrollOrigin;
 
 @end
 
@@ -64,7 +63,7 @@
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:YES animated:animated];
     
-    self.topTableViewConstraint.constant = CGRectGetHeight(self.view.frame) - 1;
+    self.topTableViewConstraint.constant = 0;
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -85,6 +84,7 @@
         topHeight = self.topHeightConstraint.constant;
     }
     self.topHeightConstraint.constant = self.topLayoutGuide.length + topHeight;
+    [self configTableViewHeader];
 }
 
 #pragma mark - Config methods.
@@ -122,11 +122,18 @@
     self.filmDetailTableView.delegate = self;
     self.filmDetailTableView.dataSource = self;
     self.filmDetailTableView.backgroundColor = [UIColor clearColor];
+    self.filmDetailTableView.separatorColor = [UIColor clearColor];
     
     [self registerCellWithClass:[TitleFilmDetailTableViewCell class]];
+    [self registerCellWithClass:[PrincipalDataFilmDetailTableViewCell class]];
     [self registerCellWithClass:[OverviewFilmDetailTableViewCell class]];
     [self registerCellWithClass:[GenresFilmDetailTableViewCell class]];
     [self registerCellWithClass:[ListFilmDetailTableViewCell class]];
+}
+
+- (void)configTableViewHeader
+{
+    self.filmDetailTableView.tableHeaderView = [[UIView alloc] initWithFrame:[self headerTableViewFrame]];
 }
 
 - (void)updateFilm
@@ -145,27 +152,6 @@
         });
         
     }];
-}
-
-- (void)updateConstraint:(CGFloat)number animate:(BOOL)animate
-{
-    if (self.topTableViewConstraint.constant + number < 0)
-    {
-        return;
-    }
-    
-    if (animate)
-    {
-        [UIView animateWithDuration:0.5f animations:^{
-            self.topTableViewConstraint.constant += number;
-            [self.filmDetailTableView layoutIfNeeded];
-        }];
-    }
-    else
-    {
-        self.topTableViewConstraint.constant += number;
-        [self.filmDetailTableView layoutIfNeeded];
-    }
 }
 
 #pragma mark - Extern methods.
@@ -195,6 +181,39 @@
     [self.filmDetailTableView registerNib:[UINib nibWithNibName:NSStringFromClass(clazz) bundle:nil] forCellReuseIdentifier:NSStringFromClass(clazz)];
 }
 
+- (CGRect)headerTableViewFrame
+{
+    CGFloat finalHeigth = CGRectGetHeight(self.view.bounds);
+    
+    TitleFilmDetailTableViewCell *titleCell = [self.filmDetailTableView dequeueReusableCellWithIdentifier:NSStringFromClass([TitleFilmDetailTableViewCell class])];
+    
+    id<DetailFilmTableViewCellController> titleController = [FilmDetailTableViewCellFactory controllerForCellClass:[titleCell class]];
+    titleController.cell = titleCell;
+    titleController.film = self.film;
+    
+    PrincipalDataFilmDetailTableViewCell *dataCell = [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([PrincipalDataFilmDetailTableViewCell class])
+                                                                                   owner:self
+                                                                                 options:kNilOptions] firstObject];
+    id<DetailFilmTableViewCellController> dataController = [FilmDetailTableViewCellFactory controllerForCellClass:[dataCell class]];
+    dataController.cell = dataCell;
+    dataController.film = self.film;
+    
+    OverviewFilmDetailTableViewCell *overCell = [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([OverviewFilmDetailTableViewCell class])
+                                                                               owner:self
+                                                                             options:kNilOptions] firstObject];
+    id<DetailFilmTableViewCellController> overController = [FilmDetailTableViewCellFactory controllerForCellClass:[overCell class]];
+    overController.cell = overCell;
+    overController.film = self.film;
+    
+    CGFloat tableWidth = CGRectGetWidth(self.filmDetailTableView.frame);
+    
+    finalHeigth -= [titleController cellHeightWithWidth:tableWidth];
+    finalHeigth -= [dataController cellHeightWithWidth:tableWidth];
+    finalHeigth -= [overController cellHeightWithWidth:tableWidth];
+    
+    return CGRectMake(0, 0, CGRectGetWidth(self.filmDetailTableView.frame), finalHeigth);
+}
+
 @end
 
 
@@ -215,34 +234,6 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return 4;
-}
-
-- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (indexPath.row < 2)
-    {
-        [self updateConstraint:-1*CGRectGetHeight(cell.bounds) animate:YES];
-    }
-}
-
-- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
-{
-    self.scrollOrigin = scrollView.contentOffset.y;
-}
-
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView
-{
-    CGFloat actual = scrollView.contentOffset.y;
-   
-    if (self.scrollOrigin < actual)
-    {
-        [self updateConstraint: -1 * (actual - self.scrollOrigin) animate:NO];
-    }
-    else
-    {
-        [self updateConstraint:(self.scrollOrigin - actual) animate:NO];
-    }
-    NSLog(@"origin: %f, Actual: %f", self.scrollOrigin, actual);
 }
 
 @end

@@ -15,10 +15,13 @@
 #import "OverviewFilmDetailTableViewCellController.h"
 #import "GenresFilmDetailTableViewCellController.h"
 #import "ListsFilmDetailTableViewCellController.h"
+#import "PrincipalDataFilmDetailTableViewCell.h"
+#import "PrincipalDataFilmDetailTableViewCellController.h"
 
 
 @implementation FilmDetailTableViewCellFactory
 
+#pragma mark - Public methods.
 + (Class)cellClassForIndexpath:(NSIndexPath *)indexpath
 {
     return [[FilmDetailTableViewCellFactory cellClasses] objectAtIndex:indexpath.row];
@@ -38,6 +41,7 @@
     {
         controllerClasses = @{
                               NSStringFromClass([TitleFilmDetailTableViewCell class]) : [TitleFilmDetailTableViewCellController class],
+                              NSStringFromClass([PrincipalDataFilmDetailTableViewCell class]) : [PrincipalDataFilmDetailTableViewCellController class],
                               NSStringFromClass([OverviewFilmDetailTableViewCell class]) : [OverviewFilmDetailTableViewCellController class],
                               NSStringFromClass([GenresFilmDetailTableViewCell class]) : [GenresFilmDetailTableViewCellController class],
                               NSStringFromClass([ListFilmDetailTableViewCell class]) : [ListsFilmDetailTableViewCellController class],
@@ -51,7 +55,11 @@
     static NSArray *cellClasses;
     if (!cellClasses)
     {
-        cellClasses = @[[TitleFilmDetailTableViewCell class], [OverviewFilmDetailTableViewCell class], [GenresFilmDetailTableViewCell class], [ListFilmDetailTableViewCell class]];
+        cellClasses = @[[TitleFilmDetailTableViewCell class],
+                        [PrincipalDataFilmDetailTableViewCell class],
+                        [OverviewFilmDetailTableViewCell class],
+                        [GenresFilmDetailTableViewCell class],
+                        [ListFilmDetailTableViewCell class]];
     }
     
     return cellClasses;

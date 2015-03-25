@@ -8,6 +8,12 @@
 
 #import "ListFilmDetailTableViewCell.h"
 
+@interface ListFilmDetailTableViewCell ()
+
+@property (weak, nonatomic) IBOutlet UITableView *listsTableView;
+
+@end
+
 @implementation ListFilmDetailTableViewCell
 
 @synthesize controller = _controller;

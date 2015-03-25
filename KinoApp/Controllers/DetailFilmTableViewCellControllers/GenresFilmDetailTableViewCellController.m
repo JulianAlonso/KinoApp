@@ -18,5 +18,9 @@
     return self.cell;
 }
 
+- (CGFloat)cellHeightWithWidth:(CGFloat)width
+{
+    return 0.0f;
+}
 
 @end
