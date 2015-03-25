@@ -58,8 +58,10 @@
 		012C6BAB1ABA14A70060A49C /* LocalCoreDataListsProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 012C6BAA1ABA14A70060A49C /* LocalCoreDataListsProvider.m */; };
 		013955681ABAD7A500BC745D /* List.m in Sources */ = {isa = PBXBuildFile; fileRef = 013955671ABAD7A500BC745D /* List.m */; };
 		0139556B1ABAD8EA00BC745D /* ListDTOParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 0139556A1ABAD8EA00BC745D /* ListDTOParser.m */; };
-		01453E6E1AC3243F00F8ADC6 /* ListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 01453E6C1AC3243F00F8ADC6 /* ListTableViewCell.m */; };
-		01453E6F1AC3243F00F8ADC6 /* ListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01453E6D1AC3243F00F8ADC6 /* ListTableViewCell.xib */; };
+		01453E731AC325AF00F8ADC6 /* FilmDetailListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 01453E711AC325AF00F8ADC6 /* FilmDetailListTableViewCell.m */; };
+		01453E741AC325AF00F8ADC6 /* FilmDetailListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01453E721AC325AF00F8ADC6 /* FilmDetailListTableViewCell.xib */; };
+		01453E781AC32AE600F8ADC6 /* FilmDetailListTableViewCellController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01453E771AC32AE600F8ADC6 /* FilmDetailListTableViewCellController.m */; };
+		01453E7B1AC32D0300F8ADC6 /* InteractorsFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 01453E7A1AC32D0300F8ADC6 /* InteractorsFactory.m */; };
 		0158344A1AB8223B007E0AC4 /* APIVars.m in Sources */ = {isa = PBXBuildFile; fileRef = 015834491AB8223B007E0AC4 /* APIVars.m */; };
 		0158344F1AB84AAA007E0AC4 /* RequestManagerFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 0158344E1AB84AAA007E0AC4 /* RequestManagerFactory.m */; };
 		015834521AB84E93007E0AC4 /* JARequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 015834511AB84E93007E0AC4 /* JARequestManager.m */; };
@@ -207,9 +209,13 @@
 		013955671ABAD7A500BC745D /* List.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = List.m; path = Entities/List.m; sourceTree = "<group>"; };
 		013955691ABAD8EA00BC745D /* ListDTOParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ListDTOParser.h; path = Parsers/ListDTOParser.h; sourceTree = "<group>"; };
 		0139556A1ABAD8EA00BC745D /* ListDTOParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ListDTOParser.m; path = Parsers/ListDTOParser.m; sourceTree = "<group>"; };
-		01453E6B1AC3243F00F8ADC6 /* ListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ListTableViewCell.h; path = Views/DetailFilmTableViewCells/ListTableViewCells/ListTableViewCell.h; sourceTree = "<group>"; };
-		01453E6C1AC3243F00F8ADC6 /* ListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ListTableViewCell.m; path = Views/DetailFilmTableViewCells/ListTableViewCells/ListTableViewCell.m; sourceTree = "<group>"; };
-		01453E6D1AC3243F00F8ADC6 /* ListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ListTableViewCell.xib; path = Views/DetailFilmTableViewCells/ListTableViewCells/ListTableViewCell.xib; sourceTree = "<group>"; };
+		01453E701AC325AF00F8ADC6 /* FilmDetailListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FilmDetailListTableViewCell.h; path = Views/DetailFilmTableViewCells/ListTableViewCells/FilmDetailListTableViewCell.h; sourceTree = "<group>"; };
+		01453E711AC325AF00F8ADC6 /* FilmDetailListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FilmDetailListTableViewCell.m; path = Views/DetailFilmTableViewCells/ListTableViewCells/FilmDetailListTableViewCell.m; sourceTree = "<group>"; };
+		01453E721AC325AF00F8ADC6 /* FilmDetailListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FilmDetailListTableViewCell.xib; path = Views/DetailFilmTableViewCells/ListTableViewCells/FilmDetailListTableViewCell.xib; sourceTree = "<group>"; };
+		01453E761AC32AE600F8ADC6 /* FilmDetailListTableViewCellController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FilmDetailListTableViewCellController.h; path = Controllers/DetailFilmTableViewCellControllers/FilmDetailListTableViewCellController/FilmDetailListTableViewCellController.h; sourceTree = "<group>"; };
+		01453E771AC32AE600F8ADC6 /* FilmDetailListTableViewCellController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FilmDetailListTableViewCellController.m; path = Controllers/DetailFilmTableViewCellControllers/FilmDetailListTableViewCellController/FilmDetailListTableViewCellController.m; sourceTree = "<group>"; };
+		01453E791AC32D0300F8ADC6 /* InteractorsFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InteractorsFactory.h; path = Factories/InteractorsFactory.h; sourceTree = "<group>"; };
+		01453E7A1AC32D0300F8ADC6 /* InteractorsFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InteractorsFactory.m; path = Factories/InteractorsFactory.m; sourceTree = "<group>"; };
 		015834481AB8223B007E0AC4 /* APIVars.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APIVars.h; path = Master/APIVars.h; sourceTree = "<group>"; };
 		015834491AB8223B007E0AC4 /* APIVars.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = APIVars.m; path = Master/APIVars.m; sourceTree = "<group>"; };
 		0158344B1AB84A88007E0AC4 /* RequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RequestManager.h; path = RequestManagers/RequestManager.h; sourceTree = "<group>"; };
@@ -572,11 +578,20 @@
 		01453E6A1AC3241000F8ADC6 /* ListTableViewCells */ = {
 			isa = PBXGroup;
 			children = (
-				01453E6B1AC3243F00F8ADC6 /* ListTableViewCell.h */,
-				01453E6C1AC3243F00F8ADC6 /* ListTableViewCell.m */,
-				01453E6D1AC3243F00F8ADC6 /* ListTableViewCell.xib */,
+				01453E701AC325AF00F8ADC6 /* FilmDetailListTableViewCell.h */,
+				01453E711AC325AF00F8ADC6 /* FilmDetailListTableViewCell.m */,
+				01453E721AC325AF00F8ADC6 /* FilmDetailListTableViewCell.xib */,
 			);
 			name = ListTableViewCells;
+			sourceTree = "<group>";
+		};
+		01453E751AC32AB100F8ADC6 /* FilmDetailListTableViewCellControllers */ = {
+			isa = PBXGroup;
+			children = (
+				01453E761AC32AE600F8ADC6 /* FilmDetailListTableViewCellController.h */,
+				01453E771AC32AE600F8ADC6 /* FilmDetailListTableViewCellController.m */,
+			);
+			name = FilmDetailListTableViewCellControllers;
 			sourceTree = "<group>";
 		};
 		015834471AB821D3007E0AC4 /* Master */ = {
@@ -597,6 +612,8 @@
 				0117596E1ABAF5E700724BC5 /* ControllersFactory.m */,
 				01F0C1121AC1DE230009E061 /* FilmDetailTableViewCellFactory.h */,
 				01F0C1131AC1DE230009E061 /* FilmDetailTableViewCellFactory.m */,
+				01453E791AC32D0300F8ADC6 /* InteractorsFactory.h */,
+				01453E7A1AC32D0300F8ADC6 /* InteractorsFactory.m */,
 			);
 			name = Factories;
 			sourceTree = "<group>";
@@ -693,6 +710,7 @@
 				01F0C11D1AC1DEDC0009E061 /* GenresFilmDetailTableViewCellController.m */,
 				01F0C1221AC1DF050009E061 /* ListsFilmDetailTableViewCellController.h */,
 				01F0C1231AC1DF050009E061 /* ListsFilmDetailTableViewCellController.m */,
+				01453E751AC32AB100F8ADC6 /* FilmDetailListTableViewCellControllers */,
 			);
 			name = DetailFilmTableViewCellControllers;
 			sourceTree = "<group>";
@@ -815,8 +833,8 @@
 				01068F521AB752840017F91A /* CollectionFilmsCollectionViewCell.xib in Resources */,
 				015AB17E1ABC6A3000D2CBAA /* SearchFilmViewController.xib in Resources */,
 				01FC73AA1AC3084D003DC161 /* PrincipalDataFilmDetailTableViewCell.xib in Resources */,
-				01453E6F1AC3243F00F8ADC6 /* ListTableViewCell.xib in Resources */,
 				012C6B981ABA0A070060A49C /* FilmListCollectionViewCell.xib in Resources */,
+				01453E741AC325AF00F8ADC6 /* FilmDetailListTableViewCell.xib in Resources */,
 				01068F311AB725490017F91A /* BillboardViewController.xib in Resources */,
 				01068EDC1AB7011D0017F91A /* Images.xcassets in Resources */,
 				0117597C1ABB3B1200724BC5 /* ListTableViewCell.xib in Resources */,
@@ -877,6 +895,7 @@
 				013955681ABAD7A500BC745D /* List.m in Sources */,
 				01F0C1001AC1D8F80009E061 /* TitleFilmDetailTableViewCell.m in Sources */,
 				012C6B8F1ABA006D0060A49C /* ListsCollectionViewController.m in Sources */,
+				01453E731AC325AF00F8ADC6 /* FilmDetailListTableViewCell.m in Sources */,
 				0117597F1ABB410600724BC5 /* SelectListRouter.m in Sources */,
 				01038D221AC05A2800B88A8A /* UIFont+Custom.m in Sources */,
 				01F0C1051AC1D9140009E061 /* OverviewFilmDetailTableViewCell.m in Sources */,
@@ -886,7 +905,6 @@
 				015AB18A1ABC827C00D2CBAA /* SearchFilmInteractor.m in Sources */,
 				015AB1791ABC3F0100D2CBAA /* DetailListRouter.m in Sources */,
 				011759831ABB429E00724BC5 /* SelectListModalTransitionAnimator.m in Sources */,
-				01453E6E1AC3243F00F8ADC6 /* ListTableViewCell.m in Sources */,
 				01068F4A1AB74E1F0017F91A /* LoadUpcomingFilmsInteractor.m in Sources */,
 				01FC73AD1AC3089B003DC161 /* PrincipalDataFilmDetailTableViewCellController.m in Sources */,
 				0158344F1AB84AAA007E0AC4 /* RequestManagerFactory.m in Sources */,
@@ -905,6 +923,7 @@
 				018F9DCD1AB896200046D3C4 /* LocalCoreDataFilmsProvider.m in Sources */,
 				012C6B7F1AB99F580060A49C /* FilmDetailViewController.m in Sources */,
 				01F0C10F1AC1D94B0009E061 /* ListFilmDetailTableViewCell.m in Sources */,
+				01453E7B1AC32D0300F8ADC6 /* InteractorsFactory.m in Sources */,
 				012176591ABC3D6700EDA095 /* FilmCollectionViewCellController.m in Sources */,
 				01F0C1211AC1DEF60009E061 /* OverviewFilmDetailTableViewCellController.m in Sources */,
 				015AB17D1ABC6A3000D2CBAA /* SearchFilmViewController.m in Sources */,
@@ -916,6 +935,7 @@
 				01F0C1291AC1EBF40009E061 /* GrayBackgroundLayer.m in Sources */,
 				012C6B8B1ABA000E0060A49C /* FetchAllListsInteractor.m in Sources */,
 				015AB1841ABC6E7E00D2CBAA /* SearchFilmTableViewCellController.m in Sources */,
+				01453E781AC32AE600F8ADC6 /* FilmDetailListTableViewCellController.m in Sources */,
 				015AB1811ABC6C3800D2CBAA /* LoadPopularFilmsInteractor.m in Sources */,
 				0121765D1ABC3D8F00EDA095 /* FilmTableViewCell.m in Sources */,
 				012C6B881AB9D3290060A49C /* LoadFilmInteractor.m in Sources */,

@@ -7,6 +7,7 @@
 //
 
 #import "ListsFilmDetailTableViewCellController.h"
+#import "ListFilmDetailTableViewCell.h"
 
 @implementation ListsFilmDetailTableViewCellController
 
@@ -15,6 +16,10 @@
 
 - (UITableViewCell *)configuredCell
 {
+    ListFilmDetailTableViewCell *cell = (ListFilmDetailTableViewCell *)self.cell;
+    
+    cell.film = self.film;
+    
     return self.cell;
 }
 

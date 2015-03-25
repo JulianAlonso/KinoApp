@@ -106,7 +106,6 @@
 - (void)configItemsWithFilm:(FilmDTO *)film
 {
     self.filmTitleLabel.text = film.filmTitle;
-//    self.filmDescriptionLabel.text = [film.filmOverview isEqualToString:@"<null>"] ? nil : film.filmOverview;
     [self.filmImageView sd_setImageWithURL:[NSURL URLWithString:film.filmPosterPath]];
 }
 
@@ -233,7 +232,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 4;
+    return 5;
 }
 
 @end

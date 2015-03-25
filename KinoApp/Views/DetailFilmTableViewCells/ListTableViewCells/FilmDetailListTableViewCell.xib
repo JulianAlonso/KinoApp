@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="57" id="KGk-i7-Jjw" customClass="FilmDetailListTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="345" height="57"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vHP-Dp-Gdn">
+                        <rect key="frame" x="287" y="8" width="50" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="zay-iL-iSd"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sot-lg-Us6">
+                        <rect key="frame" x="8" y="8" width="269" height="40"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="vHP-Dp-Gdn" firstAttribute="leading" secondItem="Sot-lg-Us6" secondAttribute="trailing" constant="10" id="1q4-vQ-XKf"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="Sot-lg-Us6" secondAttribute="bottom" id="9ay-SV-m9S"/>
+                    <constraint firstItem="vHP-Dp-Gdn" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" id="EbS-6F-kMt"/>
+                    <constraint firstItem="vHP-Dp-Gdn" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="F4b-ho-tX8"/>
+                    <constraint firstItem="vHP-Dp-Gdn" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="KvX-ue-DyO"/>
+                    <constraint firstItem="Sot-lg-Us6" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="eAD-7S-hd4"/>
+                    <constraint firstItem="Sot-lg-Us6" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="r0g-ax-AlQ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="listCheckedImageView" destination="vHP-Dp-Gdn" id="TfA-Oe-fKg"/>
+                <outlet property="listNameLabel" destination="Sot-lg-Us6" id="joj-71-goj"/>
+            </connections>
+            <point key="canvasLocation" x="236.5" y="293.5"/>
+        </tableViewCell>
+    </objects>
+</document>

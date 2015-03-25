@@ -14,19 +14,23 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="cFQ-rv-Ggj">
-                        <rect key="frame" x="10" y="10" width="408" height="178"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <rect key="frame" x="20" y="20" width="388" height="158"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="158" id="s4x-cN-KKt"/>
+                        </constraints>
                     </tableView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="cFQ-rv-Ggj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="LuO-3C-S3B"/>
-                    <constraint firstAttribute="trailing" secondItem="cFQ-rv-Ggj" secondAttribute="trailing" constant="10" id="MWN-ta-hMd"/>
-                    <constraint firstItem="cFQ-rv-Ggj" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="WEP-J8-gcn"/>
-                    <constraint firstAttribute="bottom" secondItem="cFQ-rv-Ggj" secondAttribute="bottom" constant="10" id="sin-XL-nCN"/>
+                    <constraint firstItem="cFQ-rv-Ggj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="LuO-3C-S3B"/>
+                    <constraint firstAttribute="trailing" secondItem="cFQ-rv-Ggj" secondAttribute="trailing" constant="20" id="MWN-ta-hMd"/>
+                    <constraint firstItem="cFQ-rv-Ggj" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="WEP-J8-gcn"/>
+                    <constraint firstAttribute="bottom" secondItem="cFQ-rv-Ggj" secondAttribute="bottom" constant="20" id="sin-XL-nCN"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="listsTableView" destination="cFQ-rv-Ggj" id="FEz-H0-ons"/>
+                <outlet property="tableViewHeight" destination="s4x-cN-KKt" id="em3-f3-seg"/>
             </connections>
             <point key="canvasLocation" x="406" y="482.5"/>
         </tableViewCell>
