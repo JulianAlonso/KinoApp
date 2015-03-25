@@ -10,7 +10,7 @@
 
 @implementation AddFilmToListInteractor
 
-- (void)addFilm:(FilmDTO *)film toList:(ListDTO *)list completion:(void (^)(NSError *error))completion
+- (void)addFilm:(FilmDTO *)film toList:(ListDTO *)list completion:(void (^)(ListDTO *, NSError *))completion
 {
     [self.localProvider addFilm:film toList:list completion:completion];
 }

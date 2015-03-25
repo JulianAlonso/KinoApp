@@ -136,6 +136,8 @@ NSString *const kListFilmDetailtableViewCellListsProperty = @"lists";
     label.text = @"Collections it's in";
     label.textColor = [UIColor whiteColor];
     label.font = [UIFont appFontWithSize:26.0f];
+    label.shadowColor = RGBA(0, 0, 0, 0.5f);
+    label.shadowOffset = CGSizeMake(1.0f, 1.0f);
     
     CALayer *bottomBorder = [CALayer layer];
     CGFloat borderThickness = 2.0f;

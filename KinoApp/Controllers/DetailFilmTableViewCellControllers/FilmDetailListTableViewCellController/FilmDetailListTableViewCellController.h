@@ -10,12 +10,16 @@
 #import "FilmDetailListTableViewCell.h"
 
 @class FilmDetailListTableViewCell;
+@class AddFilmToListInteractor;
+@class RemoveFilmFromListInteractor;
 @class ListDTO;
 @class FilmDTO;
 
 @interface FilmDetailListTableViewCellController : NSObject <FilmDetailListTableViewCellDelegate>
 
 @property (nonatomic, weak) FilmDetailListTableViewCell *cell;
+@property (nonatomic, strong) AddFilmToListInteractor *addFilmInteractor;
+@property (nonatomic, strong) RemoveFilmFromListInteractor *removeFilmInteractor;
 @property (nonatomic, strong) ListDTO *list;
 @property (nonatomic, strong) FilmDTO *film;
 

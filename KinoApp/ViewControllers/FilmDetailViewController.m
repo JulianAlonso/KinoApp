@@ -48,7 +48,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self configNavBar];
     [self configStyles];
     [self configBackButton];
     [self configGrayLayer];
@@ -88,11 +87,6 @@
 }
 
 #pragma mark - Config methods.
-- (void)configNavBar
-{
-    [self.navigationController setNavigationBarHidden:NO animated:YES];
-}
-
 - (void)configGrayLayer
 {
     self.grayLayer = [[GrayBackgroundLayer alloc] init];
@@ -150,15 +144,6 @@
             [weakSelf configItemsWithFilm:film];
         });
         
-    }];
-}
-
-#pragma mark - Extern methods.
-- (void)saveFilmToList:(ListDTO *)list
-{
-    __weak typeof(self) weakSelf = self;
-    [self.addFilmInteractor addFilm:self.film toList:list completion:^(NSError *error) {
-        NSLog(@"Saved film: %@ to list: %@", weakSelf.film.filmTitle, list.listName);
     }];
 }
 

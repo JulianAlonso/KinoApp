@@ -30,16 +30,6 @@
         return;
     }
     
-//    for (List *list in lists)
-//    {
-//        NSLog(@"list: %@", list);
-//        for (Film *film in list.listFilms)
-//        {
-//            NSLog(@"         Film: %@", film);
-//        }
-//
-//    }
-    
     if (lists.count == 0)
     {
         [self createPrincipalLists];
@@ -50,7 +40,7 @@
     completion([ListDTOParser listDTOsFromLists:lists]);
 }
 
-- (void)addFilm:(FilmDTO *)film toList:(ListDTO *)list completion:(void (^)(NSError *))completion
+- (void)addFilm:(FilmDTO *)film toList:(ListDTO *)list completion:(void (^)(ListDTO *list, NSError *))completion
 {
     __weak typeof(self) weakSelf = self;
     [self fetchListWithName:list.listName completion:^(List *listMO) {
@@ -63,7 +53,24 @@
         NSError *error;
         [strongSelf.privateContext save:&error];
         
-        completion(error);
+        completion([ListDTOParser listDTOFromList:listMO], error);
+    }];
+}
+
+- (void)removeFilm:(FilmDTO *)film fromList:(ListDTO *)list completion:(void(^)(ListDTO *list, NSError *error))completion
+{
+    __weak typeof(self) weakSelf = self;
+    [self fetchListWithName:list.listName completion:^(List *listMO) {
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        
+        Film *filmMO = [strongSelf fetchFilmById:film.filmId];
+        
+        [listMO removeListFilmsObject:filmMO];
+        
+        NSError *error;
+        [strongSelf.privateContext save:&error];
+        
+        completion([ListDTOParser listDTOFromList:listMO], error);
     }];
 }
 

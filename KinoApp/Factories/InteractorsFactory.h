@@ -9,9 +9,15 @@
 #import <Foundation/Foundation.h>
 
 @class FetchAllListsInteractor;
+@class AddFilmToListInteractor;
+@class RemoveFilmFromListInteractor;
 
 @interface InteractorsFactory : NSObject
 
 + (FetchAllListsInteractor *)fetchAllListsInteractor;
+
++ (AddFilmToListInteractor *)addFilmToListInteractor;
+
++ (RemoveFilmFromListInteractor *)removeFilmFromListInteractor;
 
 @end

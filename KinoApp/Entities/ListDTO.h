@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+@class FilmDTO;
+
 extern NSString *const kListNameProperty;
 
 @interface ListDTO : NSObject

@@ -20,7 +20,6 @@
 @property (nonatomic, strong) FilmDTO *film;
 
 @property (nonatomic, strong) LoadFilmInteractor *interactor;
-@property (nonatomic, strong) AddFilmToListInteractor *addFilmInteractor;
 
 - (void)saveFilmToList:(ListDTO *)list;
 

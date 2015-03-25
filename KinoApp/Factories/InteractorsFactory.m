@@ -10,6 +10,8 @@
 #import "FetchAllListsInteractor.h"
 #import "LocalListsProvider.h"
 #import "LocalCoreDataListsProvider.h"
+#import "AddFilmToListInteractor.h"
+#import "RemoveFilmFromListInteractor.h"
 
 @implementation InteractorsFactory
 
@@ -22,6 +24,28 @@
     fetchAllListInteractor.localListProvider = localListProvider;
     
     return fetchAllListInteractor;
+}
+
++ (AddFilmToListInteractor *)addFilmToListInteractor
+{
+    AddFilmToListInteractor *addInteractor = [AddFilmToListInteractor new];
+    
+    id<LocalListsProvider> localListProvider = [LocalCoreDataListsProvider new];
+    
+    addInteractor.localProvider = localListProvider;
+    
+    return addInteractor;
+}
+
++ (RemoveFilmFromListInteractor *)removeFilmFromListInteractor
+{
+    RemoveFilmFromListInteractor *removeInteractor = [RemoveFilmFromListInteractor new];
+    
+    id<LocalListsProvider> localListProvider = [LocalCoreDataListsProvider new];
+    
+    removeInteractor.localListProvider = localListProvider;
+    
+    return removeInteractor;
 }
 
 @end

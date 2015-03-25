@@ -15,6 +15,8 @@
 
 - (void)fetchAllListsWithCompletion:(void(^)(NSArray *films))completion;
 
-- (void)addFilm:(FilmDTO *)film toList:(ListDTO *)list completion:(void(^)(NSError *error))completion;
+- (void)addFilm:(FilmDTO *)film toList:(ListDTO *)list completion:(void(^)(ListDTO *list, NSError *error))completion;
+
+- (void)removeFilm:(FilmDTO *)film fromList:(ListDTO *)list completion:(void(^)(ListDTO *list, NSError *error))completion;
 
 @end

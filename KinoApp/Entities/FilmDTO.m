@@ -20,4 +20,30 @@ NSString *const kPosterPathProperty = @"filmPosterPath";
     return [[self.filmReleaseDate componentsSeparatedByString:@"-"] firstObject];
 }
 
+#pragma mark - Equals methods.
+- (BOOL)isEqual:(id)object
+{
+    if (self == object)
+    {
+        return YES;
+    }
+    
+    if (![object isKindOfClass:[FilmDTO class]])
+    {
+        return NO;
+    }
+    
+    return [self isEqualToFilmDTO:object];
+}
+
+- (BOOL)isEqualToFilmDTO:(FilmDTO *)film
+{
+    if (!film)
+    {
+        return NO;
+    }
+    
+    return [self.filmId isEqualToString:film.filmId];
+}
+
 @end

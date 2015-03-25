@@ -62,6 +62,7 @@
 		01453E741AC325AF00F8ADC6 /* FilmDetailListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01453E721AC325AF00F8ADC6 /* FilmDetailListTableViewCell.xib */; };
 		01453E781AC32AE600F8ADC6 /* FilmDetailListTableViewCellController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01453E771AC32AE600F8ADC6 /* FilmDetailListTableViewCellController.m */; };
 		01453E7B1AC32D0300F8ADC6 /* InteractorsFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 01453E7A1AC32D0300F8ADC6 /* InteractorsFactory.m */; };
+		01453E7E1AC348BD00F8ADC6 /* RemoveFilmFromListInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 01453E7D1AC348BD00F8ADC6 /* RemoveFilmFromListInteractor.m */; };
 		0158344A1AB8223B007E0AC4 /* APIVars.m in Sources */ = {isa = PBXBuildFile; fileRef = 015834491AB8223B007E0AC4 /* APIVars.m */; };
 		0158344F1AB84AAA007E0AC4 /* RequestManagerFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 0158344E1AB84AAA007E0AC4 /* RequestManagerFactory.m */; };
 		015834521AB84E93007E0AC4 /* JARequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 015834511AB84E93007E0AC4 /* JARequestManager.m */; };
@@ -216,6 +217,8 @@
 		01453E771AC32AE600F8ADC6 /* FilmDetailListTableViewCellController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FilmDetailListTableViewCellController.m; path = Controllers/DetailFilmTableViewCellControllers/FilmDetailListTableViewCellController/FilmDetailListTableViewCellController.m; sourceTree = "<group>"; };
 		01453E791AC32D0300F8ADC6 /* InteractorsFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InteractorsFactory.h; path = Factories/InteractorsFactory.h; sourceTree = "<group>"; };
 		01453E7A1AC32D0300F8ADC6 /* InteractorsFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InteractorsFactory.m; path = Factories/InteractorsFactory.m; sourceTree = "<group>"; };
+		01453E7C1AC348BD00F8ADC6 /* RemoveFilmFromListInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RemoveFilmFromListInteractor.h; path = Interactors/RemoveFilmFromListInteractor.h; sourceTree = "<group>"; };
+		01453E7D1AC348BD00F8ADC6 /* RemoveFilmFromListInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RemoveFilmFromListInteractor.m; path = Interactors/RemoveFilmFromListInteractor.m; sourceTree = "<group>"; };
 		015834481AB8223B007E0AC4 /* APIVars.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APIVars.h; path = Master/APIVars.h; sourceTree = "<group>"; };
 		015834491AB8223B007E0AC4 /* APIVars.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = APIVars.m; path = Master/APIVars.m; sourceTree = "<group>"; };
 		0158344B1AB84A88007E0AC4 /* RequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RequestManager.h; path = RequestManagers/RequestManager.h; sourceTree = "<group>"; };
@@ -423,6 +426,8 @@
 				015AB1801ABC6C3800D2CBAA /* LoadPopularFilmsInteractor.m */,
 				015AB1881ABC827C00D2CBAA /* SearchFilmInteractor.h */,
 				015AB1891ABC827C00D2CBAA /* SearchFilmInteractor.m */,
+				01453E7C1AC348BD00F8ADC6 /* RemoveFilmFromListInteractor.h */,
+				01453E7D1AC348BD00F8ADC6 /* RemoveFilmFromListInteractor.m */,
 			);
 			name = Interactors;
 			sourceTree = "<group>";
@@ -926,6 +931,7 @@
 				01453E7B1AC32D0300F8ADC6 /* InteractorsFactory.m in Sources */,
 				012176591ABC3D6700EDA095 /* FilmCollectionViewCellController.m in Sources */,
 				01F0C1211AC1DEF60009E061 /* OverviewFilmDetailTableViewCellController.m in Sources */,
+				01453E7E1AC348BD00F8ADC6 /* RemoveFilmFromListInteractor.m in Sources */,
 				015AB17D1ABC6A3000D2CBAA /* SearchFilmViewController.m in Sources */,
 				01038D1F1AC0516200B88A8A /* UIColor+Custom.m in Sources */,
 				01F0C0F21AC1A0220009E061 /* UISearchBar+Custom.m in Sources */,
