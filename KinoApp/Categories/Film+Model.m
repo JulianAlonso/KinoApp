@@ -8,6 +8,8 @@
 
 #import "Film+Model.h"
 #import "FilmDTO.h"
+#import "GenreDTO.h"
+#import "Genre+Model.h"
 
 NSString *const kFilmIdProperty = @"filmId";
 NSString *const kFilmTypeProperty = @"filmType";
@@ -32,9 +34,23 @@ NSString *const kFilmReleaseDateProperty = @"filmReleaseDate";
         film.filmHomepage = filmDTO.filmHomepage;
         film.filmType = filmDTO.filmType;
         film.filmRuntime = filmDTO.filmRuntime;
+        
+        for (GenreDTO *genreDTO in filmDTO.filmGenres)
+        {
+            Genre *genre = [Genre genreWithGenreDTO:genreDTO andManagedObjectContext:managedObjectContext];
+            [film addFilmGenresObject: genre];
+        }
     }
     
     return film;
+}
+
+#pragma mark - Override methods.
+- (void)addFilmGenresObject:(Genre *)value
+{
+    NSMutableOrderedSet *tempSet = [NSMutableOrderedSet orderedSetWithOrderedSet:self.filmGenres];
+    [tempSet addObject:value];
+    self.filmGenres = tempSet;
 }
 
 - (NSString *)description

@@ -1,4 +1,4 @@
-//
+    //
 //  FilmDTOParser.m
 //  KinoApp
 //
@@ -9,6 +9,7 @@
 #import "FilmDTOParser.h"
 #import "FilmDTO.h"
 #import "URLHelper.h"
+#import "GenreDTOParser.h"
 
 NSString *const dFilmId = @"id";
 NSString *const dFilmTitle = @"title";
@@ -20,6 +21,7 @@ NSString *const dFilmTagline = @"tagline";
 NSString *const dFilmPosterPath = @"poster_path";
 NSString *const dFilmBackdropPath = @"backdrop_path";
 NSString *const dFilmRuntime = @"runtime";
+NSString *const dFilmGenres = @"genres";
 
 @implementation FilmDTOParser
 
@@ -38,6 +40,12 @@ NSString *const dFilmRuntime = @"runtime";
     film.filmPosterPath = [URLHelper imageUrlWithEndpoint:dictionary[dFilmPosterPath]];
     film.filmBackdropPath = [URLHelper imageUrlWithEndpoint:dictionary[dFilmBackdropPath]];
     filmType ? film.filmType = filmType : film.filmType;
+    
+    NSArray *genresDic = dictionary[dFilmGenres];
+    if (genresDic)
+    {
+        film.filmGenres = [GenreDTOParser genreDTOsFromArray:genresDic];
+    }
     
     return film;
 }
@@ -68,6 +76,11 @@ NSString *const dFilmRuntime = @"runtime";
     filmDTO.filmBackdropPath = film.filmBackdropPath;
     filmDTO.filmType = film.filmType;
     filmDTO.filmRuntime = film.filmRuntime;
+    
+    if (film.filmGenres.count > 0)
+    {
+        filmDTO.filmGenres = [GenreDTOParser genreDTOsFromOrderedSetOfGenres:film.filmGenres];
+    }
     
     return filmDTO;
 }

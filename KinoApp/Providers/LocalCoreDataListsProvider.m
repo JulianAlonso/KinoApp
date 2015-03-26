@@ -14,6 +14,7 @@
 #import "Film.h"
 #import "Film+Model.h"
 #import "FilmDTO.h"
+#import "LocalCoreDataFilmsProvider.h"
 
 @implementation LocalCoreDataListsProvider
 
@@ -48,7 +49,10 @@
         
         Film *filmMO = [strongSelf fetchFilmById:film.filmId];
         
-        [listMO addListFilmsObject:filmMO];
+        if (filmMO)
+        {
+            [listMO addListFilmsObject:filmMO];
+        }
         
         NSError *error;
         [strongSelf.privateContext save:&error];
@@ -142,6 +146,15 @@
         _privateContext = [CoreDataManager privateObjectContext];
     }
     return _privateContext;
+}
+
+- (id<LocalFilmsProvider>)localFilmsProvider
+{
+    if (!_localFilmsProvider)
+    {
+        _localFilmsProvider = [LocalCoreDataFilmsProvider new];
+    }
+    return _localFilmsProvider;
 }
 
 @end

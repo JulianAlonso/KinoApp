@@ -12,14 +12,21 @@
         <attribute name="filmTagline" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="filmTitle" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="filmType" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="filmGenres" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Genre" inverseName="genreFilms" inverseEntity="Genre" syncable="YES"/>
         <relationship name="filmLists" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="List" inverseName="listFilms" inverseEntity="List" syncable="YES"/>
+    </entity>
+    <entity name="Genre" representedClassName="Genre" syncable="YES">
+        <attribute name="genreId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="genreName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="genreFilms" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Film" inverseName="filmGenres" inverseEntity="Film" syncable="YES"/>
     </entity>
     <entity name="List" representedClassName="List" syncable="YES">
         <attribute name="listName" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="listFilms" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Film" inverseName="filmLists" inverseEntity="Film" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Film" positionX="-63" positionY="-18" width="128" height="225"/>
+        <element name="Film" positionX="-63" positionY="-18" width="128" height="240"/>
         <element name="List" positionX="-54" positionY="63" width="128" height="73"/>
+        <element name="Genre" positionX="-54" positionY="81" width="128" height="88"/>
     </elements>
 </model>

@@ -7,6 +7,7 @@
 //
 
 #import "GenresFilmDetailTableViewCellController.h"
+#import "GenresFilmDetailTableViewCell.h"
 
 @implementation GenresFilmDetailTableViewCellController
 
@@ -15,6 +16,10 @@
 
 - (UITableViewCell *)configuredCell
 {
+    GenresFilmDetailTableViewCell *cell = self.cell;
+    
+    cell.film = self.film;
+    
     return self.cell;
 }
 

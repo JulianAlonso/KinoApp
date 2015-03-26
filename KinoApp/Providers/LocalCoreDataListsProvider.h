@@ -15,5 +15,6 @@
 @interface LocalCoreDataListsProvider : NSObject <LocalListsProvider>
 
 @property (nonatomic, strong) NSManagedObjectContext *privateContext;
+@property (nonatomic, strong) id<LocalFilmsProvider> localFilmsProvider;
 
 @end

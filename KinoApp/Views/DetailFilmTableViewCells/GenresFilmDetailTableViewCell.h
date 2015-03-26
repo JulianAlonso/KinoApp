@@ -9,6 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "FilmDetailViewCell.h"
 
+@class FilmDTO;
+
 @interface GenresFilmDetailTableViewCell : UITableViewCell <FilmDetailViewCell>
+
+@property (nonatomic, strong) FilmDTO *film;
 
 @end
