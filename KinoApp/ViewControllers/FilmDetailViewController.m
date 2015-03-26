@@ -133,7 +133,7 @@
 {
     __weak typeof(self) weakSelf = self;
     [self.interactor loadFilmWithId:self.film.filmId completion:^(FilmDTO *film) {
-        
+            
         if (!film)
         {
             dispatch_async(dispatch_get_main_queue(), ^{

@@ -162,7 +162,7 @@ NSString *const kListsProperty = @"lists";
         ListDTO *list = self.lists[(int)self.actualIndex];
         FilmDTO *film = [list.listFilms firstObject];
         
-        [self.backgroundImage sd_setImageWithURL:[NSURL URLWithString:film.filmPosterPath]];
+        [self.backgroundImage sd_setImageWithURL:[NSURL URLWithString:film.filmBackdropPath]];
     }
 }
 
