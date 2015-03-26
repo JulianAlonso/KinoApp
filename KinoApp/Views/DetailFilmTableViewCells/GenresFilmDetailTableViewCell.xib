@@ -18,7 +18,7 @@
                         <rect key="frame" x="8" y="8" width="365" height="89"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="89" id="vmU-rr-OG5"/>
+                            <constraint firstAttribute="height" constant="89" id="6CW-7M-umI"/>
                         </constraints>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="1BQ-Ql-0CL">
                             <size key="itemSize" width="50" height="50"/>
@@ -36,7 +36,7 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="collectionViewHeight" destination="vmU-rr-OG5" id="U8H-On-JaT"/>
+                <outlet property="collectionViewHeight" destination="6CW-7M-umI" id="KY3-N9-zgM"/>
                 <outlet property="genresCollectionView" destination="zly-jb-KxM" id="Blx-Ve-tSD"/>
             </connections>
             <point key="canvasLocation" x="287.5" y="370"/>

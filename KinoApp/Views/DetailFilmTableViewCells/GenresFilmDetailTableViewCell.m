@@ -13,15 +13,13 @@
 #import "SizeHelper.h"
 
 NSString *const kGenresFilmDetailTableViewCellFilmProperty = @"film";
+NSString *const kGenresFilmDetalTableViewCellContentSizeProperty = @"genresCollectionView.contentSize";
 
 @interface GenresFilmDetailTableViewCell () <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *collectionViewHeight;
-@property (weak, nonatomic) IBOutlet UICollectionView *genresCollectionView;
 
 @property (nonatomic, strong) NSArray *controllers;
-
-@property (nonatomic, strong) GenreFilmDetailCollectionViewCell *sizingCell;
 
 @end
 
@@ -32,9 +30,8 @@ NSString *const kGenresFilmDetailTableViewCellFilmProperty = @"film";
 - (void)awakeFromNib
 {
     [self configStyles];
-    
-    [self loadCell];
     [self registerToObserveFilm];
+    [self registerToObserveContentSize];
     [self configGenresCollectionView];
 }
 
@@ -48,7 +45,6 @@ NSString *const kGenresFilmDetailTableViewCellFilmProperty = @"film";
 {
     self.selectionStyle = UITableViewCellSelectionStyleNone;
     self.backgroundColor = [UIColor clearColor];
-    self.collectionViewHeight.constant = 100.0f;
 }
 
 - (void)configGenresCollectionView
@@ -69,17 +65,25 @@ NSString *const kGenresFilmDetailTableViewCellFilmProperty = @"film";
     self.controllers = controllers;
 }
 
-- (void)loadCell
+- (CGFloat)contentSizeHeight
 {
-    UINib *cellNib = [UINib nibWithNibName:NSStringFromClass([GenreFilmDetailCollectionViewCell class]) bundle:nil];
-    
-    self.sizingCell = [[cellNib instantiateWithOwner:nil options:nil] firstObject];
+    return self.genresCollectionView.contentSize.height;
 }
 
 #pragma mark - Observe methods.
 - (void)registerToObserveFilm
 {
     [self addObserver:self forKeyPath:kGenresFilmDetailTableViewCellFilmProperty options:NSKeyValueObservingOptionInitial context:nil];
+}
+
+- (void)registerToObserveContentSize
+{
+    [self addObserver:self forKeyPath:kGenresFilmDetalTableViewCellContentSizeProperty options:NSKeyValueObservingOptionInitial context:nil];
+}
+
+- (void)unregisterToObserveContentSize
+{
+    [self removeObserver:self forKeyPath:kGenresFilmDetalTableViewCellContentSizeProperty];
 }
 
 - (void)unregisterToObserveFilm
@@ -92,6 +96,10 @@ NSString *const kGenresFilmDetailTableViewCellFilmProperty = @"film";
     if ([keyPath isEqualToString:kGenresFilmDetailTableViewCellFilmProperty])
     {
         [self loadControllers];
+    }
+    else if ([keyPath isEqualToString:kGenresFilmDetalTableViewCellContentSizeProperty])
+    {
+        self.collectionViewHeight.constant = self.genresCollectionView.contentSize.height;
     }
 }
 
@@ -121,5 +129,7 @@ NSString *const kGenresFilmDetailTableViewCellFilmProperty = @"film";
 - (void)dealloc
 {
     [self unregisterToObserveFilm];
+    [self unregisterToObserveContentSize];
 }
+
 @end

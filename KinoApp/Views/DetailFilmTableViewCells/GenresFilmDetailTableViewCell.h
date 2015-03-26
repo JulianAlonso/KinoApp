@@ -14,5 +14,8 @@
 @interface GenresFilmDetailTableViewCell : UITableViewCell <FilmDetailViewCell>
 
 @property (nonatomic, strong) FilmDTO *film;
+@property (weak, nonatomic) IBOutlet UICollectionView *genresCollectionView;
+
+- (CGFloat)contentSizeHeight;
 
 @end

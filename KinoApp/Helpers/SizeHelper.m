@@ -10,6 +10,9 @@
 #import "FilmDetailGenreCollectionViewCellController.h"
 #import "GenreFilmDetailCollectionViewCell.h"
 #import "GenreDTO.h"
+#import "FilmDTO.h"
+#import "GenresFilmDetailTableViewCellController.h"
+#import "GenresFilmDetailTableViewCell.h"
 
 @implementation SizeHelper
 
@@ -24,6 +27,7 @@
     return [configured systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
 }
 
+#pragma mark - False getters methods.
 + (GenreFilmDetailCollectionViewCell *)genreFilmDetailCollectionViewCell
 {
     UINib *cellNib = [UINib nibWithNibName:NSStringFromClass([GenreFilmDetailCollectionViewCell class]) bundle:nil];

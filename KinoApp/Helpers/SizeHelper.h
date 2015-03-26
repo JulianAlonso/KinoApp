@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @class GenreDTO;
+@class FilmDTO;
 
 @interface SizeHelper : NSObject
 
