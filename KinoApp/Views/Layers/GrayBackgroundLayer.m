@@ -22,12 +22,13 @@
     UIColor *colorOne = [UIColor clearColor];
     UIColor *colorTwo = RGBA(14, 14, 14, 0.6f);
     
-    CGFloat locationOne = 0.4f;
-    CGFloat locationTwo = 0.8f;
+//    CGFloat locationOne = 0.4f;
+//    CGFloat locationTwo = 0.8f;
     
     CAGradientLayer *grayLayer = [CAGradientLayer layer];
     grayLayer.colors = @[colorOne, colorTwo];
-    grayLayer.locations = @[@(locationOne), @(locationTwo)];
+    grayLayer.startPoint = CGPointMake(0.0f, 0.5f);
+    grayLayer.endPoint = CGPointMake(0.5f, 1.0f);
     
     return grayLayer;
 }

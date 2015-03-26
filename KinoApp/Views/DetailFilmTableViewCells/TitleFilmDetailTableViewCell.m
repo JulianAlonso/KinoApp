@@ -8,8 +8,7 @@
 
 #import "TitleFilmDetailTableViewCell.h"
 #import "UIFont+Custom.h"
-#define RGB(r, g, b) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:1]
-#define RGBA(r, g, b, a) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
+
 @implementation TitleFilmDetailTableViewCell
 
 @synthesize controller = _controller;
@@ -27,7 +26,7 @@
 - (void)configStyles
 {
     self.selectionStyle = UITableViewCellSelectionStyleNone;
-    self.backgroundColor = RGBA(51, 51, 51, 0.7f);
+    self.backgroundColor = [UIColor clearColor];
     
     self.filmTitleLabel.textColor = [UIColor whiteColor];
     self.filmTitleLabel.font = [UIFont appFontWithSize:30];

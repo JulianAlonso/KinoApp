@@ -48,10 +48,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self configStyles];
     [self configBackButton];
     [self configGrayLayer];
     [self configTableView];
+    [self configStyles];
     
     [self configItems];
     [self updateFilm];

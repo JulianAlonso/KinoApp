@@ -12,4 +12,6 @@
 
 @property (nonatomic, strong) CAGradientLayer *grayBackgroundLayer;
 
+- (CAGradientLayer *)loadPrivateGrayBackgroundLayer;
+
 @end

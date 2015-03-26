@@ -18,6 +18,7 @@
 #define RGBA(r, g, b, a) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
 
 NSString *const kListFilmDetailtableViewCellListsProperty = @"lists";
+NSString *const kListFilmDetailtableViewCellTableContentSizeProperty = @"listsTableView.contentSize";
 
 @interface ListFilmDetailTableViewCell () <UITableViewDataSource, UITableViewDelegate>
 
@@ -38,9 +39,9 @@ NSString *const kListFilmDetailtableViewCellListsProperty = @"lists";
 - (void)awakeFromNib
 {
     [self configStyles];
-    
+
     [self configTableView];
-    [self registerToObserveLists];
+    [self registers];
     [self updateLists];
 }
 
@@ -53,7 +54,7 @@ NSString *const kListFilmDetailtableViewCellListsProperty = @"lists";
 - (void)configStyles
 {
     self.selectionStyle = UITableViewCellSelectionStyleNone;
-    self.backgroundColor = RGBA(51, 51, 51, 0.7f);
+    self.backgroundColor = [UIColor clearColor];
     self.headerHeight = 30.0f;
 }
 
@@ -68,14 +69,16 @@ NSString *const kListFilmDetailtableViewCellListsProperty = @"lists";
 }
 
 #pragma mark - Observe methods.
-- (void)registerToObserveLists
+- (void)registers
 {
     [self addObserver:self forKeyPath:kListFilmDetailtableViewCellListsProperty options:NSKeyValueObservingOptionInitial context:nil];
+    [self addObserver:self forKeyPath:kListFilmDetailtableViewCellTableContentSizeProperty options:NSKeyValueObservingOptionInitial context:nil];
 }
 
-- (void)unregisterToObserveLists
+- (void)unregisters
 {
     [self removeObserver:self forKeyPath:kListFilmDetailtableViewCellListsProperty];
+    [self removeObserver:self forKeyPath:kListFilmDetailtableViewCellTableContentSizeProperty];
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
@@ -83,6 +86,10 @@ NSString *const kListFilmDetailtableViewCellListsProperty = @"lists";
     if ([keyPath isEqualToString:kListFilmDetailtableViewCellListsProperty])
     {
         [self updateControllers];
+    }
+    else if ([keyPath isEqualToString:kListFilmDetailtableViewCellTableContentSizeProperty])
+    {
+        self.tableViewHeight.constant = self.listsTableView.contentSize.height;
     }
 }
 
@@ -94,7 +101,6 @@ NSString *const kListFilmDetailtableViewCellListsProperty = @"lists";
         __strong typeof(weakSelf) strongSelf = weakSelf;
         
         strongSelf.lists = lists;
-        strongSelf.tableViewHeight.constant = 70 * lists.count;
     }];
 }
 
@@ -186,6 +192,6 @@ NSString *const kListFilmDetailtableViewCellListsProperty = @"lists";
 #pragma mark - Dealloc.
 - (void)dealloc
 {
-    [self unregisterToObserveLists];
+    [self unregisters];
 }
 @end
