@@ -15,7 +15,7 @@
 
 + (UIColor *)appBGColor
 {
-    return RGBA(14, 14, 14, 0.9);
+    return RGB(14, 14, 14);
 }
 
 + (UIColor *)selectedItemColor

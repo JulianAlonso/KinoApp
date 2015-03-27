@@ -162,7 +162,17 @@ NSString *const kListsProperty = @"lists";
         ListDTO *list = self.lists[(int)self.actualIndex];
         FilmDTO *film = [list.listFilms firstObject];
         
-        [self.backgroundImage sd_setImageWithURL:[NSURL URLWithString:film.filmBackdropPath]];
+        SDWebImageManager *manager = [SDWebImageManager sharedManager];
+        [manager downloadImageWithURL:[NSURL URLWithString:film.filmBackdropPath] options:0 progress:nil completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
+            //Setting image
+            self.backgroundImage.image = image;
+            //Animating
+            CATransition *transition = [CATransition animation];
+            transition.duration = 0.5f;
+            transition.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+            transition.type = kCATransitionFade;
+            [self.backgroundImage.layer addAnimation:transition forKey:nil];
+        }];
     }
 }
 
