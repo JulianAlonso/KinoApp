@@ -33,7 +33,6 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *backButton;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *topHeightConstraint;
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *topTableViewConstraint;
 @property (weak, nonatomic) IBOutlet UIVisualEffectView *customNavBarView;
 @property (weak, nonatomic) IBOutlet UITableView *filmDetailTableView;
 @property (weak, nonatomic) IBOutlet UIView *layerView;
@@ -45,6 +44,7 @@
 @property (nonatomic, strong) CAGradientLayer *backgroundLayer;
 
 @property (nonatomic, assign) CGFloat dragOrigin;
+@property (nonatomic, assign) CGFloat titleHeight;
 
 @end
 
@@ -56,6 +56,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self registerToObserveContentOffset];
     
     [self configBackButton];
     [self configTableView];
@@ -69,8 +71,6 @@
 {
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:YES animated:animated];
-    
-    self.topTableViewConstraint.constant = 0;
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -93,6 +93,38 @@
     self.topHeightConstraint.constant = self.topLayoutGuide.length + topHeight;
     [self configTableViewHeader];
     [self configLayerView];
+}
+
+- (void)registerToObserveContentOffset
+{
+    [self addObserver:self forKeyPath:@"filmDetailTableView.contentOffset" options:NSKeyValueObservingOptionInitial context:nil];
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
+{
+    if ([keyPath isEqualToString:@"filmDetailTableView.contentOffset"])
+    {
+        CGFloat offsetY = self.filmDetailTableView.contentOffset.y;
+        NSLog(@"contentOfset.y: %f", self.filmDetailTableView.contentOffset.y);
+        
+        if (offsetY > 200)
+        {
+            CGFloat alpha = (offsetY - 200) / 100;
+            [UIView animateWithDuration:0.1f animations:^{
+                self.customNavBarView.alpha = alpha;
+            }];
+        }
+        else
+        {
+            self.customNavBarView.alpha = 0.0f; 
+        }
+        
+    }
+}
+
+- (void)unregisterToObservers
+{
+    [self removeObserver:self forKeyPath:@"filmDetailTableView.contentOffset"];
 }
 
 #pragma mark - Config methods.
@@ -121,8 +153,8 @@
         self.backgroundLayer = [CAGradientLayer layer];
         self.backgroundLayer.frame = self.layerView.bounds;
         self.backgroundLayer.colors = @[(id)[[UIColor clearColor] CGColor], (id)CGRGBA(21, 21, 21, 0.8f)];
-        self.backgroundLayer.startPoint = CGPointMake(0.5f, 0.0f);
-        self.backgroundLayer.endPoint = CGPointMake(0.5f, 0.75f);
+        self.backgroundLayer.startPoint = CGPointMake(0.0f, 0.0f);
+        self.backgroundLayer.endPoint = CGPointMake(0.1f, 0.2f);
         [self.layerView.layer insertSublayer:self.backgroundLayer atIndex:0];
     }
 }
@@ -192,37 +224,35 @@
     CGFloat finalHeigth = CGRectGetHeight(self.view.bounds);
     
     CGFloat tableWidth = CGRectGetWidth(self.filmDetailTableView.bounds);
-
-    finalHeigth -= [SizeHelper titleFilmDetailTableViewCellHeightForFilm:self.film andWidth:tableWidth];
+    
+    self.titleHeight = [SizeHelper titleFilmDetailTableViewCellHeightForFilm:self.film andWidth:tableWidth];
+    finalHeigth -= self.titleHeight;
+    
     finalHeigth -= [SizeHelper principalFilmDetailTableViewCellHeightForFilm:self.film andWidth:tableWidth];
     finalHeigth -= [SizeHelper overviewFilmDetailTableViewCellHeightForFilm:self.film andWidth:tableWidth];
     
-    NSLog(@"FINAL HEIGHT: %f", finalHeigth);
     
-    [self setBackgroundLayerStartPoint:[self calculateStartPointFrom:finalHeigth]];
-    
+    self.backgroundLayer.endPoint = CGPointMake(0.0f, finalHeigth / CGRectGetHeight(self.layerView.bounds));
     return CGRectMake(0, 0, CGRectGetWidth(self.filmDetailTableView.frame), finalHeigth);
 }
 
-- (void)setBackgroundLayerStartPoint:(CGPoint)point
+- (void)setBackgroundLayerEndPointYTo:(CGFloat)destiny
 {
-        self.backgroundLayer.startPoint = point;
-        self.backgroundLayer.endPoint = CGPointMake(point.x, point.x + 0.25f);
+    static CGFloat originalY;
+    if (!originalY)
+    {
+        originalY = self.backgroundLayer.endPoint.y;
+    }
+    CGFloat final = originalY - destiny;
+    if (final > 0.0f)
+    {
+        self.backgroundLayer.endPoint = CGPointMake(0.0f, final);
+    }
 }
 
-- (CGPoint)calculateStartPointFrom:(CGFloat)height
+- (void)dealloc
 {
-    CGFloat startX = height / CGRectGetHeight(self.view.bounds);
-    
-    static CGFloat original;
-    if (!original)
-    {
-        original = self.backgroundLayer.startPoint.x;
-    }
-    
-    CGFloat final = original - startX;
-    
-    return CGPointMake(final, 0.0f);
+    [self unregisterToObservers];
 }
 
 @end
@@ -254,11 +284,7 @@
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
-    
-    [self setBackgroundLayerStartPoint:[self calculateStartPointFrom:scrollView.contentOffset.y]];
-    NSLog(@"DRAG ORIGIN: %f", self.dragOrigin);
-    NSLog(@"Scrol did scroll: %f", scrollView.contentOffset.y);
-    
+    [self setBackgroundLayerEndPointYTo:(self.filmDetailTableView.contentOffset.y) / CGRectGetHeight(self.filmDetailTableView.bounds)];
 }
 
 @end
