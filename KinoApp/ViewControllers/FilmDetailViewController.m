@@ -23,6 +23,11 @@
 #import "ListFilmDetailTableViewCell.h"
 #import "GrayBackgroundLayer.h"
 #import "PrincipalDataFilmDetailTableViewCell.h"
+#import "SizeHelper.h"
+
+#define RGB(r, g, b) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:1]
+#define RGBA(r, g, b, a) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
+#define CGRGBA(r, g, b, a) [[UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a] CGColor]
 
 @interface FilmDetailViewController ()
 
@@ -31,11 +36,15 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *topTableViewConstraint;
 @property (weak, nonatomic) IBOutlet UIVisualEffectView *customNavBarView;
 @property (weak, nonatomic) IBOutlet UITableView *filmDetailTableView;
+@property (weak, nonatomic) IBOutlet UIView *layerView;
+
 
 @property (weak, nonatomic) IBOutlet UILabel *filmTitleLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *filmImageView;
 
-@property (nonatomic, strong) GrayBackgroundLayer *grayLayer;
+@property (nonatomic, strong) CAGradientLayer *backgroundLayer;
+
+@property (nonatomic, assign) CGFloat dragOrigin;
 
 @end
 
@@ -49,7 +58,6 @@
     [super viewDidLoad];
     
     [self configBackButton];
-    [self configGrayLayer];
     [self configTableView];
     [self configStyles];
     
@@ -84,14 +92,10 @@
     }
     self.topHeightConstraint.constant = self.topLayoutGuide.length + topHeight;
     [self configTableViewHeader];
+    [self configLayerView];
 }
 
 #pragma mark - Config methods.
-- (void)configGrayLayer
-{
-    self.grayLayer = [[GrayBackgroundLayer alloc] init];
-}
-
 - (void)configBackButton
 {
     [self.backButton addTarget:self action:@selector(backButtonPressed) forControlEvents:UIControlEventTouchUpInside];
@@ -108,6 +112,19 @@
     self.filmTitleLabel.textColor = [UIColor selectedItemColor];
     self.filmTitleLabel.font = [UIFont appFontWithSize:20];
     self.customNavBarView.alpha = 0.0f;
+}
+
+- (void)configLayerView
+{
+    if (!self.backgroundLayer)
+    {
+        self.backgroundLayer = [CAGradientLayer layer];
+        self.backgroundLayer.frame = self.layerView.bounds;
+        self.backgroundLayer.colors = @[(id)[[UIColor clearColor] CGColor], (id)CGRGBA(21, 21, 21, 0.8f)];
+        self.backgroundLayer.startPoint = CGPointMake(0.5f, 0.0f);
+        self.backgroundLayer.endPoint = CGPointMake(0.5f, 0.75f);
+        [self.layerView.layer insertSublayer:self.backgroundLayer atIndex:0];
+    }
 }
 
 - (void)configTableView
@@ -174,33 +191,38 @@
 {
     CGFloat finalHeigth = CGRectGetHeight(self.view.bounds);
     
-    TitleFilmDetailTableViewCell *titleCell = [self.filmDetailTableView dequeueReusableCellWithIdentifier:NSStringFromClass([TitleFilmDetailTableViewCell class])];
+    CGFloat tableWidth = CGRectGetWidth(self.filmDetailTableView.bounds);
+
+    finalHeigth -= [SizeHelper titleFilmDetailTableViewCellHeightForFilm:self.film andWidth:tableWidth];
+    finalHeigth -= [SizeHelper principalFilmDetailTableViewCellHeightForFilm:self.film andWidth:tableWidth];
+    finalHeigth -= [SizeHelper overviewFilmDetailTableViewCellHeightForFilm:self.film andWidth:tableWidth];
     
-    id<DetailFilmTableViewCellController> titleController = [FilmDetailTableViewCellFactory controllerForCellClass:[titleCell class]];
-    titleController.cell = titleCell;
-    titleController.film = self.film;
+    NSLog(@"FINAL HEIGHT: %f", finalHeigth);
     
-    PrincipalDataFilmDetailTableViewCell *dataCell = [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([PrincipalDataFilmDetailTableViewCell class])
-                                                                                   owner:self
-                                                                                 options:kNilOptions] firstObject];
-    id<DetailFilmTableViewCellController> dataController = [FilmDetailTableViewCellFactory controllerForCellClass:[dataCell class]];
-    dataController.cell = dataCell;
-    dataController.film = self.film;
-    
-    OverviewFilmDetailTableViewCell *overCell = [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([OverviewFilmDetailTableViewCell class])
-                                                                               owner:self
-                                                                             options:kNilOptions] firstObject];
-    id<DetailFilmTableViewCellController> overController = [FilmDetailTableViewCellFactory controllerForCellClass:[overCell class]];
-    overController.cell = overCell;
-    overController.film = self.film;
-    
-    CGFloat tableWidth = CGRectGetWidth(self.filmDetailTableView.frame);
-    
-    finalHeigth -= [titleController cellHeightWithWidth:tableWidth];
-    finalHeigth -= [dataController cellHeightWithWidth:tableWidth];
-    finalHeigth -= [overController cellHeightWithWidth:tableWidth];
+    [self setBackgroundLayerStartPoint:[self calculateStartPointFrom:finalHeigth]];
     
     return CGRectMake(0, 0, CGRectGetWidth(self.filmDetailTableView.frame), finalHeigth);
+}
+
+- (void)setBackgroundLayerStartPoint:(CGPoint)point
+{
+        self.backgroundLayer.startPoint = point;
+        self.backgroundLayer.endPoint = CGPointMake(point.x, point.x + 0.25f);
+}
+
+- (CGPoint)calculateStartPointFrom:(CGFloat)height
+{
+    CGFloat startX = height / CGRectGetHeight(self.view.bounds);
+    
+    static CGFloat original;
+    if (!original)
+    {
+        original = self.backgroundLayer.startPoint.x;
+    }
+    
+    CGFloat final = original - startX;
+    
+    return CGPointMake(final, 0.0f);
 }
 
 @end
@@ -223,6 +245,20 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return 5;
+}
+
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
+{
+    self.dragOrigin = scrollView.contentOffset.y;
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    
+    [self setBackgroundLayerStartPoint:[self calculateStartPointFrom:scrollView.contentOffset.y]];
+    NSLog(@"DRAG ORIGIN: %f", self.dragOrigin);
+    NSLog(@"Scrol did scroll: %f", scrollView.contentOffset.y);
+    
 }
 
 @end

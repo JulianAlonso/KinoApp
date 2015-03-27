@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
@@ -11,8 +11,8 @@
                 <outlet property="filmDetailTableView" destination="Y5R-vZ-HsS" id="ApI-Ht-3DJ"/>
                 <outlet property="filmImageView" destination="HAF-fo-tE4" id="Gkx-eV-yNv"/>
                 <outlet property="filmTitleLabel" destination="eUd-tm-ogP" id="hzq-S9-Caf"/>
+                <outlet property="layerView" destination="jwa-tQ-bQg" id="3hO-fj-oUa"/>
                 <outlet property="topHeightConstraint" destination="lRb-EO-DMX" id="gZ9-NM-Qwg"/>
-                <outlet property="topTableViewConstraint" destination="WVb-Lw-ezu" id="kth-SW-fcc"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -24,6 +24,10 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HAF-fo-tE4">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                 </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jwa-tQ-bQg">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Y5R-vZ-HsS">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -37,7 +41,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eUd-tm-ogP">
                                 <rect key="frame" x="279" y="12" width="43" height="22"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
                                 <size key="shadowOffset" width="1" height="1"/>
@@ -63,19 +67,23 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="Y5R-vZ-HsS" secondAttribute="bottom" id="6nW-sW-n0A"/>
+                <constraint firstAttribute="trailing" secondItem="Y5R-vZ-HsS" secondAttribute="trailing" id="0iC-yj-hDS"/>
+                <constraint firstAttribute="trailing" secondItem="jwa-tQ-bQg" secondAttribute="trailing" id="D7q-sh-ecg"/>
                 <constraint firstItem="HAF-fo-tE4" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="FOM-08-xML"/>
                 <constraint firstItem="Eu5-Xe-1t6" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="I0A-2w-q8z"/>
                 <constraint firstAttribute="bottom" secondItem="HAF-fo-tE4" secondAttribute="bottom" id="Pba-2v-ZsP"/>
                 <constraint firstItem="xqy-g3-cU8" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="14" id="TKY-E7-wMj"/>
                 <constraint firstItem="xqy-g3-cU8" firstAttribute="baseline" secondItem="eUd-tm-ogP" secondAttribute="baseline" id="WF2-Le-KrG"/>
-                <constraint firstItem="Y5R-vZ-HsS" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="WIL-Ir-bW0"/>
-                <constraint firstItem="Y5R-vZ-HsS" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="WVb-Lw-ezu"/>
+                <constraint firstItem="Y5R-vZ-HsS" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ZKd-6y-1xm"/>
+                <constraint firstItem="jwa-tQ-bQg" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="bx8-WJ-1r1"/>
                 <constraint firstAttribute="trailing" secondItem="Eu5-Xe-1t6" secondAttribute="trailing" id="dHR-ey-KpP"/>
                 <constraint firstItem="HAF-fo-tE4" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="dxe-3L-cV4"/>
                 <constraint firstAttribute="trailing" secondItem="HAF-fo-tE4" secondAttribute="trailing" id="fx7-ca-zTd"/>
+                <constraint firstAttribute="bottom" secondItem="jwa-tQ-bQg" secondAttribute="bottom" id="iNN-3a-1U6"/>
+                <constraint firstAttribute="bottom" secondItem="Y5R-vZ-HsS" secondAttribute="bottom" id="miG-bg-JaF"/>
                 <constraint firstItem="Eu5-Xe-1t6" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ovU-Yu-amt"/>
-                <constraint firstAttribute="trailing" secondItem="Y5R-vZ-HsS" secondAttribute="trailing" id="vBt-j0-8tl"/>
+                <constraint firstItem="Y5R-vZ-HsS" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="qId-SL-UFE"/>
+                <constraint firstItem="jwa-tQ-bQg" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="ySZ-8U-4Ho"/>
             </constraints>
         </view>
     </objects>
