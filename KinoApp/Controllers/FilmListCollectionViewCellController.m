@@ -40,6 +40,10 @@
             cont++;
         }
     }
+    else
+    {
+        self.cell.oneImageView.image = [UIImage imageNamed:@"Rectangle"];
+    }
     return self.cell;
 }
 

@@ -46,8 +46,6 @@
 
 - (void)tapAtCellWithListDTO:(ListDTO *)list
 {
-    NSLog(@"Present list table view controller with list: %@", list.listName);
-    
     DetailListRouter *detailListRouter = [DetailListRouter new];
     [detailListRouter presentDetailListViewControllerFrom:self.listCollectionViewController withList:list];
 }

@@ -25,6 +25,7 @@
 {
     self.cell.delegate = self;
     self.cell.listNameLabel.text = self.list.listName;
+    self.cell.selectionStyle = UITableViewCellSelectionStyleNone;
     [self configActivityIndicator];
     
     if ([self.list.listFilms containsObject:self.film])

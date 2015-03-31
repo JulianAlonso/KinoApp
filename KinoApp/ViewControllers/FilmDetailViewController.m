@@ -105,7 +105,6 @@
     if ([keyPath isEqualToString:@"filmDetailTableView.contentOffset"])
     {
         CGFloat offsetY = self.filmDetailTableView.contentOffset.y;
-        NSLog(@"contentOfset.y: %f", self.filmDetailTableView.contentOffset.y);
         
         if (offsetY > 200)
         {
@@ -118,7 +117,6 @@
         {
             self.customNavBarView.alpha = 0.0f; 
         }
-        
     }
 }
 

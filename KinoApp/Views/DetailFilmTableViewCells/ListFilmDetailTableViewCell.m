@@ -63,6 +63,7 @@ NSString *const kListFilmDetailtableViewCellTableContentSizeProperty = @"listsTa
     self.listsTableView.delegate = self;
     self.listsTableView.dataSource = self;
     self.listsTableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
+    self.listsTableView.scrollEnabled = NO;
     
     [self.listsTableView registerNib:[UINib nibWithNibName:NSStringFromClass([FilmDetailListTableViewCell class]) bundle:nil]
               forCellReuseIdentifier:NSStringFromClass([FilmDetailListTableViewCell class])];

@@ -185,7 +185,6 @@ NSString *const kListProperty = @"list";
 #pragma mark - Dealloc method.
 - (void)dealloc
 {
-    NSLog(@"dealoc at %@", self);
     [self unregisterToObserveList];
 }
 
