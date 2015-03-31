@@ -39,6 +39,7 @@
     
     UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:listsCollectionViewController];
     nc.tabBarItem.title = @"Lists";
+    nc.tabBarItem.image = [UIImage imageNamed:@"Star"];
     
     [tabBarCotroller addChildViewController:nc];
 }

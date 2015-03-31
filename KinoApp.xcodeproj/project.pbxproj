@@ -856,6 +856,7 @@
 				TargetAttributes = {
 					01068EC71AB7011D0017F91A = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = DKDFXAA6C4;
 					};
 					01068EE31AB7011D0017F91A = {
 						CreatedOnToolsVersion = 6.2;
@@ -1151,6 +1152,7 @@
 			baseConfigurationReference = 57E47FC539F669D5601D3966 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = KinoApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1162,6 +1164,7 @@
 			baseConfigurationReference = EFBDA11DA5EC569FCCB52E47 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = KinoApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

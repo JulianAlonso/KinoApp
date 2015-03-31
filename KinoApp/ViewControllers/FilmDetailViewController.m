@@ -151,11 +151,11 @@
     if (!self.backgroundLayer)
     {
         self.backgroundLayer = [CAGradientLayer layer];
-        self.backgroundLayer.frame = self.layerView.bounds;
+        self.backgroundLayer.frame = CGRectMake(0, 0, CGRectGetWidth(self.layerView.bounds), CGRectGetHeight(self.layerView.bounds) * 2);
         self.backgroundLayer.colors = @[(id)[[UIColor clearColor] CGColor], (id)CGRGBA(21, 21, 21, 0.8f)];
         self.backgroundLayer.startPoint = CGPointMake(0.0f, 0.0f);
         self.backgroundLayer.endPoint = CGPointMake(0.1f, 0.2f);
-        [self.layerView.layer insertSublayer:self.backgroundLayer atIndex:0];
+        [self.filmDetailTableView.layer insertSublayer:self.backgroundLayer atIndex:0];
     }
 }
 
@@ -232,22 +232,8 @@
     finalHeigth -= [SizeHelper overviewFilmDetailTableViewCellHeightForFilm:self.film andWidth:tableWidth];
     
     
-    self.backgroundLayer.endPoint = CGPointMake(0.0f, finalHeigth / CGRectGetHeight(self.layerView.bounds));
+    self.backgroundLayer.endPoint = CGPointMake(0.0f, finalHeigth / CGRectGetHeight(self.layerView.bounds) - 0.07f);
     return CGRectMake(0, 0, CGRectGetWidth(self.filmDetailTableView.frame), finalHeigth);
-}
-
-- (void)setBackgroundLayerEndPointYTo:(CGFloat)destiny
-{
-    static CGFloat originalY;
-    if (!originalY)
-    {
-        originalY = self.backgroundLayer.endPoint.y;
-    }
-    CGFloat final = originalY - destiny;
-    if (final > 0.0f)
-    {
-        self.backgroundLayer.endPoint = CGPointMake(0.0f, final);
-    }
 }
 
 - (void)dealloc
@@ -275,16 +261,6 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return 5;
-}
-
-- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
-{
-    self.dragOrigin = scrollView.contentOffset.y;
-}
-
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView
-{
-    [self setBackgroundLayerEndPointYTo:(self.filmDetailTableView.contentOffset.y) / CGRectGetHeight(self.filmDetailTableView.bounds)];
 }
 
 @end

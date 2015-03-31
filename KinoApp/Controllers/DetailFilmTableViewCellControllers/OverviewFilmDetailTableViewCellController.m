@@ -19,7 +19,12 @@
 {
     OverviewFilmDetailTableViewCell *cell = self.cell;
     
-    cell.filmOverviewLabel.text = self.film.filmOverview;
+    NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:self.film.filmOverview];
+    NSMutableParagraphStyle *paragrahStyle = [[NSMutableParagraphStyle alloc] init];
+    [paragrahStyle setLineSpacing:2];
+    [attributedString addAttribute:NSParagraphStyleAttributeName value:paragrahStyle range:NSMakeRange(0, [self.film.filmOverview length] - 1)];
+    
+    cell.filmOverviewLabel.attributedText = attributedString;
     
     return self.cell;
 }
