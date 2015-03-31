@@ -19,12 +19,10 @@
 {
     OverviewFilmDetailTableViewCell *cell = self.cell;
     
-    NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:self.film.filmOverview];
-    NSMutableParagraphStyle *paragrahStyle = [[NSMutableParagraphStyle alloc] init];
-    [paragrahStyle setLineSpacing:2];
-    [attributedString addAttribute:NSParagraphStyleAttributeName value:paragrahStyle range:NSMakeRange(0, [self.film.filmOverview length] - 1)];
-    
-    cell.filmOverviewLabel.attributedText = attributedString;
+    if (self.film.filmOverview)
+    {
+        [self configLabel:cell];
+    }
     
     return self.cell;
 }
@@ -39,6 +37,17 @@
                                                                 context:nil];
     
     return CGRectGetHeight(labelHeight) - height;
+}
+
+#pragma mark - Config methods.
+- (void)configLabel:(OverviewFilmDetailTableViewCell *)cell
+{
+    NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:self.film.filmOverview];
+    NSMutableParagraphStyle *paragrahStyle = [[NSMutableParagraphStyle alloc] init];
+    [paragrahStyle setLineSpacing:2];
+    [attributedString addAttribute:NSParagraphStyleAttributeName value:paragrahStyle range:NSMakeRange(0, [self.film.filmOverview length] - 1)];
+    
+    cell.filmOverviewLabel.attributedText = attributedString;
 }
 
 @end

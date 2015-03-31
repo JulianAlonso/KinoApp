@@ -67,6 +67,11 @@ NSString *const kGenresFilmDetalTableViewCellContentSizeProperty = @"genresColle
 
 - (CGFloat)contentSizeHeight
 {
+    if (self.genresCollectionView.contentSize.height < 40)
+    {
+        return 40;
+    }
+        
     return self.genresCollectionView.contentSize.height;
 }
 

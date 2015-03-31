@@ -95,6 +95,7 @@
     [self configLayerView];
 }
 
+#pragma mark - Obserce methods.
 - (void)registerToObserveContentOffset
 {
     [self addObserver:self forKeyPath:@"filmDetailTableView.contentOffset" options:NSKeyValueObservingOptionInitial context:nil];
@@ -257,7 +258,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
+{ 
     return 5;
 }
 

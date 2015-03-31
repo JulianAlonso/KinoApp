@@ -145,12 +145,6 @@ NSString *const kListProperty = @"list";
     return self.list.listFilms.count;
 }
 
-#pragma mark - Delegate methods.
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    return 200;
-}
-
 #pragma mark - CollectionView FloatLayout delegate methods.
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section
 {
@@ -165,7 +159,7 @@ NSString *const kListProperty = @"list";
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     CGFloat width = CGRectGetWidth(collectionView.bounds) / 2;
-    CGFloat height = CGRectGetHeight(collectionView.bounds) / 2.5;
+    CGFloat height = CGRectGetHeight(collectionView.bounds) / 2.3;
     
     return CGSizeMake(width, height);
 }
