@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FilmDetailViewController">
@@ -58,7 +58,7 @@
                     <blurEffect style="light"/>
                 </visualEffectView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xqy-g3-cU8">
-                    <rect key="frame" x="14" y="-2" width="60" height="50"/>
+                    <rect key="frame" x="14" y="11" width="60" height="25"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="60" id="xBI-rc-agH"/>
                     </constraints>
@@ -91,6 +91,6 @@
         </view>
     </objects>
     <resources>
-        <image name="Back Arrow" width="31" height="49"/>
+        <image name="Back Arrow" width="16" height="25"/>
     </resources>
 </document>

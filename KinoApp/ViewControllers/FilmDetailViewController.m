@@ -21,7 +21,6 @@
 #import "FilmDetailTableViewCellFactory.h"
 #import "GenresFilmDetailTableViewCell.h"
 #import "ListFilmDetailTableViewCell.h"
-#import "GrayBackgroundLayer.h"
 #import "PrincipalDataFilmDetailTableViewCell.h"
 #import "SizeHelper.h"
 
@@ -182,20 +181,20 @@
     __weak typeof(self) weakSelf = self;
     [self.interactor loadFilmWithId:self.film.filmId completion:^(FilmDTO *film) {
             
-        if (!film)
-        {
-            dispatch_async(dispatch_get_main_queue(), ^{
-                weakSelf.film = film;
-                [weakSelf.filmDetailTableView reloadData];
-            });
-        }
+//        if (film)
+//        {
+//            dispatch_async(dispatch_get_main_queue(), ^{
+//                weakSelf.film = film;
+//                [weakSelf.filmDetailTableView reloadData];
+//            });
+//        }
         
     } update:^(FilmDTO *film) {
         
-        dispatch_async(dispatch_get_main_queue(), ^{
-            weakSelf.film = film;
-            [weakSelf.filmDetailTableView reloadData];
-        });
+//        dispatch_async(dispatch_get_main_queue(), ^{
+//            weakSelf.film = film;
+//            [weakSelf.filmDetailTableView reloadData];
+//        });
         
     }];
 }
