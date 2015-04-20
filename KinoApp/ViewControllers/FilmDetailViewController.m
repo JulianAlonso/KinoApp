@@ -163,6 +163,8 @@
     self.filmDetailTableView.dataSource = self;
     self.filmDetailTableView.backgroundColor = [UIColor clearColor];
     self.filmDetailTableView.separatorColor = [UIColor clearColor];
+    self.filmDetailTableView.estimatedRowHeight = 100.0f;
+    self.filmDetailTableView.rowHeight = UITableViewAutomaticDimension;
     
     [self registerCellWithClass:[TitleFilmDetailTableViewCell class]];
     [self registerCellWithClass:[PrincipalDataFilmDetailTableViewCell class]];

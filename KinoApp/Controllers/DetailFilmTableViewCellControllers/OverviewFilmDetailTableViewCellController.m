@@ -21,7 +21,8 @@
     
     if (self.film.filmOverview)
     {
-        [self configLabel:cell];
+//        [self configLabel:cell];
+        cell.filmOverviewLabel.text = self.film.filmOverview;
     }
     
     return self.cell;
