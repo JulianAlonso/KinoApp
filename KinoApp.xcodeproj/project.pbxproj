@@ -70,6 +70,8 @@
 		01453E781AC32AE600F8ADC6 /* FilmDetailListTableViewCellController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01453E771AC32AE600F8ADC6 /* FilmDetailListTableViewCellController.m */; };
 		01453E7B1AC32D0300F8ADC6 /* InteractorsFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 01453E7A1AC32D0300F8ADC6 /* InteractorsFactory.m */; };
 		01453E7E1AC348BD00F8ADC6 /* RemoveFilmFromListInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 01453E7D1AC348BD00F8ADC6 /* RemoveFilmFromListInteractor.m */; };
+		01562BC21AEA53CB003EEDC8 /* FilmDetailScrollViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01562BC01AEA53CB003EEDC8 /* FilmDetailScrollViewViewController.m */; };
+		01562BC31AEA53CB003EEDC8 /* FilmDetailScrollViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01562BC11AEA53CB003EEDC8 /* FilmDetailScrollViewViewController.xib */; };
 		0158344A1AB8223B007E0AC4 /* APIVars.m in Sources */ = {isa = PBXBuildFile; fileRef = 015834491AB8223B007E0AC4 /* APIVars.m */; };
 		0158344F1AB84AAA007E0AC4 /* RequestManagerFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 0158344E1AB84AAA007E0AC4 /* RequestManagerFactory.m */; };
 		015834521AB84E93007E0AC4 /* JARequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 015834511AB84E93007E0AC4 /* JARequestManager.m */; };
@@ -241,6 +243,9 @@
 		01453E7A1AC32D0300F8ADC6 /* InteractorsFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InteractorsFactory.m; path = Factories/InteractorsFactory.m; sourceTree = "<group>"; };
 		01453E7C1AC348BD00F8ADC6 /* RemoveFilmFromListInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RemoveFilmFromListInteractor.h; path = Interactors/RemoveFilmFromListInteractor.h; sourceTree = "<group>"; };
 		01453E7D1AC348BD00F8ADC6 /* RemoveFilmFromListInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RemoveFilmFromListInteractor.m; path = Interactors/RemoveFilmFromListInteractor.m; sourceTree = "<group>"; };
+		01562BBF1AEA53CB003EEDC8 /* FilmDetailScrollViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FilmDetailScrollViewViewController.h; path = ViewControllers/FilmDetailScrollViewViewController.h; sourceTree = "<group>"; };
+		01562BC01AEA53CB003EEDC8 /* FilmDetailScrollViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FilmDetailScrollViewViewController.m; path = ViewControllers/FilmDetailScrollViewViewController.m; sourceTree = "<group>"; };
+		01562BC11AEA53CB003EEDC8 /* FilmDetailScrollViewViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FilmDetailScrollViewViewController.xib; path = ViewControllers/FilmDetailScrollViewViewController.xib; sourceTree = "<group>"; };
 		015834481AB8223B007E0AC4 /* APIVars.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APIVars.h; path = Master/APIVars.h; sourceTree = "<group>"; };
 		015834491AB8223B007E0AC4 /* APIVars.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = APIVars.m; path = Master/APIVars.m; sourceTree = "<group>"; };
 		0158344B1AB84A88007E0AC4 /* RequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RequestManager.h; path = RequestManagers/RequestManager.h; sourceTree = "<group>"; };
@@ -504,6 +509,9 @@
 				015AB17A1ABC6A3000D2CBAA /* SearchFilmViewController.h */,
 				015AB17B1ABC6A3000D2CBAA /* SearchFilmViewController.m */,
 				015AB17C1ABC6A3000D2CBAA /* SearchFilmViewController.xib */,
+				01562BBF1AEA53CB003EEDC8 /* FilmDetailScrollViewViewController.h */,
+				01562BC01AEA53CB003EEDC8 /* FilmDetailScrollViewViewController.m */,
+				01562BC11AEA53CB003EEDC8 /* FilmDetailScrollViewViewController.xib */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -885,6 +893,7 @@
 				01068F521AB752840017F91A /* CollectionFilmsCollectionViewCell.xib in Resources */,
 				015AB17E1ABC6A3000D2CBAA /* SearchFilmViewController.xib in Resources */,
 				01FC73AA1AC3084D003DC161 /* PrincipalDataFilmDetailTableViewCell.xib in Resources */,
+				01562BC31AEA53CB003EEDC8 /* FilmDetailScrollViewViewController.xib in Resources */,
 				012C6B981ABA0A070060A49C /* FilmListCollectionViewCell.xib in Resources */,
 				01453E741AC325AF00F8ADC6 /* FilmDetailListTableViewCell.xib in Resources */,
 				01068F311AB725490017F91A /* BillboardViewController.xib in Resources */,
@@ -948,6 +957,7 @@
 				013955681ABAD7A500BC745D /* List.m in Sources */,
 				011C92CF1AC42A950097EE10 /* FilmDetailGenreCollectionViewCellController.m in Sources */,
 				01F0C1001AC1D8F80009E061 /* TitleFilmDetailTableViewCell.m in Sources */,
+				01562BC21AEA53CB003EEDC8 /* FilmDetailScrollViewViewController.m in Sources */,
 				012C6B8F1ABA006D0060A49C /* ListsCollectionViewController.m in Sources */,
 				01453E731AC325AF00F8ADC6 /* FilmDetailListTableViewCell.m in Sources */,
 				0117597F1ABB410600724BC5 /* SelectListRouter.m in Sources */,

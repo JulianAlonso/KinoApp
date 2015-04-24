@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -24,7 +24,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Obd-Ba-lXU">
-                    <rect key="frame" x="0.0" y="0.0" width="600" height="49"/>
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="47"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wwk-WR-j9F">
                             <rect key="frame" x="0.0" y="45" width="300" height="2"/>
@@ -51,7 +51,7 @@
                         <constraint firstItem="Wwk-WR-j9F" firstAttribute="leading" secondItem="Obd-Ba-lXU" secondAttribute="leading" id="3vW-v6-lb5"/>
                         <constraint firstItem="nKN-rG-nv4" firstAttribute="top" secondItem="Obd-Ba-lXU" secondAttribute="top" constant="14" id="R7N-Ov-Fva"/>
                         <constraint firstItem="hWF-7S-2hm" firstAttribute="width" secondItem="nKN-rG-nv4" secondAttribute="width" id="Xt7-JV-vjz"/>
-                        <constraint firstAttribute="bottom" secondItem="Wwk-WR-j9F" secondAttribute="bottom" constant="2" id="cDh-Oc-35M"/>
+                        <constraint firstAttribute="bottom" secondItem="Wwk-WR-j9F" secondAttribute="bottom" id="cDh-Oc-35M"/>
                         <constraint firstItem="Wwk-WR-j9F" firstAttribute="top" secondItem="nKN-rG-nv4" secondAttribute="bottom" constant="10" id="qX5-M0-G6A"/>
                         <constraint firstItem="Wwk-WR-j9F" firstAttribute="width" secondItem="nKN-rG-nv4" secondAttribute="width" id="sia-T0-2hu"/>
                         <constraint firstItem="nKN-rG-nv4" firstAttribute="centerY" secondItem="hWF-7S-2hm" secondAttribute="centerY" id="vXz-f1-bTe"/>
@@ -60,7 +60,7 @@
                     </constraints>
                 </view>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Tbq-gc-4T4">
-                    <rect key="frame" x="0.0" y="49" width="600" height="551"/>
+                    <rect key="frame" x="0.0" y="47" width="600" height="553"/>
                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="4cB-Y1-KXE">
                         <size key="itemSize" width="50" height="50"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>

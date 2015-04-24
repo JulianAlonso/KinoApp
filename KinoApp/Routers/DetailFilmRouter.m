@@ -16,10 +16,12 @@
 #import "ListDTO.h"
 #import "AddFilmToListInteractor.h"
 #import "LocalCoreDataListsProvider.h"
+#import "FilmDetailScrollViewViewController.h"
 
 @interface DetailFilmRouter ()
 
 @property (nonatomic, weak) FilmDetailViewController *detailViewController;
+@property (nonatomic, weak) FilmDetailScrollViewViewController *filmDetailScrollViewController;
 
 @end
 
@@ -27,7 +29,10 @@
 
 - (void)presentFilmDetailViewControllerFrom:(UINavigationController *)navigationController withFilmDTO:(FilmDTO *)film
 {
-    FilmDetailViewController *filmDetail = [[FilmDetailViewController alloc] initWithNibName:NSStringFromClass([FilmDetailViewController class]) bundle:nil];
+//    FilmDetailViewController *filmDetail = [[FilmDetailViewController alloc] initWithNibName:NSStringFromClass([FilmDetailViewController class]) bundle:nil];
+
+    
+    FilmDetailScrollViewViewController *filmDetail = [[FilmDetailScrollViewViewController alloc] init];
     filmDetail.film = film;
     
     //Creating Interactors
@@ -36,10 +41,10 @@
     interactor.externalProvider = [ExternalTMDBProvider new];
     
     //DI
-    filmDetail.interactor = interactor;
+    filmDetail.loadFilmInteractor = interactor;
     filmDetail.router = self;
     
-    self.detailViewController = filmDetail;
+    self.filmDetailScrollViewController = filmDetail;
     
     [navigationController pushViewController:filmDetail animated:YES];
 }
