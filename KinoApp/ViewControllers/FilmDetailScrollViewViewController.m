@@ -9,6 +9,9 @@
 #import "FilmDetailScrollViewViewController.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "FilmDTO.h"
+#import "FilmGenresCollectionView.h"
+
+NSString *const kFilmGenresCollectionViewContentSizeProperty = @"filmGenreCollectionView.contentSize";
 
 @interface FilmDetailScrollViewViewController ()
 
@@ -17,9 +20,11 @@
 @property (weak, nonatomic) IBOutlet UILabel *filmTitleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *filmPrincipalDataLabel;
 @property (weak, nonatomic) IBOutlet UILabel *filmOverviewLabel;
-@property (weak, nonatomic) IBOutlet UICollectionView *filmGenreCollectionView;
+@property (weak, nonatomic) IBOutlet FilmGenresCollectionView *filmGenreCollectionView;
 @property (weak, nonatomic) IBOutlet UITableView *filmListsTableView;
 @property (weak, nonatomic) IBOutlet UIImageView *filmImageView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *filmGenresCollectionViewHeightConstraint;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *filmListTableViewHeightConstraint;
 
 @end
 
@@ -29,6 +34,7 @@
 {
     [super viewDidLoad];
     
+    [self registerObservers];
     [self configItems];
 }
 
@@ -52,6 +58,39 @@
     self.filmTitleLabel.text = self.film.filmTitle;
     self.filmOverviewLabel.text = self.film.filmOverview;
     self.filmOverviewLabel.textColor = [UIColor whiteColor];
+    self.filmGenreCollectionView.film = self.film;
 }
+
+#pragma mark - Update methods.
+- (void)updateFilmGenresCollectionViewHeight
+{
+    self.filmGenresCollectionViewHeightConstraint.constant = self.filmGenreCollectionView.contentSize.height;
+}
+
+#pragma mark - Observe methods.
+- (void)registerObservers
+{
+    [self addObserver:self forKeyPath:kFilmGenresCollectionViewContentSizeProperty options:NSKeyValueObservingOptionInitial context:nil];
+}
+
+- (void)unregisterObservers
+{
+    [self removeObserver:self forKeyPath:kFilmGenresCollectionViewContentSizeProperty];
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
+{
+    if ([keyPath isEqualToString:kFilmGenresCollectionViewContentSizeProperty])
+    {
+        [self updateFilmGenresCollectionViewHeight];
+    }
+}
+
+#pragma mark - Dealloc.
+- (void)dealloc
+{
+    [self unregisterObservers];
+}
+
 
 @end

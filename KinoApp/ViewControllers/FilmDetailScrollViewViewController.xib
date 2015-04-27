@@ -7,7 +7,9 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FilmDetailScrollViewViewController">
             <connections>
                 <outlet property="filmGenreCollectionView" destination="KKu-lQ-Io8" id="kM7-NS-MXh"/>
+                <outlet property="filmGenresCollectionViewHeightConstraint" destination="5AF-pG-pfi" id="OyN-0l-hiY"/>
                 <outlet property="filmImageView" destination="D1f-OD-BWm" id="m6Y-H8-Nxu"/>
+                <outlet property="filmListTableViewHeightConstraint" destination="of6-3Q-kAB" id="4Ur-Xm-htj"/>
                 <outlet property="filmListsTableView" destination="oiO-xw-V6o" id="z55-ga-xDV"/>
                 <outlet property="filmOverviewLabel" destination="rav-3a-yxA" id="DIb-Mj-ntr"/>
                 <outlet property="filmPrincipalDataLabel" destination="4Pn-jN-3Wu" id="oFG-uJ-lnP"/>
@@ -28,7 +30,7 @@
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u4S-lA-s0T">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                     <subviews>
-                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="KKu-lQ-Io8">
+                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="KKu-lQ-Io8" customClass="FilmGenresCollectionView">
                             <rect key="frame" x="10" y="223" width="580" height="100"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <constraints>

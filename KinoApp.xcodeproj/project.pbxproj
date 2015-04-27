@@ -50,6 +50,7 @@
 		012176591ABC3D6700EDA095 /* FilmCollectionViewCellController.m in Sources */ = {isa = PBXBuildFile; fileRef = 012176581ABC3D6700EDA095 /* FilmCollectionViewCellController.m */; };
 		0121765D1ABC3D8F00EDA095 /* FilmTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0121765B1ABC3D8F00EDA095 /* FilmTableViewCell.m */; };
 		0121765E1ABC3D8F00EDA095 /* FilmTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0121765C1ABC3D8F00EDA095 /* FilmTableViewCell.xib */; };
+		012203EA1AEE445F008ABF5B /* FilmGenresCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 012203E91AEE445F008ABF5B /* FilmGenresCollectionView.m */; };
 		012C6B7F1AB99F580060A49C /* FilmDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 012C6B7D1AB99F580060A49C /* FilmDetailViewController.m */; };
 		012C6B801AB99F580060A49C /* FilmDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 012C6B7E1AB99F580060A49C /* FilmDetailViewController.xib */; };
 		012C6B851AB9C3EE0060A49C /* DetailFilmRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 012C6B841AB9C3EE0060A49C /* DetailFilmRouter.m */; };
@@ -205,6 +206,8 @@
 		0121765A1ABC3D8F00EDA095 /* FilmTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FilmTableViewCell.h; path = Views/FilmTableViewCell.h; sourceTree = "<group>"; };
 		0121765B1ABC3D8F00EDA095 /* FilmTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FilmTableViewCell.m; path = Views/FilmTableViewCell.m; sourceTree = "<group>"; };
 		0121765C1ABC3D8F00EDA095 /* FilmTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FilmTableViewCell.xib; path = Views/FilmTableViewCell.xib; sourceTree = "<group>"; };
+		012203E81AEE445F008ABF5B /* FilmGenresCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FilmGenresCollectionView.h; path = Views/DetailFilmViews/FilmGenresCollectionView.h; sourceTree = "<group>"; };
+		012203E91AEE445F008ABF5B /* FilmGenresCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FilmGenresCollectionView.m; path = Views/DetailFilmViews/FilmGenresCollectionView.m; sourceTree = "<group>"; };
 		012C6B7C1AB99F580060A49C /* FilmDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FilmDetailViewController.h; path = ViewControllers/FilmDetailViewController.h; sourceTree = "<group>"; };
 		012C6B7D1AB99F580060A49C /* FilmDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FilmDetailViewController.m; path = ViewControllers/FilmDetailViewController.m; sourceTree = "<group>"; };
 		012C6B7E1AB99F580060A49C /* FilmDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FilmDetailViewController.xib; path = ViewControllers/FilmDetailViewController.xib; sourceTree = "<group>"; };
@@ -512,6 +515,7 @@
 				01562BBF1AEA53CB003EEDC8 /* FilmDetailScrollViewViewController.h */,
 				01562BC01AEA53CB003EEDC8 /* FilmDetailScrollViewViewController.m */,
 				01562BC11AEA53CB003EEDC8 /* FilmDetailScrollViewViewController.xib */,
+				012203E41AEE3B35008ABF5B /* DetailScrollViewControllers */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -594,6 +598,15 @@
 				0121765C1ABC3D8F00EDA095 /* FilmTableViewCell.xib */,
 			);
 			name = FilmCells;
+			sourceTree = "<group>";
+		};
+		012203E41AEE3B35008ABF5B /* DetailScrollViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				012203E81AEE445F008ABF5B /* FilmGenresCollectionView.h */,
+				012203E91AEE445F008ABF5B /* FilmGenresCollectionView.m */,
+			);
+			name = DetailScrollViewControllers;
 			sourceTree = "<group>";
 		};
 		012C6B811AB9A37D0060A49C /* EventsReceivers */ = {
@@ -1033,6 +1046,7 @@
 				015834561AB862B4007E0AC4 /* URLHelper.m in Sources */,
 				01FC73A21AC2D358003DC161 /* FilmFilter.m in Sources */,
 				012176471ABC1FE700EDA095 /* List+Model.m in Sources */,
+				012203EA1AEE445F008ABF5B /* FilmGenresCollectionView.m in Sources */,
 				012176551ABC330D00EDA095 /* ListDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
