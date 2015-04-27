@@ -51,6 +51,7 @@
 		0121765D1ABC3D8F00EDA095 /* FilmTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0121765B1ABC3D8F00EDA095 /* FilmTableViewCell.m */; };
 		0121765E1ABC3D8F00EDA095 /* FilmTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0121765C1ABC3D8F00EDA095 /* FilmTableViewCell.xib */; };
 		012203EA1AEE445F008ABF5B /* FilmGenresCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 012203E91AEE445F008ABF5B /* FilmGenresCollectionView.m */; };
+		012203ED1AEE4C02008ABF5B /* FilmCollectionsInTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 012203EC1AEE4C02008ABF5B /* FilmCollectionsInTableView.m */; };
 		012C6B7F1AB99F580060A49C /* FilmDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 012C6B7D1AB99F580060A49C /* FilmDetailViewController.m */; };
 		012C6B801AB99F580060A49C /* FilmDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 012C6B7E1AB99F580060A49C /* FilmDetailViewController.xib */; };
 		012C6B851AB9C3EE0060A49C /* DetailFilmRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 012C6B841AB9C3EE0060A49C /* DetailFilmRouter.m */; };
@@ -208,6 +209,8 @@
 		0121765C1ABC3D8F00EDA095 /* FilmTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FilmTableViewCell.xib; path = Views/FilmTableViewCell.xib; sourceTree = "<group>"; };
 		012203E81AEE445F008ABF5B /* FilmGenresCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FilmGenresCollectionView.h; path = Views/DetailFilmViews/FilmGenresCollectionView.h; sourceTree = "<group>"; };
 		012203E91AEE445F008ABF5B /* FilmGenresCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FilmGenresCollectionView.m; path = Views/DetailFilmViews/FilmGenresCollectionView.m; sourceTree = "<group>"; };
+		012203EB1AEE4C02008ABF5B /* FilmCollectionsInTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FilmCollectionsInTableView.h; path = Views/DetailFilmViews/FilmCollectionsInTableView.h; sourceTree = "<group>"; };
+		012203EC1AEE4C02008ABF5B /* FilmCollectionsInTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FilmCollectionsInTableView.m; path = Views/DetailFilmViews/FilmCollectionsInTableView.m; sourceTree = "<group>"; };
 		012C6B7C1AB99F580060A49C /* FilmDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FilmDetailViewController.h; path = ViewControllers/FilmDetailViewController.h; sourceTree = "<group>"; };
 		012C6B7D1AB99F580060A49C /* FilmDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FilmDetailViewController.m; path = ViewControllers/FilmDetailViewController.m; sourceTree = "<group>"; };
 		012C6B7E1AB99F580060A49C /* FilmDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FilmDetailViewController.xib; path = ViewControllers/FilmDetailViewController.xib; sourceTree = "<group>"; };
@@ -605,6 +608,8 @@
 			children = (
 				012203E81AEE445F008ABF5B /* FilmGenresCollectionView.h */,
 				012203E91AEE445F008ABF5B /* FilmGenresCollectionView.m */,
+				012203EB1AEE4C02008ABF5B /* FilmCollectionsInTableView.h */,
+				012203EC1AEE4C02008ABF5B /* FilmCollectionsInTableView.m */,
 			);
 			name = DetailScrollViewControllers;
 			sourceTree = "<group>";
@@ -995,6 +1000,7 @@
 				018F9DD41AB89B4D0046D3C4 /* Film+Model.m in Sources */,
 				012C6B971ABA0A070060A49C /* FilmListCollectionViewCell.m in Sources */,
 				01F0C1241AC1DF050009E061 /* ListsFilmDetailTableViewCellController.m in Sources */,
+				012203ED1AEE4C02008ABF5B /* FilmCollectionsInTableView.m in Sources */,
 				0139556B1ABAD8EA00BC745D /* ListDTOParser.m in Sources */,
 				01068ED41AB7011D0017F91A /* KinoApp.xcdatamodeld in Sources */,
 				01F0C1181AC1DEAC0009E061 /* TitleFilmDetailTableViewCellController.m in Sources */,

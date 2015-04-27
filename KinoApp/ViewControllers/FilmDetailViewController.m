@@ -180,7 +180,7 @@
 
 - (void)updateFilm
 {
-    __weak typeof(self) weakSelf = self;
+//    __weak typeof(self) weakSelf = self;
     [self.interactor loadFilmWithId:self.film.filmId completion:^(FilmDTO *film) {
             
 //        if (film)

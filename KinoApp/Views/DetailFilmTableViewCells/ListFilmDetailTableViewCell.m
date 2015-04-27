@@ -17,7 +17,7 @@
 
 #define RGBA(r, g, b, a) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
 
-NSString *const kListFilmDetailtableViewCellListsProperty = @"lists";
+//NSString *const kListFilmDetailtableViewCellListsProperty = @"lists";
 NSString *const kListFilmDetailtableViewCellTableContentSizeProperty = @"listsTableView.contentSize";
 
 @interface ListFilmDetailTableViewCell () <UITableViewDataSource, UITableViewDelegate>
@@ -41,7 +41,7 @@ NSString *const kListFilmDetailtableViewCellTableContentSizeProperty = @"listsTa
     [self configStyles];
 
     [self configTableView];
-    [self registers];
+//    [self registers];
     [self updateLists];
 }
 
@@ -72,29 +72,29 @@ NSString *const kListFilmDetailtableViewCellTableContentSizeProperty = @"listsTa
 }
 
 #pragma mark - Observe methods.
-- (void)registers
-{
-    [self addObserver:self forKeyPath:kListFilmDetailtableViewCellListsProperty options:NSKeyValueObservingOptionInitial context:nil];
-    [self addObserver:self forKeyPath:kListFilmDetailtableViewCellTableContentSizeProperty options:NSKeyValueObservingOptionInitial context:nil];
-}
-
-- (void)unregisters
-{
-    [self removeObserver:self forKeyPath:kListFilmDetailtableViewCellListsProperty];
-    [self removeObserver:self forKeyPath:kListFilmDetailtableViewCellTableContentSizeProperty];
-}
-
-- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
-{
-    if ([keyPath isEqualToString:kListFilmDetailtableViewCellListsProperty])
-    {
-        [self updateControllers];
-    }
-    else if ([keyPath isEqualToString:kListFilmDetailtableViewCellTableContentSizeProperty])
-    {
-        self.tableViewHeight.constant = self.listsTableView.contentSize.height;
-    }
-}
+//- (void)registers
+//{
+//    [self addObserver:self forKeyPath:kListFilmDetailtableViewCellListsProperty options:NSKeyValueObservingOptionInitial context:nil];
+//    [self addObserver:self forKeyPath:kListFilmDetailtableViewCellTableContentSizeProperty options:NSKeyValueObservingOptionInitial context:nil];
+//}
+//
+//- (void)unregisters
+//{
+//    [self removeObserver:self forKeyPath:kListFilmDetailtableViewCellListsProperty];
+//    [self removeObserver:self forKeyPath:kListFilmDetailtableViewCellTableContentSizeProperty];
+//}
+//
+//- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
+//{
+//    if ([keyPath isEqualToString:kListFilmDetailtableViewCellListsProperty])
+//    {
+//        [self updateControllers];
+//    }
+//    else if ([keyPath isEqualToString:kListFilmDetailtableViewCellTableContentSizeProperty])
+//    {
+//        self.tableViewHeight.constant = self.listsTableView.contentSize.height;
+//    }
+//}
 
 #pragma mark - Update methods.
 - (void)updateLists
@@ -192,9 +192,9 @@ NSString *const kListFilmDetailtableViewCellTableContentSizeProperty = @"listsTa
     return _fetchListsInteractor;
 }
 
-#pragma mark - Dealloc.
-- (void)dealloc
-{
-    [self unregisters];
-}
+//#pragma mark - Dealloc.
+//- (void)dealloc
+//{
+//    [self unregisters];
+//}
 @end

@@ -10,8 +10,10 @@
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "FilmDTO.h"
 #import "FilmGenresCollectionView.h"
+#import "FilmCollectionsInTableView.h"
 
 NSString *const kFilmGenresCollectionViewContentSizeProperty = @"filmGenreCollectionView.contentSize";
+NSString *const kFilmListsTableViewContentSizeProperty = @"filmListsTableView.contentSize";
 
 @interface FilmDetailScrollViewViewController ()
 
@@ -21,7 +23,7 @@ NSString *const kFilmGenresCollectionViewContentSizeProperty = @"filmGenreCollec
 @property (weak, nonatomic) IBOutlet UILabel *filmPrincipalDataLabel;
 @property (weak, nonatomic) IBOutlet UILabel *filmOverviewLabel;
 @property (weak, nonatomic) IBOutlet FilmGenresCollectionView *filmGenreCollectionView;
-@property (weak, nonatomic) IBOutlet UITableView *filmListsTableView;
+@property (weak, nonatomic) IBOutlet FilmCollectionsInTableView *filmListsTableView;
 @property (weak, nonatomic) IBOutlet UIImageView *filmImageView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *filmGenresCollectionViewHeightConstraint;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *filmListTableViewHeightConstraint;
@@ -59,6 +61,7 @@ NSString *const kFilmGenresCollectionViewContentSizeProperty = @"filmGenreCollec
     self.filmOverviewLabel.text = self.film.filmOverview;
     self.filmOverviewLabel.textColor = [UIColor whiteColor];
     self.filmGenreCollectionView.film = self.film;
+    self.filmListsTableView.film = self.film;
 }
 
 #pragma mark - Update methods.
@@ -66,16 +69,22 @@ NSString *const kFilmGenresCollectionViewContentSizeProperty = @"filmGenreCollec
 {
     self.filmGenresCollectionViewHeightConstraint.constant = self.filmGenreCollectionView.contentSize.height;
 }
+- (void)updateFilmListsTableViewheight
+{
+    self.filmListTableViewHeightConstraint.constant = self.filmListsTableView.contentSize.height;
+}
 
 #pragma mark - Observe methods.
 - (void)registerObservers
 {
     [self addObserver:self forKeyPath:kFilmGenresCollectionViewContentSizeProperty options:NSKeyValueObservingOptionInitial context:nil];
+    [self addObserver:self forKeyPath:kFilmListsTableViewContentSizeProperty options:NSKeyValueObservingOptionInitial context:nil];
 }
 
 - (void)unregisterObservers
 {
     [self removeObserver:self forKeyPath:kFilmGenresCollectionViewContentSizeProperty];
+    [self removeObserver:self forKeyPath:kFilmListsTableViewContentSizeProperty];
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
@@ -83,6 +92,10 @@ NSString *const kFilmGenresCollectionViewContentSizeProperty = @"filmGenreCollec
     if ([keyPath isEqualToString:kFilmGenresCollectionViewContentSizeProperty])
     {
         [self updateFilmGenresCollectionViewHeight];
+    }
+    else if([keyPath isEqualToString:kFilmListsTableViewContentSizeProperty])
+    {
+        [self updateFilmListsTableViewheight];
     }
 }
 
