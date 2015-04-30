@@ -16,7 +16,7 @@
 #define RGBA(r, g, b, a) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
 
 NSString *const kListFilmDetailtableViewCellListsProperty = @"lists";
-NSString *const kListFilmDetailTableViewCell = @"cell";
+NSString *const kListFilmDetailTableViewCellFilmProperty = @"film";
 
 @interface FilmCollectionsInTableView () <UITableViewDataSource, UITableViewDelegate>
 
@@ -88,11 +88,13 @@ NSString *const kListFilmDetailTableViewCell = @"cell";
 - (void)registerObservers
 {
     [self addObserver:self forKeyPath:kListFilmDetailtableViewCellListsProperty options:NSKeyValueObservingOptionInitial context:nil];
+    [self addObserver:self forKeyPath:kListFilmDetailTableViewCellFilmProperty options:NSKeyValueObservingOptionInitial context:nil];
 }
 
 - (void)unregisterObservers
 {
     [self removeObserver:self forKeyPath:kListFilmDetailtableViewCellListsProperty];
+    [self removeObserver:self forKeyPath:kListFilmDetailTableViewCellFilmProperty];
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
@@ -100,8 +102,8 @@ NSString *const kListFilmDetailTableViewCell = @"cell";
     if ([keyPath isEqualToString:kListFilmDetailtableViewCellListsProperty])
     {
         [self updateControllers];
-        [self reloadData];
     }
+    [self reloadData];
 }
 
 #pragma mark - UITableViewDatasource methods.

@@ -39,8 +39,25 @@
     }
     [self.privateContext save:nil];
     
-    [self fetchFilmsByFilmType:[[films lastObject] valueForKey:kFilmTypeProperty]  andCompletion:^(NSArray *films) {
-        completionBlock(films);
+    [self fetchFilmsByFilmType:[[films lastObject] valueForKey:kFilmTypeProperty]  andCompletion:^(NSArray *fetchedFilms) {
+        
+        NSMutableArray *toRemove = [NSMutableArray array];
+        for (FilmDTO *film in fetchedFilms)
+        {
+            if (![films containsObject:film])
+            {
+                [toRemove addObject:film];
+            }
+        }
+        
+        for (FilmDTO *film in toRemove)
+        {
+            [self deleteFilm:film];
+        }
+        
+        [self fetchFilmsByFilmType:[[films lastObject] valueForKey:kFilmTypeProperty] andCompletion:^(NSArray *foundFilms) {
+            completionBlock(foundFilms);
+        }];
     }];
 }
 
@@ -116,6 +133,20 @@
         }
         
         completionBlock();
+    }
+}
+
+- (void)deleteFilm:(FilmDTO *)film
+{
+    NSFetchRequest *select = [NSFetchRequest fetchRequestWithEntityName:NSStringFromClass([Film class])];
+    select.predicate = [NSPredicate predicateWithFormat:@"%K == %@", kFilmIdProperty, film.filmId];
+    
+    NSError *error;
+    Film *foundFilm = [[self.privateContext executeFetchRequest:select error:&error] firstObject];
+    
+    if (foundFilm)
+    {
+        [self.privateContext deleteObject:foundFilm];
     }
 }
 

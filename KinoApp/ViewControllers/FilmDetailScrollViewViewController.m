@@ -12,6 +12,7 @@
 #import "FilmGenresCollectionView.h"
 #import "FilmCollectionsInTableView.h"
 #import "LoadFilmInteractor.h"
+#import "UIFont+Custom.h"
 
 #define CGRGBA(r, g, b, a) [[UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a] CGColor]
 
@@ -62,6 +63,21 @@ NSString *const kFilmListsTableViewContentSizeProperty = @"filmListsTableView.co
     self.refereceViewTopConstraint.constant = CGRectGetHeight(self.view.frame) - CGRectGetHeight(self.referenceView.frame) - 10.0f;
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+//    CGRect bounds = self.navigationController.navigationBar.bounds;
+//    UIVisualEffectView *visualEffectView = [[UIVisualEffectView alloc] initWithEffect:[UIBlurEffect effectWithStyle:UIBlurEffectStyleLight]];
+//    visualEffectView.frame = bounds;
+//    visualEffectView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+//    [self.navigationController.navigationBar addSubview:visualEffectView];
+//    [self.navigationController.navigationBar setBarTintColor:[UIColor clearColor]];
+//    [self.navigationController.navigationBar setTintColor:[UIColor clearColor]];
+//    [self.navigationController.navigationBar setBackgroundColor:[UIColor clearColor]];
+//    [self.navigationController.navigationBar sendSubviewToBack:visualEffectView];
+//    self.navigationController.navigationBar.alpha = 0.0f;
+}
+
 #pragma mark - Config methods.
 - (void)configItems
 {
@@ -71,12 +87,16 @@ NSString *const kFilmListsTableViewContentSizeProperty = @"filmListsTableView.co
         self.filmOverviewLabel.text = self.film.filmOverview;
         self.filmGenreCollectionView.film = self.film;
         self.filmListsTableView.film = self.film;
+        self.filmPrincipalDataLabel.text = [NSString stringWithFormat:@"%@ minutes  ·  %@", self.film.filmRuntime, self.film.filmYear];
     });
 }
 
 - (void)configStyles
 {
     self.filmTitleLabel.textColor = [UIColor whiteColor];
+    self.filmTitleLabel.font = [UIFont appFontWithSize:30];
+    self.filmPrincipalDataLabel.font = [UIFont appFontWithSize:20.0f];
+    self.filmPrincipalDataLabel.textColor = [UIColor whiteColor];
     self.filmOverviewLabel.textColor = [UIColor whiteColor];
 }
 
@@ -145,7 +165,6 @@ NSString *const kFilmListsTableViewContentSizeProperty = @"filmListsTableView.co
 - (void)dealloc
 {
     [self unregisterObservers];
-    NSLog(@"i death %@", self);
 }
 
 

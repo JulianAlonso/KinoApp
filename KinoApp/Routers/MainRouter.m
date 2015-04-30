@@ -39,7 +39,6 @@
     [[UINavigationBar appearance] setTintColor:[UIColor selectedItemColor]];
     [[UINavigationBar appearance] setBarTintColor:[UIColor appBGColor]];
     [[UINavigationBar appearance] setTranslucent:NO];
-    [[UINavigationBar appearance] setAlpha:0.9f];
     
     [[UISearchBar appearance] setTintColor:[UIColor unselectedItemColor]];
     
