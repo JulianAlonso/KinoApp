@@ -14,8 +14,10 @@
                 <outlet property="filmOverviewLabel" destination="rav-3a-yxA" id="DIb-Mj-ntr"/>
                 <outlet property="filmPrincipalDataLabel" destination="4Pn-jN-3Wu" id="oFG-uJ-lnP"/>
                 <outlet property="filmTitleLabel" destination="mW4-Q9-hGr" id="OxA-4L-FmC"/>
+                <outlet property="gradientLayerView" destination="rhV-F5-DWD" id="TZI-3m-XMs"/>
                 <outlet property="refereceViewTopConstraint" destination="ri0-hs-VeB" id="XZe-zQ-E89"/>
                 <outlet property="referenceView" destination="VXg-yX-wJT" id="aah-hK-ZBN"/>
+                <outlet property="scrollView" destination="u4S-lA-s0T" id="F1f-cA-ZKK"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -30,28 +32,10 @@
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u4S-lA-s0T">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                     <subviews>
-                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="KKu-lQ-Io8" customClass="FilmGenresCollectionView">
-                            <rect key="frame" x="10" y="223" width="580" height="100"/>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rhV-F5-DWD">
+                            <rect key="frame" x="0.0" y="80" width="600" height="1373"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="100" id="5AF-pG-pfi"/>
-                            </constraints>
-                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="bBk-N6-iXr">
-                                <size key="itemSize" width="50" height="50"/>
-                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                            </collectionViewFlowLayout>
-                        </collectionView>
-                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="oiO-xw-V6o" customClass="FilmCollectionsInTableView">
-                            <rect key="frame" x="10" y="343" width="580" height="100"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="100" id="of6-3Q-kAB"/>
-                            </constraints>
-                            <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                            <color key="sectionIndexTrackingBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        </tableView>
+                        </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VXg-yX-wJT">
                             <rect key="frame" x="10" y="100" width="580" height="103"/>
                             <subviews>
@@ -91,16 +75,42 @@
                                 <constraint firstItem="rav-3a-yxA" firstAttribute="leading" secondItem="VXg-yX-wJT" secondAttribute="leading" id="pI2-l9-fBk"/>
                             </constraints>
                         </view>
+                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="KKu-lQ-Io8" customClass="FilmGenresCollectionView">
+                            <rect key="frame" x="10" y="223" width="580" height="100"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="100" id="5AF-pG-pfi"/>
+                            </constraints>
+                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="bBk-N6-iXr">
+                                <size key="itemSize" width="50" height="50"/>
+                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </collectionViewFlowLayout>
+                        </collectionView>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="oiO-xw-V6o" customClass="FilmCollectionsInTableView">
+                            <rect key="frame" x="10" y="343" width="580" height="100"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="100" id="of6-3Q-kAB"/>
+                            </constraints>
+                            <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <color key="sectionIndexTrackingBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        </tableView>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
+                        <constraint firstItem="rhV-F5-DWD" firstAttribute="leading" secondItem="u4S-lA-s0T" secondAttribute="leading" id="0bj-6t-VEC"/>
                         <constraint firstItem="KKu-lQ-Io8" firstAttribute="top" secondItem="VXg-yX-wJT" secondAttribute="bottom" constant="20" id="31x-ST-Ca0"/>
+                        <constraint firstAttribute="bottom" secondItem="rhV-F5-DWD" secondAttribute="bottom" constant="-1000" id="326-3Q-hea"/>
+                        <constraint firstItem="rhV-F5-DWD" firstAttribute="top" secondItem="VXg-yX-wJT" secondAttribute="top" constant="-20" id="3dE-By-Z1e"/>
                         <constraint firstAttribute="bottom" secondItem="oiO-xw-V6o" secondAttribute="bottom" constant="10" id="Etb-eC-CEF"/>
                         <constraint firstItem="VXg-yX-wJT" firstAttribute="leading" secondItem="u4S-lA-s0T" secondAttribute="leading" constant="10" id="GY2-jt-YV2"/>
                         <constraint firstAttribute="trailing" secondItem="KKu-lQ-Io8" secondAttribute="trailing" constant="10" id="GbE-mw-jQv"/>
                         <constraint firstItem="oiO-xw-V6o" firstAttribute="leading" secondItem="u4S-lA-s0T" secondAttribute="leading" constant="10" id="PKH-aB-n8W"/>
                         <constraint firstAttribute="trailing" secondItem="VXg-yX-wJT" secondAttribute="trailing" constant="10" id="QpP-Y9-JRM"/>
                         <constraint firstAttribute="trailing" secondItem="oiO-xw-V6o" secondAttribute="trailing" constant="10" id="dWE-px-KDX"/>
+                        <constraint firstAttribute="trailing" secondItem="rhV-F5-DWD" secondAttribute="trailing" id="lTp-NJ-geX"/>
                         <constraint firstItem="VXg-yX-wJT" firstAttribute="top" secondItem="u4S-lA-s0T" secondAttribute="top" constant="100" id="ri0-hs-VeB"/>
                         <constraint firstItem="KKu-lQ-Io8" firstAttribute="leading" secondItem="u4S-lA-s0T" secondAttribute="leading" constant="10" id="tfT-o6-Z29"/>
                         <constraint firstItem="oiO-xw-V6o" firstAttribute="top" secondItem="KKu-lQ-Io8" secondAttribute="bottom" constant="20" id="yLl-7X-xD2"/>

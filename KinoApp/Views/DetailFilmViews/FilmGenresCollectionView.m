@@ -70,6 +70,7 @@ NSString *const kFilmProperty = @"film";
     if ([keyPath isEqualToString:kFilmProperty])
     {
         [self updateControllers];
+        [self reloadData];
     }
 }
 

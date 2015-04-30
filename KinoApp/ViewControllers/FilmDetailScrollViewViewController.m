@@ -11,12 +11,16 @@
 #import "FilmDTO.h"
 #import "FilmGenresCollectionView.h"
 #import "FilmCollectionsInTableView.h"
+#import "LoadFilmInteractor.h"
+
+#define CGRGBA(r, g, b, a) [[UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a] CGColor]
 
 NSString *const kFilmGenresCollectionViewContentSizeProperty = @"filmGenreCollectionView.contentSize";
 NSString *const kFilmListsTableViewContentSizeProperty = @"filmListsTableView.contentSize";
 
 @interface FilmDetailScrollViewViewController ()
 
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *refereceViewTopConstraint;
 @property (weak, nonatomic) IBOutlet UIView *referenceView;
 @property (weak, nonatomic) IBOutlet UILabel *filmTitleLabel;
@@ -27,6 +31,9 @@ NSString *const kFilmListsTableViewContentSizeProperty = @"filmListsTableView.co
 @property (weak, nonatomic) IBOutlet UIImageView *filmImageView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *filmGenresCollectionViewHeightConstraint;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *filmListTableViewHeightConstraint;
+@property (weak, nonatomic) IBOutlet UIView *gradientLayerView;
+
+@property (nonatomic, strong) CAGradientLayer *backgroundLayer;
 
 @end
 
@@ -37,7 +44,9 @@ NSString *const kFilmListsTableViewContentSizeProperty = @"filmListsTableView.co
     [super viewDidLoad];
     
     [self registerObservers];
+    [self configStyles];
     [self configItems];
+    [self updateFilm];
 }
 
 - (void)didReceiveMemoryWarning
@@ -49,22 +58,55 @@ NSString *const kFilmListsTableViewContentSizeProperty = @"filmListsTableView.co
 {
     [super viewDidLayoutSubviews];
     
+    [self configLayerView];
     self.refereceViewTopConstraint.constant = CGRectGetHeight(self.view.frame) - CGRectGetHeight(self.referenceView.frame) - 10.0f;
 }
 
 #pragma mark - Config methods.
 - (void)configItems
 {
-    [self.filmImageView sd_setImageWithURL:[NSURL URLWithString:self.film.filmPosterPath]];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.filmImageView sd_setImageWithURL:[NSURL URLWithString:self.film.filmPosterPath]];
+        self.filmTitleLabel.text = self.film.filmTitle;
+        self.filmOverviewLabel.text = self.film.filmOverview;
+        self.filmGenreCollectionView.film = self.film;
+        self.filmListsTableView.film = self.film;
+    });
+}
+
+- (void)configStyles
+{
     self.filmTitleLabel.textColor = [UIColor whiteColor];
-    self.filmTitleLabel.text = self.film.filmTitle;
-    self.filmOverviewLabel.text = self.film.filmOverview;
     self.filmOverviewLabel.textColor = [UIColor whiteColor];
-    self.filmGenreCollectionView.film = self.film;
-    self.filmListsTableView.film = self.film;
+}
+
+- (void)configLayerView
+{
+    if (!self.backgroundLayer && self.scrollView.contentSize.width > 0)
+    {
+        self.backgroundLayer = [CAGradientLayer layer];
+        self.backgroundLayer.frame = CGRectMake(0, 0, self.scrollView.contentSize.width, self.scrollView.contentSize.height + 200.0f);
+        self.backgroundLayer.colors = @[(id)[[UIColor clearColor] CGColor], (id)CGRGBA(21, 21, 21, 0.8f)];
+        self.backgroundLayer.startPoint = CGPointMake(0.0f, 0.00f);
+        self.backgroundLayer.endPoint = CGPointMake(0.0f, 0.025f);
+        
+        [self.gradientLayerView.layer addSublayer:self.backgroundLayer];
+    }
 }
 
 #pragma mark - Update methods.
+- (void)updateFilm
+{
+    __weak typeof(self) weakSelf = self;
+    void(^updateFilmBlock)(FilmDTO *film) = ^(FilmDTO *film){
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        strongSelf.film = film;
+        [strongSelf configItems];
+    };
+    
+    [self.loadFilmInteractor loadFilmWithId:self.film.filmId completion:updateFilmBlock update:updateFilmBlock];
+}
+
 - (void)updateFilmGenresCollectionViewHeight
 {
     self.filmGenresCollectionViewHeightConstraint.constant = self.filmGenreCollectionView.contentSize.height;
@@ -103,6 +145,7 @@ NSString *const kFilmListsTableViewContentSizeProperty = @"filmListsTableView.co
 - (void)dealloc
 {
     [self unregisterObservers];
+    NSLog(@"i death %@", self);
 }
 
 
