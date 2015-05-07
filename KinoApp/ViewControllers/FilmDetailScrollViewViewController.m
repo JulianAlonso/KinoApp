@@ -13,6 +13,7 @@
 #import "FilmCollectionsInTableView.h"
 #import "LoadFilmInteractor.h"
 #import "UIFont+Custom.h"
+#import "UIColor+Custom.h"
 
 #define CGRGBA(r, g, b, a) [[UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a] CGColor]
 
@@ -93,6 +94,7 @@ NSString *const kFilmListsTableViewContentSizeProperty = @"filmListsTableView.co
 
 - (void)configStyles
 {
+    self.view.backgroundColor = [UIColor appBGColor];
     self.filmTitleLabel.textColor = [UIColor whiteColor];
     self.filmTitleLabel.font = [UIFont appFontWithSize:30];
     self.filmPrincipalDataLabel.font = [UIFont appFontWithSize:20.0f];

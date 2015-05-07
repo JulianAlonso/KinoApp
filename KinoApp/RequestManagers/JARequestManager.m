@@ -30,7 +30,7 @@ NSString *const kBackgroundSession = @"BackgroundSession";
        
         if (error)
         {
-            completionBlock(nil);
+            completionBlock(data);
         }
         else
         {

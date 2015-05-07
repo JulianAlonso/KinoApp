@@ -118,24 +118,6 @@
 }
 
 #pragma mark - Own methods.
-- (void)deleteFilmsByFilmType:(NSString *)filmType andCompletion:(void (^)())completionBlock
-{
-    NSFetchRequest *select = [NSFetchRequest fetchRequestWithEntityName:NSStringFromClass([Film class])];
-    select.predicate = [NSPredicate predicateWithFormat:@"%K == %@", kFilmTypeProperty, filmType];
-    
-    NSError *error;
-    NSArray *films = [self.privateContext executeFetchRequest:select error:&error];
-    if (!error)
-    {
-        for (Film *film in films)
-        {
-            [self.privateContext deleteObject:film];
-        }
-        
-        completionBlock();
-    }
-}
-
 - (void)deleteFilm:(FilmDTO *)film
 {
     NSFetchRequest *select = [NSFetchRequest fetchRequestWithEntityName:NSStringFromClass([Film class])];
@@ -146,7 +128,15 @@
     
     if (foundFilm)
     {
-        [self.privateContext deleteObject:foundFilm];
+        if ([[foundFilm filmLists] count] == 0)
+        {
+            [self.privateContext deleteObject:foundFilm];
+        }
+        else
+        {
+            foundFilm.filmType = TYPE_OLD;
+            [self.privateContext save:nil];
+        }
     }
 }
 

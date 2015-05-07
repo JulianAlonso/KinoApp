@@ -10,7 +10,7 @@
 
 extern NSString *const TYPE_PLAYIN_NOW;
 extern NSString *const TYPE_UPCOMING;
-
+extern NSString *const TYPE_OLD;
 extern NSString *const kPosterPathProperty;
 
 @interface FilmDTO : NSObject

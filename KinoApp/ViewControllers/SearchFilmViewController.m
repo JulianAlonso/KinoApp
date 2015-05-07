@@ -67,6 +67,7 @@ NSString *const kFilmsProperty = @"films";
     self.searchTableView.delegate = self;
     self.searchTableView.dataSource = self;
     self.searchTableView.backgroundColor = [UIColor appBGColor];
+    self.searchTableView.estimatedRowHeight = 140.0f;
     
     [self.searchTableView registerNib:[UINib nibWithNibName:NSStringFromClass([FilmTableViewCell class]) bundle:nil]
                forCellReuseIdentifier:NSStringFromClass([FilmTableViewCell class])];
