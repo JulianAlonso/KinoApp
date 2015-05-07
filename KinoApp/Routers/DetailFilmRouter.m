@@ -8,7 +8,6 @@
 
 #import "DetailFilmRouter.h"
 #import "FilmDTO.h"
-#import "FilmDetailViewController.h"
 #import "LoadFilmInteractor.h"
 #import "LocalCoreDataFilmsProvider.h"
 #import "ExternalTMDBProvider.h"
@@ -20,7 +19,6 @@
 
 @interface DetailFilmRouter ()
 
-@property (nonatomic, weak) FilmDetailViewController *detailViewController;
 @property (nonatomic, weak) FilmDetailScrollViewViewController *filmDetailScrollViewController;
 
 @end
@@ -29,9 +27,6 @@
 
 - (void)presentFilmDetailViewControllerFrom:(UINavigationController *)navigationController withFilmDTO:(FilmDTO *)film
 {
-//    FilmDetailViewController *filmDetail = [[FilmDetailViewController alloc] initWithNibName:NSStringFromClass([FilmDetailViewController class]) bundle:nil];
-
-    
     FilmDetailScrollViewViewController *filmDetail = [[FilmDetailScrollViewViewController alloc] init];
     filmDetail.film = film;
     
@@ -51,7 +46,7 @@
 
 - (void)popFilmDetailViewController
 {
-    [self.detailViewController.navigationController popViewControllerAnimated:YES];
+    [self.filmDetailScrollViewController.navigationController popViewControllerAnimated:YES];
 }
 
 @end

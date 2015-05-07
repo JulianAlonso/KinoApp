@@ -15,8 +15,4 @@
 
 + (CGSize)filmDetailGenreCollectionViewCellSizeForGenre:(GenreDTO *)genre;
 
-+ (CGFloat)titleFilmDetailTableViewCellHeightForFilm:(FilmDTO *)film andWidth:(CGFloat)width;
-+ (CGFloat)principalFilmDetailTableViewCellHeightForFilm:(FilmDTO *)film andWidth:(CGFloat)width;
-+ (CGFloat)overviewFilmDetailTableViewCellHeightForFilm:(FilmDTO *)film andWidth:(CGFloat)width;
-
 @end

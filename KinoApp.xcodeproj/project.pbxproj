@@ -52,8 +52,6 @@
 		0121765E1ABC3D8F00EDA095 /* FilmTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0121765C1ABC3D8F00EDA095 /* FilmTableViewCell.xib */; };
 		012203EA1AEE445F008ABF5B /* FilmGenresCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 012203E91AEE445F008ABF5B /* FilmGenresCollectionView.m */; };
 		012203ED1AEE4C02008ABF5B /* FilmCollectionsInTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 012203EC1AEE4C02008ABF5B /* FilmCollectionsInTableView.m */; };
-		012C6B7F1AB99F580060A49C /* FilmDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 012C6B7D1AB99F580060A49C /* FilmDetailViewController.m */; };
-		012C6B801AB99F580060A49C /* FilmDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 012C6B7E1AB99F580060A49C /* FilmDetailViewController.xib */; };
 		012C6B851AB9C3EE0060A49C /* DetailFilmRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 012C6B841AB9C3EE0060A49C /* DetailFilmRouter.m */; };
 		012C6B881AB9D3290060A49C /* LoadFilmInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 012C6B871AB9D3290060A49C /* LoadFilmInteractor.m */; };
 		012C6B8B1ABA000E0060A49C /* FetchAllListsInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 012C6B8A1ABA000E0060A49C /* FetchAllListsInteractor.m */; };
@@ -94,23 +92,7 @@
 		01B875AC1AC45FE200BD69EB /* GenreFilmDetailCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01B875AA1AC45FE200BD69EB /* GenreFilmDetailCollectionViewCell.xib */; };
 		01B875AF1AC470DE00BD69EB /* SizeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B875AE1AC470DE00BD69EB /* SizeHelper.m */; };
 		01F0C0F21AC1A0220009E061 /* UISearchBar+Custom.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F0C0F11AC1A0220009E061 /* UISearchBar+Custom.m */; };
-		01F0C1001AC1D8F80009E061 /* TitleFilmDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F0C0FE1AC1D8F80009E061 /* TitleFilmDetailTableViewCell.m */; };
-		01F0C1011AC1D8F80009E061 /* TitleFilmDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01F0C0FF1AC1D8F80009E061 /* TitleFilmDetailTableViewCell.xib */; };
-		01F0C1051AC1D9140009E061 /* OverviewFilmDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F0C1031AC1D9140009E061 /* OverviewFilmDetailTableViewCell.m */; };
-		01F0C1061AC1D9140009E061 /* OverviewFilmDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01F0C1041AC1D9140009E061 /* OverviewFilmDetailTableViewCell.xib */; };
-		01F0C10A1AC1D92E0009E061 /* GenresFilmDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F0C1081AC1D92E0009E061 /* GenresFilmDetailTableViewCell.m */; };
-		01F0C10B1AC1D92E0009E061 /* GenresFilmDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01F0C1091AC1D92E0009E061 /* GenresFilmDetailTableViewCell.xib */; };
-		01F0C10F1AC1D94B0009E061 /* ListFilmDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F0C10D1AC1D94B0009E061 /* ListFilmDetailTableViewCell.m */; };
-		01F0C1101AC1D94B0009E061 /* ListFilmDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01F0C10E1AC1D94B0009E061 /* ListFilmDetailTableViewCell.xib */; };
-		01F0C1141AC1DE230009E061 /* FilmDetailTableViewCellFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F0C1131AC1DE230009E061 /* FilmDetailTableViewCellFactory.m */; };
-		01F0C1181AC1DEAC0009E061 /* TitleFilmDetailTableViewCellController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F0C1171AC1DEAC0009E061 /* TitleFilmDetailTableViewCellController.m */; };
-		01F0C11E1AC1DEDC0009E061 /* GenresFilmDetailTableViewCellController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F0C11D1AC1DEDC0009E061 /* GenresFilmDetailTableViewCellController.m */; };
-		01F0C1211AC1DEF60009E061 /* OverviewFilmDetailTableViewCellController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F0C1201AC1DEF60009E061 /* OverviewFilmDetailTableViewCellController.m */; };
-		01F0C1241AC1DF050009E061 /* ListsFilmDetailTableViewCellController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F0C1231AC1DF050009E061 /* ListsFilmDetailTableViewCellController.m */; };
 		01FC73A21AC2D358003DC161 /* FilmFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 01FC73A11AC2D358003DC161 /* FilmFilter.m */; };
-		01FC73A91AC3084D003DC161 /* PrincipalDataFilmDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 01FC73A71AC3084D003DC161 /* PrincipalDataFilmDetailTableViewCell.m */; };
-		01FC73AA1AC3084D003DC161 /* PrincipalDataFilmDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01FC73A81AC3084D003DC161 /* PrincipalDataFilmDetailTableViewCell.xib */; };
-		01FC73AD1AC3089B003DC161 /* PrincipalDataFilmDetailTableViewCellController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01FC73AC1AC3089B003DC161 /* PrincipalDataFilmDetailTableViewCellController.m */; };
 		F2F038238A73F7DA954B4244 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F855DE3F67C9EF3B55C10712 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -211,9 +193,6 @@
 		012203E91AEE445F008ABF5B /* FilmGenresCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FilmGenresCollectionView.m; path = Views/DetailFilmViews/FilmGenresCollectionView.m; sourceTree = "<group>"; };
 		012203EB1AEE4C02008ABF5B /* FilmCollectionsInTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FilmCollectionsInTableView.h; path = Views/DetailFilmViews/FilmCollectionsInTableView.h; sourceTree = "<group>"; };
 		012203EC1AEE4C02008ABF5B /* FilmCollectionsInTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FilmCollectionsInTableView.m; path = Views/DetailFilmViews/FilmCollectionsInTableView.m; sourceTree = "<group>"; };
-		012C6B7C1AB99F580060A49C /* FilmDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FilmDetailViewController.h; path = ViewControllers/FilmDetailViewController.h; sourceTree = "<group>"; };
-		012C6B7D1AB99F580060A49C /* FilmDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FilmDetailViewController.m; path = ViewControllers/FilmDetailViewController.m; sourceTree = "<group>"; };
-		012C6B7E1AB99F580060A49C /* FilmDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FilmDetailViewController.xib; path = ViewControllers/FilmDetailViewController.xib; sourceTree = "<group>"; };
 		012C6B821AB9A3D00060A49C /* BillboardFilmCollectionEventReceiver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BillboardFilmCollectionEventReceiver.h; path = Delegates/EventReceiver/BillboardFilmCollectionEventReceiver.h; sourceTree = "<group>"; };
 		012C6B831AB9C3EE0060A49C /* DetailFilmRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailFilmRouter.h; path = Routers/DetailFilmRouter.h; sourceTree = "<group>"; };
 		012C6B841AB9C3EE0060A49C /* DetailFilmRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailFilmRouter.m; path = Routers/DetailFilmRouter.m; sourceTree = "<group>"; };
@@ -292,37 +271,8 @@
 		01B875AE1AC470DE00BD69EB /* SizeHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SizeHelper.m; path = Helpers/SizeHelper.m; sourceTree = "<group>"; };
 		01F0C0F01AC1A0220009E061 /* UISearchBar+Custom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UISearchBar+Custom.h"; path = "Categories/UISearchBar+Custom.h"; sourceTree = "<group>"; };
 		01F0C0F11AC1A0220009E061 /* UISearchBar+Custom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UISearchBar+Custom.m"; path = "Categories/UISearchBar+Custom.m"; sourceTree = "<group>"; };
-		01F0C0FD1AC1D8F80009E061 /* TitleFilmDetailTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TitleFilmDetailTableViewCell.h; path = Views/DetailFilmTableViewCells/TitleFilmDetailTableViewCell.h; sourceTree = "<group>"; };
-		01F0C0FE1AC1D8F80009E061 /* TitleFilmDetailTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TitleFilmDetailTableViewCell.m; path = Views/DetailFilmTableViewCells/TitleFilmDetailTableViewCell.m; sourceTree = "<group>"; };
-		01F0C0FF1AC1D8F80009E061 /* TitleFilmDetailTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TitleFilmDetailTableViewCell.xib; path = Views/DetailFilmTableViewCells/TitleFilmDetailTableViewCell.xib; sourceTree = "<group>"; };
-		01F0C1021AC1D9140009E061 /* OverviewFilmDetailTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OverviewFilmDetailTableViewCell.h; path = Views/DetailFilmTableViewCells/OverviewFilmDetailTableViewCell.h; sourceTree = "<group>"; };
-		01F0C1031AC1D9140009E061 /* OverviewFilmDetailTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OverviewFilmDetailTableViewCell.m; path = Views/DetailFilmTableViewCells/OverviewFilmDetailTableViewCell.m; sourceTree = "<group>"; };
-		01F0C1041AC1D9140009E061 /* OverviewFilmDetailTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = OverviewFilmDetailTableViewCell.xib; path = Views/DetailFilmTableViewCells/OverviewFilmDetailTableViewCell.xib; sourceTree = "<group>"; };
-		01F0C1071AC1D92E0009E061 /* GenresFilmDetailTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GenresFilmDetailTableViewCell.h; path = Views/DetailFilmTableViewCells/GenresFilmDetailTableViewCell.h; sourceTree = "<group>"; };
-		01F0C1081AC1D92E0009E061 /* GenresFilmDetailTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GenresFilmDetailTableViewCell.m; path = Views/DetailFilmTableViewCells/GenresFilmDetailTableViewCell.m; sourceTree = "<group>"; };
-		01F0C1091AC1D92E0009E061 /* GenresFilmDetailTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GenresFilmDetailTableViewCell.xib; path = Views/DetailFilmTableViewCells/GenresFilmDetailTableViewCell.xib; sourceTree = "<group>"; };
-		01F0C10C1AC1D94B0009E061 /* ListFilmDetailTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ListFilmDetailTableViewCell.h; path = Views/DetailFilmTableViewCells/ListFilmDetailTableViewCell.h; sourceTree = "<group>"; };
-		01F0C10D1AC1D94B0009E061 /* ListFilmDetailTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ListFilmDetailTableViewCell.m; path = Views/DetailFilmTableViewCells/ListFilmDetailTableViewCell.m; sourceTree = "<group>"; };
-		01F0C10E1AC1D94B0009E061 /* ListFilmDetailTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ListFilmDetailTableViewCell.xib; path = Views/DetailFilmTableViewCells/ListFilmDetailTableViewCell.xib; sourceTree = "<group>"; };
-		01F0C1111AC1DDB50009E061 /* FilmDetailViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FilmDetailViewCell.h; path = Views/DetailFilmTableViewCells/FilmDetailViewCell.h; sourceTree = "<group>"; };
-		01F0C1121AC1DE230009E061 /* FilmDetailTableViewCellFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FilmDetailTableViewCellFactory.h; path = Factories/FilmDetailTableViewCellFactory.h; sourceTree = "<group>"; };
-		01F0C1131AC1DE230009E061 /* FilmDetailTableViewCellFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FilmDetailTableViewCellFactory.m; path = Factories/FilmDetailTableViewCellFactory.m; sourceTree = "<group>"; };
-		01F0C1161AC1DEAC0009E061 /* TitleFilmDetailTableViewCellController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TitleFilmDetailTableViewCellController.h; path = Controllers/DetailFilmTableViewCellControllers/TitleFilmDetailTableViewCellController.h; sourceTree = "<group>"; };
-		01F0C1171AC1DEAC0009E061 /* TitleFilmDetailTableViewCellController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TitleFilmDetailTableViewCellController.m; path = Controllers/DetailFilmTableViewCellControllers/TitleFilmDetailTableViewCellController.m; sourceTree = "<group>"; };
-		01F0C11C1AC1DEDC0009E061 /* GenresFilmDetailTableViewCellController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GenresFilmDetailTableViewCellController.h; path = Controllers/DetailFilmTableViewCellControllers/GenresFilmDetailTableViewCellController.h; sourceTree = "<group>"; };
-		01F0C11D1AC1DEDC0009E061 /* GenresFilmDetailTableViewCellController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GenresFilmDetailTableViewCellController.m; path = Controllers/DetailFilmTableViewCellControllers/GenresFilmDetailTableViewCellController.m; sourceTree = "<group>"; };
-		01F0C11F1AC1DEF60009E061 /* OverviewFilmDetailTableViewCellController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OverviewFilmDetailTableViewCellController.h; path = Controllers/DetailFilmTableViewCellControllers/OverviewFilmDetailTableViewCellController.h; sourceTree = "<group>"; };
-		01F0C1201AC1DEF60009E061 /* OverviewFilmDetailTableViewCellController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OverviewFilmDetailTableViewCellController.m; path = Controllers/DetailFilmTableViewCellControllers/OverviewFilmDetailTableViewCellController.m; sourceTree = "<group>"; };
-		01F0C1221AC1DF050009E061 /* ListsFilmDetailTableViewCellController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ListsFilmDetailTableViewCellController.h; path = Controllers/DetailFilmTableViewCellControllers/ListsFilmDetailTableViewCellController.h; sourceTree = "<group>"; };
-		01F0C1231AC1DF050009E061 /* ListsFilmDetailTableViewCellController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ListsFilmDetailTableViewCellController.m; path = Controllers/DetailFilmTableViewCellControllers/ListsFilmDetailTableViewCellController.m; sourceTree = "<group>"; };
-		01F0C1251AC1DF8C0009E061 /* DetailFilmTableViewCellController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailFilmTableViewCellController.h; path = Controllers/DetailFilmTableViewCellControllers/DetailFilmTableViewCellController.h; sourceTree = "<group>"; };
 		01FC73A01AC2D358003DC161 /* FilmFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FilmFilter.h; path = Helpers/FilmFilter.h; sourceTree = "<group>"; };
 		01FC73A11AC2D358003DC161 /* FilmFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FilmFilter.m; path = Helpers/FilmFilter.m; sourceTree = "<group>"; };
-		01FC73A61AC3084D003DC161 /* PrincipalDataFilmDetailTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PrincipalDataFilmDetailTableViewCell.h; path = Views/DetailFilmTableViewCells/PrincipalDataFilmDetailTableViewCell.h; sourceTree = "<group>"; };
-		01FC73A71AC3084D003DC161 /* PrincipalDataFilmDetailTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PrincipalDataFilmDetailTableViewCell.m; path = Views/DetailFilmTableViewCells/PrincipalDataFilmDetailTableViewCell.m; sourceTree = "<group>"; };
-		01FC73A81AC3084D003DC161 /* PrincipalDataFilmDetailTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PrincipalDataFilmDetailTableViewCell.xib; path = Views/DetailFilmTableViewCells/PrincipalDataFilmDetailTableViewCell.xib; sourceTree = "<group>"; };
-		01FC73AB1AC3089B003DC161 /* PrincipalDataFilmDetailTableViewCellController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PrincipalDataFilmDetailTableViewCellController.h; path = Controllers/DetailFilmTableViewCellControllers/PrincipalDataFilmDetailTableViewCellController.h; sourceTree = "<group>"; };
-		01FC73AC1AC3089B003DC161 /* PrincipalDataFilmDetailTableViewCellController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PrincipalDataFilmDetailTableViewCellController.m; path = Controllers/DetailFilmTableViewCellControllers/PrincipalDataFilmDetailTableViewCellController.m; sourceTree = "<group>"; };
 		57E47FC539F669D5601D3966 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		EFBDA11DA5EC569FCCB52E47 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		F855DE3F67C9EF3B55C10712 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -500,9 +450,6 @@
 				01068F2D1AB725490017F91A /* BillboardViewController.h */,
 				01068F2E1AB725490017F91A /* BillboardViewController.m */,
 				01068F2F1AB725490017F91A /* BillboardViewController.xib */,
-				012C6B7C1AB99F580060A49C /* FilmDetailViewController.h */,
-				012C6B7D1AB99F580060A49C /* FilmDetailViewController.m */,
-				012C6B7E1AB99F580060A49C /* FilmDetailViewController.xib */,
 				012C6B8C1ABA006D0060A49C /* ListsCollectionViewController.h */,
 				012C6B8D1ABA006D0060A49C /* ListsCollectionViewController.m */,
 				012C6B8E1ABA006D0060A49C /* ListsCollectionViewController.xib */,
@@ -541,7 +488,8 @@
 				01068F4E1AB752840017F91A /* CollectionFilmsCollectionViewCell.h */,
 				01068F4F1AB752840017F91A /* CollectionFilmsCollectionViewCell.m */,
 				01068F501AB752840017F91A /* CollectionFilmsCollectionViewCell.xib */,
-				01F0C0FC1AC1D5850009E061 /* DetailFilmTableViewCells */,
+				011C92C61AC428F90097EE10 /* GenresFilmDetailCollectionCells */,
+				01453E6A1AC3241000F8ADC6 /* ListTableViewCells */,
 				013955721ABAE05800BC745D /* ListsCells */,
 				0121765F1ABC3D9300EDA095 /* FilmCells */,
 			);
@@ -571,14 +519,14 @@
 			name = Transitions;
 			sourceTree = "<group>";
 		};
-		011C92C61AC428F90097EE10 /* GenresFilmDetailTableViewCellCollectionCells */ = {
+		011C92C61AC428F90097EE10 /* GenresFilmDetailCollectionCells */ = {
 			isa = PBXGroup;
 			children = (
 				01B875A81AC45FE200BD69EB /* GenreFilmDetailCollectionViewCell.h */,
 				01B875A91AC45FE200BD69EB /* GenreFilmDetailCollectionViewCell.m */,
 				01B875AA1AC45FE200BD69EB /* GenreFilmDetailCollectionViewCell.xib */,
 			);
-			name = GenresFilmDetailTableViewCellCollectionCells;
+			name = GenresFilmDetailCollectionCells;
 			sourceTree = "<group>";
 		};
 		011C92CC1AC42A470097EE10 /* GenresFilmDetailTableViewCellCollectionCellControllers */ = {
@@ -625,7 +573,8 @@
 		012C6B9D1ABA0EBA0060A49C /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				01F0C1151AC1DE690009E061 /* DetailFilmTableViewCellControllers */,
+				011C92CC1AC42A470097EE10 /* GenresFilmDetailTableViewCellCollectionCellControllers */,
+				01453E751AC32AB100F8ADC6 /* FilmDetailListTableViewCellControllers */,
 				012C6B9E1ABA0EE70060A49C /* FilmListCollectionViewCellController.h */,
 				012C6B9F1ABA0EE70060A49C /* FilmListCollectionViewCellController.m */,
 				012176571ABC3D6700EDA095 /* FilmCollectionViewCellController.h */,
@@ -684,8 +633,6 @@
 				0158344E1AB84AAA007E0AC4 /* RequestManagerFactory.m */,
 				0117596D1ABAF5E700724BC5 /* ControllersFactory.h */,
 				0117596E1ABAF5E700724BC5 /* ControllersFactory.m */,
-				01F0C1121AC1DE230009E061 /* FilmDetailTableViewCellFactory.h */,
-				01F0C1131AC1DE230009E061 /* FilmDetailTableViewCellFactory.m */,
 				01453E791AC32D0300F8ADC6 /* InteractorsFactory.h */,
 				01453E7A1AC32D0300F8ADC6 /* InteractorsFactory.m */,
 			);
@@ -754,51 +701,6 @@
 				01F0C0F11AC1A0220009E061 /* UISearchBar+Custom.m */,
 			);
 			name = Categories;
-			sourceTree = "<group>";
-		};
-		01F0C0FC1AC1D5850009E061 /* DetailFilmTableViewCells */ = {
-			isa = PBXGroup;
-			children = (
-				01F0C1111AC1DDB50009E061 /* FilmDetailViewCell.h */,
-				01F0C0FD1AC1D8F80009E061 /* TitleFilmDetailTableViewCell.h */,
-				01F0C0FE1AC1D8F80009E061 /* TitleFilmDetailTableViewCell.m */,
-				01F0C0FF1AC1D8F80009E061 /* TitleFilmDetailTableViewCell.xib */,
-				01FC73A61AC3084D003DC161 /* PrincipalDataFilmDetailTableViewCell.h */,
-				01FC73A71AC3084D003DC161 /* PrincipalDataFilmDetailTableViewCell.m */,
-				01FC73A81AC3084D003DC161 /* PrincipalDataFilmDetailTableViewCell.xib */,
-				01F0C1021AC1D9140009E061 /* OverviewFilmDetailTableViewCell.h */,
-				01F0C1031AC1D9140009E061 /* OverviewFilmDetailTableViewCell.m */,
-				01F0C1041AC1D9140009E061 /* OverviewFilmDetailTableViewCell.xib */,
-				01F0C1071AC1D92E0009E061 /* GenresFilmDetailTableViewCell.h */,
-				01F0C1081AC1D92E0009E061 /* GenresFilmDetailTableViewCell.m */,
-				01F0C1091AC1D92E0009E061 /* GenresFilmDetailTableViewCell.xib */,
-				011C92C61AC428F90097EE10 /* GenresFilmDetailTableViewCellCollectionCells */,
-				01F0C10C1AC1D94B0009E061 /* ListFilmDetailTableViewCell.h */,
-				01F0C10D1AC1D94B0009E061 /* ListFilmDetailTableViewCell.m */,
-				01F0C10E1AC1D94B0009E061 /* ListFilmDetailTableViewCell.xib */,
-				01453E6A1AC3241000F8ADC6 /* ListTableViewCells */,
-			);
-			name = DetailFilmTableViewCells;
-			sourceTree = "<group>";
-		};
-		01F0C1151AC1DE690009E061 /* DetailFilmTableViewCellControllers */ = {
-			isa = PBXGroup;
-			children = (
-				01F0C1251AC1DF8C0009E061 /* DetailFilmTableViewCellController.h */,
-				01F0C1161AC1DEAC0009E061 /* TitleFilmDetailTableViewCellController.h */,
-				01F0C1171AC1DEAC0009E061 /* TitleFilmDetailTableViewCellController.m */,
-				01FC73AB1AC3089B003DC161 /* PrincipalDataFilmDetailTableViewCellController.h */,
-				01FC73AC1AC3089B003DC161 /* PrincipalDataFilmDetailTableViewCellController.m */,
-				01F0C11F1AC1DEF60009E061 /* OverviewFilmDetailTableViewCellController.h */,
-				01F0C1201AC1DEF60009E061 /* OverviewFilmDetailTableViewCellController.m */,
-				01F0C11C1AC1DEDC0009E061 /* GenresFilmDetailTableViewCellController.h */,
-				01F0C11D1AC1DEDC0009E061 /* GenresFilmDetailTableViewCellController.m */,
-				011C92CC1AC42A470097EE10 /* GenresFilmDetailTableViewCellCollectionCellControllers */,
-				01F0C1221AC1DF050009E061 /* ListsFilmDetailTableViewCellController.h */,
-				01F0C1231AC1DF050009E061 /* ListsFilmDetailTableViewCellController.m */,
-				01453E751AC32AB100F8ADC6 /* FilmDetailListTableViewCellControllers */,
-			);
-			name = DetailFilmTableViewCellControllers;
 			sourceTree = "<group>";
 		};
 		0B24B96251924E16800F2BD5 /* Pods */ = {
@@ -903,14 +805,10 @@
 			files = (
 				01068F3C1AB72D480017F91A /* BillboardFilmCollectionViewCell.xib in Resources */,
 				0121765E1ABC3D8F00EDA095 /* FilmTableViewCell.xib in Resources */,
-				01F0C1011AC1D8F80009E061 /* TitleFilmDetailTableViewCell.xib in Resources */,
 				01068EDF1AB7011D0017F91A /* LaunchScreen.xib in Resources */,
 				012C6B901ABA006D0060A49C /* ListsCollectionViewController.xib in Resources */,
-				01F0C1101AC1D94B0009E061 /* ListFilmDetailTableViewCell.xib in Resources */,
-				01F0C1061AC1D9140009E061 /* OverviewFilmDetailTableViewCell.xib in Resources */,
 				01068F521AB752840017F91A /* CollectionFilmsCollectionViewCell.xib in Resources */,
 				015AB17E1ABC6A3000D2CBAA /* SearchFilmViewController.xib in Resources */,
-				01FC73AA1AC3084D003DC161 /* PrincipalDataFilmDetailTableViewCell.xib in Resources */,
 				01562BC31AEA53CB003EEDC8 /* FilmDetailScrollViewViewController.xib in Resources */,
 				012C6B981ABA0A070060A49C /* FilmListCollectionViewCell.xib in Resources */,
 				01453E741AC325AF00F8ADC6 /* FilmDetailListTableViewCell.xib in Resources */,
@@ -918,9 +816,7 @@
 				01B875AC1AC45FE200BD69EB /* GenreFilmDetailCollectionViewCell.xib in Resources */,
 				01068EDC1AB7011D0017F91A /* Images.xcassets in Resources */,
 				0117597C1ABB3B1200724BC5 /* ListTableViewCell.xib in Resources */,
-				01F0C10B1AC1D92E0009E061 /* GenresFilmDetailTableViewCell.xib in Resources */,
 				011759771ABB390600724BC5 /* SelectListViewController.xib in Resources */,
-				012C6B801AB99F580060A49C /* FilmDetailViewController.xib in Resources */,
 				012176561ABC330D00EDA095 /* ListDetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -974,13 +870,11 @@
 			files = (
 				013955681ABAD7A500BC745D /* List.m in Sources */,
 				011C92CF1AC42A950097EE10 /* FilmDetailGenreCollectionViewCellController.m in Sources */,
-				01F0C1001AC1D8F80009E061 /* TitleFilmDetailTableViewCell.m in Sources */,
 				01562BC21AEA53CB003EEDC8 /* FilmDetailScrollViewViewController.m in Sources */,
 				012C6B8F1ABA006D0060A49C /* ListsCollectionViewController.m in Sources */,
 				01453E731AC325AF00F8ADC6 /* FilmDetailListTableViewCell.m in Sources */,
 				0117597F1ABB410600724BC5 /* SelectListRouter.m in Sources */,
 				01038D221AC05A2800B88A8A /* UIFont+Custom.m in Sources */,
-				01F0C1051AC1D9140009E061 /* OverviewFilmDetailTableViewCell.m in Sources */,
 				01068F581AB7546A0017F91A /* BillboardFilmsCollectionDelegate.m in Sources */,
 				011C92C51AC424FA0097EE10 /* Genre.m in Sources */,
 				01068EFC1AB702CC0017F91A /* CoreDataStack.m in Sources */,
@@ -990,29 +884,21 @@
 				01B875AB1AC45FE200BD69EB /* GenreFilmDetailCollectionViewCell.m in Sources */,
 				011759831ABB429E00724BC5 /* SelectListModalTransitionAnimator.m in Sources */,
 				01068F4A1AB74E1F0017F91A /* LoadUpcomingFilmsInteractor.m in Sources */,
-				01FC73AD1AC3089B003DC161 /* PrincipalDataFilmDetailTableViewCellController.m in Sources */,
 				011C92B61AC410C90097EE10 /* GenreDTO.m in Sources */,
 				0158344F1AB84AAA007E0AC4 /* RequestManagerFactory.m in Sources */,
-				01F0C11E1AC1DEDC0009E061 /* GenresFilmDetailTableViewCellController.m in Sources */,
-				01F0C1141AC1DE230009E061 /* FilmDetailTableViewCellFactory.m in Sources */,
 				01068F301AB725490017F91A /* BillboardViewController.m in Sources */,
 				0117596F1ABAF5E700724BC5 /* ControllersFactory.m in Sources */,
 				018F9DD41AB89B4D0046D3C4 /* Film+Model.m in Sources */,
 				012C6B971ABA0A070060A49C /* FilmListCollectionViewCell.m in Sources */,
-				01F0C1241AC1DF050009E061 /* ListsFilmDetailTableViewCellController.m in Sources */,
 				012203ED1AEE4C02008ABF5B /* FilmCollectionsInTableView.m in Sources */,
 				0139556B1ABAD8EA00BC745D /* ListDTOParser.m in Sources */,
 				01068ED41AB7011D0017F91A /* KinoApp.xcdatamodeld in Sources */,
-				01F0C1181AC1DEAC0009E061 /* TitleFilmDetailTableViewCellController.m in Sources */,
 				011C92C21AC421AC0097EE10 /* Genre+Model.m in Sources */,
 				01068ED11AB7011D0017F91A /* AppDelegate.m in Sources */,
 				012C6BAB1ABA14A70060A49C /* LocalCoreDataListsProvider.m in Sources */,
 				018F9DCD1AB896200046D3C4 /* LocalCoreDataFilmsProvider.m in Sources */,
-				012C6B7F1AB99F580060A49C /* FilmDetailViewController.m in Sources */,
-				01F0C10F1AC1D94B0009E061 /* ListFilmDetailTableViewCell.m in Sources */,
 				01453E7B1AC32D0300F8ADC6 /* InteractorsFactory.m in Sources */,
 				012176591ABC3D6700EDA095 /* FilmCollectionViewCellController.m in Sources */,
-				01F0C1211AC1DEF60009E061 /* OverviewFilmDetailTableViewCellController.m in Sources */,
 				01453E7E1AC348BD00F8ADC6 /* RemoveFilmFromListInteractor.m in Sources */,
 				015AB17D1ABC6A3000D2CBAA /* SearchFilmViewController.m in Sources */,
 				01038D1F1AC0516200B88A8A /* UIColor+Custom.m in Sources */,
@@ -1026,7 +912,6 @@
 				015AB1811ABC6C3800D2CBAA /* LoadPopularFilmsInteractor.m in Sources */,
 				0121765D1ABC3D8F00EDA095 /* FilmTableViewCell.m in Sources */,
 				012C6B881AB9D3290060A49C /* LoadFilmInteractor.m in Sources */,
-				01F0C10A1AC1D92E0009E061 /* GenresFilmDetailTableViewCell.m in Sources */,
 				011759721ABB291F00724BC5 /* AddFilmToListInteractor.m in Sources */,
 				011C92B91AC411C70097EE10 /* GenreDTOParser.m in Sources */,
 				018F9DD01AB896F90046D3C4 /* CoreDataManager.m in Sources */,
@@ -1046,7 +931,6 @@
 				011759761ABB390600724BC5 /* SelectListViewController.m in Sources */,
 				012C6B851AB9C3EE0060A49C /* DetailFilmRouter.m in Sources */,
 				012C6BA61ABA107D0060A49C /* ListDTO.m in Sources */,
-				01FC73A91AC3084D003DC161 /* PrincipalDataFilmDetailTableViewCell.m in Sources */,
 				0115B7251AC3630800F38A7D /* UpdateListInteractor.m in Sources */,
 				01068F471AB747F00017F91A /* ExternalTMDBProvider.m in Sources */,
 				015834561AB862B4007E0AC4 /* URLHelper.m in Sources */,
