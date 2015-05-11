@@ -16,6 +16,7 @@
 #import "UIColor+Custom.h"
 #import "UISearchBar+Custom.h"
 #import "UIFont+Custom.h"
+#import "ReachabilityHelper.h"
 
 NSString *const kFilmsProperty = @"films";
 
@@ -24,6 +25,7 @@ NSString *const kFilmsProperty = @"films";
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *topConstraint;
 @property (weak, nonatomic) IBOutlet UITableView *searchTableView;
 @property (nonatomic, strong) UISearchBar *searchBar;
+@property (weak, nonatomic) IBOutlet UILabel *infoLabel;
 
 @property (nonatomic, strong) NSArray *films;
 @property (nonatomic, strong) NSArray *controllers;
@@ -37,11 +39,13 @@ NSString *const kFilmsProperty = @"films";
 {
     [super viewDidLoad];
     
+    [self configStyles];
     [self registerToObserveFilms];
     [self loadPopularFilms];
     [self configSearchTableView];
     [self configSearchBar];
     [self configNavBar];
+    [self checkInternetConnection];
 }
 
 - (void)viewDidLayoutSubviews
@@ -60,13 +64,16 @@ NSString *const kFilmsProperty = @"films";
 - (void)configStyles
 {
     self.view.backgroundColor = [UIColor appBGColor];
+    self.infoLabel.alpha = 0.0f;
+    self.infoLabel.font = [UIFont appFontWithSize:30.0f];
+    self.infoLabel.textColor = [UIColor unselectedItemColor];
 }
 
 - (void)configSearchTableView
 {
     self.searchTableView.delegate = self;
     self.searchTableView.dataSource = self;
-    self.searchTableView.backgroundColor = [UIColor appBGColor];
+    self.searchTableView.backgroundColor = [UIColor clearColor];
     self.searchTableView.estimatedRowHeight = 140.0f;
     
     [self.searchTableView registerNib:[UINib nibWithNibName:NSStringFromClass([FilmTableViewCell class]) bundle:nil]
@@ -93,6 +100,18 @@ NSString *const kFilmsProperty = @"films";
                                                                                            target:self
                                                                                            action:@selector(cancelButtonPressed)];
     self.navigationItem.hidesBackButton = YES;
+}
+
+#pragma mark - Check methods.
+- (void)checkInternetConnection
+{
+    if (![ReachabilityHelper internetConnection])
+    {
+        self.infoLabel.alpha = 1.0f;
+        self.searchTableView.alpha = 0.0f;
+        self.infoLabel.text = @"No hay internet tio";
+        self.searchBar.userInteractionEnabled = NO;
+    }
 }
 
 #pragma mark - Load methods.

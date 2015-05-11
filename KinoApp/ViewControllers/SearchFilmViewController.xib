@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchFilmViewController">
             <connections>
+                <outlet property="infoLabel" destination="jS8-oe-eRg" id="NzI-dZ-8nH"/>
                 <outlet property="searchDisplayController" destination="KSO-pJ-ZqL" id="Ems-iz-cIN"/>
                 <outlet property="searchTableView" destination="F7F-ub-yQH" id="gEC-2F-nUw"/>
                 <outlet property="topConstraint" destination="tFu-45-JNt" id="I9I-fx-zWM"/>
@@ -17,6 +18,12 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jS8-oe-eRg" userLabel="No internet label">
+                    <rect key="frame" x="279" y="20" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="F7F-ub-yQH">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -24,7 +31,9 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="jS8-oe-eRg" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="NZ5-aU-p9G"/>
                 <constraint firstAttribute="bottom" secondItem="F7F-ub-yQH" secondAttribute="bottom" id="NmY-YS-dna"/>
+                <constraint firstAttribute="centerX" secondItem="jS8-oe-eRg" secondAttribute="centerX" id="Tg0-rZ-JVu"/>
                 <constraint firstAttribute="trailing" secondItem="F7F-ub-yQH" secondAttribute="trailing" id="XOu-B4-sHg"/>
                 <constraint firstItem="F7F-ub-yQH" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="tFu-45-JNt"/>
                 <constraint firstItem="F7F-ub-yQH" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="uTQ-5Z-cvC"/>
