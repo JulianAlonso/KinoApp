@@ -14,41 +14,28 @@
 #import "DetailFilmRouter.h"
 #import "LocalCoreDataListsProvider.h"
 #import "UpdateListInteractor.h"
-
-@interface DetailListRouter ()
-
-@property (nonatomic, weak) ListDetailViewController *listDetailViewController;
-
-@end
+#import "RouterAssembly.h"
 
 @implementation DetailListRouter
 
 - (void)presentDetailListViewControllerFrom:(UIViewController *)fromViewController withList:(ListDTO *)list
 {
-    ListDetailViewController *listDetailViewController = [ListDetailViewController new];
+    self.listDetailViewController.list = list;
     
-    UpdateListInteractor *updateListInteractor = [UpdateListInteractor new];
-    updateListInteractor.localListProvider = [LocalCoreDataListsProvider new];
-    
-    
-    listDetailViewController.updateListInteractor = updateListInteractor;
-    listDetailViewController.list = list;
-    listDetailViewController.router = self;
-    self.listDetailViewController = listDetailViewController;
-    
-    [fromViewController.navigationController pushViewController:listDetailViewController animated:YES];
+    [fromViewController.navigationController pushViewController:self.listDetailViewController animated:YES];
 }
 
 - (void)searchButtonPressed
 {
-    SearchFilmRouter *searchRouter = [SearchFilmRouter new];
     
-    [searchRouter presentSearchFrom:self.listDetailViewController.navigationController andList:self.listDetailViewController.list];
+    [[self.routerAssembly searchFilmRouter] presentSearchFrom:self.listDetailViewController.navigationController
+                                                      andList:self.listDetailViewController.list];
 }
 
 - (void)tappedCellWithFilm:(FilmDTO *)film
 {    
-    [[DetailFilmRouter new] presentFilmDetailViewControllerFrom:self.listDetailViewController.navigationController withFilmDTO:film];
+    [[self.routerAssembly detailFilmRouter] presentFilmDetailViewControllerFrom:self.listDetailViewController.navigationController
+                                                                    withFilmDTO:film];
 }
 
 @end

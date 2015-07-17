@@ -13,6 +13,8 @@
 
 @interface SelectListRouter : NSObject
 
+@property (nonatomic, weak) SelectListViewController *selectListViewController;
+
 - (void)presentModallyFromViewController:(UINavigationController *)fromNavigationController andRouter:(id)router;
 
 @end

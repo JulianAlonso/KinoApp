@@ -93,14 +93,4 @@
     }
 }
 
-#pragma mark - Lazy getterss.
-- (id<RequestManager>)requestManager
-{
-    if (!_requestManager)
-    {
-        _requestManager = [RequestManagerFactory requestManager];
-    }
-    return _requestManager;
-}
-
 @end

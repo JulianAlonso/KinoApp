@@ -6,8 +6,11 @@
 //  Copyright (c) 2015 Julian. All rights reserved.
 //
 
-#import "TyphoonDefinition.h"
+#import "TyphoonAssembly.h"
+#import "RequestManager.h"
 
-@interface RequestManagerAssembly : TyphoonDefinition
+@interface RequestManagerAssembly : TyphoonAssembly
+
+- (id<RequestManager>)requestManager;
 
 @end

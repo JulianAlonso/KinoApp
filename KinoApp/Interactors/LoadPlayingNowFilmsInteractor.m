@@ -6,11 +6,11 @@
 //  Copyright (c) 2015 Julian. All rights reserved.
 //
 
-#import "LoadPlayingNowInteractor.h"
+#import "LoadPlayingNowFilmsInteractor.h"
 #import "FilmDTO.h"
 
 
-@implementation LoadPlayingNowInteractor
+@implementation LoadPlayingNowFilmsInteractor
 
 #pragma mark - BillboardFilmsIteractor methods.
 - (void)fetchFilmsWithLocalData:(void(^)(NSArray *films))localCompletionBlock update:(void(^)(NSArray *films))updateCompletionBlock;

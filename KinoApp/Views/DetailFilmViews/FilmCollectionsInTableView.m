@@ -48,7 +48,6 @@ NSString *const kListFilmDetailTableViewCellFilmProperty = @"film";
     [self registerNib:[UINib nibWithNibName:NSStringFromClass([FilmDetailListTableViewCell class]) bundle:nil] forCellReuseIdentifier:NSStringFromClass([FilmDetailListTableViewCell class])];
     
     [self registerObservers];
-    [self updateLists];
     self.delegate = self;
     self.dataSource = self;
     self.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
@@ -131,7 +130,7 @@ NSString *const kListFilmDetailTableViewCellFilmProperty = @"film";
     UIView *header = [[UIView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.frame), self.headerHeight)];
     
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, 0, CGRectGetWidth(self.frame), self.headerHeight - 5)];
-    
+    #warning Not localized!
     label.text = @"Collections it's in";
     label.textColor = [UIColor whiteColor];
     label.font = [UIFont appFontWithSize:26.0f];
@@ -172,14 +171,10 @@ NSString *const kListFilmDetailTableViewCellFilmProperty = @"film";
     }
 }
 
-#pragma mark - Lazy getters.
-- (FetchAllListsInteractor *)fetchListsInteractor
+- (void)setFetchListsInteractor:(FetchAllListsInteractor *)fetchListsInteractor
 {
-    if (!_fetchListsInteractor)
-    {
-        _fetchListsInteractor = [InteractorsFactory fetchAllListsInteractor];
-    }
-    return _fetchListsInteractor;
+    _fetchListsInteractor = fetchListsInteractor;
+    [self updateLists];
 }
 
 #pragma mark - Dealloc.

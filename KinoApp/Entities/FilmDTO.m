@@ -20,6 +20,11 @@ NSString *const kPosterPathProperty = @"filmPosterPath";
     return [[self.filmReleaseDate componentsSeparatedByString:@"-"] firstObject];
 }
 
+- (NSString *)description
+{
+    return [NSString stringWithFormat:@"id: %@ \n original title: %@ \n title: %@ \n release date: %@ \n homepage: %@ \n overview: %@ \n tagline: %@ \n poster path: %@ \n backdrop path: %@ \n type: %@ \n runtime: %@ \n genres: %@ \n year: %@ \n", self.filmId, self.filmOriginalTitle, self.filmTitle, self.filmReleaseDate, self.filmHomepage, self.filmOverview, self.filmTagline, self.filmPosterPath, self.filmBackdropPath, self.filmType, self.filmRuntime, self.filmGenres, self.filmYear];
+}
+
 #pragma mark - Equals methods.
 - (BOOL)isEqual:(id)object
 {

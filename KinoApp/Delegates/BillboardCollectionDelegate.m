@@ -19,8 +19,6 @@
 @implementation BillboardCollectionDelegate
 
 @synthesize markerViewLeftSpace = _markerViewLeftSpace;
-@synthesize loadPlayingNowInteractor = _loadPlayingNowInteractor;
-@synthesize loadUpcomingInteractor = _loadUpcomingInteractor;
 @synthesize cellDelegates = _cellDelegates;
 @synthesize billboardCollectionView = _billboardCollectionView;
 @synthesize playingNowLabel = _playingNowLabel;

@@ -10,55 +10,34 @@
 #import "BillboardViewController.h"
 #import "BillboardCollectionDelegate.h"
 #import "ExternalTMDBProvider.h"
-#import "LoadPlayingNowInteractor.h"
+#import "LoadPlayingNowFilmsInteractor.h"
 #import "FilmsCollectionDelegate.h"
 #import "LoadUpcomingFilmsInteractor.h"
 #import "LocalCoreDataFilmsProvider.h"
 #import "BillboardFilmsCollectionDelegate.h"
 #import "FilmDTO.h"
 #import "DetailFilmRouter.h"
+#import "ViewControllersAssembly.h"
+#import "RouterAssembly.h"
 
 @implementation BillboardRouter
 
 - (void)loadViewAt:(UITabBarController *)tabBarController
 {
-    BillboardViewController *billboardViewController = [[BillboardViewController alloc] init];
-    billboardViewController.router = self;
-    
-    BillboardCollectionDelegate *billboardDelegate = [BillboardCollectionDelegate new];
-    ExternalTMDBProvider *externalFilmsProvider = [ExternalTMDBProvider new];
-    LocalCoreDataFilmsProvider *localFilmsProvider = [LocalCoreDataFilmsProvider new];
-    
-    //Playing now collection delegate creation
-    BillboardFilmsCollectionDelegate *playingNowDelegate = [BillboardFilmsCollectionDelegate new];
-    LoadPlayingNowInteractor *loadPlayingNowInteractor = [LoadPlayingNowInteractor new];
-    loadPlayingNowInteractor.externalProvider = externalFilmsProvider;
-    loadPlayingNowInteractor.localProvider = localFilmsProvider;
-    playingNowDelegate.interactor = loadPlayingNowInteractor;
-    playingNowDelegate.eventReceiver = billboardViewController;
-    
-    //Upcoming collection delegate creation
-    BillboardFilmsCollectionDelegate *upcomingDelegate = [BillboardFilmsCollectionDelegate new];
-    LoadUpcomingFilmsInteractor *loadUpcomingInteractor = [LoadUpcomingFilmsInteractor new];
-    loadUpcomingInteractor.externalProvider = externalFilmsProvider;
-    loadUpcomingInteractor.localProvider = localFilmsProvider;
-    upcomingDelegate.interactor = loadUpcomingInteractor;
-    upcomingDelegate.eventReceiver = billboardViewController;
-    
-    billboardDelegate.cellDelegates = @[playingNowDelegate, upcomingDelegate];
-    billboardViewController.delegate = billboardDelegate;
+    #warning Better create the VC with typhoon and inject.
+    BillboardViewController *billboardViewController = [self.viewControllersAssembly billboardViewController];
     
     UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:billboardViewController];
+    #warning Not localized!
     nc.tabBarItem.title = @"Billboard";
-    UIImage *image = [UIImage imageNamed:@"Films"];
-    nc.tabBarItem.image = image;
+    nc.tabBarItem.image =  [UIImage imageNamed:@"Films"];
     
     [tabBarController addChildViewController:nc];
 }
 
 - (void)selectedCellWithFilmDTO:(FilmDTO *)filmDTO fromViewController:(UIViewController *)fromViewController
 {
-    [[DetailFilmRouter new] presentFilmDetailViewControllerFrom:fromViewController.navigationController withFilmDTO:filmDTO];
+    [[self.routerAssembly detailFilmRouter] presentFilmDetailViewControllerFrom:fromViewController.navigationController withFilmDTO:filmDTO];
 }
 
 @end

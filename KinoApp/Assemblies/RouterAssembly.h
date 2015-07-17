@@ -6,8 +6,33 @@
 //  Copyright (c) 2015 Julian. All rights reserved.
 //
 
-#import "TyphoonDefinition.h"
+#import "TyphoonAssembly.h"
 
-@interface RouterAssembly : TyphoonDefinition
+@class ViewControllersAssembly;
+@class MainRouter;
+@class BillboardRouter;
+@class ListsCollectionRouter;
+@class DetailFilmRouter;
+@class DetailListRouter;
+@class SearchFilmRouter;
+@class SelectListRouter;
+
+@interface RouterAssembly : TyphoonAssembly
+
+@property (nonatomic, strong, readonly) ViewControllersAssembly *viewControllersAssembly;
+
+- (MainRouter *)mainRouter;
+
+- (BillboardRouter *)billboardRouter;
+
+- (ListsCollectionRouter *)listsCollectionRouter;
+
+- (DetailFilmRouter *)detailFilmRouter;
+
+- (DetailListRouter *)detailListRouter;
+
+- (SearchFilmRouter *)searchFilmRouter;
+
+- (SelectListRouter *)selectListRouter;
 
 @end

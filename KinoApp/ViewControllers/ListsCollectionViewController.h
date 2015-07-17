@@ -10,12 +10,10 @@
 
 @class FetchAllListsInteractor;
 @class ListsCollectionRouter;
-@class ListsCollectionDelegate;
 
 @interface ListsCollectionViewController : UIViewController
 
 @property (nonatomic, strong) FetchAllListsInteractor *fetchAllListsInteractor;
 @property (nonatomic, strong) ListsCollectionRouter *router;
-@property (nonatomic, strong) ListsCollectionDelegate *delegate;
 
 @end

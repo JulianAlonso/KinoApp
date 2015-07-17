@@ -13,31 +13,17 @@
 #import "LocalCoreDataListsProvider.h"
 #import "ListDTO.h"
 #import "DetailListRouter.h"
-
-@interface ListsCollectionRouter ()
-
-@property (nonatomic, weak) ListsCollectionViewController *listCollectionViewController;
-
-@end
+#import "RouterAssembly.h"
 
 @implementation ListsCollectionRouter
 
 - (void)loadViewAt:(UITabBarController *)tabBarCotroller
 {
-    ListsCollectionViewController *listsCollectionViewController = [ListsCollectionViewController new];
-    listsCollectionViewController.tabBarItem.title = @"Lists";
+    #warning Not localized.
+    self.listsCollectionViewController.tabBarItem.title = @"Lists";
     
-    //DI
-    FetchAllListsInteractor *fetchAllListsInteractor = [FetchAllListsInteractor new];
-    id<LocalListsProvider> localListProvider = [LocalCoreDataListsProvider new];
-    
-    fetchAllListsInteractor.localListProvider = localListProvider;
-    listsCollectionViewController.fetchAllListsInteractor = fetchAllListsInteractor;
-    
-    listsCollectionViewController.router = self;
-    self.listCollectionViewController = listsCollectionViewController;
-    
-    UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:listsCollectionViewController];
+    UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:self.listsCollectionViewController];
+    #warning Not localized.
     nc.tabBarItem.title = @"Lists";
     nc.tabBarItem.image = [UIImage imageNamed:@"Star"];
     
@@ -46,8 +32,8 @@
 
 - (void)tapAtCellWithListDTO:(ListDTO *)list
 {
-    DetailListRouter *detailListRouter = [DetailListRouter new];
-    [detailListRouter presentDetailListViewControllerFrom:self.listCollectionViewController withList:list];
+    [[self.routerAssembly detailListRouter] presentDetailListViewControllerFrom:self.listsCollectionViewController
+                                                                       withList:list];
 }
 
 @end

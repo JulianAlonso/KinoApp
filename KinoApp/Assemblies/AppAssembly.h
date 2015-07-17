@@ -6,8 +6,17 @@
 //  Copyright (c) 2015 Julian. All rights reserved.
 //
 
-#import "TyphoonDefinition.h"
+#import "TyphoonAssembly.h"
 
-@interface AppAssembly : TyphoonDefinition
+@class AppDelegate;
+@class RouterAssembly;
+
+@interface AppAssembly : TyphoonAssembly
+
+@property (nonatomic, strong, readonly) RouterAssembly *routerAssembly;
+
+- (AppDelegate *)appDelegate;
+
+- (UIWindow *)mainWindow;
 
 @end

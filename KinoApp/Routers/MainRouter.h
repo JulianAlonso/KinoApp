@@ -6,9 +6,12 @@
 //  Copyright (c) 2015 Julian. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@class RouterAssembly;
+
 
 @interface MainRouter : NSObject
+
+@property (nonatomic, strong) RouterAssembly *routerAssembly;
 
 - (void)showMainViewInWindow:(UIWindow *)window;
 

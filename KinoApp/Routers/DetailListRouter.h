@@ -8,10 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+@class ListDetailViewController;
+@class RouterAssembly;
 @class ListDTO;
 @class FilmDTO;
 
 @interface DetailListRouter : NSObject
+
+@property (nonatomic, strong) RouterAssembly *routerAssembly;
+@property (nonatomic, weak) ListDetailViewController *listDetailViewController;
 
 - (void)presentDetailListViewControllerFrom:(UIViewController *)fromViewController withList:(ListDTO *)list;
 

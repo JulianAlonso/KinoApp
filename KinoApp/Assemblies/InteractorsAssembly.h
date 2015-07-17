@@ -6,8 +6,32 @@
 //  Copyright (c) 2015 Julian. All rights reserved.
 //
 
-#import "TyphoonDefinition.h"
+#import "TyphoonAssembly.h"
+#import "BillboardFilmsInteractor.h"
 
-@interface InteractorsAssembly : TyphoonDefinition
+@class ProvidersAssembly;
+@class LoadFilmInteractor;
+@class FetchAllListsInteractor;
+@class UpdateListInteractor;
+@class LoadPopularFilmsInteractor;
+@class SearchFilmInteractor;
+
+@interface InteractorsAssembly : TyphoonAssembly
+
+@property (nonatomic, strong, readonly) ProvidersAssembly *providersAssembly;
+
+- (id<BillboardFilmsInteractor>)loadUpcomingFilmsInteractor;
+
+- (id<BillboardFilmsInteractor>)loadPlayingNowFilmsInteractor;
+
+- (LoadFilmInteractor *)loadFilmInteractor;
+
+- (FetchAllListsInteractor *)fetchAllListInteractor;
+
+- (UpdateListInteractor *)updateListInteractor;
+
+- (LoadPopularFilmsInteractor *)loadPopularFilmsInteractor;
+
+- (SearchFilmInteractor *)searchFilmInteractor;
 
 @end

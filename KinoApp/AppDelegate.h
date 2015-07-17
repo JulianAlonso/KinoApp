@@ -9,8 +9,11 @@
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
 
+@class MainRouter;
+
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
+@property (strong, nonatomic) MainRouter *mainRouter;
 @property (strong, nonatomic) UIWindow *window;
 
 @end

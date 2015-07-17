@@ -75,7 +75,7 @@ NSString *const kFilmsProperty = @"films";
     self.searchTableView.dataSource = self;
     self.searchTableView.backgroundColor = [UIColor clearColor];
     self.searchTableView.estimatedRowHeight = 140.0f;
-    
+    self.searchTableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     [self.searchTableView registerNib:[UINib nibWithNibName:NSStringFromClass([FilmTableViewCell class]) bundle:nil]
                forCellReuseIdentifier:NSStringFromClass([FilmTableViewCell class])];
 }
@@ -155,7 +155,7 @@ NSString *const kFilmsProperty = @"films";
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return  self.films.count;
+    return self.films.count;
 }
 
 #pragma mark - TableView Delegate methods.

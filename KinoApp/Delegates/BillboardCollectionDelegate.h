@@ -11,6 +11,4 @@
 
 @interface BillboardCollectionDelegate : NSObject <BillboardCollectionDelegateProtocol>
 
-
-
 @end

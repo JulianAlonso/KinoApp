@@ -12,6 +12,7 @@
 #import "FetchAllListsInteractor.h"
 #import "LocalCoreDataListsProvider.h"
 #import "DetailFilmRouter.h"
+#import "ViewControllersAssembly.h"
 
 @interface SelectListRouter () <UIViewControllerTransitioningDelegate>
 
@@ -21,16 +22,11 @@
 
 - (void)presentModallyFromViewController:(UINavigationController *)fromNavigationController andRouter:(id)router
 {
-    SelectListViewController *selectListViewController = [SelectListViewController new];
-    selectListViewController.router = self;
-    selectListViewController.interactor = [FetchAllListsInteractor new];
-    selectListViewController.interactor.localListProvider = [LocalCoreDataListsProvider new];
-    
-    selectListViewController.presentingRouter = router;
+    self.selectListViewController.presentingRouter = router;
     
 //    selectListViewController.transitioningDelegate = self;
 
-    [fromNavigationController presentViewController:selectListViewController animated:YES completion:nil];
+    [fromNavigationController presentViewController:self.selectListViewController animated:YES completion:nil];
 }
 
 #pragma mark - Transition delegate methods.

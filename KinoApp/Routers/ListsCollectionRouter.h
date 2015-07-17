@@ -8,9 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+@class RouterAssembly;
+@class ListsCollectionViewController;
 @class ListDTO;
 
 @interface ListsCollectionRouter : NSObject
+
+@property (nonatomic, strong) RouterAssembly *routerAssembly;
+@property (nonatomic, weak) ListsCollectionViewController *listsCollectionViewController;
 
 - (void)loadViewAt:(UITabBarController *)tabBarCotroller;
 

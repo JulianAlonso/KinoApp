@@ -17,31 +17,13 @@
 #import "LocalCoreDataListsProvider.h"
 #import "FilmDetailScrollViewViewController.h"
 
-@interface DetailFilmRouter ()
-
-@property (nonatomic, weak) FilmDetailScrollViewViewController *filmDetailScrollViewController;
-
-@end
-
 @implementation DetailFilmRouter
 
 - (void)presentFilmDetailViewControllerFrom:(UINavigationController *)navigationController withFilmDTO:(FilmDTO *)film
 {
-    FilmDetailScrollViewViewController *filmDetail = [[FilmDetailScrollViewViewController alloc] init];
-    filmDetail.film = film;
+    self.filmDetailScrollViewController.film = film;
     
-    //Creating Interactors
-    LoadFilmInteractor *interactor = [LoadFilmInteractor new];
-    interactor.localProvider = [LocalCoreDataFilmsProvider new];
-    interactor.externalProvider = [ExternalTMDBProvider new];
-    
-    //DI
-    filmDetail.loadFilmInteractor = interactor;
-    filmDetail.router = self;
-    
-    self.filmDetailScrollViewController = filmDetail;
-    
-    [navigationController pushViewController:filmDetail animated:YES];
+    [navigationController pushViewController:self.filmDetailScrollViewController animated:YES];
 }
 
 - (void)popFilmDetailViewController

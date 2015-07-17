@@ -11,6 +11,4 @@
 
 @interface LocalCoreDataFilmsProvider : NSObject <LocalFilmsProvider>
 
-
-
 @end

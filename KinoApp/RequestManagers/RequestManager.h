@@ -10,8 +10,8 @@
 
 @protocol RequestManager <NSObject>
 
-@property (nonatomic, strong, readonly) NSDictionary *defaultParams;
-@property (nonatomic, strong, readonly) NSString *basePath;
+@property (nonatomic, strong) NSDictionary *defaultParams;
+@property (nonatomic, strong) NSString *basePath;
 
 - (void)GETendpoint:(NSString *)endpoint params:(NSDictionary *)params andCompletionBlock:(void(^)(NSData *data))completionBlock;
 

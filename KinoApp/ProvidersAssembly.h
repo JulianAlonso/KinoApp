@@ -6,8 +6,19 @@
 //  Copyright (c) 2015 Julian. All rights reserved.
 //
 
-#import "TyphoonDefinition.h"
+#import "TyphoonAssembly.h"
+#import "ExternalFilmsProvider.h"
+#import "LocalFilmsProvider.h"
+#import "LocalListsProvider.h"
 
-@interface ProvidersAssembly : TyphoonDefinition
+@class RequestManagerAssembly;
+
+@interface ProvidersAssembly : TyphoonAssembly
+
+@property (nonatomic, strong, readonly) RequestManagerAssembly *requestManagerAssembly;
+
+- (id<ExternalFilmsProvider>)externalFilmsProvider;
+- (id<LocalFilmsProvider>)localFilmsProvider;
+- (id<LocalListsProvider>)localListProvider;
 
 @end

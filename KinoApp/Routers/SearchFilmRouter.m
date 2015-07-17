@@ -12,36 +12,21 @@
 #import "ExternalTMDBProvider.h"
 #import "SearchFilmInteractor.h"
 #import "DetailFilmRouter.h"
-
-@interface SearchFilmRouter ()
-
-@property (nonatomic, weak) SearchFilmViewController *searchFilmViewController;
-
-@end
+#import "RouterAssembly.h"
 
 @implementation SearchFilmRouter
 
 - (void)presentSearchFrom:(UINavigationController *)fromNavigationController andList:(ListDTO *)list
 {
-    SearchFilmViewController *searchFilmViewController = [SearchFilmViewController new];
+    self.searchFilmViewController.fromList = list;
     
-    LoadPopularFilmsInteractor *loadPopularInteractor = [LoadPopularFilmsInteractor new];
-    loadPopularInteractor.externalProvider = [ExternalTMDBProvider new];
-    SearchFilmInteractor *searchInteractor = [SearchFilmInteractor new];
-    searchInteractor.externalProvider = [ExternalTMDBProvider new];
-    
-    searchFilmViewController.popularInteractor = loadPopularInteractor;
-    searchFilmViewController.searchInteractor = searchInteractor;
-    searchFilmViewController.fromList = list;
-    searchFilmViewController.router = self;
-    self.searchFilmViewController = searchFilmViewController;
-    
-    [fromNavigationController pushViewController:searchFilmViewController animated:YES];
+    [fromNavigationController pushViewController:self.searchFilmViewController animated:YES];
 }
 
 - (void)tappedCellWithFilm:(FilmDTO *)film
 {
-    [[DetailFilmRouter new] presentFilmDetailViewControllerFrom:self.searchFilmViewController.navigationController withFilmDTO:film];
+    [[self.routerAssembly detailFilmRouter] presentFilmDetailViewControllerFrom:self.searchFilmViewController.navigationController
+                                                                    withFilmDTO:film];
 }
 
 - (void)popSearchFilmViewController

@@ -74,12 +74,7 @@
     
     controller.cell = cell;
     controller.film = film;
-//    //Remove old image.
-//    cell.filmImageView.image = nil;
-//    
-//    cell.filmTitleLabel.text = film.filmTitle;
-//    
-//    [cell.filmImageView sd_setImageWithURL:[NSURL URLWithString:film.filmPosterPath]];
+
     return [controller configuredCell];
 }
 

@@ -8,13 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@class LoadPlayingNowInteractor;
+@class LoadPlayingNowFilmsInteractor;
 @class LoadUpcomingFilmsInteractor;
 
 @protocol BillboardCollectionDelegateProtocol <UICollectionViewDelegate, UICollectionViewDataSource>
-
-@property (nonatomic, strong) LoadPlayingNowInteractor *loadPlayingNowInteractor;
-@property (nonatomic, strong) LoadUpcomingFilmsInteractor *loadUpcomingInteractor;
 
 @property (nonatomic, strong) NSLayoutConstraint *markerViewLeftSpace;
 

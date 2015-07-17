@@ -67,16 +67,6 @@ NSString *const kFilmListsTableViewContentSizeProperty = @"filmListsTableView.co
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-//    CGRect bounds = self.navigationController.navigationBar.bounds;
-//    UIVisualEffectView *visualEffectView = [[UIVisualEffectView alloc] initWithEffect:[UIBlurEffect effectWithStyle:UIBlurEffectStyleLight]];
-//    visualEffectView.frame = bounds;
-//    visualEffectView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-//    [self.navigationController.navigationBar addSubview:visualEffectView];
-//    [self.navigationController.navigationBar setBarTintColor:[UIColor clearColor]];
-//    [self.navigationController.navigationBar setTintColor:[UIColor clearColor]];
-//    [self.navigationController.navigationBar setBackgroundColor:[UIColor clearColor]];
-//    [self.navigationController.navigationBar sendSubviewToBack:visualEffectView];
-//    self.navigationController.navigationBar.alpha = 0.0f;
 }
 
 #pragma mark - Config methods.
@@ -87,6 +77,7 @@ NSString *const kFilmListsTableViewContentSizeProperty = @"filmListsTableView.co
         self.filmTitleLabel.text = self.film.filmTitle;
         self.filmOverviewLabel.text = self.film.filmOverview;
         self.filmGenreCollectionView.film = self.film;
+        self.filmListsTableView.fetchListsInteractor = self.fetchAllListInteractor;
         self.filmListsTableView.film = self.film;
         self.filmPrincipalDataLabel.text = [NSString stringWithFormat:@"%@ minutes  ·  %@", self.film.filmRuntime, self.film.filmYear];
     });
@@ -107,7 +98,7 @@ NSString *const kFilmListsTableViewContentSizeProperty = @"filmListsTableView.co
     if (!self.backgroundLayer && self.scrollView.contentSize.width > 0)
     {
         self.backgroundLayer = [CAGradientLayer layer];
-        self.backgroundLayer.frame = CGRectMake(0, 0, self.scrollView.contentSize.width, self.scrollView.contentSize.height + 200.0f);
+        self.backgroundLayer.frame = CGRectMake(0, 0, self.scrollView.contentSize.width, self.scrollView.contentSize.height + 800.0f);
         self.backgroundLayer.colors = @[(id)[[UIColor clearColor] CGColor], (id)CGRGBA(21, 21, 21, 0.8f)];
         self.backgroundLayer.startPoint = CGPointMake(0.0f, 0.00f);
         self.backgroundLayer.endPoint = CGPointMake(0.0f, 0.025f);
@@ -168,6 +159,5 @@ NSString *const kFilmListsTableViewContentSizeProperty = @"filmListsTableView.co
 {
     [self unregisterObservers];
 }
-
 
 @end

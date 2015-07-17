@@ -10,6 +10,7 @@
 #import "BillboardRouter.h"
 #import "ListsCollectionRouter.h"
 #import "UIColor+Custom.h"
+#import "RouterAssembly.h"
 
 @implementation MainRouter
 
@@ -17,10 +18,10 @@
 {
     UITabBarController *tabBarController = [[UITabBarController alloc] init];
     
-    BillboardRouter *billboardRouter = [[BillboardRouter alloc] init];
+    BillboardRouter *billboardRouter = [self.routerAssembly billboardRouter];
     [billboardRouter loadViewAt:tabBarController];
     
-    ListsCollectionRouter *activityRouter = [ListsCollectionRouter new];
+    ListsCollectionRouter *activityRouter = [self.routerAssembly listsCollectionRouter];
     [activityRouter loadViewAt:tabBarController];
     
     [self configApearance];
