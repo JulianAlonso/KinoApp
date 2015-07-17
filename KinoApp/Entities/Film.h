@@ -26,6 +26,7 @@
 @property (nonatomic, retain) NSString * filmType;
 @property (nonatomic, retain) NSSet *filmLists;
 @property (nonatomic, retain) NSOrderedSet *filmGenres;
+
 @end
 
 @interface Film (CoreDataGeneratedAccessors)

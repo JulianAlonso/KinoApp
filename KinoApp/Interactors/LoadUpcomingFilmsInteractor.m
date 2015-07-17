@@ -13,7 +13,7 @@
 @implementation LoadUpcomingFilmsInteractor
 
 #pragma mark - BillboardFilmsInteractor methods.
-- (void)fetchFilmsWithLocalData:(void(^)(NSArray *films))localCompletionBlock update:(void(^)(NSArray *films))updateCompletionBlock;
+- (void)fetchFilmsWithLocalData:(CompletionBlock)localCompletionBlock update:(void(^)(NSArray *films))updateCompletionBlock;
 {
     [self loadUpcomingFilms:localCompletionBlock];
     
@@ -29,9 +29,9 @@
 - (void)updateFilms:(CompletionBlock)updatedBlock
 {
     __weak typeof(self) weakSelf = self;
-    [self.externalProvider fetchUpcomingFilms:^(NSArray *films) {
+    [self.externalProvider fetchUpcomingFilms:^(NSArray *films)
+    {
         __strong typeof(weakSelf) strongSelf = weakSelf;
-        
         [strongSelf.localProvider saveFilms:films completion:updatedBlock];
     }];
 }

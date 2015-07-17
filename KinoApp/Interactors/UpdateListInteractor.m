@@ -10,10 +10,9 @@
 
 @implementation UpdateListInteractor
 
-- (void)updateList:(ListDTO *)list completion:(void(^)(ListDTO *list))completion {
-
+- (void)updateList:(ListDTO *)list completion:(void(^)(ListDTO *list))completion
+{
     [self.localListProvider updateList:list completion:completion];
-    
 }
 
 @end

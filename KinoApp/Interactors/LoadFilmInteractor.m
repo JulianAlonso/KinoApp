@@ -13,8 +13,8 @@
 
 - (void)loadFilmWithId:(NSString *)filmId completion:(void(^)(FilmDTO *film))completion update:(void(^)(FilmDTO *film))update
 {
-    [self.localProvider fetchFilmById:filmId completion:^(FilmDTO *film) {
-
+    [self.localProvider fetchFilmById:filmId completion:^(FilmDTO *film)
+    {
         if (film && ![film.filmOverview isEqualToString:@"(null)"])
         {
             update(film);
@@ -23,8 +23,10 @@
         {
             completion(film);
 
-            [self.externalProvider fetchFilmById:filmId completion:^(FilmDTO *film) {
-                [self.localProvider createOrUpdateFilm:film completion:^(FilmDTO *film) {
+            [self.externalProvider fetchFilmById:filmId completion:^(FilmDTO *film)
+            {
+                [self.localProvider createOrUpdateFilm:film completion:^(FilmDTO *film)
+                {
                     update(film);
                 }];
             }];

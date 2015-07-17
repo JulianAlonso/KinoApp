@@ -28,7 +28,6 @@
 #pragma mark - Config methods.
 - (void)configBillboardCollection
 {
-
     self.filmsCollectionView.alwaysBounceVertical = YES;
     
     [self.filmsCollectionView addSubview:self.refreshControl];

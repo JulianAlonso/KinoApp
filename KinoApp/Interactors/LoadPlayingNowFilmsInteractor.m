@@ -29,9 +29,9 @@
 - (void)updateFilms:(CompletionBlock)updatedBlock
 {
     __weak typeof(self) weakSelf = self;
-    [self.externalProvider fetchPlayingNowFilms:^(NSArray *films) {
+    [self.externalProvider fetchPlayingNowFilms:^(NSArray *films)
+    {
         __strong typeof(weakSelf) strongSelf = weakSelf;
-        
         [strongSelf.localProvider saveFilms:films completion:updatedBlock];
     }];
 }
