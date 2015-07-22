@@ -22,6 +22,13 @@
     [self configStyles];
 }
 
+- (void)prepareForReuse
+{
+    self.filmImageView.image = nil;
+    self.filmTitleLabel.text = @"";
+    self.filmYearLabel.text = @"";
+}
+
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 }

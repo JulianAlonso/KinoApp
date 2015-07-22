@@ -16,6 +16,12 @@
     [self addGestureRecognizer:tapGesture];
 }
 
+- (void)prepareForReuse
+{
+    self.filmImageView.image = nil;
+    self.filmTitleLabel.text = @"";
+}
+
 #pragma mark - Action methods.
 - (void)cellPressed:(UITapGestureRecognizer *)sender
 {
