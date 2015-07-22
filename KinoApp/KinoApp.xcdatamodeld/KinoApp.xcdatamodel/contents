@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6751" systemVersion="14C1510" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7701" systemVersion="14E46" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="Film" representedClassName="Film" syncable="YES">
         <attribute name="filmBackdropPath" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="filmHomepage" optional="YES" attributeType="String" syncable="YES"/>
@@ -7,7 +7,7 @@
         <attribute name="filmOriginalTitle" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="filmOverview" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="filmPosterPath" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="filmReleaseDate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="filmReleaseDate" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="filmRuntime" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="filmTagline" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="filmTitle" optional="YES" attributeType="String" syncable="YES"/>
@@ -26,7 +26,7 @@
     </entity>
     <elements>
         <element name="Film" positionX="-63" positionY="-18" width="128" height="240"/>
-        <element name="List" positionX="-54" positionY="63" width="128" height="73"/>
         <element name="Genre" positionX="-54" positionY="81" width="128" height="88"/>
+        <element name="List" positionX="-54" positionY="63" width="128" height="73"/>
     </elements>
 </model>

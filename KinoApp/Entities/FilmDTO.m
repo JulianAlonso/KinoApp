@@ -7,6 +7,7 @@
 //
 
 #import "FilmDTO.h"
+#import "DateHelper.h"
 
 NSString *const TYPE_PLAYIN_NOW = @"playing now";
 NSString *const TYPE_UPCOMING = @"upcoming";
@@ -17,7 +18,7 @@ NSString *const kPosterPathProperty = @"filmPosterPath";
 
 - (NSString *)filmYear
 {
-    return [[self.filmReleaseDate componentsSeparatedByString:@"-"] firstObject];
+    return [DateHelper yearStirngFromDate:self.filmReleaseDate];
 }
 
 - (NSString *)description

@@ -10,18 +10,21 @@
 #import "FilmDTO.h"
 #import "URLHelper.h"
 #import "GenreDTOParser.h"
+#import "DateHelper.h"
 
-NSString *const dFilmId = @"id";
-NSString *const dFilmTitle = @"title";
-NSString *const dFilmOriginalTitle = @"original_title";
-NSString *const dFilmReleaseDate = @"release_date";
-NSString *const dFilmHomepage = @"homepage";
-NSString *const dFilmOverview = @"overview";
-NSString *const dFilmTagline = @"tagline";
-NSString *const dFilmPosterPath = @"poster_path";
-NSString *const dFilmBackdropPath = @"backdrop_path";
-NSString *const dFilmRuntime = @"runtime";
-NSString *const dFilmGenres = @"genres";
+static NSString *const dFilmId = @"id";
+static NSString *const dFilmTitle = @"title";
+static NSString *const dFilmOriginalTitle = @"original_title";
+static NSString *const dFilmReleaseDate = @"release_date";
+static NSString *const dFilmHomepage = @"homepage";
+static NSString *const dFilmOverview = @"overview";
+static NSString *const dFilmTagline = @"tagline";
+static NSString *const dFilmPosterPath = @"poster_path";
+static NSString *const dFilmBackdropPath = @"backdrop_path";
+static NSString *const dFilmRuntime = @"runtime";
+static NSString *const dFilmGenres = @"genres";
+
+static NSString *const filmDateFormat = @"yyyy-MM-dd";
 
 @implementation FilmDTOParser
 
@@ -32,7 +35,8 @@ NSString *const dFilmGenres = @"genres";
     film.filmId = [NSString stringWithFormat:@"%@", dictionary[dFilmId]];
     film.filmTitle = [NSString stringWithFormat:@"%@", dictionary[dFilmTitle]];
     film.filmOriginalTitle = [NSString stringWithFormat:@"%@", dictionary[dFilmOriginalTitle]];
-    film.filmReleaseDate = [NSString stringWithFormat:@"%@", dictionary[dFilmReleaseDate]];
+    film.filmReleaseDate = [DateHelper dateFromString:[NSString stringWithFormat:@"%@", dictionary[dFilmReleaseDate]]
+                                           withFormat:filmDateFormat];
     film.filmHomepage = [NSString stringWithFormat:@"%@", dictionary[dFilmHomepage]];
     film.filmOverview = [NSString stringWithFormat:@"%@", dictionary[dFilmOverview]];
     film.filmTagline = [NSString stringWithFormat:@"%@", dictionary[dFilmTagline]];

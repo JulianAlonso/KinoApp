@@ -29,6 +29,8 @@
 		01068F511AB752840017F91A /* CollectionFilmsCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 01068F4F1AB752840017F91A /* CollectionFilmsCollectionViewCell.m */; };
 		01068F521AB752840017F91A /* CollectionFilmsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01068F501AB752840017F91A /* CollectionFilmsCollectionViewCell.xib */; };
 		01068F581AB7546A0017F91A /* BillboardFilmsCollectionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 01068F571AB7546A0017F91A /* BillboardFilmsCollectionDelegate.m */; };
+		0114C7F51B5FAB2700400401 /* DateHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0114C7F41B5FAB2700400401 /* DateHelper.m */; };
+		0114C7F81B5FAF9F00400401 /* Film.m in Sources */ = {isa = PBXBuildFile; fileRef = 0114C7F71B5FAF9F00400401 /* Film.m */; };
 		0115B7251AC3630800F38A7D /* UpdateListInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 0115B7241AC3630800F38A7D /* UpdateListInteractor.m */; };
 		0117596F1ABAF5E700724BC5 /* ControllersFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 0117596E1ABAF5E700724BC5 /* ControllersFactory.m */; };
 		011759721ABB291F00724BC5 /* AddFilmToListInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 011759711ABB291F00724BC5 /* AddFilmToListInteractor.m */; };
@@ -41,7 +43,6 @@
 		0119D4091B58FDFA00654F8B /* RepositoriesAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 0119D4081B58FDFA00654F8B /* RepositoriesAssembly.m */; };
 		011C92B61AC410C90097EE10 /* GenreDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = 011C92B51AC410C90097EE10 /* GenreDTO.m */; };
 		011C92B91AC411C70097EE10 /* GenreDTOParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 011C92B81AC411C70097EE10 /* GenreDTOParser.m */; };
-		011C92BF1AC41F960097EE10 /* Film.m in Sources */ = {isa = PBXBuildFile; fileRef = 011C92BE1AC41F960097EE10 /* Film.m */; };
 		011C92C21AC421AC0097EE10 /* Genre+Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 011C92C11AC421AC0097EE10 /* Genre+Model.m */; };
 		011C92C51AC424FA0097EE10 /* Genre.m in Sources */ = {isa = PBXBuildFile; fileRef = 011C92C41AC424FA0097EE10 /* Genre.m */; };
 		011C92CF1AC42A950097EE10 /* FilmDetailGenreCollectionViewCellController.m in Sources */ = {isa = PBXBuildFile; fileRef = 011C92CE1AC42A950097EE10 /* FilmDetailGenreCollectionViewCellController.m */; };
@@ -163,6 +164,10 @@
 		01068F571AB7546A0017F91A /* BillboardFilmsCollectionDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BillboardFilmsCollectionDelegate.m; path = Delegates/BillboardFilmsCollectionDelegate.m; sourceTree = "<group>"; };
 		01068F591AB754810017F91A /* FilmsCollectionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FilmsCollectionDelegate.h; path = Delegates/FilmsCollectionDelegate.h; sourceTree = "<group>"; };
 		01068F5A1AB7558F0017F91A /* BillboardFilmsInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BillboardFilmsInteractor.h; path = Interactors/BillboardFilmsInteractor.h; sourceTree = "<group>"; };
+		0114C7F31B5FAB2700400401 /* DateHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DateHelper.h; path = Helpers/DateHelper.h; sourceTree = "<group>"; };
+		0114C7F41B5FAB2700400401 /* DateHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DateHelper.m; path = Helpers/DateHelper.m; sourceTree = "<group>"; };
+		0114C7F61B5FAF9F00400401 /* Film.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Film.h; path = Entities/Film.h; sourceTree = "<group>"; };
+		0114C7F71B5FAF9F00400401 /* Film.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Film.m; path = Entities/Film.m; sourceTree = "<group>"; };
 		0115B7231AC3630800F38A7D /* UpdateListInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UpdateListInteractor.h; path = Interactors/UpdateListInteractor.h; sourceTree = "<group>"; };
 		0115B7241AC3630800F38A7D /* UpdateListInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UpdateListInteractor.m; path = Interactors/UpdateListInteractor.m; sourceTree = "<group>"; };
 		0117596D1ABAF5E700724BC5 /* ControllersFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ControllersFactory.h; path = Factories/ControllersFactory.h; sourceTree = "<group>"; };
@@ -185,8 +190,6 @@
 		011C92B51AC410C90097EE10 /* GenreDTO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GenreDTO.m; path = Entities/GenreDTO.m; sourceTree = "<group>"; };
 		011C92B71AC411C70097EE10 /* GenreDTOParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GenreDTOParser.h; path = Parsers/GenreDTOParser.h; sourceTree = "<group>"; };
 		011C92B81AC411C70097EE10 /* GenreDTOParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GenreDTOParser.m; path = Parsers/GenreDTOParser.m; sourceTree = "<group>"; };
-		011C92BD1AC41F960097EE10 /* Film.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Film.h; path = Entities/Film.h; sourceTree = "<group>"; };
-		011C92BE1AC41F960097EE10 /* Film.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Film.m; path = Entities/Film.m; sourceTree = "<group>"; };
 		011C92C01AC421AC0097EE10 /* Genre+Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Genre+Model.h"; path = "Categories/Genre+Model.h"; sourceTree = "<group>"; };
 		011C92C11AC421AC0097EE10 /* Genre+Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Genre+Model.m"; path = "Categories/Genre+Model.m"; sourceTree = "<group>"; };
 		011C92C31AC424FA0097EE10 /* Genre.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Genre.h; path = Entities/Genre.h; sourceTree = "<group>"; };
@@ -709,6 +712,8 @@
 				01B875AE1AC470DE00BD69EB /* SizeHelper.m */,
 				013276D61AFB724A00416F82 /* ReachabilityHelper.h */,
 				013276D71AFB724A00416F82 /* ReachabilityHelper.m */,
+				0114C7F31B5FAB2700400401 /* DateHelper.h */,
+				0114C7F41B5FAB2700400401 /* DateHelper.m */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -729,8 +734,8 @@
 		015834581AB864ED007E0AC4 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				011C92BD1AC41F960097EE10 /* Film.h */,
-				011C92BE1AC41F960097EE10 /* Film.m */,
+				0114C7F61B5FAF9F00400401 /* Film.h */,
+				0114C7F71B5FAF9F00400401 /* Film.m */,
 				015834591AB86508007E0AC4 /* FilmDTO.h */,
 				0158345A1AB86508007E0AC4 /* FilmDTO.m */,
 				013955661ABAD7A500BC745D /* List.h */,
@@ -975,6 +980,7 @@
 				015AB1791ABC3F0100D2CBAA /* DetailListRouter.m in Sources */,
 				01B62DF21B567DEC000F203A /* InteractorsAssembly.m in Sources */,
 				01B875AB1AC45FE200BD69EB /* GenreFilmDetailCollectionViewCell.m in Sources */,
+				0114C7F51B5FAB2700400401 /* DateHelper.m in Sources */,
 				011759831ABB429E00724BC5 /* SelectListModalTransitionAnimator.m in Sources */,
 				01068F4A1AB74E1F0017F91A /* LoadUpcomingFilmsInteractor.m in Sources */,
 				011C92B61AC410C90097EE10 /* GenreDTO.m in Sources */,
@@ -1004,6 +1010,7 @@
 				01068F3B1AB72D480017F91A /* BillboardFilmCollectionViewCell.m in Sources */,
 				01068F511AB752840017F91A /* CollectionFilmsCollectionViewCell.m in Sources */,
 				01B62DEC1B5679C0000F203A /* RouterAssembly.m in Sources */,
+				0114C7F81B5FAF9F00400401 /* Film.m in Sources */,
 				01B62DF51B567DFA000F203A /* ProvidersAssembly.m in Sources */,
 				012C6B8B1ABA000E0060A49C /* FetchAllListsInteractor.m in Sources */,
 				015AB1841ABC6E7E00D2CBAA /* SearchFilmTableViewCellController.m in Sources */,
@@ -1027,7 +1034,6 @@
 				01B875AF1AC470DE00BD69EB /* SizeHelper.m in Sources */,
 				0158345B1AB86508007E0AC4 /* FilmDTO.m in Sources */,
 				0158344A1AB8223B007E0AC4 /* APIVars.m in Sources */,
-				011C92BF1AC41F960097EE10 /* Film.m in Sources */,
 				011759761ABB390600724BC5 /* SelectListViewController.m in Sources */,
 				012C6B851AB9C3EE0060A49C /* DetailFilmRouter.m in Sources */,
 				012C6BA61ABA107D0060A49C /* ListDTO.m in Sources */,

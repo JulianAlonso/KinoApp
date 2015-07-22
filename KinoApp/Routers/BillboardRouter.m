@@ -32,6 +32,8 @@
     nc.tabBarItem.title = @"Billboard";
     nc.tabBarItem.image =  [UIImage imageNamed:@"Films"];
     
+    nc.interactivePopGestureRecognizer.delegate = self;
+    
     [tabBarController addChildViewController:nc];
 }
 

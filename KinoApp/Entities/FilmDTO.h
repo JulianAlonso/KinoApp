@@ -18,7 +18,7 @@ extern NSString *const kPosterPathProperty;
 @property (nonatomic, strong) NSString *filmId;
 @property (nonatomic, strong) NSString *filmOriginalTitle;
 @property (nonatomic, strong) NSString *filmTitle;
-@property (nonatomic, strong) NSString *filmReleaseDate;
+@property (nonatomic, strong) NSDate *filmReleaseDate;
 @property (nonatomic, strong) NSString *filmHomepage;
 @property (nonatomic, strong) NSString *filmOverview;
 @property (nonatomic, strong) NSString *filmTagline;
