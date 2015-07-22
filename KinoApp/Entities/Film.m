@@ -2,7 +2,7 @@
 //  Film.m
 //  KinoApp
 //
-//  Created by Julian Alonso on 26/3/15.
+//  Created by Julian Alonso on 22/7/15.
 //  Copyright (c) 2015 Julian. All rights reserved.
 //
 
@@ -24,7 +24,7 @@
 @dynamic filmTagline;
 @dynamic filmTitle;
 @dynamic filmType;
-@dynamic filmLists;
 @dynamic filmGenres;
+@dynamic filmLists;
 
 @end

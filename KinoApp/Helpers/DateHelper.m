@@ -18,4 +18,12 @@
     return [dateFormatter dateFromString:string];
 }
 
++ (NSString *)yearStirngFromDate:(NSDate *)date
+{
+    NSDateFormatter *dateFormatter = [NSDateFormatter new];
+    dateFormatter.dateFormat = @"yyyy";
+    
+    return [dateFormatter stringFromDate:date];
+}
+
 @end

@@ -12,4 +12,6 @@
 
 + (NSDate *)dateFromString:(NSString *)string withFormat:(NSString *)format;
 
++ (NSString *)yearStirngFromDate:(NSDate *)date;
+
 @end
