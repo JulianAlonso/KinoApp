@@ -76,6 +76,11 @@
 		01453E7B1AC32D0300F8ADC6 /* InteractorsFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 01453E7A1AC32D0300F8ADC6 /* InteractorsFactory.m */; };
 		01453E7E1AC348BD00F8ADC6 /* RemoveFilmFromListInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 01453E7D1AC348BD00F8ADC6 /* RemoveFilmFromListInteractor.m */; };
 		014DF9941B00B72F0052547C /* CheckNextReleasesInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 014DF9931B00B72F0052547C /* CheckNextReleasesInteractor.m */; };
+		015228911B68CA9100344244 /* GenericCoreDataRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 015228901B68CA9100344244 /* GenericCoreDataRepository.m */; };
+		0153470E1B6A3ECF00A7D5A7 /* FilmDetailHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0153470D1B6A3ECF00A7D5A7 /* FilmDetailHeaderView.xib */; };
+		015347121B6A405700A7D5A7 /* StyledLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 015347111B6A405700A7D5A7 /* StyledLabel.m */; };
+		015347151B6A421300A7D5A7 /* FilmDetailHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 015347141B6A421300A7D5A7 /* FilmDetailHeaderView.m */; };
+		015347191B6A4F6B00A7D5A7 /* JAXibView.m in Sources */ = {isa = PBXBuildFile; fileRef = 015347181B6A4F6B00A7D5A7 /* JAXibView.m */; };
 		01562BC21AEA53CB003EEDC8 /* FilmDetailScrollViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01562BC01AEA53CB003EEDC8 /* FilmDetailScrollViewViewController.m */; };
 		01562BC31AEA53CB003EEDC8 /* FilmDetailScrollViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01562BC11AEA53CB003EEDC8 /* FilmDetailScrollViewViewController.xib */; };
 		0158344A1AB8223B007E0AC4 /* APIVars.m in Sources */ = {isa = PBXBuildFile; fileRef = 015834491AB8223B007E0AC4 /* APIVars.m */; };
@@ -168,6 +173,8 @@
 		0114C7F41B5FAB2700400401 /* DateHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DateHelper.m; path = Helpers/DateHelper.m; sourceTree = "<group>"; };
 		0114C7F61B5FAF9F00400401 /* Film.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Film.h; path = Entities/Film.h; sourceTree = "<group>"; };
 		0114C7F71B5FAF9F00400401 /* Film.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Film.m; path = Entities/Film.m; sourceTree = "<group>"; };
+		0114C7FA1B5FB7C400400401 /* FilmRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FilmRepository.h; path = Repositories/FilmRepository.h; sourceTree = "<group>"; };
+		0114C7FB1B5FB7D500400401 /* ListRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ListRepository.h; path = Repositories/ListRepository.h; sourceTree = "<group>"; };
 		0115B7231AC3630800F38A7D /* UpdateListInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UpdateListInteractor.h; path = Interactors/UpdateListInteractor.h; sourceTree = "<group>"; };
 		0115B7241AC3630800F38A7D /* UpdateListInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UpdateListInteractor.m; path = Interactors/UpdateListInteractor.m; sourceTree = "<group>"; };
 		0117596D1ABAF5E700724BC5 /* ControllersFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ControllersFactory.h; path = Factories/ControllersFactory.h; sourceTree = "<group>"; };
@@ -252,6 +259,15 @@
 		01453E7D1AC348BD00F8ADC6 /* RemoveFilmFromListInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RemoveFilmFromListInteractor.m; path = Interactors/RemoveFilmFromListInteractor.m; sourceTree = "<group>"; };
 		014DF9921B00B72F0052547C /* CheckNextReleasesInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CheckNextReleasesInteractor.h; path = Interactors/CheckNextReleasesInteractor.h; sourceTree = "<group>"; };
 		014DF9931B00B72F0052547C /* CheckNextReleasesInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CheckNextReleasesInteractor.m; path = Interactors/CheckNextReleasesInteractor.m; sourceTree = "<group>"; };
+		0152288F1B68CA9100344244 /* GenericCoreDataRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GenericCoreDataRepository.h; path = Repositories/GenericCoreDataRepository.h; sourceTree = "<group>"; };
+		015228901B68CA9100344244 /* GenericCoreDataRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GenericCoreDataRepository.m; path = Repositories/GenericCoreDataRepository.m; sourceTree = "<group>"; };
+		0153470D1B6A3ECF00A7D5A7 /* FilmDetailHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FilmDetailHeaderView.xib; path = Views/HeaderViews/FilmDetailHeaderView/FilmDetailHeaderView.xib; sourceTree = "<group>"; };
+		015347101B6A405700A7D5A7 /* StyledLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StyledLabel.h; path = Views/UISubclasses/StyledLabel.h; sourceTree = "<group>"; };
+		015347111B6A405700A7D5A7 /* StyledLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StyledLabel.m; path = Views/UISubclasses/StyledLabel.m; sourceTree = "<group>"; };
+		015347131B6A421300A7D5A7 /* FilmDetailHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FilmDetailHeaderView.h; path = Views/HeaderViews/FilmDetailHeaderView/FilmDetailHeaderView.h; sourceTree = "<group>"; };
+		015347141B6A421300A7D5A7 /* FilmDetailHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FilmDetailHeaderView.m; path = Views/HeaderViews/FilmDetailHeaderView/FilmDetailHeaderView.m; sourceTree = "<group>"; };
+		015347171B6A4F6B00A7D5A7 /* JAXibView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JAXibView.h; path = Resources/JAXibView.h; sourceTree = "<group>"; };
+		015347181B6A4F6B00A7D5A7 /* JAXibView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JAXibView.m; path = Resources/JAXibView.m; sourceTree = "<group>"; };
 		01562BBF1AEA53CB003EEDC8 /* FilmDetailScrollViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FilmDetailScrollViewViewController.h; path = ViewControllers/FilmDetailScrollViewViewController.h; sourceTree = "<group>"; };
 		01562BC01AEA53CB003EEDC8 /* FilmDetailScrollViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FilmDetailScrollViewViewController.m; path = ViewControllers/FilmDetailScrollViewViewController.m; sourceTree = "<group>"; };
 		01562BC11AEA53CB003EEDC8 /* FilmDetailScrollViewViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FilmDetailScrollViewViewController.xib; path = ViewControllers/FilmDetailScrollViewViewController.xib; sourceTree = "<group>"; };
@@ -373,6 +389,7 @@
 				015834531AB862A4007E0AC4 /* Helpers */,
 				01068EF71AB701EA0017F91A /* RequestManagers */,
 				0158344C1AB84A90007E0AC4 /* Factories */,
+				0114C7F91B5FB79B00400401 /* Repositories */,
 				01068EF61AB701E40017F91A /* Providers */,
 				01068EF51AB701DA0017F91A /* Interactors */,
 				014DF9951B00C2900052547C /* BackgroundInteractors */,
@@ -381,6 +398,7 @@
 				01068EF81AB701F40017F91A /* ViewControllers */,
 				01068EFD1AB703B40017F91A /* Views */,
 				01068EF91AB702A30017F91A /* CoreData */,
+				015347161B6A4F4400A7D5A7 /* Resources */,
 				01068EDB1AB7011D0017F91A /* Images.xcassets */,
 				01068EDD1AB7011D0017F91A /* LaunchScreen.xib */,
 				01068ECB1AB7011D0017F91A /* Supporting Files */,
@@ -529,6 +547,8 @@
 		01068EFD1AB703B40017F91A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				0153470F1B6A402400A7D5A7 /* UISubClasses */,
+				015347081B6A3E1E00A7D5A7 /* HeaderViews */,
 				01068F4E1AB752840017F91A /* CollectionFilmsCollectionViewCell.h */,
 				01068F4F1AB752840017F91A /* CollectionFilmsCollectionViewCell.m */,
 				01068F501AB752840017F91A /* CollectionFilmsCollectionViewCell.xib */,
@@ -552,6 +572,17 @@
 				01068F591AB754810017F91A /* FilmsCollectionDelegate.h */,
 			);
 			name = Delegates;
+			sourceTree = "<group>";
+		};
+		0114C7F91B5FB79B00400401 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				0114C7FA1B5FB7C400400401 /* FilmRepository.h */,
+				0114C7FB1B5FB7D500400401 /* ListRepository.h */,
+				0152288F1B68CA9100344244 /* GenericCoreDataRepository.h */,
+				015228901B68CA9100344244 /* GenericCoreDataRepository.m */,
+			);
+			name = Repositories;
 			sourceTree = "<group>";
 		};
 		011759801ABB424E00724BC5 /* Transitions */ = {
@@ -677,6 +708,42 @@
 				014DF9931B00B72F0052547C /* CheckNextReleasesInteractor.m */,
 			);
 			name = BackgroundInteractors;
+			sourceTree = "<group>";
+		};
+		015347081B6A3E1E00A7D5A7 /* HeaderViews */ = {
+			isa = PBXGroup;
+			children = (
+				015347091B6A3E2700A7D5A7 /* FilmDetailHeaderView */,
+			);
+			name = HeaderViews;
+			sourceTree = "<group>";
+		};
+		015347091B6A3E2700A7D5A7 /* FilmDetailHeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				0153470D1B6A3ECF00A7D5A7 /* FilmDetailHeaderView.xib */,
+				015347131B6A421300A7D5A7 /* FilmDetailHeaderView.h */,
+				015347141B6A421300A7D5A7 /* FilmDetailHeaderView.m */,
+			);
+			name = FilmDetailHeaderView;
+			sourceTree = "<group>";
+		};
+		0153470F1B6A402400A7D5A7 /* UISubClasses */ = {
+			isa = PBXGroup;
+			children = (
+				015347101B6A405700A7D5A7 /* StyledLabel.h */,
+				015347111B6A405700A7D5A7 /* StyledLabel.m */,
+			);
+			name = UISubClasses;
+			sourceTree = "<group>";
+		};
+		015347161B6A4F4400A7D5A7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				015347171B6A4F6B00A7D5A7 /* JAXibView.h */,
+				015347181B6A4F6B00A7D5A7 /* JAXibView.m */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		015834471AB821D3007E0AC4 /* Master */ = {
@@ -906,6 +973,7 @@
 				015AB17E1ABC6A3000D2CBAA /* SearchFilmViewController.xib in Resources */,
 				01562BC31AEA53CB003EEDC8 /* FilmDetailScrollViewViewController.xib in Resources */,
 				012C6B981ABA0A070060A49C /* FilmListCollectionViewCell.xib in Resources */,
+				0153470E1B6A3ECF00A7D5A7 /* FilmDetailHeaderView.xib in Resources */,
 				01453E741AC325AF00F8ADC6 /* FilmDetailListTableViewCell.xib in Resources */,
 				01068F311AB725490017F91A /* BillboardViewController.xib in Resources */,
 				01B875AC1AC45FE200BD69EB /* GenreFilmDetailCollectionViewCell.xib in Resources */,
@@ -974,6 +1042,7 @@
 				011C92C51AC424FA0097EE10 /* Genre.m in Sources */,
 				01068EFC1AB702CC0017F91A /* CoreDataStack.m in Sources */,
 				01068F051AB710D70017F91A /* MainRouter.m in Sources */,
+				015347191B6A4F6B00A7D5A7 /* JAXibView.m in Sources */,
 				01B62DE81B5675CF000F203A /* AppAssembly.m in Sources */,
 				0169446A1B57C03700B77A31 /* DelegatesAssembly.m in Sources */,
 				015AB18A1ABC827C00D2CBAA /* SearchFilmInteractor.m in Sources */,
@@ -996,6 +1065,8 @@
 				01B62DEF1B567DC4000F203A /* ViewControllersAssembly.m in Sources */,
 				011C92C21AC421AC0097EE10 /* Genre+Model.m in Sources */,
 				01068ED11AB7011D0017F91A /* AppDelegate.m in Sources */,
+				015347121B6A405700A7D5A7 /* StyledLabel.m in Sources */,
+				015347151B6A421300A7D5A7 /* FilmDetailHeaderView.m in Sources */,
 				012C6BAB1ABA14A70060A49C /* LocalCoreDataListsProvider.m in Sources */,
 				018F9DCD1AB896200046D3C4 /* LocalCoreDataFilmsProvider.m in Sources */,
 				01453E7B1AC32D0300F8ADC6 /* InteractorsFactory.m in Sources */,
@@ -1016,6 +1087,7 @@
 				015AB1841ABC6E7E00D2CBAA /* SearchFilmTableViewCellController.m in Sources */,
 				01453E781AC32AE600F8ADC6 /* FilmDetailListTableViewCellController.m in Sources */,
 				01B62DF81B567E2D000F203A /* RequestManagerAssembly.m in Sources */,
+				015228911B68CA9100344244 /* GenericCoreDataRepository.m in Sources */,
 				015AB1811ABC6C3800D2CBAA /* LoadPopularFilmsInteractor.m in Sources */,
 				0121765D1ABC3D8F00EDA095 /* FilmTableViewCell.m in Sources */,
 				012C6B881AB9D3290060A49C /* LoadFilmInteractor.m in Sources */,

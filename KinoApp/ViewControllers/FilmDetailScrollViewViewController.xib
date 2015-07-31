@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FilmDetailScrollViewViewController">
             <connections>
+                <outlet property="filmDetailHeaderView" destination="lE8-nl-01b" id="Fmp-m9-Mkh"/>
                 <outlet property="filmGenreCollectionView" destination="KKu-lQ-Io8" id="kM7-NS-MXh"/>
                 <outlet property="filmGenresCollectionViewHeightConstraint" destination="5AF-pG-pfi" id="OyN-0l-hiY"/>
                 <outlet property="filmImageView" destination="D1f-OD-BWm" id="m6Y-H8-Nxu"/>
@@ -116,14 +117,24 @@
                         <constraint firstItem="oiO-xw-V6o" firstAttribute="top" secondItem="KKu-lQ-Io8" secondAttribute="bottom" constant="20" id="yLl-7X-xD2"/>
                     </constraints>
                 </scrollView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lE8-nl-01b" customClass="FilmDetailHeaderView">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="64"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="64" id="V0L-Of-Mlo"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="D1f-OD-BWm" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="4fK-FI-zn5"/>
+                <constraint firstItem="lE8-nl-01b" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="APy-A0-T23"/>
                 <constraint firstAttribute="trailing" secondItem="u4S-lA-s0T" secondAttribute="trailing" id="D4d-9c-Nwz"/>
                 <constraint firstItem="rav-3a-yxA" firstAttribute="width" secondItem="D1f-OD-BWm" secondAttribute="width" constant="-20" id="Jgg-VU-RQo"/>
                 <constraint firstAttribute="trailing" secondItem="D1f-OD-BWm" secondAttribute="trailing" id="T5C-IJ-PUm"/>
+                <constraint firstAttribute="trailing" secondItem="lE8-nl-01b" secondAttribute="trailing" id="Tdc-Co-oFm"/>
                 <constraint firstItem="D1f-OD-BWm" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Yme-RD-aDr"/>
+                <constraint firstItem="lE8-nl-01b" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="bAe-tp-1gu"/>
                 <constraint firstAttribute="bottom" secondItem="D1f-OD-BWm" secondAttribute="bottom" id="c98-HK-e5f"/>
                 <constraint firstAttribute="bottom" secondItem="u4S-lA-s0T" secondAttribute="bottom" id="dDt-Za-k1a"/>
                 <constraint firstItem="u4S-lA-s0T" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="uIP-3J-SZT"/>
@@ -135,6 +146,7 @@
                     <exclude reference="Jgg-VU-RQo"/>
                 </mask>
             </variation>
+            <point key="canvasLocation" x="490" y="651"/>
         </view>
     </objects>
 </document>

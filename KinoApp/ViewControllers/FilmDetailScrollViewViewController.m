@@ -14,13 +14,16 @@
 #import "LoadFilmInteractor.h"
 #import "UIFont+Custom.h"
 #import "UIColor+Custom.h"
+#import "FilmDetailHeaderView.h"
+#import "DetailFilmRouter.h"
 
 #define CGRGBA(r, g, b, a) [[UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a] CGColor]
+#define MIDDLE(max, min, number) MIN(max, MAX(min, number))
 
 NSString *const kFilmGenresCollectionViewContentSizeProperty = @"filmGenreCollectionView.contentSize";
 NSString *const kFilmListsTableViewContentSizeProperty = @"filmListsTableView.contentSize";
 
-@interface FilmDetailScrollViewViewController ()
+@interface FilmDetailScrollViewViewController () <FilmDetailHeaderViewDelegate, UIScrollViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *refereceViewTopConstraint;
@@ -34,7 +37,9 @@ NSString *const kFilmListsTableViewContentSizeProperty = @"filmListsTableView.co
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *filmGenresCollectionViewHeightConstraint;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *filmListTableViewHeightConstraint;
 @property (weak, nonatomic) IBOutlet UIView *gradientLayerView;
+@property (weak, nonatomic) IBOutlet FilmDetailHeaderView *filmDetailHeaderView;
 
+@property (nonatomic, assign) CGFloat completeHeight;
 @property (nonatomic, strong) CAGradientLayer *backgroundLayer;
 
 @end
@@ -62,6 +67,7 @@ NSString *const kFilmListsTableViewContentSizeProperty = @"filmListsTableView.co
     
     [self configLayerView];
     self.refereceViewTopConstraint.constant = CGRectGetHeight(self.view.frame) - CGRectGetHeight(self.referenceView.frame) - 10.0f;
+    [self calculateReferences];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -75,6 +81,8 @@ NSString *const kFilmListsTableViewContentSizeProperty = @"filmListsTableView.co
 - (void)configItems
 {
     dispatch_async(dispatch_get_main_queue(), ^{
+        self.scrollView.delegate = self;
+        self.filmDetailHeaderView.filmName = self.film.filmTitle;
         [self.filmImageView sd_setImageWithURL:[NSURL URLWithString:self.film.filmPosterPath]];
         self.filmTitleLabel.text = self.film.filmTitle;
         self.filmOverviewLabel.text = self.film.filmOverview;
@@ -88,6 +96,8 @@ NSString *const kFilmListsTableViewContentSizeProperty = @"filmListsTableView.co
 - (void)configStyles
 {
     self.view.backgroundColor = [UIColor appBGColor];
+    self.filmDetailHeaderView.alpha = 0.0f;
+    self.filmDetailHeaderView.delegate = self;
     self.filmTitleLabel.textColor = [UIColor whiteColor];
     self.filmTitleLabel.font = [UIFont appFontWithSize:30];
     self.filmPrincipalDataLabel.font = [UIFont appFontWithSize:20.0f];
@@ -154,6 +164,28 @@ NSString *const kFilmListsTableViewContentSizeProperty = @"filmListsTableView.co
     {
         [self updateFilmListsTableViewheight];
     }
+}
+
+#pragma mark - Custom methods.
+- (void)calculateReferences
+{
+    self.completeHeight = self.refereceViewTopConstraint.constant - CGRectGetHeight(self.filmDetailHeaderView.frame);
+    CGFloat diference = self.scrollView.contentSize.height - CGRectGetHeight(self.view.bounds);
+    self.completeHeight = (self.completeHeight > diference) ? diference : self.completeHeight;
+}
+
+#pragma mark - UIScrollViewdelegate methods.
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    CGFloat alpha = scrollView.contentOffset.y / self.completeHeight;
+    alpha = MIDDLE(1, 0, alpha);
+    self.filmDetailHeaderView.alpha = alpha;
+}
+
+#pragma mark - FilmDetailHeaderViewDelegate methods.
+- (void)didTapAtBackButton:(UIButton *)sender
+{
+    [self.router popFilmDetailViewController];
 }
 
 #pragma mark - Dealloc.
