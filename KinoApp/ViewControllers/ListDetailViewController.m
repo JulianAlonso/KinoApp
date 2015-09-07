@@ -15,6 +15,7 @@
 #import "BillboardFilmCollectionViewCell.h"
 #import "UIColor+Custom.h"
 #import "UpdateListInteractor.h"
+#import "SizeHelper.h"
 
 NSString *const kListProperty = @"list";
 
@@ -49,7 +50,6 @@ NSString *const kListProperty = @"list";
 
 - (void)viewWillDisappear:(BOOL)animated
 {
-//    [self.navigationController setNavigationBarHidden:YES animated:animated];
     [super viewWillDisappear:animated];
 }
 
@@ -162,9 +162,8 @@ NSString *const kListProperty = @"list";
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     CGFloat width = CGRectGetWidth(collectionView.bounds) / 2;
-    CGFloat height = CGRectGetHeight(collectionView.bounds) / 2.3;
     
-    return CGSizeMake(width, height);
+    return [SizeHelper sizeForFilmCellWithWidth:width];
 }
 
 #pragma mark - FilmTableViewControllerCellDelegate methods.

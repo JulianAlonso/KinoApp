@@ -13,6 +13,7 @@
 #import "BillboardFilmCollectionViewCell.h"
 #import "ControllersFactory.h"
 #import "FilmCollectionViewCellController.h"
+#import "SizeHelper.h"
 
 @interface BillboardFilmsCollectionDelegate () <FilmCollectionViewControllerCellDelegate>
 
@@ -103,9 +104,8 @@
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     CGFloat width = CGRectGetWidth(collectionView.bounds) /2;
-    CGFloat height = CGRectGetHeight(collectionView.bounds) /2;
     
-    return CGSizeMake(width, height);
+    return [SizeHelper sizeForFilmCellWithWidth:width];
 }
 
 #pragma mark - Custom setters methods.

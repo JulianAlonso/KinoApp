@@ -15,4 +15,6 @@
 
 + (CGSize)filmDetailGenreCollectionViewCellSizeForGenre:(GenreDTO *)genre;
 
++ (CGSize)sizeForFilmCellWithWidth:(CGFloat)width;
+
 @end

@@ -178,6 +178,11 @@ NSString *const kFilmsProperty = @"films";
     return 140.0f;
 }
 
+- (BOOL)tableView:(UITableView *)tableView shouldHighlightRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return NO;
+}
+
 #pragma mark - SearchBar delegate methods.
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText
 {

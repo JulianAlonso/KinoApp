@@ -25,6 +25,12 @@
     return [configured systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
 }
 
++ (CGSize)sizeForFilmCellWithWidth:(CGFloat)width
+{
+    CGFloat height = width / 0.66;
+    return CGSizeMake(width, height);
+}
+
 #pragma mark - False getters methods.
 + (GenreFilmDetailCollectionViewCell *)genreFilmDetailCollectionViewCell
 {

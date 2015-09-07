@@ -29,10 +29,6 @@
     self.filmYearLabel.text = @"";
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-}
-
 - (void)configStyles
 {
     self.backgroundColor = [UIColor appBGColor];
@@ -41,6 +37,11 @@
     
     self.filmTitleLabel.font = [UIFont appFontWithSize:20.0f];
     self.filmYearLabel.font = [UIFont appFontWithSize:15.0f];
+}
+
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [self setSelected:NO];
 }
 
 #pragma mark - Action methods.
