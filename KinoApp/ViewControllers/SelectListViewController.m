@@ -25,7 +25,8 @@
 
 @implementation SelectListViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     
     [self configTableView];
@@ -33,9 +34,17 @@
     [self configStyles];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-}
+//- (void)viewWillAppear:(BOOL)animated
+//{
+//    [self.navigationController setNavigationBarHidden:NO animated:YES];
+//    [super viewWillAppear:animated];
+//}
+//
+//- (void)viewWillDisappear:(BOOL)animated
+//{
+//    [self.navigationController setNavigationBarHidden:NO animated:YES];
+//    [super viewWillDisappear:animated];
+//}
 
 - (void)viewDidLayoutSubviews
 {

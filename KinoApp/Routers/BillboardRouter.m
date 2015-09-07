@@ -19,20 +19,18 @@
 #import "DetailFilmRouter.h"
 #import "ViewControllersAssembly.h"
 #import "RouterAssembly.h"
+#import "JANavigationController.h"
 
 @implementation BillboardRouter
 
 - (void)loadViewAt:(UITabBarController *)tabBarController
 {
-    #warning Better create the VC with typhoon and inject.
     BillboardViewController *billboardViewController = [self.viewControllersAssembly billboardViewController];
     
-    UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:billboardViewController];
+    UINavigationController *nc = [[JANavigationController alloc] initWithRootViewController:billboardViewController];
     #warning Not localized!
     nc.tabBarItem.title = @"Billboard";
     nc.tabBarItem.image =  [UIImage imageNamed:@"Films"];
-    
-    nc.interactivePopGestureRecognizer.delegate = self;
     
     [tabBarController addChildViewController:nc];
 }

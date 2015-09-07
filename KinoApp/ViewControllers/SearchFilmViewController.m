@@ -42,10 +42,11 @@ NSString *const kFilmsProperty = @"films";
     [self configStyles];
     [self registerToObserveFilms];
     [self loadPopularFilms];
-    [self configSearchTableView];
     [self configSearchBar];
     [self configNavBar];
+    [self configSearchTableView];
     [self checkInternetConnection];
+    self.title = @"";
 }
 
 - (void)viewDidLayoutSubviews
@@ -55,9 +56,22 @@ NSString *const kFilmsProperty = @"films";
     self.topConstraint.constant = self.topLayoutGuide.length;
 }
 
-- (void)didReceiveMemoryWarning
+- (void)viewWillAppear:(BOOL)animated
 {
-    [super didReceiveMemoryWarning];
+    [self.navigationController setNavigationBarHidden:NO animated:animated];
+    [super viewWillAppear:animated];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    self.navigationController.interactivePopGestureRecognizer.enabled = NO;
+    [super viewDidAppear:animated];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    self.navigationController.interactivePopGestureRecognizer.enabled = YES;
+    [super viewWillDisappear:animated];
 }
 
 #pragma mark - Config methods.

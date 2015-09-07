@@ -29,6 +29,7 @@
 		01068F511AB752840017F91A /* CollectionFilmsCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 01068F4F1AB752840017F91A /* CollectionFilmsCollectionViewCell.m */; };
 		01068F521AB752840017F91A /* CollectionFilmsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01068F501AB752840017F91A /* CollectionFilmsCollectionViewCell.xib */; };
 		01068F581AB7546A0017F91A /* BillboardFilmsCollectionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 01068F571AB7546A0017F91A /* BillboardFilmsCollectionDelegate.m */; };
+		010D30751B9E08D000E582F1 /* JANavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 010D30741B9E08D000E582F1 /* JANavigationController.m */; };
 		0114C7F51B5FAB2700400401 /* DateHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0114C7F41B5FAB2700400401 /* DateHelper.m */; };
 		0114C7F81B5FAF9F00400401 /* Film.m in Sources */ = {isa = PBXBuildFile; fileRef = 0114C7F71B5FAF9F00400401 /* Film.m */; };
 		0115B7251AC3630800F38A7D /* UpdateListInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 0115B7241AC3630800F38A7D /* UpdateListInteractor.m */; };
@@ -169,6 +170,8 @@
 		01068F571AB7546A0017F91A /* BillboardFilmsCollectionDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BillboardFilmsCollectionDelegate.m; path = Delegates/BillboardFilmsCollectionDelegate.m; sourceTree = "<group>"; };
 		01068F591AB754810017F91A /* FilmsCollectionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FilmsCollectionDelegate.h; path = Delegates/FilmsCollectionDelegate.h; sourceTree = "<group>"; };
 		01068F5A1AB7558F0017F91A /* BillboardFilmsInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BillboardFilmsInteractor.h; path = Interactors/BillboardFilmsInteractor.h; sourceTree = "<group>"; };
+		010D30731B9E08D000E582F1 /* JANavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JANavigationController.h; path = SubClasses/UINavigationController/JANavigationController.h; sourceTree = "<group>"; };
+		010D30741B9E08D000E582F1 /* JANavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JANavigationController.m; path = SubClasses/UINavigationController/JANavigationController.m; sourceTree = "<group>"; };
 		0114C7F31B5FAB2700400401 /* DateHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DateHelper.h; path = Helpers/DateHelper.h; sourceTree = "<group>"; };
 		0114C7F41B5FAB2700400401 /* DateHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DateHelper.m; path = Helpers/DateHelper.m; sourceTree = "<group>"; };
 		0114C7F61B5FAF9F00400401 /* Film.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Film.h; path = Entities/Film.h; sourceTree = "<group>"; };
@@ -397,6 +400,7 @@
 				012C6B9D1ABA0EBA0060A49C /* Controllers */,
 				01068EF81AB701F40017F91A /* ViewControllers */,
 				01068EFD1AB703B40017F91A /* Views */,
+				010D30711B9E088400E582F1 /* SubClasses */,
 				01068EF91AB702A30017F91A /* CoreData */,
 				015347161B6A4F4400A7D5A7 /* Resources */,
 				01068EDB1AB7011D0017F91A /* Images.xcassets */,
@@ -572,6 +576,23 @@
 				01068F591AB754810017F91A /* FilmsCollectionDelegate.h */,
 			);
 			name = Delegates;
+			sourceTree = "<group>";
+		};
+		010D30711B9E088400E582F1 /* SubClasses */ = {
+			isa = PBXGroup;
+			children = (
+				010D30721B9E089B00E582F1 /* UINavigationController */,
+			);
+			name = SubClasses;
+			sourceTree = "<group>";
+		};
+		010D30721B9E089B00E582F1 /* UINavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				010D30731B9E08D000E582F1 /* JANavigationController.h */,
+				010D30741B9E08D000E582F1 /* JANavigationController.m */,
+			);
+			name = UINavigationController;
 			sourceTree = "<group>";
 		};
 		0114C7F91B5FB79B00400401 /* Repositories */ = {
@@ -1096,6 +1117,7 @@
 				018F9DD01AB896F90046D3C4 /* CoreDataManager.m in Sources */,
 				012C6BA01ABA0EE70060A49C /* FilmListCollectionViewCellController.m in Sources */,
 				015834521AB84E93007E0AC4 /* JARequestManager.m in Sources */,
+				010D30751B9E08D000E582F1 /* JANavigationController.m in Sources */,
 				015AB1871ABC78BD00D2CBAA /* SearchFilmRouter.m in Sources */,
 				01068ECE1AB7011D0017F91A /* main.m in Sources */,
 				01068F4D1AB74F2F0017F91A /* LoadPlayingNowFilmsInteractor.m in Sources */,

@@ -14,6 +14,7 @@
 #import "ListDTO.h"
 #import "DetailListRouter.h"
 #import "RouterAssembly.h"
+#import "JANavigationController.h"
 
 @implementation ListsCollectionRouter
 
@@ -22,11 +23,12 @@
     #warning Not localized.
     self.listsCollectionViewController.tabBarItem.title = @"Lists";
     
-    UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:self.listsCollectionViewController];
+    UINavigationController *nc = [[JANavigationController alloc] initWithRootViewController:self.listsCollectionViewController];
+    
     #warning Not localized.
     nc.tabBarItem.title = @"Lists";
     nc.tabBarItem.image = [UIImage imageNamed:@"Star"];
-    
+
     [tabBarCotroller addChildViewController:nc];
 }
 

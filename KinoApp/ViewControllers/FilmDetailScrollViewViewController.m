@@ -72,9 +72,14 @@ NSString *const kFilmListsTableViewContentSizeProperty = @"filmListsTableView.co
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    [super viewWillAppear:animated];
-    
     [self.navigationController setNavigationBarHidden:YES animated:NO];
+    [super viewWillAppear:animated];
+}
+
+- (void)viewDidDisappear:(BOOL)animated
+{
+    [self.navigationController setNavigationBarHidden:NO animated:NO];
+    [super viewDidDisappear:animated];
 }
 
 #pragma mark - Config methods.
