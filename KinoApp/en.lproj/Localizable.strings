@@ -1,0 +1,14 @@
+/* 
+  KinoApp.strings
+  KinoApp
+
+  Created by Julian Alonso on 26/10/15.
+  Copyright © 2015 Julian. All rights reserved.
+*/
+"playing_now" = "Playing now";
+"upcoming" = "Upcoming";
+"billboard" = "Billboard";
+"lists" = "Theaters";
+"no_connection" = "There is no connection. Try later";
+"%@ minutes · %@" = "%@ minutes · %@";
+"theater" = "Theater it's in:";

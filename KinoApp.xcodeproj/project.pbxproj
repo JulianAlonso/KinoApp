@@ -13,7 +13,6 @@
 		01068ED11AB7011D0017F91A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 01068ED01AB7011D0017F91A /* AppDelegate.m */; };
 		01068ED41AB7011D0017F91A /* KinoApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 01068ED21AB7011D0017F91A /* KinoApp.xcdatamodeld */; };
 		01068EDC1AB7011D0017F91A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01068EDB1AB7011D0017F91A /* Images.xcassets */; };
-		01068EDF1AB7011D0017F91A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01068EDD1AB7011D0017F91A /* LaunchScreen.xib */; };
 		01068EEB1AB7011D0017F91A /* KinoAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 01068EEA1AB7011D0017F91A /* KinoAppTests.m */; };
 		01068EFC1AB702CC0017F91A /* CoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 01068EFB1AB702CC0017F91A /* CoreDataStack.m */; };
 		01068F051AB710D70017F91A /* MainRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 01068F041AB710D70017F91A /* MainRouter.m */; };
@@ -47,6 +46,8 @@
 		011C92C21AC421AC0097EE10 /* Genre+Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 011C92C11AC421AC0097EE10 /* Genre+Model.m */; };
 		011C92C51AC424FA0097EE10 /* Genre.m in Sources */ = {isa = PBXBuildFile; fileRef = 011C92C41AC424FA0097EE10 /* Genre.m */; };
 		011C92CF1AC42A950097EE10 /* FilmDetailGenreCollectionViewCellController.m in Sources */ = {isa = PBXBuildFile; fileRef = 011C92CE1AC42A950097EE10 /* FilmDetailGenreCollectionViewCellController.m */; };
+		01200D1E1BDEC1DA00A31F22 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 01200D201BDEC1DA00A31F22 /* Localizable.strings */; };
+		01200D251BDEC22C00A31F22 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01200D241BDEC22C00A31F22 /* LaunchScreen.xib */; };
 		012176471ABC1FE700EDA095 /* List+Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 012176461ABC1FE700EDA095 /* List+Model.m */; };
 		012176551ABC330D00EDA095 /* ListDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 012176531ABC330D00EDA095 /* ListDetailViewController.m */; };
 		012176561ABC330D00EDA095 /* ListDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 012176541ABC330D00EDA095 /* ListDetailViewController.xib */; };
@@ -137,7 +138,6 @@
 		01068ED01AB7011D0017F91A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		01068ED31AB7011D0017F91A /* KinoApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = KinoApp.xcdatamodel; sourceTree = "<group>"; };
 		01068EDB1AB7011D0017F91A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		01068EDE1AB7011D0017F91A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		01068EE41AB7011D0017F91A /* KinoAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KinoAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		01068EE91AB7011D0017F91A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		01068EEA1AB7011D0017F91A /* KinoAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KinoAppTests.m; sourceTree = "<group>"; };
@@ -206,6 +206,9 @@
 		011C92C41AC424FA0097EE10 /* Genre.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Genre.m; path = Entities/Genre.m; sourceTree = "<group>"; };
 		011C92CD1AC42A950097EE10 /* FilmDetailGenreCollectionViewCellController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FilmDetailGenreCollectionViewCellController.h; path = Controllers/DetailFilmTableViewCellControllers/GenresFilmDetailTableViewCellCollectionCellConrtrollers/FilmDetailGenreCollectionViewCellController.h; sourceTree = "<group>"; };
 		011C92CE1AC42A950097EE10 /* FilmDetailGenreCollectionViewCellController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FilmDetailGenreCollectionViewCellController.m; path = Controllers/DetailFilmTableViewCellControllers/GenresFilmDetailTableViewCellCollectionCellConrtrollers/FilmDetailGenreCollectionViewCellController.m; sourceTree = "<group>"; };
+		01200D1F1BDEC1DA00A31F22 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		01200D211BDEC1DF00A31F22 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		01200D241BDEC22C00A31F22 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		012176451ABC1FE700EDA095 /* List+Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "List+Model.h"; path = "Categories/List+Model.h"; sourceTree = "<group>"; };
 		012176461ABC1FE700EDA095 /* List+Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "List+Model.m"; path = "Categories/List+Model.m"; sourceTree = "<group>"; };
 		012176521ABC330D00EDA095 /* ListDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ListDetailViewController.h; path = ViewControllers/ListDetailViewController.h; sourceTree = "<group>"; };
@@ -403,8 +406,8 @@
 				010D30711B9E088400E582F1 /* SubClasses */,
 				01068EF91AB702A30017F91A /* CoreData */,
 				015347161B6A4F4400A7D5A7 /* Resources */,
+				01200D241BDEC22C00A31F22 /* LaunchScreen.xib */,
 				01068EDB1AB7011D0017F91A /* Images.xcassets */,
-				01068EDD1AB7011D0017F91A /* LaunchScreen.xib */,
 				01068ECB1AB7011D0017F91A /* Supporting Files */,
 			);
 			path = KinoApp;
@@ -416,6 +419,7 @@
 				01068ECC1AB7011D0017F91A /* Info.plist */,
 				01068ECD1AB7011D0017F91A /* main.m */,
 				01B62DE91B56769A000F203A /* Kino-Prefix.pch */,
+				01200D201BDEC1DA00A31F22 /* Localizable.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -944,7 +948,7 @@
 		01068EC01AB7011D0017F91A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0620;
+				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = Julian;
 				TargetAttributes = {
 					01068EC71AB7011D0017F91A = {
@@ -967,8 +971,8 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
+				es,
 			);
 			mainGroup = 01068EBF1AB7011D0017F91A;
 			productRefGroup = 01068EC91AB7011D0017F91A /* Products */;
@@ -988,11 +992,12 @@
 			files = (
 				01068F3C1AB72D480017F91A /* BillboardFilmCollectionViewCell.xib in Resources */,
 				0121765E1ABC3D8F00EDA095 /* FilmTableViewCell.xib in Resources */,
-				01068EDF1AB7011D0017F91A /* LaunchScreen.xib in Resources */,
 				012C6B901ABA006D0060A49C /* ListsCollectionViewController.xib in Resources */,
+				01200D251BDEC22C00A31F22 /* LaunchScreen.xib in Resources */,
 				01068F521AB752840017F91A /* CollectionFilmsCollectionViewCell.xib in Resources */,
 				015AB17E1ABC6A3000D2CBAA /* SearchFilmViewController.xib in Resources */,
 				01562BC31AEA53CB003EEDC8 /* FilmDetailScrollViewViewController.xib in Resources */,
+				01200D1E1BDEC1DA00A31F22 /* Localizable.strings in Resources */,
 				012C6B981ABA0A070060A49C /* FilmListCollectionViewCell.xib in Resources */,
 				0153470E1B6A3ECF00A7D5A7 /* FilmDetailHeaderView.xib in Resources */,
 				01453E741AC325AF00F8ADC6 /* FilmDetailListTableViewCell.xib in Resources */,
@@ -1161,12 +1166,13 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		01068EDD1AB7011D0017F91A /* LaunchScreen.xib */ = {
+		01200D201BDEC1DA00A31F22 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				01068EDE1AB7011D0017F91A /* Base */,
+				01200D1F1BDEC1DA00A31F22 /* en */,
+				01200D211BDEC1DF00A31F22 /* es */,
 			);
-			name = LaunchScreen.xib;
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -1192,6 +1198,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -1258,6 +1265,7 @@
 				GCC_PREFIX_HEADER = "KinoApp/Kino-Prefix.pch";
 				INFOPLIST_FILE = KinoApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Julian.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -1273,6 +1281,7 @@
 				GCC_PREFIX_HEADER = "KinoApp/Kino-Prefix.pch";
 				INFOPLIST_FILE = KinoApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Julian.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -1292,6 +1301,7 @@
 				);
 				INFOPLIST_FILE = KinoAppTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Julian.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KinoApp.app/KinoApp";
 			};
@@ -1307,6 +1317,7 @@
 				);
 				INFOPLIST_FILE = KinoAppTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Julian.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KinoApp.app/KinoApp";
 			};

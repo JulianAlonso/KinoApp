@@ -94,7 +94,7 @@ NSString *const kFilmListsTableViewContentSizeProperty = @"filmListsTableView.co
         self.filmGenreCollectionView.film = self.film;
         self.filmListsTableView.fetchListsInteractor = self.fetchAllListInteractor;
         self.filmListsTableView.film = self.film;
-        self.filmPrincipalDataLabel.text = [NSString stringWithFormat:@"%@ minutes  ·  %@", self.film.filmRuntime, self.film.filmYear];
+        self.filmPrincipalDataLabel.text = [NSString stringWithFormat:NSLocalizedString(@"%@ minutes · %@", nil), self.film.filmRuntime, self.film.filmYear];
     });
 }
 

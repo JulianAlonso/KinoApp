@@ -1,0 +1,14 @@
+/* 
+  KinoApp.strings
+  KinoApp
+
+  Created by Julian Alonso on 26/10/15.
+  Copyright © 2015 Julian. All rights reserved.
+*/
+"playing_now" = "En cines";
+"upcoming" = "Próximamente";
+"billboard" = "Cartelera";
+"lists" = "Salas";
+"no_connection" = "No hay conexión. Prueba mas tarde";
+"%@ minutes · %@" = "%@ minutos · %@";
+"theater" = "Guardada en las salas:";

@@ -123,7 +123,7 @@ NSString *const kFilmsProperty = @"films";
     {
         self.infoLabel.alpha = 1.0f;
         self.searchTableView.alpha = 0.0f;
-        self.infoLabel.text = @"No hay internet tio";
+        self.infoLabel.text = NSLocalizedString(@"no_connection", nil);
         self.searchBar.userInteractionEnabled = NO;
     }
 }

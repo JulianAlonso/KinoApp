@@ -130,8 +130,8 @@ NSString *const kListFilmDetailTableViewCellFilmProperty = @"film";
     UIView *header = [[UIView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.frame), self.headerHeight)];
     
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, 0, CGRectGetWidth(self.frame), self.headerHeight - 5)];
-    #warning Not localized!
-    label.text = @"Collections it's in";
+
+    label.text = NSLocalizedString(@"theater", nil);
     label.textColor = [UIColor whiteColor];
     label.font = [UIFont appFontWithSize:26.0f];
     label.shadowColor = RGBA(0, 0, 0, 0.5f);
