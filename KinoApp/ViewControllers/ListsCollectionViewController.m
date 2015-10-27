@@ -11,10 +11,10 @@
 #import "FilmListCollectionViewCell.h"
 #import "FilmListCollectionViewCellController.h"
 #import "FetchAllListsInteractor.h"
-#import "ControllersFactory.h"
 #import "UIColor+Custom.h"
 #import "ListDTO.h"
 #import "FilmDTO.h"
+#import "ControllersAssembly.h"
 
 NSString *const kListsProperty = @"lists";
 
@@ -106,7 +106,7 @@ NSString *const kListsProperty = @"lists";
     
     for (__unused ListDTO *l in self.lists)
     {
-        FilmListCollectionViewCellController *controller = [ControllersFactory controllerForCellClass:[FilmListCollectionViewCell class]];
+        FilmListCollectionViewCellController *controller = [self.controllersAssembly filmListCollectionViewCellContorller];
         controller.router = self.router;
         [controllers addObject:controller];
     }

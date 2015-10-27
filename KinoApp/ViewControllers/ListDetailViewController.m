@@ -10,12 +10,12 @@
 #import "FilmTableViewCell.h"
 #import "FilmCollectionViewCellController.h"
 #import "ListDTO.h"
-#import "ControllersFactory.h"
 #import "DetailListRouter.h"
 #import "BillboardFilmCollectionViewCell.h"
 #import "UIColor+Custom.h"
 #import "UpdateListInteractor.h"
 #import "SizeHelper.h"
+#import "ControllersAssembly.h"
 
 NSString *const kListProperty = @"list";
 
@@ -84,7 +84,7 @@ NSString *const kListProperty = @"list";
     NSMutableArray *controllers = [NSMutableArray array];
     for (__unused FilmDTO *film in self.list.listFilms)
     {
-        FilmCollectionViewCellController *controller = [ControllersFactory controllerForCellClass:[BillboardFilmCollectionViewCell class]];
+        FilmCollectionViewCellController *controller = [self.controllersAssembly filmCollectionViewCellController];
         controller.delegate = self;
         [controllers addObject:controller];
     }

@@ -7,7 +7,6 @@
 //
 
 #import "ExternalTMDBProvider.h"
-#import "RequestManagerFactory.h"
 #import "APIVars.h"
 #import "FilmDTOParser.h"
 #import "FilmDTO.h"

@@ -9,7 +9,6 @@
 #import "FilmDetailListTableViewCellController.h"
 #import "FilmDetailListTableViewCell.h"
 #import "ListDTO.h"
-#import "InteractorsFactory.h"
 #import "AddFilmToListInteractor.h"
 #import "RemoveFilmFromListInteractor.h"
 
@@ -83,25 +82,6 @@
             });
         }];
     }
-}
-
-#pragma mark - Lazy getters.
-- (AddFilmToListInteractor *)addFilmInteractor
-{
-    if (!_addFilmInteractor)
-    {
-        _addFilmInteractor = [InteractorsFactory addFilmToListInteractor];
-    }
-    return _addFilmInteractor;
-}
-
-- (RemoveFilmFromListInteractor *)removeFilmInteractor
-{
-    if (!_removeFilmInteractor)
-    {
-        _removeFilmInteractor = [InteractorsFactory removeFilmFromListInteractor];
-    }
-    return _removeFilmInteractor;
 }
 
 @end

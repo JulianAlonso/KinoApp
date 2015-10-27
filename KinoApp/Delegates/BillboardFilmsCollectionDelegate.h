@@ -10,8 +10,11 @@
 #import "FilmsCollectionDelegate.h"
 #import "BillboardFilmCollectionEventReceiver.h"
 
+@class ControllersAssembly;
+
 @interface BillboardFilmsCollectionDelegate : NSObject <FilmsCollectionDelegate>
 
 @property (nonatomic, weak) id<BillboardFilmCollectionEventReceiver> eventReceiver;
+@property (nonatomic, strong) ControllersAssembly *controllersAssembly;
 
 @end

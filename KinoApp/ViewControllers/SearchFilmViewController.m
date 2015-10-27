@@ -8,7 +8,6 @@
 
 #import "SearchFilmViewController.h"
 #import "SearchFilmTableViewCellController.h"
-#import "ControllersFactory.h"
 #import "FilmTableViewCell.h"
 #import "LoadPopularFilmsInteractor.h"
 #import "SearchFilmInteractor.h"

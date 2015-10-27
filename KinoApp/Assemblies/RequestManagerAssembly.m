@@ -17,7 +17,8 @@
     return [TyphoonDefinition withClass:[JARequestManager class] configuration:^(TyphoonDefinition *definition)
     {
         [definition injectProperty:@selector(basePath) with:BASE_PATH];
-        [definition injectProperty:@selector(defaultParams) with:@{@"api_key" : API_KEY, @"language" : @"es"}];
+        [definition injectProperty:@selector(defaultParams) with:@{@"api_key" : API_KEY,
+                                                                   @"language" : @"es"}];
     }];
 }
 

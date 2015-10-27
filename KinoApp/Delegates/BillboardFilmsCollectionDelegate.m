@@ -11,9 +11,9 @@
 #import "CollectionFilmsCollectionViewCell.h"
 #import "FilmDTO.h"
 #import "BillboardFilmCollectionViewCell.h"
-#import "ControllersFactory.h"
 #import "FilmCollectionViewCellController.h"
 #import "SizeHelper.h"
+#import "ControllersAssembly.h"
 
 @interface BillboardFilmsCollectionDelegate () <FilmCollectionViewControllerCellDelegate>
 
@@ -56,7 +56,7 @@
     NSMutableArray *controllers = [NSMutableArray array];
     for (__unused FilmDTO *film in self.films)
     {
-        FilmCollectionViewCellController *controller = [ControllersFactory controllerForCellClass:[BillboardFilmCollectionViewCell class]];
+        FilmCollectionViewCellController *controller = [self.controllersAssembly filmCollectionViewCellController];
         controller.delegate = self;
         [controllers addObject:controller];
         
