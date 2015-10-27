@@ -10,4 +10,9 @@
 
 @implementation FilmReleaseDTO
 
+- (NSString *)description
+{
+    return [NSString stringWithFormat:@"Release Date = %@ \n Country = %@", self.releaseDate, self.releaseCountryISO];
+}
+
 @end

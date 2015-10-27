@@ -10,7 +10,7 @@
 #import "FilmReleasesProvider.h"
 #import "RequestManager.h"
 
-@interface FilmReleasesProviderImpl : NSObject <FilmReleasesProvider>
+@interface TMDBFilmReleasesProvider : NSObject <FilmReleasesProvider>
 
 @property (nonatomic, strong) id<RequestManager> requestManager;
 

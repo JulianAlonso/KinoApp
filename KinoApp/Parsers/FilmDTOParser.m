@@ -24,8 +24,6 @@ static NSString *const dFilmBackdropPath = @"backdrop_path";
 static NSString *const dFilmRuntime = @"runtime";
 static NSString *const dFilmGenres = @"genres";
 
-static NSString *const filmDateFormat = @"yyyy-MM-dd";
-
 @implementation FilmDTOParser
 
 + (FilmDTO *)filmDTOFromDictionary:(NSDictionary *)dictionary filmType:(NSString *)filmType
@@ -36,7 +34,7 @@ static NSString *const filmDateFormat = @"yyyy-MM-dd";
     film.filmTitle = [NSString stringWithFormat:@"%@", dictionary[dFilmTitle]];
     film.filmOriginalTitle = [NSString stringWithFormat:@"%@", dictionary[dFilmOriginalTitle]];
     film.filmReleaseDate = [DateHelper dateFromString:[NSString stringWithFormat:@"%@", dictionary[dFilmReleaseDate]]
-                                           withFormat:filmDateFormat];
+                                           withFormat:TMDB_DATE_FORMAT];
     film.filmHomepage = [NSString stringWithFormat:@"%@", dictionary[dFilmHomepage]];
     film.filmOverview = [NSString stringWithFormat:@"%@", dictionary[dFilmOverview]];
     film.filmTagline = [NSString stringWithFormat:@"%@", dictionary[dFilmTagline]];

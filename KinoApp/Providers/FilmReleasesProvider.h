@@ -9,9 +9,12 @@
 #import <Foundation/Foundation.h>
 
 @class FilmReleaseDTO;
+@class FilmDTO;
 
 @protocol FilmReleasesProvider <NSObject>
 
-- (NSArray<FilmReleaseDTO *> *)filmReleaseDTOsForFilmWithId:(NSString *)filmId;
+- (void)filmReleaseDTOsForFilmWithId:(NSString *)filmId completion:(void(^)(NSArray<FilmReleaseDTO *> *filmReleaseDTOs))completionBlock;
+
+- (void)fetchFilmReleaseDTOsForFilms:(NSArray<FilmDTO *> *)films completion:(void(^)(NSArray<FilmDTO *> *completedFilms))completionBlock;
 
 @end

@@ -17,6 +17,7 @@ extern NSString *const POPULAR_ENDPOINT;
 extern NSString *const SEARCH_ENDPOINT;
 extern NSString *const BY_ID_ENDPOINT;
 extern NSString *const FILM_RELEASE_DATE_ENDPOINT;
+extern NSString *const TMDB_DATE_FORMAT;
 
 @interface APIVars : NSObject
 

@@ -68,8 +68,8 @@
 		012C6BAB1ABA14A70060A49C /* LocalCoreDataListsProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 012C6BAA1ABA14A70060A49C /* LocalCoreDataListsProvider.m */; };
 		012CC5391BE00F4300BE49E1 /* ControllersAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 012CC5381BE00F4300BE49E1 /* ControllersAssembly.m */; };
 		012CC53C1BE013B100BE49E1 /* FilmReleaseDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = 012CC53B1BE013B100BE49E1 /* FilmReleaseDTO.m */; };
-		012CC5421BE0145F00BE49E1 /* FilmReleaseDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = 012CC5411BE0145F00BE49E1 /* FilmReleaseDTO.m */; };
-		012CC54A1BE0158200BE49E1 /* FilmReleasesProviderImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 012CC5491BE0158200BE49E1 /* FilmReleasesProviderImpl.m */; };
+		012CC54A1BE0158200BE49E1 /* TMDBFilmReleasesProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 012CC5491BE0158200BE49E1 /* TMDBFilmReleasesProvider.m */; };
+		012CC54D1BE0173F00BE49E1 /* FilmReleaseDTOParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 012CC54C1BE0173F00BE49E1 /* FilmReleaseDTOParser.m */; };
 		013276D81AFB724A00416F82 /* ReachabilityHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 013276D71AFB724A00416F82 /* ReachabilityHelper.m */; };
 		013276DA1AFB72D800416F82 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 013276D91AFB72D800416F82 /* SystemConfiguration.framework */; };
 		013276DE1AFB735E00416F82 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 013276DD1AFB735E00416F82 /* Reachability.m */; };
@@ -248,11 +248,11 @@
 		012CC5381BE00F4300BE49E1 /* ControllersAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ControllersAssembly.m; path = Assemblies/ControllersAssembly.m; sourceTree = "<group>"; };
 		012CC53A1BE013B100BE49E1 /* FilmReleaseDTO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FilmReleaseDTO.h; path = Entities/FilmReleaseDTO.h; sourceTree = "<group>"; };
 		012CC53B1BE013B100BE49E1 /* FilmReleaseDTO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FilmReleaseDTO.m; path = Entities/FilmReleaseDTO.m; sourceTree = "<group>"; };
-		012CC5401BE0145F00BE49E1 /* FilmReleaseDTO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FilmReleaseDTO.h; path = Parsers/FilmReleaseDTO.h; sourceTree = "<group>"; };
-		012CC5411BE0145F00BE49E1 /* FilmReleaseDTO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FilmReleaseDTO.m; path = Parsers/FilmReleaseDTO.m; sourceTree = "<group>"; };
 		012CC5441BE0153800BE49E1 /* FilmReleasesProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FilmReleasesProvider.h; path = Providers/FilmReleasesProvider.h; sourceTree = "<group>"; };
-		012CC5481BE0158200BE49E1 /* FilmReleasesProviderImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FilmReleasesProviderImpl.h; path = Providers/FilmReleasesProviderImpl.h; sourceTree = "<group>"; };
-		012CC5491BE0158200BE49E1 /* FilmReleasesProviderImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FilmReleasesProviderImpl.m; path = Providers/FilmReleasesProviderImpl.m; sourceTree = "<group>"; };
+		012CC5481BE0158200BE49E1 /* TMDBFilmReleasesProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMDBFilmReleasesProvider.h; path = Providers/TMDBFilmReleasesProvider.h; sourceTree = "<group>"; };
+		012CC5491BE0158200BE49E1 /* TMDBFilmReleasesProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMDBFilmReleasesProvider.m; path = Providers/TMDBFilmReleasesProvider.m; sourceTree = "<group>"; };
+		012CC54B1BE0173F00BE49E1 /* FilmReleaseDTOParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FilmReleaseDTOParser.h; path = Parsers/FilmReleaseDTOParser.h; sourceTree = "<group>"; };
+		012CC54C1BE0173F00BE49E1 /* FilmReleaseDTOParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FilmReleaseDTOParser.m; path = Parsers/FilmReleaseDTOParser.m; sourceTree = "<group>"; };
 		013276D61AFB724A00416F82 /* ReachabilityHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ReachabilityHelper.h; path = Helpers/ReachabilityHelper.h; sourceTree = "<group>"; };
 		013276D71AFB724A00416F82 /* ReachabilityHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ReachabilityHelper.m; path = Helpers/ReachabilityHelper.m; sourceTree = "<group>"; };
 		013276D91AFB72D800416F82 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -504,8 +504,8 @@
 				012C6BA91ABA14A70060A49C /* LocalCoreDataListsProvider.h */,
 				012C6BAA1ABA14A70060A49C /* LocalCoreDataListsProvider.m */,
 				012CC5441BE0153800BE49E1 /* FilmReleasesProvider.h */,
-				012CC5481BE0158200BE49E1 /* FilmReleasesProviderImpl.h */,
-				012CC5491BE0158200BE49E1 /* FilmReleasesProviderImpl.m */,
+				012CC5481BE0158200BE49E1 /* TMDBFilmReleasesProvider.h */,
+				012CC5491BE0158200BE49E1 /* TMDBFilmReleasesProvider.m */,
 			);
 			name = Providers;
 			sourceTree = "<group>";
@@ -812,8 +812,8 @@
 				0139556A1ABAD8EA00BC745D /* ListDTOParser.m */,
 				011C92B71AC411C70097EE10 /* GenreDTOParser.h */,
 				011C92B81AC411C70097EE10 /* GenreDTOParser.m */,
-				012CC5401BE0145F00BE49E1 /* FilmReleaseDTO.h */,
-				012CC5411BE0145F00BE49E1 /* FilmReleaseDTO.m */,
+				012CC54B1BE0173F00BE49E1 /* FilmReleaseDTOParser.h */,
+				012CC54C1BE0173F00BE49E1 /* FilmReleaseDTOParser.m */,
 			);
 			name = Parsers;
 			sourceTree = "<group>";
@@ -1079,7 +1079,6 @@
 				011759831ABB429E00724BC5 /* SelectListModalTransitionAnimator.m in Sources */,
 				01068F4A1AB74E1F0017F91A /* LoadUpcomingFilmsInteractor.m in Sources */,
 				011C92B61AC410C90097EE10 /* GenreDTO.m in Sources */,
-				012CC5421BE0145F00BE49E1 /* FilmReleaseDTO.m in Sources */,
 				01068F301AB725490017F91A /* BillboardViewController.m in Sources */,
 				018F9DD41AB89B4D0046D3C4 /* Film+Model.m in Sources */,
 				012C6B971ABA0A070060A49C /* FilmListCollectionViewCell.m in Sources */,
@@ -1094,7 +1093,7 @@
 				015347151B6A421300A7D5A7 /* FilmDetailHeaderView.m in Sources */,
 				012C6BAB1ABA14A70060A49C /* LocalCoreDataListsProvider.m in Sources */,
 				018F9DCD1AB896200046D3C4 /* LocalCoreDataFilmsProvider.m in Sources */,
-				012CC54A1BE0158200BE49E1 /* FilmReleasesProviderImpl.m in Sources */,
+				012CC54A1BE0158200BE49E1 /* TMDBFilmReleasesProvider.m in Sources */,
 				012176591ABC3D6700EDA095 /* FilmCollectionViewCellController.m in Sources */,
 				01453E7E1AC348BD00F8ADC6 /* RemoveFilmFromListInteractor.m in Sources */,
 				015AB17D1ABC6A3000D2CBAA /* SearchFilmViewController.m in Sources */,
@@ -1135,6 +1134,7 @@
 				0158344A1AB8223B007E0AC4 /* APIVars.m in Sources */,
 				011759761ABB390600724BC5 /* SelectListViewController.m in Sources */,
 				012C6B851AB9C3EE0060A49C /* DetailFilmRouter.m in Sources */,
+				012CC54D1BE0173F00BE49E1 /* FilmReleaseDTOParser.m in Sources */,
 				012C6BA61ABA107D0060A49C /* ListDTO.m in Sources */,
 				0115B7251AC3630800F38A7D /* UpdateListInteractor.m in Sources */,
 				01068F471AB747F00017F91A /* ExternalTMDBProvider.m in Sources */,

@@ -11,6 +11,7 @@
 #import "RequestManagerAssembly.h"
 #import "LocalCoreDataFilmsProvider.h"
 #import "LocalCoreDataListsProvider.h"
+#import "TMDBFilmReleasesProvider.h"
 
 @implementation ProvidersAssembly
 
@@ -19,23 +20,27 @@
     return [TyphoonDefinition withClass:[ExternalTMDBProvider class] configuration:^(TyphoonDefinition *definition)
     {
         [definition injectProperty:@selector(requestManager) with:[_requestManagerAssembly requestManager]];
+        [definition injectProperty:@selector(filmReleasesProvider) with:[self filmReleasesProvider]];
     }];
 }
 
+- (id<FilmReleasesProvider>)filmReleasesProvider
+{
+    return [TyphoonDefinition withClass:[TMDBFilmReleasesProvider class] configuration:^(TyphoonDefinition *definition)
+    {
+        [definition injectProperty:@selector(requestManager) with:[_requestManagerAssembly requestManager]];
+    }];
+}
+
+#pragma mark - Locals Providers methods.
 - (id<LocalFilmsProvider>)localFilmsProvider
 {
-    return [TyphoonDefinition withClass:[LocalCoreDataFilmsProvider class] configuration:^(TyphoonDefinition *definition)
-    {
-        //No Dependencies at this moment, but probably if the coredata stack is injected by typhoon, the dependency will be here.
-    }];
+    return [TyphoonDefinition withClass:[LocalCoreDataFilmsProvider class]];
 }
 
 - (id<LocalListsProvider>)localListProvider
 {
-    return [TyphoonDefinition withClass:[LocalCoreDataListsProvider class] configuration:^(TyphoonDefinition *definition)
-    {
-        // The same as above
-    }];
+    return [TyphoonDefinition withClass:[LocalCoreDataListsProvider class]];
 }
 
 @end

@@ -78,15 +78,22 @@
 
 - (void)completeFilmsFields:(NSArray *)films completion:(void(^)(NSArray *completedFilms))completion
 {
-    NSMutableArray *completedFilms = [NSMutableArray array];
+    NSMutableArray *semiCompletedFilms = [NSMutableArray array];
     for (FilmDTO *f in films)
     {
-        [self fetchFilmById:f.filmId completion:^(FilmDTO *film) {
+        __weak typeof(self) weakSelf = self;
+        [self fetchFilmById:f.filmId completion:^(FilmDTO *film)
+        {
+            __strong typeof(weakSelf) strongSelf = weakSelf;
+            
             film.filmType = f.filmType;
-            [completedFilms addObject:film];
-            if (completedFilms.count == films.count)
+            [semiCompletedFilms addObject:film];
+            if (semiCompletedFilms.count == films.count)
             {
-                completion(completedFilms);
+                [strongSelf.filmReleasesProvider fetchFilmReleaseDTOsForFilms:semiCompletedFilms completion:^(NSArray<FilmDTO *> *completedFilms)
+                {
+                    completion(completedFilms);
+                }];
             }
         }];
     }
