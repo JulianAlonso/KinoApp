@@ -9,11 +9,15 @@
 #import <Foundation/Foundation.h>
 
 @class FilmReleaseDTO;
+@class FilmRelease;
 
 @interface FilmReleaseDTOParser : NSObject
 
 + (NSArray<FilmReleaseDTO *> *)filmReleaseDTOsFromArray:(NSArray *)dictionaries;
 
 + (FilmReleaseDTO *)filmReleaseDTOfromDictionary:(NSDictionary *)dictionary;
+
++ (FilmReleaseDTO *)filmReleaseDTOfromFilmRelease:(FilmRelease *)filmRelease;
++ (NSArray<FilmReleaseDTO *> *)filmReleaseDTOsFromFilmReleases:(NSArray<FilmRelease *> *)filmReleases;
 
 @end

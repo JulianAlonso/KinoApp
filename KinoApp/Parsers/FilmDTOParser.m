@@ -11,6 +11,7 @@
 #import "URLHelper.h"
 #import "GenreDTOParser.h"
 #import "DateHelper.h"
+#import "FilmReleaseDTOParser.h"
 
 static NSString *const dFilmId = @"id";
 static NSString *const dFilmTitle = @"title";
@@ -82,6 +83,11 @@ static NSString *const dFilmGenres = @"genres";
     if (film.filmGenres.count > 0)
     {
         filmDTO.filmGenres = [GenreDTOParser genreDTOsFromOrderedSetOfGenres:film.filmGenres];
+    }
+    
+    if (film.filmReleases.count > 0)
+    {
+        filmDTO.filmReseases = [FilmReleaseDTOParser filmReleaseDTOsFromFilmReleases:film.filmReleases];
     }
     
     return filmDTO;

@@ -10,6 +10,7 @@
 #import "FilmDTO.h"
 #import "GenreDTO.h"
 #import "Genre+Model.h"
+#import "FilmRelease.h"
 
 NSString *const kFilmIdProperty = @"filmId";
 NSString *const kFilmTypeProperty = @"filmType";
@@ -38,8 +39,14 @@ NSString *const kFilmReleaseDateProperty = @"filmReleaseDate";
         for (GenreDTO *genreDTO in filmDTO.filmGenres)
         {
             Genre *genre = [Genre genreWithGenreDTO:genreDTO andManagedObjectContext:managedObjectContext];
-            [film addFilmGenresObject: genre];
+            [film addFilmGenresObject:genre];
         }
+        
+        [filmDTO.filmReseases enumerateObjectsUsingBlock:^(FilmReleaseDTO * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop)
+        {
+            FilmRelease *filmRelease = [FilmRelease filmReleaseWithFilmReleaseDTO:obj andManagedObjectContext:managedObjectContext];
+            [film addFilmReleasesObject:filmRelease];
+        }];
     }
     
     return film;
