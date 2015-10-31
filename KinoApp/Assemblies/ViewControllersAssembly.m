@@ -16,6 +16,7 @@
 #import "SelectListViewController.h"
 #import "SearchFilmViewController.h"
 #import "ListsCollectionViewController.h"
+#import "ControllersAssembly.h"
 
 @implementation ViewControllersAssembly
 
@@ -44,6 +45,7 @@
     {
         [definition injectProperty:@selector(router) with:[_routerAssembly listsCollectionRouter]];
         [definition injectProperty:@selector(fetchAllListsInteractor) with:[_interactorsAssembly fetchAllListInteractor]];
+        [definition injectProperty:@selector(controllersAssembly) with:_controllersAssembly];
     }];
 }
 
