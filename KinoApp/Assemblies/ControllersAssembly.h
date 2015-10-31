@@ -9,13 +9,20 @@
 #import <Foundation/Foundation.h>
 #import "TyphoonAssembly.h"
 
+@class InteractorsAssembly;
+
 @class FilmListCollectionViewCellController;
 @class FilmCollectionViewCellController;
+@class FilmDetailListTableViewCellController;
 
 @interface ControllersAssembly : TyphoonAssembly
+
+@property (nonatomic, strong, readonly) InteractorsAssembly *interactorsAssembly;
 
 - (FilmListCollectionViewCellController *)filmListCollectionViewCellContorller;
 
 - (FilmCollectionViewCellController *)filmCollectionViewCellController;
+
+- (FilmDetailListTableViewCellController *)filmDetailListTableViewCellController;
 
 @end

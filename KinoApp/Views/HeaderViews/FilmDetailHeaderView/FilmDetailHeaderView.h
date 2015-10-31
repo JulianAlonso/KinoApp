@@ -15,9 +15,12 @@
 
 @end
 
+
+IB_DESIGNABLE
 @interface FilmDetailHeaderView : JAXibView
 
 @property (nonatomic, copy) NSString *filmName;
 @property (nonatomic, weak) id<FilmDetailHeaderViewDelegate> delegate;
+@property (weak, nonatomic) IBOutlet UIView *contentView;
 
 @end

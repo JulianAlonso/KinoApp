@@ -9,6 +9,8 @@
 #import "ControllersAssembly.h"
 #import "FilmListCollectionViewCellController.h"
 #import "FilmCollectionViewCellController.h"
+#import "FilmDetailListTableViewCellController.h"
+#import "InteractorsAssembly.h"
 
 @implementation ControllersAssembly
 
@@ -20,6 +22,15 @@
 - (FilmCollectionViewCellController *)filmCollectionViewCellController
 {
     return [TyphoonDefinition withClass:[FilmCollectionViewCellController class]];
+}
+
+- (FilmDetailListTableViewCellController *)filmDetailListTableViewCellController
+{
+    return [TyphoonDefinition withClass:[FilmDetailListTableViewCellController class] configuration:^(TyphoonDefinition *definition)
+    {
+        [definition injectProperty:@selector(addFilmInteractor) with:[_interactorsAssembly addFilmToListInteractor]];
+        [definition injectProperty:@selector(removeFilmInteractor) with:[_interactorsAssembly removeFilmFromListInteractor]];
+    }];
 }
 
 @end

@@ -22,7 +22,7 @@
 - (void)presentFilmDetailViewControllerFrom:(UINavigationController *)navigationController withFilmDTO:(FilmDTO *)film
 {
     self.filmDetailScrollViewController.film = film;
-    
+    self.filmDetailScrollViewController.hidesBottomBarWhenPushed = YES;
     [navigationController pushViewController:self.filmDetailScrollViewController animated:YES];
 }
 

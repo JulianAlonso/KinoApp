@@ -36,6 +36,7 @@
         [definition injectProperty:@selector(router) with:[_routerAssembly detailFilmRouter]];
         [definition injectProperty:@selector(fetchAllListInteractor) with:[_interactorsAssembly fetchAllListInteractor]];
         [definition injectProperty:@selector(loadFilmInteractor) with:[_interactorsAssembly loadFilmInteractor]];
+        [definition injectProperty:@selector(controllersAssembly) with:_controllersAssembly];
     }];
 }
 

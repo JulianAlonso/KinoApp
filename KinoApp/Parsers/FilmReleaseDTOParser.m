@@ -63,6 +63,4 @@ static NSString *const dReleaseDate = @"release_date";
     return filmReleasesDTOs;
 }
 
-
-
 @end
