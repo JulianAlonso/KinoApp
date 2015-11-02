@@ -20,13 +20,11 @@
 
 - (void)loadViewAt:(UITabBarController *)tabBarCotroller
 {
-    #warning Not localized.
-    self.listsCollectionViewController.tabBarItem.title = @"Lists";
+    self.listsCollectionViewController.tabBarItem.title = NSLocalizedString(@"lists", nil);
     
     UINavigationController *nc = [[JANavigationController alloc] initWithRootViewController:self.listsCollectionViewController];
     
-    #warning Not localized.
-    nc.tabBarItem.title = @"Lists";
+    nc.tabBarItem.title = NSLocalizedString(@"lists", nil);
     nc.tabBarItem.image = [UIImage imageNamed:@"Star"];
 
     [tabBarCotroller addChildViewController:nc];

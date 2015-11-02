@@ -15,6 +15,8 @@
 #import "UpdateListInteractor.h"
 #import "LoadPopularFilmsInteractor.h"
 #import "SearchFilmInteractor.h"
+#import "AddFilmToListInteractor.h"
+#import "RemoveFilmFromListInteractor.h"
 
 @implementation InteractorsAssembly
 
@@ -74,6 +76,22 @@
     return [TyphoonDefinition withClass:[SearchFilmInteractor class] configuration:^(TyphoonDefinition *definition)
     {
         [definition injectProperty:@selector(externalProvider) with:[_providersAssembly externalFilmsProvider]];
+    }];
+}
+
+- (AddFilmToListInteractor *)addFilmToListInteractor
+{
+    return [TyphoonDefinition withClass:[AddFilmToListInteractor class] configuration:^(TyphoonDefinition *definition)
+    {
+        [definition injectProperty:@selector(localProvider) with:[_providersAssembly localListProvider]];
+    }];
+}
+
+- (RemoveFilmFromListInteractor *)removeFilmFromListInteractor
+{
+    return [TyphoonDefinition withClass:[RemoveFilmFromListInteractor class] configuration:^(TyphoonDefinition *definition)
+    {
+        [definition injectProperty:@selector(localListProvider) with:[_providersAssembly localListProvider]];
     }];
 }
 

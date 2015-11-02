@@ -28,6 +28,7 @@
     {
         [definition injectProperty:@selector(interactor) with:[_interactorAssembly loadPlayingNowFilmsInteractor]];
         [definition injectProperty:@selector(eventReceiver) with:[_viewControllersAssembly billboardViewController]];
+        [definition injectProperty:@selector(controllersAssembly) with:_controllersAssembly];
     }];
 }
 
@@ -37,6 +38,7 @@
     {
         [definition injectProperty:@selector(interactor) with:[_interactorAssembly loadUpcomingFilmsInteractor]];
         [definition injectProperty:@selector(eventReceiver) with:[_viewControllersAssembly billboardViewController]];
+        [definition injectProperty:@selector(controllersAssembly) with:_controllersAssembly];
     }];
 }
 

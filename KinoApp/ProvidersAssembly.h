@@ -10,6 +10,7 @@
 #import "ExternalFilmsProvider.h"
 #import "LocalFilmsProvider.h"
 #import "LocalListsProvider.h"
+#import "FilmReleasesProvider.h"
 
 @class RequestManagerAssembly;
 
@@ -18,6 +19,7 @@
 @property (nonatomic, strong, readonly) RequestManagerAssembly *requestManagerAssembly;
 
 - (id<ExternalFilmsProvider>)externalFilmsProvider;
+- (id<FilmReleasesProvider>)filmReleasesProvider;
 - (id<LocalFilmsProvider>)localFilmsProvider;
 - (id<LocalListsProvider>)localListProvider;
 

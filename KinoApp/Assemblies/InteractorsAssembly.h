@@ -15,6 +15,8 @@
 @class UpdateListInteractor;
 @class LoadPopularFilmsInteractor;
 @class SearchFilmInteractor;
+@class AddFilmToListInteractor;
+@class RemoveFilmFromListInteractor;
 
 @interface InteractorsAssembly : TyphoonAssembly
 
@@ -33,5 +35,9 @@
 - (LoadPopularFilmsInteractor *)loadPopularFilmsInteractor;
 
 - (SearchFilmInteractor *)searchFilmInteractor;
+
+- (AddFilmToListInteractor *)addFilmToListInteractor;
+
+- (RemoveFilmFromListInteractor *)removeFilmFromListInteractor;
 
 @end

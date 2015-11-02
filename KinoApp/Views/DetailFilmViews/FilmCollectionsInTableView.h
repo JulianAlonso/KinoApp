@@ -10,10 +10,12 @@
 
 @class FilmDTO;
 @class FetchAllListsInteractor;
+@class ControllersAssembly;
 
 @interface FilmCollectionsInTableView : UITableView
 
 @property (nonatomic, strong) FilmDTO *film;
 @property (nonatomic, strong) FetchAllListsInteractor *fetchListsInteractor;
+@property (nonatomic, strong) ControllersAssembly *controllersAssembly;
 
 @end

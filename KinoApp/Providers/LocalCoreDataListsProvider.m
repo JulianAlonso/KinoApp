@@ -123,15 +123,15 @@
 
 - (void)createPrincipalLists
 {
-    [self saveListWithName:@"Ver cine" completion:^(NSArray *lists) {
+    [self saveListWithName:NSLocalizedString(@"cinema", nil) completion:^(NSArray *lists) {
         
     }];
     
-    [self saveListWithName:@"Ver casa" completion:^(NSArray *lists) {
+    [self saveListWithName:NSLocalizedString(@"home", nil) completion:^(NSArray *lists) {
         
     }];
     
-    [self saveListWithName:@"Top 15" completion:^(NSArray *lists) {
+    [self saveListWithName:NSLocalizedString(@"top 15", nil) completion:^(NSArray *lists) {
         
     }];
 }

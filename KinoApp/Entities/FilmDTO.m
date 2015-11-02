@@ -23,7 +23,7 @@ NSString *const kPosterPathProperty = @"filmPosterPath";
 
 - (NSString *)description
 {
-    return [NSString stringWithFormat:@"id: %@ \n original title: %@ \n title: %@ \n release date: %@ \n homepage: %@ \n overview: %@ \n tagline: %@ \n poster path: %@ \n backdrop path: %@ \n type: %@ \n runtime: %@ \n genres: %@ \n year: %@ \n", self.filmId, self.filmOriginalTitle, self.filmTitle, self.filmReleaseDate, self.filmHomepage, self.filmOverview, self.filmTagline, self.filmPosterPath, self.filmBackdropPath, self.filmType, self.filmRuntime, self.filmGenres, self.filmYear];
+    return [NSString stringWithFormat:@"id: %@ \n original title: %@ \n title: %@ \n release date: %@ \n homepage: %@ \n overview: %@ \n tagline: %@ \n poster path: %@ \n backdrop path: %@ \n type: %@ \n runtime: %@ \n genres: %@ \n year: %@ \n release dates: %@ \n", self.filmId, self.filmOriginalTitle, self.filmTitle, self.filmReleaseDate, self.filmHomepage, self.filmOverview, self.filmTagline, self.filmPosterPath, self.filmBackdropPath, self.filmType, self.filmRuntime, self.filmGenres, self.filmYear, self.filmReseases];
 }
 
 #pragma mark - Equals methods.
