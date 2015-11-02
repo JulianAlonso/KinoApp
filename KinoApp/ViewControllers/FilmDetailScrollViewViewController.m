@@ -102,6 +102,10 @@ static CGFloat const kBottomMargin = 240.0f;
                                                                                                              attributes:[self paragraphStylesToOverviewLabelWithFont:self.  filmOverviewLabel.font]];
             self.filmOverviewLabel.attributedText = displayAttributedDescription;
         }
+        else
+        {
+            self.filmOverviewLabel.text = NSLocalizedString(@"No Overview", nil);
+        }
         self.filmGenreCollectionView.film = self.film;
         self.filmListsTableView.fetchListsInteractor = self.fetchAllListInteractor;
         self.filmListsTableView.film = self.film;
@@ -122,6 +126,7 @@ static CGFloat const kBottomMargin = 240.0f;
     self.filmPrincipalDataLabel.font = [UIFont appFontWithSize:18.0f];
     self.filmPrincipalDataLabel.textColor = [UIColor whiteColor];
     self.filmVotesLabel.textColor = [UIColor whiteColor];
+    self.filmOverviewLabel.textColor = [UIColor whiteColor];
 }
 
 - (void)configLayerView

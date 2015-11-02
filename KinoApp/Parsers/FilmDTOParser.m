@@ -12,6 +12,7 @@
 #import "GenreDTOParser.h"
 #import "DateHelper.h"
 #import "FilmReleaseDTOParser.h"
+#import "NSDictionary+Utilities.h"
 
 static NSString *const dFilmId = @"id";
 static NSString *const dFilmTitle = @"title";
@@ -33,15 +34,15 @@ static NSString *const dFilmVotesAverage = @"vote_average";
 {
     FilmDTO *film = [FilmDTO new];
     
-    film.filmId = [NSString stringWithFormat:@"%@", dictionary[dFilmId]];
-    film.filmTitle = [NSString stringWithFormat:@"%@", dictionary[dFilmTitle]];
-    film.filmOriginalTitle = [NSString stringWithFormat:@"%@", dictionary[dFilmOriginalTitle]];
+    film.filmId = [dictionary stringWithKey:dFilmId];
+    film.filmTitle = [dictionary stringWithKey:dFilmTitle];
+    film.filmOriginalTitle = [dictionary stringWithKey:dFilmOriginalTitle];
     film.filmReleaseDate = [DateHelper dateFromString:[NSString stringWithFormat:@"%@", dictionary[dFilmReleaseDate]]
                                            withFormat:TMDB_DATE_FORMAT];
-    film.filmHomepage = [NSString stringWithFormat:@"%@", dictionary[dFilmHomepage]];
-    film.filmOverview = [NSString stringWithFormat:@"%@", dictionary[dFilmOverview]];
-    film.filmTagline = [NSString stringWithFormat:@"%@", dictionary[dFilmTagline]];
-    film.filmRuntime = [NSString stringWithFormat:@"%@", dictionary[dFilmRuntime]];
+    film.filmHomepage = [dictionary stringWithKey:dFilmHomepage];
+    film.filmOverview = [dictionary stringWithKey:dFilmOverview];
+    film.filmTagline = [dictionary stringWithKey:dFilmTagline];
+    film.filmRuntime = [dictionary stringWithKey:dFilmRuntime];
     film.filmPosterPath = [URLHelper imageUrlWithEndpoint:dictionary[dFilmPosterPath]];
     film.filmBackdropPath = [URLHelper imageUrlWithEndpoint:dictionary[dFilmBackdropPath]];
     film.filmVotes = @([dictionary[dFilmVotes] integerValue]);
