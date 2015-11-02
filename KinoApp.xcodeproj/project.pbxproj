@@ -112,6 +112,7 @@
 		01B875AB1AC45FE200BD69EB /* GenreFilmDetailCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B875A91AC45FE200BD69EB /* GenreFilmDetailCollectionViewCell.m */; };
 		01B875AC1AC45FE200BD69EB /* GenreFilmDetailCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01B875AA1AC45FE200BD69EB /* GenreFilmDetailCollectionViewCell.xib */; };
 		01B875AF1AC470DE00BD69EB /* SizeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B875AE1AC470DE00BD69EB /* SizeHelper.m */; };
+		01BB036A1BE80E28009A4B51 /* NSDictionary+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 01BB03691BE80E28009A4B51 /* NSDictionary+Utilities.m */; };
 		01EC61591BE16236003C0778 /* Film+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 01EC61541BE16236003C0778 /* Film+CoreDataProperties.m */; };
 		01EC615A1BE16236003C0778 /* FilmRelease+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 01EC61561BE16236003C0778 /* FilmRelease+CoreDataProperties.m */; };
 		01EC615B1BE16236003C0778 /* FilmRelease.m in Sources */ = {isa = PBXBuildFile; fileRef = 01EC61581BE16236003C0778 /* FilmRelease.m */; };
@@ -337,6 +338,8 @@
 		01B875AA1AC45FE200BD69EB /* GenreFilmDetailCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GenreFilmDetailCollectionViewCell.xib; path = Views/DetailFilmTableViewCells/GenresCollectionViewCells/GenreFilmDetailCollectionViewCell.xib; sourceTree = "<group>"; };
 		01B875AD1AC470DE00BD69EB /* SizeHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SizeHelper.h; path = Helpers/SizeHelper.h; sourceTree = "<group>"; };
 		01B875AE1AC470DE00BD69EB /* SizeHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SizeHelper.m; path = Helpers/SizeHelper.m; sourceTree = "<group>"; };
+		01BB03681BE80E28009A4B51 /* NSDictionary+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+Utilities.h"; path = "Categories/NSDictionary+Utilities.h"; sourceTree = "<group>"; };
+		01BB03691BE80E28009A4B51 /* NSDictionary+Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+Utilities.m"; path = "Categories/NSDictionary+Utilities.m"; sourceTree = "<group>"; };
 		01EC61531BE16236003C0778 /* Film+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Film+CoreDataProperties.h"; path = "Entities/Film+CoreDataProperties.h"; sourceTree = "<group>"; };
 		01EC61541BE16236003C0778 /* Film+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Film+CoreDataProperties.m"; path = "Entities/Film+CoreDataProperties.m"; sourceTree = "<group>"; };
 		01EC61551BE16236003C0778 /* FilmRelease+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "FilmRelease+CoreDataProperties.h"; path = "Entities/FilmRelease+CoreDataProperties.h"; sourceTree = "<group>"; };
@@ -869,6 +872,8 @@
 				01038D211AC05A2800B88A8A /* UIFont+Custom.m */,
 				01F0C0F01AC1A0220009E061 /* UISearchBar+Custom.h */,
 				01F0C0F11AC1A0220009E061 /* UISearchBar+Custom.m */,
+				01BB03681BE80E28009A4B51 /* NSDictionary+Utilities.h */,
+				01BB03691BE80E28009A4B51 /* NSDictionary+Utilities.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -1108,6 +1113,7 @@
 				015347121B6A405700A7D5A7 /* StyledLabel.m in Sources */,
 				015347151B6A421300A7D5A7 /* FilmDetailHeaderView.m in Sources */,
 				012C6BAB1ABA14A70060A49C /* LocalCoreDataListsProvider.m in Sources */,
+				01BB036A1BE80E28009A4B51 /* NSDictionary+Utilities.m in Sources */,
 				018F9DCD1AB896200046D3C4 /* LocalCoreDataFilmsProvider.m in Sources */,
 				012CC54A1BE0158200BE49E1 /* TMDBFilmReleasesProvider.m in Sources */,
 				012176591ABC3D6700EDA095 /* FilmCollectionViewCellController.m in Sources */,
