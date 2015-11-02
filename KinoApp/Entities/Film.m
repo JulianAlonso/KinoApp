@@ -13,18 +13,4 @@
 
 @implementation Film
 
-@dynamic filmBackdropPath;
-@dynamic filmHomepage;
-@dynamic filmId;
-@dynamic filmOriginalTitle;
-@dynamic filmOverview;
-@dynamic filmPosterPath;
-@dynamic filmReleaseDate;
-@dynamic filmRuntime;
-@dynamic filmTagline;
-@dynamic filmTitle;
-@dynamic filmType;
-@dynamic filmGenres;
-@dynamic filmLists;
-
 @end

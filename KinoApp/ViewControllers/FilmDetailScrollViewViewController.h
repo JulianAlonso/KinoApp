@@ -12,12 +12,14 @@
 @class LoadFilmInteractor;
 @class DetailFilmRouter;
 @class FetchAllListsInteractor;
+@class ControllersAssembly;
 
 @interface FilmDetailScrollViewViewController : UIViewController
 
 @property (nonatomic, strong) DetailFilmRouter *router;
 @property (nonatomic, strong) LoadFilmInteractor *loadFilmInteractor;
 @property (nonatomic, strong) FetchAllListsInteractor *fetchAllListInteractor;
+@property (nonatomic, strong) ControllersAssembly *controllersAssembly;
 @property (nonatomic, strong) FilmDTO *film;
 
 @end

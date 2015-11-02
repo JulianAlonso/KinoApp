@@ -10,9 +10,11 @@
 
 @class FetchAllListsInteractor;
 @class ListsCollectionRouter;
+@class ControllersAssembly;
 
 @interface ListsCollectionViewController : UIViewController
 
+@property (nonatomic, strong) ControllersAssembly *controllersAssembly;
 @property (nonatomic, strong) FetchAllListsInteractor *fetchAllListsInteractor;
 @property (nonatomic, strong) ListsCollectionRouter *router;
 

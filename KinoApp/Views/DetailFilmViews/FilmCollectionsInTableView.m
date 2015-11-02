@@ -11,7 +11,7 @@
 #import "FilmDetailListTableViewCellController.h"
 #import "FetchAllListsInteractor.h"
 #import "UIFont+Custom.h"
-#import "InteractorsFactory.h"
+#import "ControllersAssembly.h"
 
 #define RGBA(r, g, b, a) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
 
@@ -51,9 +51,10 @@ NSString *const kListFilmDetailTableViewCellFilmProperty = @"film";
     self.delegate = self;
     self.dataSource = self;
     self.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
+    self.separatorInset = UIEdgeInsetsZero;
     self.scrollEnabled = NO;
-    self.estimatedRowHeight = 75.0f;
-    self.rowHeight = UITableViewAutomaticDimension;
+    self.estimatedRowHeight = 44.0f;
+    self.rowHeight = 44.0f;
 }
 
 - (void)configStyles
@@ -78,7 +79,7 @@ NSString *const kListFilmDetailTableViewCellFilmProperty = @"film";
     NSMutableArray *controllers = [NSMutableArray array];
     for (__unused ListDTO *list in self.lists)
     {
-        [controllers addObject:[FilmDetailListTableViewCellController new]];
+        [controllers addObject:[self.controllersAssembly filmDetailListTableViewCellController]];
     }
     self.controllers = controllers;
 }
@@ -129,16 +130,16 @@ NSString *const kListFilmDetailTableViewCellFilmProperty = @"film";
 {
     UIView *header = [[UIView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.frame), self.headerHeight)];
     
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, 0, CGRectGetWidth(self.frame), self.headerHeight - 5)];
-    #warning Not localized!
-    label.text = @"Collections it's in";
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.frame), self.headerHeight - 5)];
+
+    label.text = NSLocalizedString(@"theater", nil);
     label.textColor = [UIColor whiteColor];
-    label.font = [UIFont appFontWithSize:26.0f];
+    label.font = [UIFont appFontWithSize:17.0f];
     label.shadowColor = RGBA(0, 0, 0, 0.5f);
     label.shadowOffset = CGSizeMake(1.0f, 1.0f);
     
     CALayer *bottomBorder = [CALayer layer];
-    CGFloat borderThickness = 2.0f;
+    CGFloat borderThickness = 1.0f;
     
     bottomBorder.frame = CGRectMake(0, self.headerHeight - borderThickness , CGRectGetWidth(self.frame), borderThickness);
     bottomBorder.backgroundColor = [[UIColor whiteColor] CGColor];

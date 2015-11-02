@@ -17,12 +17,14 @@
 @class InteractorsAssembly;
 @class SelectListViewController;
 @class SearchFilmViewController;
+@class ControllersAssembly;
 
 @interface ViewControllersAssembly : TyphoonAssembly
 
 @property (nonatomic, strong, readonly) RouterAssembly *routerAssembly;
 @property (nonatomic, strong, readonly) DelegatesAssembly *delegateAssembly;
 @property (nonatomic, strong, readonly) InteractorsAssembly *interactorsAssembly;
+@property (nonatomic, strong, readonly) ControllersAssembly *controllersAssembly;
 
 - (BillboardViewController *)billboardViewController;
 - (FilmDetailScrollViewViewController *)filmDetailScrollViewController;
