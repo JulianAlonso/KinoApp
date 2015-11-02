@@ -101,6 +101,7 @@
 - (void)configUpcomingLabel
 {
     [self.upcomingLabel setUserInteractionEnabled:YES];
+    self.upcomingLabel.text = NSLocalizedString(@"upcoming", nil);
     self.upcomingLabel.textColor = [UIColor unselectedItemColor];
     self.upcomingLabel.font = [UIFont appFontWithSize:20];
     UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(upcomfingLabelPressed:)];
@@ -110,6 +111,7 @@
 - (void)configPlayingNowLabel
 {
     self.playingNowLabel.userInteractionEnabled = YES;
+    self.playingNowLabel.text = NSLocalizedString(@"playing_now", nil);
     self.playingNowLabel.font = [UIFont appFontWithSize:20];
     self.playingNowLabel.textColor = [UIColor selectedItemColor];
     UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(playingNowLabelPressed:)];

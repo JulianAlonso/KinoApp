@@ -27,7 +27,7 @@
     
     [self.cell addGestureRecognizer:tapGesture];
     
-    if (self.list.listFilms.count > 0 && self.list.listFilms.count < 4)
+    if (self.list.listFilms.count > 0 && self.list.listFilms.count < 3)
     {
         [self.cell.oneImageView sd_setImageWithURL:[NSURL URLWithString:[[self.list.listFilms firstObject] valueForKey:kPosterPathProperty]]];
     }

@@ -28,8 +28,8 @@
     BillboardViewController *billboardViewController = [self.viewControllersAssembly billboardViewController];
     
     UINavigationController *nc = [[JANavigationController alloc] initWithRootViewController:billboardViewController];
-    #warning Not localized!
-    nc.tabBarItem.title = @"Billboard";
+
+    nc.tabBarItem.title = NSLocalizedString(@"billboard", nil);
     nc.tabBarItem.image =  [UIImage imageNamed:@"Films"];
     
     [tabBarController addChildViewController:nc];

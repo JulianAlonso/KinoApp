@@ -13,7 +13,6 @@
 		01068ED11AB7011D0017F91A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 01068ED01AB7011D0017F91A /* AppDelegate.m */; };
 		01068ED41AB7011D0017F91A /* KinoApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 01068ED21AB7011D0017F91A /* KinoApp.xcdatamodeld */; };
 		01068EDC1AB7011D0017F91A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01068EDB1AB7011D0017F91A /* Images.xcassets */; };
-		01068EDF1AB7011D0017F91A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01068EDD1AB7011D0017F91A /* LaunchScreen.xib */; };
 		01068EEB1AB7011D0017F91A /* KinoAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 01068EEA1AB7011D0017F91A /* KinoAppTests.m */; };
 		01068EFC1AB702CC0017F91A /* CoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 01068EFB1AB702CC0017F91A /* CoreDataStack.m */; };
 		01068F051AB710D70017F91A /* MainRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 01068F041AB710D70017F91A /* MainRouter.m */; };
@@ -33,7 +32,6 @@
 		0114C7F51B5FAB2700400401 /* DateHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0114C7F41B5FAB2700400401 /* DateHelper.m */; };
 		0114C7F81B5FAF9F00400401 /* Film.m in Sources */ = {isa = PBXBuildFile; fileRef = 0114C7F71B5FAF9F00400401 /* Film.m */; };
 		0115B7251AC3630800F38A7D /* UpdateListInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 0115B7241AC3630800F38A7D /* UpdateListInteractor.m */; };
-		0117596F1ABAF5E700724BC5 /* ControllersFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 0117596E1ABAF5E700724BC5 /* ControllersFactory.m */; };
 		011759721ABB291F00724BC5 /* AddFilmToListInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 011759711ABB291F00724BC5 /* AddFilmToListInteractor.m */; };
 		011759761ABB390600724BC5 /* SelectListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 011759741ABB390600724BC5 /* SelectListViewController.m */; };
 		011759771ABB390600724BC5 /* SelectListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 011759751ABB390600724BC5 /* SelectListViewController.xib */; };
@@ -47,6 +45,8 @@
 		011C92C21AC421AC0097EE10 /* Genre+Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 011C92C11AC421AC0097EE10 /* Genre+Model.m */; };
 		011C92C51AC424FA0097EE10 /* Genre.m in Sources */ = {isa = PBXBuildFile; fileRef = 011C92C41AC424FA0097EE10 /* Genre.m */; };
 		011C92CF1AC42A950097EE10 /* FilmDetailGenreCollectionViewCellController.m in Sources */ = {isa = PBXBuildFile; fileRef = 011C92CE1AC42A950097EE10 /* FilmDetailGenreCollectionViewCellController.m */; };
+		01200D1E1BDEC1DA00A31F22 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 01200D201BDEC1DA00A31F22 /* Localizable.strings */; };
+		01200D251BDEC22C00A31F22 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01200D241BDEC22C00A31F22 /* LaunchScreen.xib */; };
 		012176471ABC1FE700EDA095 /* List+Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 012176461ABC1FE700EDA095 /* List+Model.m */; };
 		012176551ABC330D00EDA095 /* ListDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 012176531ABC330D00EDA095 /* ListDetailViewController.m */; };
 		012176561ABC330D00EDA095 /* ListDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 012176541ABC330D00EDA095 /* ListDetailViewController.xib */; };
@@ -66,6 +66,10 @@
 		012C6BA01ABA0EE70060A49C /* FilmListCollectionViewCellController.m in Sources */ = {isa = PBXBuildFile; fileRef = 012C6B9F1ABA0EE70060A49C /* FilmListCollectionViewCellController.m */; };
 		012C6BA61ABA107D0060A49C /* ListDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = 012C6BA51ABA107D0060A49C /* ListDTO.m */; };
 		012C6BAB1ABA14A70060A49C /* LocalCoreDataListsProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 012C6BAA1ABA14A70060A49C /* LocalCoreDataListsProvider.m */; };
+		012CC5391BE00F4300BE49E1 /* ControllersAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 012CC5381BE00F4300BE49E1 /* ControllersAssembly.m */; };
+		012CC53C1BE013B100BE49E1 /* FilmReleaseDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = 012CC53B1BE013B100BE49E1 /* FilmReleaseDTO.m */; };
+		012CC54A1BE0158200BE49E1 /* TMDBFilmReleasesProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 012CC5491BE0158200BE49E1 /* TMDBFilmReleasesProvider.m */; };
+		012CC54D1BE0173F00BE49E1 /* FilmReleaseDTOParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 012CC54C1BE0173F00BE49E1 /* FilmReleaseDTOParser.m */; };
 		013276D81AFB724A00416F82 /* ReachabilityHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 013276D71AFB724A00416F82 /* ReachabilityHelper.m */; };
 		013276DA1AFB72D800416F82 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 013276D91AFB72D800416F82 /* SystemConfiguration.framework */; };
 		013276DE1AFB735E00416F82 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 013276DD1AFB735E00416F82 /* Reachability.m */; };
@@ -74,7 +78,6 @@
 		01453E731AC325AF00F8ADC6 /* FilmDetailListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 01453E711AC325AF00F8ADC6 /* FilmDetailListTableViewCell.m */; };
 		01453E741AC325AF00F8ADC6 /* FilmDetailListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01453E721AC325AF00F8ADC6 /* FilmDetailListTableViewCell.xib */; };
 		01453E781AC32AE600F8ADC6 /* FilmDetailListTableViewCellController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01453E771AC32AE600F8ADC6 /* FilmDetailListTableViewCellController.m */; };
-		01453E7B1AC32D0300F8ADC6 /* InteractorsFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 01453E7A1AC32D0300F8ADC6 /* InteractorsFactory.m */; };
 		01453E7E1AC348BD00F8ADC6 /* RemoveFilmFromListInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 01453E7D1AC348BD00F8ADC6 /* RemoveFilmFromListInteractor.m */; };
 		014DF9941B00B72F0052547C /* CheckNextReleasesInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 014DF9931B00B72F0052547C /* CheckNextReleasesInteractor.m */; };
 		015228911B68CA9100344244 /* GenericCoreDataRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 015228901B68CA9100344244 /* GenericCoreDataRepository.m */; };
@@ -85,7 +88,6 @@
 		01562BC21AEA53CB003EEDC8 /* FilmDetailScrollViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01562BC01AEA53CB003EEDC8 /* FilmDetailScrollViewViewController.m */; };
 		01562BC31AEA53CB003EEDC8 /* FilmDetailScrollViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01562BC11AEA53CB003EEDC8 /* FilmDetailScrollViewViewController.xib */; };
 		0158344A1AB8223B007E0AC4 /* APIVars.m in Sources */ = {isa = PBXBuildFile; fileRef = 015834491AB8223B007E0AC4 /* APIVars.m */; };
-		0158344F1AB84AAA007E0AC4 /* RequestManagerFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 0158344E1AB84AAA007E0AC4 /* RequestManagerFactory.m */; };
 		015834521AB84E93007E0AC4 /* JARequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 015834511AB84E93007E0AC4 /* JARequestManager.m */; };
 		015834561AB862B4007E0AC4 /* URLHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 015834551AB862B4007E0AC4 /* URLHelper.m */; };
 		0158345B1AB86508007E0AC4 /* FilmDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = 0158345A1AB86508007E0AC4 /* FilmDTO.m */; };
@@ -110,6 +112,12 @@
 		01B875AB1AC45FE200BD69EB /* GenreFilmDetailCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B875A91AC45FE200BD69EB /* GenreFilmDetailCollectionViewCell.m */; };
 		01B875AC1AC45FE200BD69EB /* GenreFilmDetailCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01B875AA1AC45FE200BD69EB /* GenreFilmDetailCollectionViewCell.xib */; };
 		01B875AF1AC470DE00BD69EB /* SizeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B875AE1AC470DE00BD69EB /* SizeHelper.m */; };
+		01BB03651BE7FF15009A4B51 /* JAStarsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01BB03641BE7FF15009A4B51 /* JAStarsView.m */; };
+		01BB03671BE7FF30009A4B51 /* JAStarsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01BB03661BE7FF30009A4B51 /* JAStarsView.xib */; };
+		01BB036A1BE80E28009A4B51 /* NSDictionary+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 01BB03691BE80E28009A4B51 /* NSDictionary+Utilities.m */; };
+		01EC61591BE16236003C0778 /* Film+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 01EC61541BE16236003C0778 /* Film+CoreDataProperties.m */; };
+		01EC615A1BE16236003C0778 /* FilmRelease+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 01EC61561BE16236003C0778 /* FilmRelease+CoreDataProperties.m */; };
+		01EC615B1BE16236003C0778 /* FilmRelease.m in Sources */ = {isa = PBXBuildFile; fileRef = 01EC61581BE16236003C0778 /* FilmRelease.m */; };
 		01F0C0F21AC1A0220009E061 /* UISearchBar+Custom.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F0C0F11AC1A0220009E061 /* UISearchBar+Custom.m */; };
 		01FC73A21AC2D358003DC161 /* FilmFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 01FC73A11AC2D358003DC161 /* FilmFilter.m */; };
 		F2F038238A73F7DA954B4244 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F855DE3F67C9EF3B55C10712 /* libPods.a */; };
@@ -137,7 +145,6 @@
 		01068ED01AB7011D0017F91A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		01068ED31AB7011D0017F91A /* KinoApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = KinoApp.xcdatamodel; sourceTree = "<group>"; };
 		01068EDB1AB7011D0017F91A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		01068EDE1AB7011D0017F91A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		01068EE41AB7011D0017F91A /* KinoAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KinoAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		01068EE91AB7011D0017F91A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		01068EEA1AB7011D0017F91A /* KinoAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KinoAppTests.m; sourceTree = "<group>"; };
@@ -180,8 +187,6 @@
 		0114C7FB1B5FB7D500400401 /* ListRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ListRepository.h; path = Repositories/ListRepository.h; sourceTree = "<group>"; };
 		0115B7231AC3630800F38A7D /* UpdateListInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UpdateListInteractor.h; path = Interactors/UpdateListInteractor.h; sourceTree = "<group>"; };
 		0115B7241AC3630800F38A7D /* UpdateListInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UpdateListInteractor.m; path = Interactors/UpdateListInteractor.m; sourceTree = "<group>"; };
-		0117596D1ABAF5E700724BC5 /* ControllersFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ControllersFactory.h; path = Factories/ControllersFactory.h; sourceTree = "<group>"; };
-		0117596E1ABAF5E700724BC5 /* ControllersFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ControllersFactory.m; path = Factories/ControllersFactory.m; sourceTree = "<group>"; };
 		011759701ABB291F00724BC5 /* AddFilmToListInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddFilmToListInteractor.h; path = Interactors/AddFilmToListInteractor.h; sourceTree = "<group>"; };
 		011759711ABB291F00724BC5 /* AddFilmToListInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddFilmToListInteractor.m; path = Interactors/AddFilmToListInteractor.m; sourceTree = "<group>"; };
 		011759731ABB390600724BC5 /* SelectListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SelectListViewController.h; path = ViewControllers/SelectListViewController.h; sourceTree = "<group>"; };
@@ -206,6 +211,9 @@
 		011C92C41AC424FA0097EE10 /* Genre.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Genre.m; path = Entities/Genre.m; sourceTree = "<group>"; };
 		011C92CD1AC42A950097EE10 /* FilmDetailGenreCollectionViewCellController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FilmDetailGenreCollectionViewCellController.h; path = Controllers/DetailFilmTableViewCellControllers/GenresFilmDetailTableViewCellCollectionCellConrtrollers/FilmDetailGenreCollectionViewCellController.h; sourceTree = "<group>"; };
 		011C92CE1AC42A950097EE10 /* FilmDetailGenreCollectionViewCellController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FilmDetailGenreCollectionViewCellController.m; path = Controllers/DetailFilmTableViewCellControllers/GenresFilmDetailTableViewCellCollectionCellConrtrollers/FilmDetailGenreCollectionViewCellController.m; sourceTree = "<group>"; };
+		01200D1F1BDEC1DA00A31F22 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		01200D211BDEC1DF00A31F22 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		01200D241BDEC22C00A31F22 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		012176451ABC1FE700EDA095 /* List+Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "List+Model.h"; path = "Categories/List+Model.h"; sourceTree = "<group>"; };
 		012176461ABC1FE700EDA095 /* List+Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "List+Model.m"; path = "Categories/List+Model.m"; sourceTree = "<group>"; };
 		012176521ABC330D00EDA095 /* ListDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ListDetailViewController.h; path = ViewControllers/ListDetailViewController.h; sourceTree = "<group>"; };
@@ -242,6 +250,15 @@
 		012C6BA81ABA13C30060A49C /* LocalListsProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocalListsProvider.h; path = Providers/LocalListsProvider.h; sourceTree = "<group>"; };
 		012C6BA91ABA14A70060A49C /* LocalCoreDataListsProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocalCoreDataListsProvider.h; path = Providers/LocalCoreDataListsProvider.h; sourceTree = "<group>"; };
 		012C6BAA1ABA14A70060A49C /* LocalCoreDataListsProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LocalCoreDataListsProvider.m; path = Providers/LocalCoreDataListsProvider.m; sourceTree = "<group>"; };
+		012CC5371BE00F4300BE49E1 /* ControllersAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ControllersAssembly.h; path = Assemblies/ControllersAssembly.h; sourceTree = "<group>"; };
+		012CC5381BE00F4300BE49E1 /* ControllersAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ControllersAssembly.m; path = Assemblies/ControllersAssembly.m; sourceTree = "<group>"; };
+		012CC53A1BE013B100BE49E1 /* FilmReleaseDTO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FilmReleaseDTO.h; path = Entities/FilmReleaseDTO.h; sourceTree = "<group>"; };
+		012CC53B1BE013B100BE49E1 /* FilmReleaseDTO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FilmReleaseDTO.m; path = Entities/FilmReleaseDTO.m; sourceTree = "<group>"; };
+		012CC5441BE0153800BE49E1 /* FilmReleasesProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FilmReleasesProvider.h; path = Providers/FilmReleasesProvider.h; sourceTree = "<group>"; };
+		012CC5481BE0158200BE49E1 /* TMDBFilmReleasesProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMDBFilmReleasesProvider.h; path = Providers/TMDBFilmReleasesProvider.h; sourceTree = "<group>"; };
+		012CC5491BE0158200BE49E1 /* TMDBFilmReleasesProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMDBFilmReleasesProvider.m; path = Providers/TMDBFilmReleasesProvider.m; sourceTree = "<group>"; };
+		012CC54B1BE0173F00BE49E1 /* FilmReleaseDTOParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FilmReleaseDTOParser.h; path = Parsers/FilmReleaseDTOParser.h; sourceTree = "<group>"; };
+		012CC54C1BE0173F00BE49E1 /* FilmReleaseDTOParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FilmReleaseDTOParser.m; path = Parsers/FilmReleaseDTOParser.m; sourceTree = "<group>"; };
 		013276D61AFB724A00416F82 /* ReachabilityHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ReachabilityHelper.h; path = Helpers/ReachabilityHelper.h; sourceTree = "<group>"; };
 		013276D71AFB724A00416F82 /* ReachabilityHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ReachabilityHelper.m; path = Helpers/ReachabilityHelper.m; sourceTree = "<group>"; };
 		013276D91AFB72D800416F82 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -256,8 +273,6 @@
 		01453E721AC325AF00F8ADC6 /* FilmDetailListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FilmDetailListTableViewCell.xib; path = Views/DetailFilmTableViewCells/ListTableViewCells/FilmDetailListTableViewCell.xib; sourceTree = "<group>"; };
 		01453E761AC32AE600F8ADC6 /* FilmDetailListTableViewCellController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FilmDetailListTableViewCellController.h; path = Controllers/DetailFilmTableViewCellControllers/FilmDetailListTableViewCellController/FilmDetailListTableViewCellController.h; sourceTree = "<group>"; };
 		01453E771AC32AE600F8ADC6 /* FilmDetailListTableViewCellController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FilmDetailListTableViewCellController.m; path = Controllers/DetailFilmTableViewCellControllers/FilmDetailListTableViewCellController/FilmDetailListTableViewCellController.m; sourceTree = "<group>"; };
-		01453E791AC32D0300F8ADC6 /* InteractorsFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InteractorsFactory.h; path = Factories/InteractorsFactory.h; sourceTree = "<group>"; };
-		01453E7A1AC32D0300F8ADC6 /* InteractorsFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InteractorsFactory.m; path = Factories/InteractorsFactory.m; sourceTree = "<group>"; };
 		01453E7C1AC348BD00F8ADC6 /* RemoveFilmFromListInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RemoveFilmFromListInteractor.h; path = Interactors/RemoveFilmFromListInteractor.h; sourceTree = "<group>"; };
 		01453E7D1AC348BD00F8ADC6 /* RemoveFilmFromListInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RemoveFilmFromListInteractor.m; path = Interactors/RemoveFilmFromListInteractor.m; sourceTree = "<group>"; };
 		014DF9921B00B72F0052547C /* CheckNextReleasesInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CheckNextReleasesInteractor.h; path = Interactors/CheckNextReleasesInteractor.h; sourceTree = "<group>"; };
@@ -277,8 +292,6 @@
 		015834481AB8223B007E0AC4 /* APIVars.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APIVars.h; path = Master/APIVars.h; sourceTree = "<group>"; };
 		015834491AB8223B007E0AC4 /* APIVars.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = APIVars.m; path = Master/APIVars.m; sourceTree = "<group>"; };
 		0158344B1AB84A88007E0AC4 /* RequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RequestManager.h; path = RequestManagers/RequestManager.h; sourceTree = "<group>"; };
-		0158344D1AB84AAA007E0AC4 /* RequestManagerFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RequestManagerFactory.h; path = Factories/RequestManagerFactory.h; sourceTree = "<group>"; };
-		0158344E1AB84AAA007E0AC4 /* RequestManagerFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RequestManagerFactory.m; path = Factories/RequestManagerFactory.m; sourceTree = "<group>"; };
 		015834501AB84E93007E0AC4 /* JARequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JARequestManager.h; path = RequestManagers/JARequestManager.h; sourceTree = "<group>"; };
 		015834511AB84E93007E0AC4 /* JARequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JARequestManager.m; path = RequestManagers/JARequestManager.m; sourceTree = "<group>"; };
 		015834541AB862B4007E0AC4 /* URLHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = URLHelper.h; path = Helpers/URLHelper.h; sourceTree = "<group>"; };
@@ -327,6 +340,17 @@
 		01B875AA1AC45FE200BD69EB /* GenreFilmDetailCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GenreFilmDetailCollectionViewCell.xib; path = Views/DetailFilmTableViewCells/GenresCollectionViewCells/GenreFilmDetailCollectionViewCell.xib; sourceTree = "<group>"; };
 		01B875AD1AC470DE00BD69EB /* SizeHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SizeHelper.h; path = Helpers/SizeHelper.h; sourceTree = "<group>"; };
 		01B875AE1AC470DE00BD69EB /* SizeHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SizeHelper.m; path = Helpers/SizeHelper.m; sourceTree = "<group>"; };
+		01BB03631BE7FF15009A4B51 /* JAStarsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JAStarsView.h; path = Views/CustomViews/JAStarsView.h; sourceTree = "<group>"; };
+		01BB03641BE7FF15009A4B51 /* JAStarsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JAStarsView.m; path = Views/CustomViews/JAStarsView.m; sourceTree = "<group>"; };
+		01BB03661BE7FF30009A4B51 /* JAStarsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = JAStarsView.xib; path = Views/CustomViews/JAStarsView.xib; sourceTree = "<group>"; };
+		01BB03681BE80E28009A4B51 /* NSDictionary+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+Utilities.h"; path = "Categories/NSDictionary+Utilities.h"; sourceTree = "<group>"; };
+		01BB03691BE80E28009A4B51 /* NSDictionary+Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+Utilities.m"; path = "Categories/NSDictionary+Utilities.m"; sourceTree = "<group>"; };
+		01EC61531BE16236003C0778 /* Film+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Film+CoreDataProperties.h"; path = "Entities/Film+CoreDataProperties.h"; sourceTree = "<group>"; };
+		01EC61541BE16236003C0778 /* Film+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Film+CoreDataProperties.m"; path = "Entities/Film+CoreDataProperties.m"; sourceTree = "<group>"; };
+		01EC61551BE16236003C0778 /* FilmRelease+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "FilmRelease+CoreDataProperties.h"; path = "Entities/FilmRelease+CoreDataProperties.h"; sourceTree = "<group>"; };
+		01EC61561BE16236003C0778 /* FilmRelease+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "FilmRelease+CoreDataProperties.m"; path = "Entities/FilmRelease+CoreDataProperties.m"; sourceTree = "<group>"; };
+		01EC61571BE16236003C0778 /* FilmRelease.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FilmRelease.h; path = Entities/FilmRelease.h; sourceTree = "<group>"; };
+		01EC61581BE16236003C0778 /* FilmRelease.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FilmRelease.m; path = Entities/FilmRelease.m; sourceTree = "<group>"; };
 		01F0C0F01AC1A0220009E061 /* UISearchBar+Custom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UISearchBar+Custom.h"; path = "Categories/UISearchBar+Custom.h"; sourceTree = "<group>"; };
 		01F0C0F11AC1A0220009E061 /* UISearchBar+Custom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UISearchBar+Custom.m"; path = "Categories/UISearchBar+Custom.m"; sourceTree = "<group>"; };
 		01FC73A01AC2D358003DC161 /* FilmFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FilmFilter.h; path = Helpers/FilmFilter.h; sourceTree = "<group>"; };
@@ -391,7 +415,6 @@
 				015834571AB8635B007E0AC4 /* Parsers */,
 				015834531AB862A4007E0AC4 /* Helpers */,
 				01068EF71AB701EA0017F91A /* RequestManagers */,
-				0158344C1AB84A90007E0AC4 /* Factories */,
 				0114C7F91B5FB79B00400401 /* Repositories */,
 				01068EF61AB701E40017F91A /* Providers */,
 				01068EF51AB701DA0017F91A /* Interactors */,
@@ -403,8 +426,8 @@
 				010D30711B9E088400E582F1 /* SubClasses */,
 				01068EF91AB702A30017F91A /* CoreData */,
 				015347161B6A4F4400A7D5A7 /* Resources */,
+				01200D241BDEC22C00A31F22 /* LaunchScreen.xib */,
 				01068EDB1AB7011D0017F91A /* Images.xcassets */,
-				01068EDD1AB7011D0017F91A /* LaunchScreen.xib */,
 				01068ECB1AB7011D0017F91A /* Supporting Files */,
 			);
 			path = KinoApp;
@@ -416,6 +439,7 @@
 				01068ECC1AB7011D0017F91A /* Info.plist */,
 				01068ECD1AB7011D0017F91A /* main.m */,
 				01B62DE91B56769A000F203A /* Kino-Prefix.pch */,
+				01200D201BDEC1DA00A31F22 /* Localizable.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -496,6 +520,9 @@
 				012C6BA81ABA13C30060A49C /* LocalListsProvider.h */,
 				012C6BA91ABA14A70060A49C /* LocalCoreDataListsProvider.h */,
 				012C6BAA1ABA14A70060A49C /* LocalCoreDataListsProvider.m */,
+				012CC5441BE0153800BE49E1 /* FilmReleasesProvider.h */,
+				012CC5481BE0158200BE49E1 /* TMDBFilmReleasesProvider.h */,
+				012CC5491BE0158200BE49E1 /* TMDBFilmReleasesProvider.m */,
 			);
 			name = Providers;
 			sourceTree = "<group>";
@@ -551,6 +578,7 @@
 		01068EFD1AB703B40017F91A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				01BB03621BE7FEF6009A4B51 /* CustomViews */,
 				0153470F1B6A402400A7D5A7 /* UISubClasses */,
 				015347081B6A3E1E00A7D5A7 /* HeaderViews */,
 				01068F4E1AB752840017F91A /* CollectionFilmsCollectionViewCell.h */,
@@ -776,19 +804,6 @@
 			name = Master;
 			sourceTree = "<group>";
 		};
-		0158344C1AB84A90007E0AC4 /* Factories */ = {
-			isa = PBXGroup;
-			children = (
-				0158344D1AB84AAA007E0AC4 /* RequestManagerFactory.h */,
-				0158344E1AB84AAA007E0AC4 /* RequestManagerFactory.m */,
-				0117596D1ABAF5E700724BC5 /* ControllersFactory.h */,
-				0117596E1ABAF5E700724BC5 /* ControllersFactory.m */,
-				01453E791AC32D0300F8ADC6 /* InteractorsFactory.h */,
-				01453E7A1AC32D0300F8ADC6 /* InteractorsFactory.m */,
-			);
-			name = Factories;
-			sourceTree = "<group>";
-		};
 		015834531AB862A4007E0AC4 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -815,6 +830,8 @@
 				0139556A1ABAD8EA00BC745D /* ListDTOParser.m */,
 				011C92B71AC411C70097EE10 /* GenreDTOParser.h */,
 				011C92B81AC411C70097EE10 /* GenreDTOParser.m */,
+				012CC54B1BE0173F00BE49E1 /* FilmReleaseDTOParser.h */,
+				012CC54C1BE0173F00BE49E1 /* FilmReleaseDTOParser.m */,
 			);
 			name = Parsers;
 			sourceTree = "<group>";
@@ -822,10 +839,18 @@
 		015834581AB864ED007E0AC4 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				0114C7F61B5FAF9F00400401 /* Film.h */,
-				0114C7F71B5FAF9F00400401 /* Film.m */,
 				015834591AB86508007E0AC4 /* FilmDTO.h */,
 				0158345A1AB86508007E0AC4 /* FilmDTO.m */,
+				0114C7F61B5FAF9F00400401 /* Film.h */,
+				0114C7F71B5FAF9F00400401 /* Film.m */,
+				01EC61531BE16236003C0778 /* Film+CoreDataProperties.h */,
+				01EC61541BE16236003C0778 /* Film+CoreDataProperties.m */,
+				012CC53A1BE013B100BE49E1 /* FilmReleaseDTO.h */,
+				012CC53B1BE013B100BE49E1 /* FilmReleaseDTO.m */,
+				01EC61571BE16236003C0778 /* FilmRelease.h */,
+				01EC61581BE16236003C0778 /* FilmRelease.m */,
+				01EC61551BE16236003C0778 /* FilmRelease+CoreDataProperties.h */,
+				01EC61561BE16236003C0778 /* FilmRelease+CoreDataProperties.m */,
 				013955661ABAD7A500BC745D /* List.h */,
 				013955671ABAD7A500BC745D /* List.m */,
 				012C6BA41ABA107D0060A49C /* ListDTO.h */,
@@ -853,6 +878,8 @@
 				01038D211AC05A2800B88A8A /* UIFont+Custom.m */,
 				01F0C0F01AC1A0220009E061 /* UISearchBar+Custom.h */,
 				01F0C0F11AC1A0220009E061 /* UISearchBar+Custom.m */,
+				01BB03681BE80E28009A4B51 /* NSDictionary+Utilities.h */,
+				01BB03691BE80E28009A4B51 /* NSDictionary+Utilities.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -876,8 +903,20 @@
 				016944691B57C03700B77A31 /* DelegatesAssembly.m */,
 				0119D4071B58FDFA00654F8B /* RepositoriesAssembly.h */,
 				0119D4081B58FDFA00654F8B /* RepositoriesAssembly.m */,
+				012CC5371BE00F4300BE49E1 /* ControllersAssembly.h */,
+				012CC5381BE00F4300BE49E1 /* ControllersAssembly.m */,
 			);
 			name = Assemblies;
+			sourceTree = "<group>";
+		};
+		01BB03621BE7FEF6009A4B51 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				01BB03631BE7FF15009A4B51 /* JAStarsView.h */,
+				01BB03641BE7FF15009A4B51 /* JAStarsView.m */,
+				01BB03661BE7FF30009A4B51 /* JAStarsView.xib */,
+			);
+			name = CustomViews;
 			sourceTree = "<group>";
 		};
 		0B24B96251924E16800F2BD5 /* Pods */ = {
@@ -944,7 +983,7 @@
 		01068EC01AB7011D0017F91A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0620;
+				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = Julian;
 				TargetAttributes = {
 					01068EC71AB7011D0017F91A = {
@@ -967,8 +1006,8 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
+				es,
 			);
 			mainGroup = 01068EBF1AB7011D0017F91A;
 			productRefGroup = 01068EC91AB7011D0017F91A /* Products */;
@@ -988,16 +1027,18 @@
 			files = (
 				01068F3C1AB72D480017F91A /* BillboardFilmCollectionViewCell.xib in Resources */,
 				0121765E1ABC3D8F00EDA095 /* FilmTableViewCell.xib in Resources */,
-				01068EDF1AB7011D0017F91A /* LaunchScreen.xib in Resources */,
 				012C6B901ABA006D0060A49C /* ListsCollectionViewController.xib in Resources */,
+				01200D251BDEC22C00A31F22 /* LaunchScreen.xib in Resources */,
 				01068F521AB752840017F91A /* CollectionFilmsCollectionViewCell.xib in Resources */,
 				015AB17E1ABC6A3000D2CBAA /* SearchFilmViewController.xib in Resources */,
 				01562BC31AEA53CB003EEDC8 /* FilmDetailScrollViewViewController.xib in Resources */,
+				01200D1E1BDEC1DA00A31F22 /* Localizable.strings in Resources */,
 				012C6B981ABA0A070060A49C /* FilmListCollectionViewCell.xib in Resources */,
 				0153470E1B6A3ECF00A7D5A7 /* FilmDetailHeaderView.xib in Resources */,
 				01453E741AC325AF00F8ADC6 /* FilmDetailListTableViewCell.xib in Resources */,
 				01068F311AB725490017F91A /* BillboardViewController.xib in Resources */,
 				01B875AC1AC45FE200BD69EB /* GenreFilmDetailCollectionViewCell.xib in Resources */,
+				01BB03671BE7FF30009A4B51 /* JAStarsView.xib in Resources */,
 				01068EDC1AB7011D0017F91A /* Images.xcassets in Resources */,
 				0117597C1ABB3B1200724BC5 /* ListTableViewCell.xib in Resources */,
 				011759771ABB390600724BC5 /* SelectListViewController.xib in Resources */,
@@ -1054,6 +1095,7 @@
 			files = (
 				013955681ABAD7A500BC745D /* List.m in Sources */,
 				011C92CF1AC42A950097EE10 /* FilmDetailGenreCollectionViewCellController.m in Sources */,
+				01EC615A1BE16236003C0778 /* FilmRelease+CoreDataProperties.m in Sources */,
 				01562BC21AEA53CB003EEDC8 /* FilmDetailScrollViewViewController.m in Sources */,
 				012C6B8F1ABA006D0060A49C /* ListsCollectionViewController.m in Sources */,
 				01453E731AC325AF00F8ADC6 /* FilmDetailListTableViewCell.m in Sources */,
@@ -1069,14 +1111,13 @@
 				015AB18A1ABC827C00D2CBAA /* SearchFilmInteractor.m in Sources */,
 				015AB1791ABC3F0100D2CBAA /* DetailListRouter.m in Sources */,
 				01B62DF21B567DEC000F203A /* InteractorsAssembly.m in Sources */,
+				012CC53C1BE013B100BE49E1 /* FilmReleaseDTO.m in Sources */,
 				01B875AB1AC45FE200BD69EB /* GenreFilmDetailCollectionViewCell.m in Sources */,
 				0114C7F51B5FAB2700400401 /* DateHelper.m in Sources */,
 				011759831ABB429E00724BC5 /* SelectListModalTransitionAnimator.m in Sources */,
 				01068F4A1AB74E1F0017F91A /* LoadUpcomingFilmsInteractor.m in Sources */,
 				011C92B61AC410C90097EE10 /* GenreDTO.m in Sources */,
-				0158344F1AB84AAA007E0AC4 /* RequestManagerFactory.m in Sources */,
 				01068F301AB725490017F91A /* BillboardViewController.m in Sources */,
-				0117596F1ABAF5E700724BC5 /* ControllersFactory.m in Sources */,
 				018F9DD41AB89B4D0046D3C4 /* Film+Model.m in Sources */,
 				012C6B971ABA0A070060A49C /* FilmListCollectionViewCell.m in Sources */,
 				012203ED1AEE4C02008ABF5B /* FilmCollectionsInTableView.m in Sources */,
@@ -1089,22 +1130,26 @@
 				015347121B6A405700A7D5A7 /* StyledLabel.m in Sources */,
 				015347151B6A421300A7D5A7 /* FilmDetailHeaderView.m in Sources */,
 				012C6BAB1ABA14A70060A49C /* LocalCoreDataListsProvider.m in Sources */,
+				01BB036A1BE80E28009A4B51 /* NSDictionary+Utilities.m in Sources */,
 				018F9DCD1AB896200046D3C4 /* LocalCoreDataFilmsProvider.m in Sources */,
-				01453E7B1AC32D0300F8ADC6 /* InteractorsFactory.m in Sources */,
+				012CC54A1BE0158200BE49E1 /* TMDBFilmReleasesProvider.m in Sources */,
 				012176591ABC3D6700EDA095 /* FilmCollectionViewCellController.m in Sources */,
 				01453E7E1AC348BD00F8ADC6 /* RemoveFilmFromListInteractor.m in Sources */,
 				015AB17D1ABC6A3000D2CBAA /* SearchFilmViewController.m in Sources */,
 				01038D1F1AC0516200B88A8A /* UIColor+Custom.m in Sources */,
+				012CC5391BE00F4300BE49E1 /* ControllersAssembly.m in Sources */,
 				013276DE1AFB735E00416F82 /* Reachability.m in Sources */,
 				013276D81AFB724A00416F82 /* ReachabilityHelper.m in Sources */,
 				01F0C0F21AC1A0220009E061 /* UISearchBar+Custom.m in Sources */,
 				012C6B931ABA01560060A49C /* ListsCollectionRouter.m in Sources */,
 				01068F3B1AB72D480017F91A /* BillboardFilmCollectionViewCell.m in Sources */,
 				01068F511AB752840017F91A /* CollectionFilmsCollectionViewCell.m in Sources */,
+				01EC615B1BE16236003C0778 /* FilmRelease.m in Sources */,
 				01B62DEC1B5679C0000F203A /* RouterAssembly.m in Sources */,
 				0114C7F81B5FAF9F00400401 /* Film.m in Sources */,
 				01B62DF51B567DFA000F203A /* ProvidersAssembly.m in Sources */,
 				012C6B8B1ABA000E0060A49C /* FetchAllListsInteractor.m in Sources */,
+				01BB03651BE7FF15009A4B51 /* JAStarsView.m in Sources */,
 				015AB1841ABC6E7E00D2CBAA /* SearchFilmTableViewCellController.m in Sources */,
 				01453E781AC32AE600F8ADC6 /* FilmDetailListTableViewCellController.m in Sources */,
 				01B62DF81B567E2D000F203A /* RequestManagerAssembly.m in Sources */,
@@ -1112,6 +1157,7 @@
 				015AB1811ABC6C3800D2CBAA /* LoadPopularFilmsInteractor.m in Sources */,
 				0121765D1ABC3D8F00EDA095 /* FilmTableViewCell.m in Sources */,
 				012C6B881AB9D3290060A49C /* LoadFilmInteractor.m in Sources */,
+				01EC61591BE16236003C0778 /* Film+CoreDataProperties.m in Sources */,
 				011759721ABB291F00724BC5 /* AddFilmToListInteractor.m in Sources */,
 				011C92B91AC411C70097EE10 /* GenreDTOParser.m in Sources */,
 				018F9DD01AB896F90046D3C4 /* CoreDataManager.m in Sources */,
@@ -1130,6 +1176,7 @@
 				0158344A1AB8223B007E0AC4 /* APIVars.m in Sources */,
 				011759761ABB390600724BC5 /* SelectListViewController.m in Sources */,
 				012C6B851AB9C3EE0060A49C /* DetailFilmRouter.m in Sources */,
+				012CC54D1BE0173F00BE49E1 /* FilmReleaseDTOParser.m in Sources */,
 				012C6BA61ABA107D0060A49C /* ListDTO.m in Sources */,
 				0115B7251AC3630800F38A7D /* UpdateListInteractor.m in Sources */,
 				01068F471AB747F00017F91A /* ExternalTMDBProvider.m in Sources */,
@@ -1161,12 +1208,13 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		01068EDD1AB7011D0017F91A /* LaunchScreen.xib */ = {
+		01200D201BDEC1DA00A31F22 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				01068EDE1AB7011D0017F91A /* Base */,
+				01200D1F1BDEC1DA00A31F22 /* en */,
+				01200D211BDEC1DF00A31F22 /* es */,
 			);
-			name = LaunchScreen.xib;
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -1192,6 +1240,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -1258,6 +1307,7 @@
 				GCC_PREFIX_HEADER = "KinoApp/Kino-Prefix.pch";
 				INFOPLIST_FILE = KinoApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Julian.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -1273,6 +1323,7 @@
 				GCC_PREFIX_HEADER = "KinoApp/Kino-Prefix.pch";
 				INFOPLIST_FILE = KinoApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Julian.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -1292,6 +1343,7 @@
 				);
 				INFOPLIST_FILE = KinoAppTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Julian.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KinoApp.app/KinoApp";
 			};
@@ -1307,6 +1359,7 @@
 				);
 				INFOPLIST_FILE = KinoAppTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Julian.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KinoApp.app/KinoApp";
 			};

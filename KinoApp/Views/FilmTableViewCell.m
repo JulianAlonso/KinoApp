@@ -9,6 +9,7 @@
 #import "FilmTableViewCell.h"
 #import "UIColor+Custom.h"
 #import "UIFont+Custom.h"
+#import "JAStarsView.h"
 
 #define RGB(r, g, b) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:1]
 
@@ -27,6 +28,7 @@
     self.filmImageView.image = nil;
     self.filmTitleLabel.text = @"";
     self.filmYearLabel.text = @"";
+    self.filmStarsView.note = @(0);
 }
 
 - (void)configStyles

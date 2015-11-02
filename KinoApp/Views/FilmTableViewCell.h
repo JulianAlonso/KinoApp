@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @class FilmTableViewCell;
+@class JAStarsView;
 
 @protocol FilmTableViewCellDelegate <NSObject>
 
@@ -21,6 +22,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *filmImageView;
 @property (weak, nonatomic) IBOutlet UILabel *filmTitleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *filmYearLabel;
+@property (weak, nonatomic) IBOutlet JAStarsView *filmStarsView;
 
 @property (nonatomic, strong) id<FilmTableViewCellDelegate> delegate;
 

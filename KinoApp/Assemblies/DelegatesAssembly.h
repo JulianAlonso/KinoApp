@@ -12,11 +12,13 @@
 
 @class InteractorsAssembly;
 @class ViewControllersAssembly;
+@class ControllersAssembly;
 
 @interface DelegatesAssembly : TyphoonAssembly
 
 @property (nonatomic, strong, readonly) InteractorsAssembly *interactorAssembly;
 @property (nonatomic, strong, readonly) ViewControllersAssembly *viewControllersAssembly;
+@property (nonatomic, strong, readonly) ControllersAssembly *controllersAssembly;
 
 - (id<BillboardCollectionDelegateProtocol>)billboardDelegate;
 

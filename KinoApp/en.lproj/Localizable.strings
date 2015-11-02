@@ -1,0 +1,34 @@
+/* 
+  KinoApp.strings
+  KinoApp
+
+  Created by Julian Alonso on 26/10/15.
+  Copyright © 2015 Julian. All rights reserved.
+*/
+"playing_now" = "Playing now";
+"upcoming" = "Upcoming";
+"no_connection" = "There is no connection. Try later";
+
+/*
+ Tab bar items names
+*/
+"billboard" = "Billboard";
+"lists" = "Collections";
+
+/*
+ Default list names
+*/
+"cinema" = "Cinema";
+"home" = "Home";
+"top 15" = "Top 15";
+
+/*
+ Film Detail list scroll view
+ */
+"%@ minutes · %@" = "%@ minutes · %@";
+"theater" = "Collections it's in:";
+
+/*
+ Film defaults
+ */
+"No Overview" = "There is no overview.";
