@@ -7,11 +7,15 @@
 */
 "playing_now" = "En cines";
 "upcoming" = "Próximamente";
-"billboard" = "Cartelera";
-"lists" = "Salas";
 "no_connection" = "No hay conexión. Prueba mas tarde";
 "%@ minutes · %@" = "%@ minutos · %@";
-"theater" = "Guardada en las salas:";
+"theater" = "Guardada en las colecciones:";
+
+/*
+ Tab bar items names
+*/
+"billboard" = "Cartelera";
+"lists" = "Colección";
 
 /*
  Default list names

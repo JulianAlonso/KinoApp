@@ -7,14 +7,18 @@
 */
 "playing_now" = "Playing now";
 "upcoming" = "Upcoming";
-"billboard" = "Billboard";
-"lists" = "Theaters";
 "no_connection" = "There is no connection. Try later";
 "%@ minutes · %@" = "%@ minutes · %@";
-"theater" = "Theater it's in:";
+"theater" = "Collections it's in:";
 
 /*
-    Default list names
+ Tab bar items names
+*/
+"billboard" = "Billboard";
+"lists" = "Collections";
+
+/*
+ Default list names
 */
 "cinema" = "Cinema";
 "home" = "Home";
