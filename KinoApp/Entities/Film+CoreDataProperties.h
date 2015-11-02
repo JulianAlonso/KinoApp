@@ -1,9 +1,9 @@
 //
 //  Film+CoreDataProperties.h
-//  
+//  KinoApp
 //
-//  Created by Julian Alonso on 28/10/15.
-//
+//  Created by Julian Alonso on 2/11/15.
+//  Copyright © 2015 Julian. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
 //  to delete and recreate this implementation file for your updated model.
@@ -26,6 +26,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nullable, nonatomic, retain) NSString *filmTagline;
 @property (nullable, nonatomic, retain) NSString *filmTitle;
 @property (nullable, nonatomic, retain) NSString *filmType;
+@property (nullable, nonatomic, retain) NSNumber *filmVotes;
+@property (nullable, nonatomic, retain) NSNumber *filmVoteAverage;
 @property (nullable, nonatomic, retain) NSOrderedSet<Genre *> *filmGenres;
 @property (nullable, nonatomic, retain) NSSet<List *> *filmLists;
 @property (nullable, nonatomic, retain) NSSet<FilmRelease *> *filmReleases;
@@ -50,10 +52,10 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)addFilmLists:(NSSet<List *> *)values;
 - (void)removeFilmLists:(NSSet<List *> *)values;
 
-- (void)addFilmReleasesObject:(NSManagedObject *)value;
-- (void)removeFilmReleasesObject:(NSManagedObject *)value;
-- (void)addFilmReleases:(NSSet<NSManagedObject *> *)values;
-- (void)removeFilmReleases:(NSSet<NSManagedObject *> *)values;
+- (void)addFilmReleasesObject:(FilmRelease *)value;
+- (void)removeFilmReleasesObject:(FilmRelease *)value;
+- (void)addFilmReleases:(NSSet<FilmRelease *> *)values;
+- (void)removeFilmReleases:(NSSet<FilmRelease *> *)values;
 
 @end
 

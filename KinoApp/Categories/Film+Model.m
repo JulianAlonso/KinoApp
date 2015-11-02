@@ -35,6 +35,8 @@ NSString *const kFilmReleaseDateProperty = @"filmReleaseDate";
         film.filmHomepage = filmDTO.filmHomepage;
         film.filmType = filmDTO.filmType;
         film.filmRuntime = filmDTO.filmRuntime;
+        film.filmVotes = filmDTO.filmVotes;
+        film.filmVoteAverage = filmDTO.filmVotesAverage;
         
         for (GenreDTO *genreDTO in filmDTO.filmGenres)
         {

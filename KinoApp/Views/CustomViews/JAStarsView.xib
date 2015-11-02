@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="JAStarsView">
+            <connections>
+                <outletCollection property="starImagesView" destination="IcU-5x-pbi" id="RJe-zK-yZJ"/>
+                <outletCollection property="starImagesView" destination="TWC-x6-27E" id="SBm-0s-SqW"/>
+                <outletCollection property="starImagesView" destination="ZCz-e9-ze7" id="Py3-6P-rsC"/>
+                <outletCollection property="starImagesView" destination="HpN-dn-89U" id="EYX-kf-huO"/>
+                <outletCollection property="starImagesView" destination="Jsi-iO-zdb" id="Y2M-d3-0E1"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="350" height="70"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Star" translatesAutoresizingMaskIntoConstraints="NO" id="Jsi-iO-zdb">
+                    <rect key="frame" x="280" y="0.0" width="70" height="70"/>
+                    <animations/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="Jsi-iO-zdb" secondAttribute="height" multiplier="1:1" id="tdv-Vb-eC2"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FilledStar" translatesAutoresizingMaskIntoConstraints="NO" id="IcU-5x-pbi">
+                    <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
+                    <animations/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="IcU-5x-pbi" secondAttribute="height" multiplier="1:1" id="K5a-eL-hLE"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FilledStar" translatesAutoresizingMaskIntoConstraints="NO" id="TWC-x6-27E">
+                    <rect key="frame" x="70" y="0.0" width="70" height="70"/>
+                    <animations/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="TWC-x6-27E" secondAttribute="height" multiplier="1:1" id="Fo1-6s-vN5"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FilledStar" translatesAutoresizingMaskIntoConstraints="NO" id="ZCz-e9-ze7">
+                    <rect key="frame" x="140" y="0.0" width="70" height="70"/>
+                    <animations/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="ZCz-e9-ze7" secondAttribute="height" multiplier="1:1" id="t6d-lt-WIF"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SemiFilledStar" translatesAutoresizingMaskIntoConstraints="NO" id="HpN-dn-89U">
+                    <rect key="frame" x="210" y="0.0" width="70" height="70"/>
+                    <animations/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="HpN-dn-89U" secondAttribute="height" multiplier="1:1" id="6hz-Jy-kRd"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="ZCz-e9-ze7" firstAttribute="width" secondItem="IcU-5x-pbi" secondAttribute="width" id="376-g1-pwo"/>
+                <constraint firstItem="TWC-x6-27E" firstAttribute="leading" secondItem="IcU-5x-pbi" secondAttribute="trailing" id="3bI-2T-e8T"/>
+                <constraint firstItem="ZCz-e9-ze7" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="5mM-kd-pND"/>
+                <constraint firstItem="Jsi-iO-zdb" firstAttribute="width" secondItem="IcU-5x-pbi" secondAttribute="width" id="8XO-cd-YX3"/>
+                <constraint firstItem="IcU-5x-pbi" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="8eI-Ih-lgB"/>
+                <constraint firstItem="HpN-dn-89U" firstAttribute="leading" secondItem="ZCz-e9-ze7" secondAttribute="trailing" id="Cbl-P3-UDY"/>
+                <constraint firstItem="ZCz-e9-ze7" firstAttribute="leading" secondItem="TWC-x6-27E" secondAttribute="trailing" id="If2-lC-kPg"/>
+                <constraint firstItem="TWC-x6-27E" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="KDI-9T-T6P"/>
+                <constraint firstItem="HpN-dn-89U" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="L7i-W2-beC"/>
+                <constraint firstItem="Jsi-iO-zdb" firstAttribute="leading" secondItem="HpN-dn-89U" secondAttribute="trailing" id="QjF-fd-V7G"/>
+                <constraint firstItem="HpN-dn-89U" firstAttribute="width" secondItem="IcU-5x-pbi" secondAttribute="width" id="Tdm-Mx-Og2"/>
+                <constraint firstAttribute="bottom" secondItem="ZCz-e9-ze7" secondAttribute="bottom" id="WKJ-At-d5L"/>
+                <constraint firstAttribute="bottom" secondItem="IcU-5x-pbi" secondAttribute="bottom" id="fPh-Lt-lLV"/>
+                <constraint firstAttribute="bottom" secondItem="TWC-x6-27E" secondAttribute="bottom" id="jCG-R9-Ydd"/>
+                <constraint firstAttribute="trailing" secondItem="Jsi-iO-zdb" secondAttribute="trailing" priority="999" id="noz-bq-K3c"/>
+                <constraint firstItem="Jsi-iO-zdb" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="rlu-IL-FoM"/>
+                <constraint firstItem="IcU-5x-pbi" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="sfi-19-Lhc"/>
+                <constraint firstItem="TWC-x6-27E" firstAttribute="width" secondItem="IcU-5x-pbi" secondAttribute="width" id="tEp-mG-ZKW"/>
+                <constraint firstAttribute="bottom" secondItem="Jsi-iO-zdb" secondAttribute="bottom" id="w9G-dX-CRI"/>
+                <constraint firstAttribute="bottom" secondItem="HpN-dn-89U" secondAttribute="bottom" id="xxH-Ng-yxP"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="837" y="512"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="FilledStar" width="27" height="27"/>
+        <image name="SemiFilledStar" width="29" height="28"/>
+        <image name="Star" width="30" height="29"/>
+    </resources>
+</document>

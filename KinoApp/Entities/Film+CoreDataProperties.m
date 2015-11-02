@@ -1,9 +1,9 @@
 //
 //  Film+CoreDataProperties.m
-//  
+//  KinoApp
 //
-//  Created by Julian Alonso on 28/10/15.
-//
+//  Created by Julian Alonso on 2/11/15.
+//  Copyright © 2015 Julian. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
 //  to delete and recreate this implementation file for your updated model.
@@ -24,6 +24,8 @@
 @dynamic filmTagline;
 @dynamic filmTitle;
 @dynamic filmType;
+@dynamic filmVotes;
+@dynamic filmVoteAverage;
 @dynamic filmGenres;
 @dynamic filmLists;
 @dynamic filmReleases;

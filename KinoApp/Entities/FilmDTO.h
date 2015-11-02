@@ -28,6 +28,8 @@ extern NSString *const kPosterPathProperty;
 @property (nonatomic, strong) NSString *filmBackdropPath;
 @property (nonatomic, strong) NSString *filmType;
 @property (nonatomic, strong) NSString *filmRuntime;
+@property (nonatomic, strong) NSNumber *filmVotes;
+@property (nonatomic, strong) NSNumber *filmVotesAverage;
 @property (nonatomic, strong) NSArray *filmGenres;
 @property (nonatomic, strong) NSArray<FilmReleaseDTO *> *filmReseases;
 @property (nonatomic, strong, readonly) NSString *filmYear;
