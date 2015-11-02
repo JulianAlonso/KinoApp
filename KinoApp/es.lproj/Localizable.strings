@@ -12,3 +12,10 @@
 "no_connection" = "No hay conexión. Prueba mas tarde";
 "%@ minutes · %@" = "%@ minutos · %@";
 "theater" = "Guardada en las salas:";
+
+/*
+ Default list names
+ */
+"cinema" = "Cine";
+"home" = "Casa";
+"top 15" = "Top 15";

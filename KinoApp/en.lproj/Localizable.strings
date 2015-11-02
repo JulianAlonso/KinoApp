@@ -12,3 +12,10 @@
 "no_connection" = "There is no connection. Try later";
 "%@ minutes · %@" = "%@ minutes · %@";
 "theater" = "Theater it's in:";
+
+/*
+    Default list names
+*/
+"cinema" = "Cinema";
+"home" = "Home";
+"top 15" = "Top 15";
