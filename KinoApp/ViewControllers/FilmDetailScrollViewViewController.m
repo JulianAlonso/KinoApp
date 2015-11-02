@@ -69,7 +69,7 @@ static CGFloat const kBottomMargin = 240.0f;
     [super viewDidLayoutSubviews];
     
     [self configLayerView];
-    self.refereceViewTopConstraint.constant = CGRectGetHeight(self.view.frame) - kBottomMargin;
+    self.refereceViewTopConstraint.constant = CGRectGetHeight(self.view.frame) - MIN(CGRectGetHeight(self.referenceView.frame) + 10.0f, kBottomMargin);
     [self calculateReferences];
 }
 
