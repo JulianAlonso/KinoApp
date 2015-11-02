@@ -8,8 +8,6 @@
 "playing_now" = "Playing now";
 "upcoming" = "Upcoming";
 "no_connection" = "There is no connection. Try later";
-"%@ minutes · %@" = "%@ minutes · %@";
-"theater" = "Collections it's in:";
 
 /*
  Tab bar items names
@@ -23,3 +21,14 @@
 "cinema" = "Cinema";
 "home" = "Home";
 "top 15" = "Top 15";
+
+/*
+ Film Detail list scroll view
+ */
+"%@ minutes · %@" = "%@ minutes · %@";
+"theater" = "Collections it's in:";
+
+/*
+ Film defaults
+ */
+"No Overview" = "No hay descripción";

@@ -24,6 +24,8 @@ static NSString *const dFilmPosterPath = @"poster_path";
 static NSString *const dFilmBackdropPath = @"backdrop_path";
 static NSString *const dFilmRuntime = @"runtime";
 static NSString *const dFilmGenres = @"genres";
+static NSString *const dFilmVotes = @"vote_count";
+static NSString *const dFilmVotesAverage = @"vote_average";
 
 @implementation FilmDTOParser
 
@@ -42,6 +44,8 @@ static NSString *const dFilmGenres = @"genres";
     film.filmRuntime = [NSString stringWithFormat:@"%@", dictionary[dFilmRuntime]];
     film.filmPosterPath = [URLHelper imageUrlWithEndpoint:dictionary[dFilmPosterPath]];
     film.filmBackdropPath = [URLHelper imageUrlWithEndpoint:dictionary[dFilmBackdropPath]];
+    film.filmVotes = @([dictionary[dFilmVotes] integerValue]);
+    film.filmVotesAverage = @([dictionary[dFilmVotesAverage] integerValue]);
     filmType ? film.filmType = filmType : film.filmType;
     
     NSArray *genresDic = dictionary[dFilmGenres];
@@ -79,6 +83,8 @@ static NSString *const dFilmGenres = @"genres";
     filmDTO.filmBackdropPath = film.filmBackdropPath;
     filmDTO.filmType = film.filmType;
     filmDTO.filmRuntime = film.filmRuntime;
+    filmDTO.filmVotesAverage = film.filmVoteAverage;
+    filmDTO.filmVotes = film.filmVotes;
     
     if (film.filmGenres.count > 0)
     {
@@ -87,7 +93,7 @@ static NSString *const dFilmGenres = @"genres";
     
     if (film.filmReleases.count > 0)
     {
-        filmDTO.filmReseases = [FilmReleaseDTOParser filmReleaseDTOsFromFilmReleases:film.filmReleases];
+        filmDTO.filmReseases = [FilmReleaseDTOParser filmReleaseDTOsFromFilmReleases:film.filmReleases.allObjects];
     }
     
     return filmDTO;

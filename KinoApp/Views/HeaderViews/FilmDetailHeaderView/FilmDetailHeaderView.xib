@@ -27,7 +27,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HqP-BJ-8eR">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FILM NAME" textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nyw-3A-7Ff" customClass="StyledLabel">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FILM NAME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nyw-3A-7Ff" customClass="StyledLabel">
                                         <rect key="frame" x="250" y="11" width="100" height="23"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="19"/>
@@ -39,6 +39,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="centerX" secondItem="Nyw-3A-7Ff" secondAttribute="centerX" id="9ck-md-Onh"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Nyw-3A-7Ff" secondAttribute="trailing" constant="8" id="I8b-l5-xJA"/>
                                     <constraint firstAttribute="centerY" secondItem="Nyw-3A-7Ff" secondAttribute="centerY" id="MR1-tU-arP"/>
                                 </constraints>
                             </view>
@@ -68,6 +69,7 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="hWH-Ly-5uL" secondAttribute="trailing" id="0Sn-2q-uht"/>
+                <constraint firstItem="Nyw-3A-7Ff" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="JsU-rd-x5i" secondAttribute="trailing" constant="8" id="32J-Bc-3NF"/>
                 <constraint firstItem="hWH-Ly-5uL" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="M1l-2j-zev"/>
                 <constraint firstItem="JsU-rd-x5i" firstAttribute="centerY" secondItem="Nyw-3A-7Ff" secondAttribute="centerY" id="X2x-r4-Xk7"/>
                 <constraint firstAttribute="bottom" secondItem="hWH-Ly-5uL" secondAttribute="bottom" id="if6-Cu-VMO"/>
@@ -76,7 +78,7 @@
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="510" y="411"/>
+            <point key="canvasLocation" x="645" y="419"/>
         </view>
     </objects>
     <resources>

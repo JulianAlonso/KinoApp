@@ -10,6 +10,7 @@
 #import "SearchFilmTableViewCellController.h"
 #import "FilmTableViewCell.h"
 #import "FilmDTO.h"
+#import "JAStarsView.h"
 
 @interface SearchFilmTableViewCellController () <FilmTableViewCellDelegate>
 
@@ -24,6 +25,7 @@
     self.cell.filmTitleLabel.text = self.film.filmTitle;
     self.cell.filmYearLabel.text = self.film.filmYear;
     [self.cell.filmImageView sd_setImageWithURL:[NSURL URLWithString:self.film.filmPosterPath]];
+    self.cell.filmStarsView.note = self.film.filmVotesAverage;
     
     return self.cell;
 }

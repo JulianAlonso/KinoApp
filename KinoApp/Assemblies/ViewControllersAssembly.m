@@ -56,6 +56,7 @@
     {
         [definition injectProperty:@selector(router) with:[_routerAssembly detailListRouter]];
         [definition injectProperty:@selector(updateListInteractor) with:[_interactorsAssembly updateListInteractor]];
+        [definition injectProperty:@selector(controllersAssembly) with:_controllersAssembly];
     }];
 }
 

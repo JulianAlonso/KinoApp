@@ -8,8 +8,6 @@
 "playing_now" = "En cines";
 "upcoming" = "Próximamente";
 "no_connection" = "No hay conexión. Prueba mas tarde";
-"%@ minutes · %@" = "%@ minutos · %@";
-"theater" = "Guardada en las colecciones:";
 
 /*
  Tab bar items names
@@ -23,3 +21,14 @@
 "cinema" = "Cine";
 "home" = "Casa";
 "top 15" = "Top 15";
+
+/*
+ Film Detail list scroll view
+*/
+"%@ minutes · %@" = "%@ minutos · %@";
+"theater" = "Guardada en las colecciones:";
+
+/*
+ Film defaults
+*/
+"No Overview" = "No hay descripción";

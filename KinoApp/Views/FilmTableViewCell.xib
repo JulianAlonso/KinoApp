@@ -36,13 +36,20 @@
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WKV-Y8-48J" customClass="JAStarsView">
+                        <rect key="frame" x="122" y="46" width="150" height="30"/>
+                        <animations/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </view>
                 </subviews>
                 <animations/>
                 <constraints>
                     <constraint firstAttribute="trailingMargin" secondItem="nGW-G9-jSd" secondAttribute="trailing" constant="20" id="FJN-RA-rgZ"/>
                     <constraint firstAttribute="bottomMargin" secondItem="jSa-5D-8m5" secondAttribute="bottom" id="HvJ-ch-i8Y"/>
                     <constraint firstAttribute="trailingMargin" secondItem="jSa-5D-8m5" secondAttribute="trailing" constant="20" id="Z7j-Bt-hbG"/>
+                    <constraint firstItem="WKV-Y8-48J" firstAttribute="leading" secondItem="nGW-G9-jSd" secondAttribute="leading" id="ece-1G-sA8"/>
                     <constraint firstItem="KG0-d4-xY1" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="emx-Jl-ahS"/>
+                    <constraint firstItem="WKV-Y8-48J" firstAttribute="centerY" secondItem="KG0-d4-xY1" secondAttribute="centerY" id="f0F-yK-dX6"/>
                     <constraint firstItem="nGW-G9-jSd" firstAttribute="leading" secondItem="KG0-d4-xY1" secondAttribute="trailing" constant="30" id="ltb-94-B5T"/>
                     <constraint firstItem="KG0-d4-xY1" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" id="p9F-Ml-dks"/>
                     <constraint firstItem="nGW-G9-jSd" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="q7P-xU-uRR"/>
@@ -53,10 +60,11 @@
             <animations/>
             <connections>
                 <outlet property="filmImageView" destination="KG0-d4-xY1" id="iPe-zr-TNi"/>
+                <outlet property="filmStarsView" destination="WKV-Y8-48J" id="0sH-3f-T0e"/>
                 <outlet property="filmTitleLabel" destination="nGW-G9-jSd" id="85C-6s-wRS"/>
                 <outlet property="filmYearLabel" destination="jSa-5D-8m5" id="9Ri-fp-hSM"/>
             </connections>
-            <point key="canvasLocation" x="115" y="243"/>
+            <point key="canvasLocation" x="13" y="248"/>
         </tableViewCell>
     </objects>
 </document>
