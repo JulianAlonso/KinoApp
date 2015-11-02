@@ -12,16 +12,16 @@
 
 - (void)checkNextReleasesWithCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler
 {
-    UILocalNotification *notification = [[UILocalNotification alloc] init];
-    notification.fireDate = [NSDate dateWithTimeIntervalSinceNow:0];
-    notification.alertBody = [NSString stringWithFormat:@"Test notification from fetch"];
-    notification.timeZone = [NSTimeZone defaultTimeZone];
-    notification.soundName = UILocalNotificationDefaultSoundName;
-    notification.applicationIconBadgeNumber = [UIApplication sharedApplication].applicationIconBadgeNumber + 1;
-    
-    [[UIApplication sharedApplication] scheduleLocalNotification:notification];
-    
-    completionHandler(UIBackgroundFetchResultNoData);
+//    UILocalNotification *notification = [[UILocalNotification alloc] init];
+//    notification.fireDate = [NSDate dateWithTimeIntervalSinceNow:0];
+//    notification.alertBody = [NSString stringWithFormat:@"Test notification from fetch"];
+//    notification.timeZone = [NSTimeZone defaultTimeZone];
+//    notification.soundName = UILocalNotificationDefaultSoundName;
+//    notification.applicationIconBadgeNumber = [UIApplication sharedApplication].applicationIconBadgeNumber + 1;
+//    
+//    [[UIApplication sharedApplication] scheduleLocalNotification:notification];
+//    
+//    completionHandler(UIBackgroundFetchResultNoData);
 }
 
 @end
