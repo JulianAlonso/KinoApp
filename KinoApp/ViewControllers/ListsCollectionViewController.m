@@ -54,8 +54,6 @@ NSString *const kListsProperty = @"lists";
     [super viewDidLoad];
     
     self.actualIndex = 0;
-    
-    [self registerToObserveFilms];
     [self configListsCollectionView];
     [self configStyles];
 }
@@ -129,25 +127,6 @@ NSString *const kListsProperty = @"lists";
     }];
 }
 
-#pragma mark - Observation methods.
-- (void)registerToObserveFilms
-{
-    [self addObserver:self forKeyPath:kListsProperty options:NSKeyValueObservingOptionInitial context:nil];
-}
-
-- (void)unregisterToObserveFilms
-{
-    [self removeObserver:self forKeyPath:kListsProperty];
-}
-
-- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
-{
-    if ([keyPath isEqualToString:kListsProperty])
-    {
-        [self changedValueOfFilms];
-    }
-}
-
 #pragma mark - Action methods.
 - (void)changedValueOfFilms
 {
@@ -176,10 +155,11 @@ NSString *const kListsProperty = @"lists";
     }
 }
 
-#pragma mark - Dealloc method.
--(void)dealloc
+#pragma mark - Custom setters methods.
+- (void)setLists:(NSArray *)lists
 {
-    [self unregisterToObserveFilms];
+    _lists = lists;
+    [self changedValueOfFilms];
 }
 
 @end
