@@ -40,7 +40,7 @@
     return [TyphoonDefinition withClass:[ListsCollectionRouter class] configuration:^(TyphoonDefinition *definition)
     {
         [definition injectProperty:@selector(routerAssembly) with:self];
-        [definition injectProperty:@selector(listsCollectionViewController) with:[_viewControllersAssembly listsCollectionViewController]];
+        [definition injectProperty:@selector(viewControllersAssembly) with:self];
     }];
 }
 
@@ -57,7 +57,7 @@
     return [TyphoonDefinition withClass:[DetailListRouter class] configuration:^(TyphoonDefinition *definition)
     {
         [definition injectProperty:@selector(routerAssembly) with:self];
-        [definition injectProperty:@selector(listDetailViewController) with:[_viewControllersAssembly listDetailViewController]];
+        [definition injectProperty:@selector(viewControllersAssembly) with:_viewControllersAssembly];
     }];
 }
 

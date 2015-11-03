@@ -44,7 +44,6 @@
 {
     return [TyphoonDefinition withClass:[ListsCollectionViewController class] configuration:^(TyphoonDefinition *definition)
     {
-        [definition injectProperty:@selector(router) with:[_routerAssembly listsCollectionRouter]];
         [definition injectProperty:@selector(fetchAllListsInteractor) with:[_interactorsAssembly fetchAllListInteractor]];
         [definition injectProperty:@selector(controllersAssembly) with:_controllersAssembly];
     }];
@@ -54,7 +53,6 @@
 {
     return [TyphoonDefinition withClass:[ListDetailViewController class] configuration:^(TyphoonDefinition *definition)
     {
-        [definition injectProperty:@selector(router) with:[_routerAssembly detailListRouter]];
         [definition injectProperty:@selector(updateListInteractor) with:[_interactorsAssembly updateListInteractor]];
         [definition injectProperty:@selector(controllersAssembly) with:_controllersAssembly];
     }];
