@@ -80,7 +80,6 @@
 
 - (void)configBillboardCollectionView
 {
-    self.billboardCollectionView.contentSize = CGSizeMake(self.billboardCollectionView.frame.size.width * 2, self.billboardCollectionView.frame.size.height);
     self.billboardCollectionView.pagingEnabled = YES;
     self.billboardCollectionView.showsHorizontalScrollIndicator = NO;
     self.billboardCollectionView.delegate = self.delegate;

@@ -15,14 +15,17 @@
 #import "DetailListRouter.h"
 #import "RouterAssembly.h"
 #import "JANavigationController.h"
+#import "ViewControllersAssembly.h"
 
 @implementation ListsCollectionRouter
 
 - (void)loadViewAt:(UITabBarController *)tabBarCotroller
-{
-    self.listsCollectionViewController.tabBarItem.title = NSLocalizedString(@"lists", nil);
+{    
+    ListsCollectionViewController *listsViewController = [self.viewControllersAssembly listsCollectionViewController];
+    listsViewController.router = self;
+    self.listsCollectionViewController = listsViewController;
     
-    UINavigationController *nc = [[JANavigationController alloc] initWithRootViewController:self.listsCollectionViewController];
+    UINavigationController *nc = [[JANavigationController alloc] initWithRootViewController:listsViewController];
     
     nc.tabBarItem.title = NSLocalizedString(@"lists", nil);
     nc.tabBarItem.image = [UIImage imageNamed:@"Star"];

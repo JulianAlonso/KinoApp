@@ -10,6 +10,8 @@
 #import "CollectionFilmsCollectionViewCell.h"
 #import "UIColor+Custom.h"
 
+static CGFloat kTabBarHeight = 49.0f;
+
 @interface BillboardCollectionDelegate ()
 
 @property (nonatomic, strong) NSArray *films;
@@ -49,7 +51,7 @@
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    return collectionView.frame.size;
+    return collectionView.bounds.size;
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
