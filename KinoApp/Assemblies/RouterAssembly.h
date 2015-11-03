@@ -15,7 +15,6 @@
 @class DetailFilmRouter;
 @class DetailListRouter;
 @class SearchFilmRouter;
-@class SelectListRouter;
 
 @interface RouterAssembly : TyphoonAssembly
 
@@ -32,7 +31,5 @@
 - (DetailListRouter *)detailListRouter;
 
 - (SearchFilmRouter *)searchFilmRouter;
-
-- (SelectListRouter *)selectListRouter;
 
 @end

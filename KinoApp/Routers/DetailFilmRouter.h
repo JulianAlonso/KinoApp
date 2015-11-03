@@ -10,10 +10,12 @@
 
 @class FilmDTO;
 @class ListDTO;
+@class ViewControllersAssembly;
 @class FilmDetailScrollViewViewController;
 
 @interface DetailFilmRouter : UIViewController
 
+@property (nonatomic, strong) ViewControllersAssembly *viewControllersAssembly;
 @property (nonatomic, weak) FilmDetailScrollViewViewController *filmDetailScrollViewController;
 
 

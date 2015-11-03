@@ -8,13 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@class RouterAssembly;
 @class SearchFilmViewController;
+@class ViewControllersAssembly;
+@class RouterAssembly;
 @class ListDTO;
 @class FilmDTO;
 
 @interface SearchFilmRouter : NSObject
 
+@property (nonatomic, strong) ViewControllersAssembly *viewControllersAssembly;
 @property (nonatomic, strong) RouterAssembly *routerAssembly;
 @property (nonatomic, weak) SearchFilmViewController *searchFilmViewController;
 
