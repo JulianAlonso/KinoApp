@@ -15,11 +15,16 @@
 #import "LocalCoreDataListsProvider.h"
 #import "UpdateListInteractor.h"
 #import "RouterAssembly.h"
+#import "ViewControllersAssembly.h"
 
 @implementation DetailListRouter
 
 - (void)presentDetailListViewControllerFrom:(UIViewController *)fromViewController withList:(ListDTO *)list
 {
+    ListDetailViewController *listDetailViewController = [self.viewControllersAssembly listDetailViewController];
+    listDetailViewController.router = self;
+    self.listDetailViewController = listDetailViewController;
+    
     self.listDetailViewController.list = list;
     
     [fromViewController.navigationController pushViewController:self.listDetailViewController animated:YES];

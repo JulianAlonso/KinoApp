@@ -33,11 +33,8 @@
 		0114C7F81B5FAF9F00400401 /* Film.m in Sources */ = {isa = PBXBuildFile; fileRef = 0114C7F71B5FAF9F00400401 /* Film.m */; };
 		0115B7251AC3630800F38A7D /* UpdateListInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 0115B7241AC3630800F38A7D /* UpdateListInteractor.m */; };
 		011759721ABB291F00724BC5 /* AddFilmToListInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 011759711ABB291F00724BC5 /* AddFilmToListInteractor.m */; };
-		011759761ABB390600724BC5 /* SelectListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 011759741ABB390600724BC5 /* SelectListViewController.m */; };
-		011759771ABB390600724BC5 /* SelectListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 011759751ABB390600724BC5 /* SelectListViewController.xib */; };
 		0117597B1ABB3B1200724BC5 /* ListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 011759791ABB3B1200724BC5 /* ListTableViewCell.m */; };
 		0117597C1ABB3B1200724BC5 /* ListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0117597A1ABB3B1200724BC5 /* ListTableViewCell.xib */; };
-		0117597F1ABB410600724BC5 /* SelectListRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0117597E1ABB410600724BC5 /* SelectListRouter.m */; };
 		011759831ABB429E00724BC5 /* SelectListModalTransitionAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 011759821ABB429E00724BC5 /* SelectListModalTransitionAnimator.m */; };
 		0119D4091B58FDFA00654F8B /* RepositoriesAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 0119D4081B58FDFA00654F8B /* RepositoriesAssembly.m */; };
 		011C92B61AC410C90097EE10 /* GenreDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = 011C92B51AC410C90097EE10 /* GenreDTO.m */; };
@@ -138,14 +135,14 @@
 		01038D1E1AC0516200B88A8A /* UIColor+Custom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+Custom.m"; path = "Categories/UIColor+Custom.m"; sourceTree = "<group>"; };
 		01038D201AC05A2800B88A8A /* UIFont+Custom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIFont+Custom.h"; path = "Categories/UIFont+Custom.h"; sourceTree = "<group>"; };
 		01038D211AC05A2800B88A8A /* UIFont+Custom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIFont+Custom.m"; path = "Categories/UIFont+Custom.m"; sourceTree = "<group>"; };
-		01068EC81AB7011D0017F91A /* KinoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KinoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		01068EC81AB7011D0017F91A /* Kino.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kino.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01068ECC1AB7011D0017F91A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		01068ECD1AB7011D0017F91A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		01068ECF1AB7011D0017F91A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		01068ED01AB7011D0017F91A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		01068ED31AB7011D0017F91A /* KinoApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = KinoApp.xcdatamodel; sourceTree = "<group>"; };
 		01068EDB1AB7011D0017F91A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		01068EE41AB7011D0017F91A /* KinoAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KinoAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		01068EE41AB7011D0017F91A /* Kino.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Kino.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		01068EE91AB7011D0017F91A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		01068EEA1AB7011D0017F91A /* KinoAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KinoAppTests.m; sourceTree = "<group>"; };
 		01068EFA1AB702CC0017F91A /* CoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CoreDataStack.h; path = CoreData/CoreDataStack.h; sourceTree = "<group>"; };
@@ -189,14 +186,9 @@
 		0115B7241AC3630800F38A7D /* UpdateListInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UpdateListInteractor.m; path = Interactors/UpdateListInteractor.m; sourceTree = "<group>"; };
 		011759701ABB291F00724BC5 /* AddFilmToListInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddFilmToListInteractor.h; path = Interactors/AddFilmToListInteractor.h; sourceTree = "<group>"; };
 		011759711ABB291F00724BC5 /* AddFilmToListInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddFilmToListInteractor.m; path = Interactors/AddFilmToListInteractor.m; sourceTree = "<group>"; };
-		011759731ABB390600724BC5 /* SelectListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SelectListViewController.h; path = ViewControllers/SelectListViewController.h; sourceTree = "<group>"; };
-		011759741ABB390600724BC5 /* SelectListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SelectListViewController.m; path = ViewControllers/SelectListViewController.m; sourceTree = "<group>"; };
-		011759751ABB390600724BC5 /* SelectListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SelectListViewController.xib; path = ViewControllers/SelectListViewController.xib; sourceTree = "<group>"; };
 		011759781ABB3B1200724BC5 /* ListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ListTableViewCell.h; path = Views/ListTableViewCell.h; sourceTree = "<group>"; };
 		011759791ABB3B1200724BC5 /* ListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ListTableViewCell.m; path = Views/ListTableViewCell.m; sourceTree = "<group>"; };
 		0117597A1ABB3B1200724BC5 /* ListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ListTableViewCell.xib; path = Views/ListTableViewCell.xib; sourceTree = "<group>"; };
-		0117597D1ABB410600724BC5 /* SelectListRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SelectListRouter.h; path = Routers/SelectListRouter.h; sourceTree = "<group>"; };
-		0117597E1ABB410600724BC5 /* SelectListRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SelectListRouter.m; path = Routers/SelectListRouter.m; sourceTree = "<group>"; };
 		011759811ABB429E00724BC5 /* SelectListModalTransitionAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SelectListModalTransitionAnimator.h; path = Transitions/SelectListModalTransitionAnimator.h; sourceTree = "<group>"; };
 		011759821ABB429E00724BC5 /* SelectListModalTransitionAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SelectListModalTransitionAnimator.m; path = Transitions/SelectListModalTransitionAnimator.m; sourceTree = "<group>"; };
 		0119D4071B58FDFA00654F8B /* RepositoriesAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RepositoriesAssembly.h; path = Assemblies/RepositoriesAssembly.h; sourceTree = "<group>"; };
@@ -394,8 +386,8 @@
 		01068EC91AB7011D0017F91A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				01068EC81AB7011D0017F91A /* KinoApp.app */,
-				01068EE41AB7011D0017F91A /* KinoAppTests.xctest */,
+				01068EC81AB7011D0017F91A /* Kino.app */,
+				01068EE41AB7011D0017F91A /* Kino.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -472,8 +464,6 @@
 				012C6B841AB9C3EE0060A49C /* DetailFilmRouter.m */,
 				012C6B911ABA01560060A49C /* ListsCollectionRouter.h */,
 				012C6B921ABA01560060A49C /* ListsCollectionRouter.m */,
-				0117597D1ABB410600724BC5 /* SelectListRouter.h */,
-				0117597E1ABB410600724BC5 /* SelectListRouter.m */,
 				015AB1771ABC3F0100D2CBAA /* DetailListRouter.h */,
 				015AB1781ABC3F0100D2CBAA /* DetailListRouter.m */,
 				015AB1851ABC78BD00D2CBAA /* SearchFilmRouter.h */,
@@ -546,9 +536,6 @@
 				012C6B8C1ABA006D0060A49C /* ListsCollectionViewController.h */,
 				012C6B8D1ABA006D0060A49C /* ListsCollectionViewController.m */,
 				012C6B8E1ABA006D0060A49C /* ListsCollectionViewController.xib */,
-				011759731ABB390600724BC5 /* SelectListViewController.h */,
-				011759741ABB390600724BC5 /* SelectListViewController.m */,
-				011759751ABB390600724BC5 /* SelectListViewController.xib */,
 				012176521ABC330D00EDA095 /* ListDetailViewController.h */,
 				012176531ABC330D00EDA095 /* ListDetailViewController.m */,
 				012176541ABC330D00EDA095 /* ListDetailViewController.xib */,
@@ -940,28 +927,29 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		01068EC71AB7011D0017F91A /* KinoApp */ = {
+		01068EC71AB7011D0017F91A /* Kino */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 01068EEE1AB7011D0017F91A /* Build configuration list for PBXNativeTarget "KinoApp" */;
+			buildConfigurationList = 01068EEE1AB7011D0017F91A /* Build configuration list for PBXNativeTarget "Kino" */;
 			buildPhases = (
 				961A9D546CA7628ED1D9855A /* Check Pods Manifest.lock */,
 				01068EC41AB7011D0017F91A /* Sources */,
 				01068EC51AB7011D0017F91A /* Frameworks */,
 				01068EC61AB7011D0017F91A /* Resources */,
 				5B6F01DA284C0ED64B4A0427 /* Copy Pods Resources */,
+				C205C4F22A479B0A7A8931AC /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = KinoApp;
+			name = Kino;
 			productName = KinoApp;
-			productReference = 01068EC81AB7011D0017F91A /* KinoApp.app */;
+			productReference = 01068EC81AB7011D0017F91A /* Kino.app */;
 			productType = "com.apple.product-type.application";
 		};
-		01068EE31AB7011D0017F91A /* KinoAppTests */ = {
+		01068EE31AB7011D0017F91A /* KinoTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 01068EF11AB7011D0017F91A /* Build configuration list for PBXNativeTarget "KinoAppTests" */;
+			buildConfigurationList = 01068EF11AB7011D0017F91A /* Build configuration list for PBXNativeTarget "KinoTests" */;
 			buildPhases = (
 				01068EE01AB7011D0017F91A /* Sources */,
 				01068EE11AB7011D0017F91A /* Frameworks */,
@@ -972,9 +960,9 @@
 			dependencies = (
 				01068EE61AB7011D0017F91A /* PBXTargetDependency */,
 			);
-			name = KinoAppTests;
+			name = KinoTests;
 			productName = KinoAppTests;
-			productReference = 01068EE41AB7011D0017F91A /* KinoAppTests.xctest */;
+			productReference = 01068EE41AB7011D0017F91A /* Kino.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -1001,7 +989,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 01068EC31AB7011D0017F91A /* Build configuration list for PBXProject "KinoApp" */;
+			buildConfigurationList = 01068EC31AB7011D0017F91A /* Build configuration list for PBXProject "Kino" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -1014,8 +1002,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				01068EC71AB7011D0017F91A /* KinoApp */,
-				01068EE31AB7011D0017F91A /* KinoAppTests */,
+				01068EC71AB7011D0017F91A /* Kino */,
+				01068EE31AB7011D0017F91A /* KinoTests */,
 			);
 		};
 /* End PBXProject section */
@@ -1041,7 +1029,6 @@
 				01BB03671BE7FF30009A4B51 /* JAStarsView.xib in Resources */,
 				01068EDC1AB7011D0017F91A /* Images.xcassets in Resources */,
 				0117597C1ABB3B1200724BC5 /* ListTableViewCell.xib in Resources */,
-				011759771ABB390600724BC5 /* SelectListViewController.xib in Resources */,
 				012176561ABC330D00EDA095 /* ListDetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1086,6 +1073,21 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		C205C4F22A479B0A7A8931AC /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -1099,7 +1101,6 @@
 				01562BC21AEA53CB003EEDC8 /* FilmDetailScrollViewViewController.m in Sources */,
 				012C6B8F1ABA006D0060A49C /* ListsCollectionViewController.m in Sources */,
 				01453E731AC325AF00F8ADC6 /* FilmDetailListTableViewCell.m in Sources */,
-				0117597F1ABB410600724BC5 /* SelectListRouter.m in Sources */,
 				01038D221AC05A2800B88A8A /* UIFont+Custom.m in Sources */,
 				01068F581AB7546A0017F91A /* BillboardFilmsCollectionDelegate.m in Sources */,
 				011C92C51AC424FA0097EE10 /* Genre.m in Sources */,
@@ -1174,7 +1175,6 @@
 				01B875AF1AC470DE00BD69EB /* SizeHelper.m in Sources */,
 				0158345B1AB86508007E0AC4 /* FilmDTO.m in Sources */,
 				0158344A1AB8223B007E0AC4 /* APIVars.m in Sources */,
-				011759761ABB390600724BC5 /* SelectListViewController.m in Sources */,
 				012C6B851AB9C3EE0060A49C /* DetailFilmRouter.m in Sources */,
 				012CC54D1BE0173F00BE49E1 /* FilmReleaseDTOParser.m in Sources */,
 				012C6BA61ABA107D0060A49C /* ListDTO.m in Sources */,
@@ -1202,7 +1202,7 @@
 /* Begin PBXTargetDependency section */
 		01068EE61AB7011D0017F91A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 01068EC71AB7011D0017F91A /* KinoApp */;
+			target = 01068EC71AB7011D0017F91A /* Kino */;
 			targetProxy = 01068EE51AB7011D0017F91A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -1307,8 +1307,8 @@
 				GCC_PREFIX_HEADER = "KinoApp/Kino-Prefix.pch";
 				INFOPLIST_FILE = KinoApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Julian.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Julian.KinoApp;
+				PRODUCT_NAME = Kino;
 				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
@@ -1323,8 +1323,8 @@
 				GCC_PREFIX_HEADER = "KinoApp/Kino-Prefix.pch";
 				INFOPLIST_FILE = KinoApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Julian.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Julian.KinoApp;
+				PRODUCT_NAME = Kino;
 				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
@@ -1344,8 +1344,8 @@
 				INFOPLIST_FILE = KinoAppTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Julian.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KinoApp.app/KinoApp";
+				PRODUCT_NAME = Kino;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kino.app/Kino";
 			};
 			name = Debug;
 		};
@@ -1360,15 +1360,15 @@
 				INFOPLIST_FILE = KinoAppTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Julian.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KinoApp.app/KinoApp";
+				PRODUCT_NAME = Kino;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kino.app/Kino";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		01068EC31AB7011D0017F91A /* Build configuration list for PBXProject "KinoApp" */ = {
+		01068EC31AB7011D0017F91A /* Build configuration list for PBXProject "Kino" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				01068EEC1AB7011D0017F91A /* Debug */,
@@ -1377,7 +1377,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		01068EEE1AB7011D0017F91A /* Build configuration list for PBXNativeTarget "KinoApp" */ = {
+		01068EEE1AB7011D0017F91A /* Build configuration list for PBXNativeTarget "Kino" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				01068EEF1AB7011D0017F91A /* Debug */,
@@ -1386,7 +1386,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		01068EF11AB7011D0017F91A /* Build configuration list for PBXNativeTarget "KinoAppTests" */ = {
+		01068EF11AB7011D0017F91A /* Build configuration list for PBXNativeTarget "KinoTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				01068EF21AB7011D0017F91A /* Debug */,

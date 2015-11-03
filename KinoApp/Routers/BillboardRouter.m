@@ -26,6 +26,8 @@
 - (void)loadViewAt:(UITabBarController *)tabBarController
 {
     BillboardViewController *billboardViewController = [self.viewControllersAssembly billboardViewController];
+    billboardViewController.router = self;
+    self.billboardViewController = billboardViewController;
     
     UINavigationController *nc = [[JANavigationController alloc] initWithRootViewController:billboardViewController];
 

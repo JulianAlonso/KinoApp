@@ -14,7 +14,6 @@
 #import "ViewControllersAssembly.h"
 #import "DetailListRouter.h"
 #import "SearchFilmRouter.h"
-#import "SelectListRouter.h"
 
 @implementation RouterAssembly
 
@@ -40,7 +39,7 @@
     return [TyphoonDefinition withClass:[ListsCollectionRouter class] configuration:^(TyphoonDefinition *definition)
     {
         [definition injectProperty:@selector(routerAssembly) with:self];
-        [definition injectProperty:@selector(listsCollectionViewController) with:[_viewControllersAssembly listsCollectionViewController]];
+        [definition injectProperty:@selector(viewControllersAssembly) with:self];
     }];
 }
 
@@ -48,7 +47,7 @@
 {
     return [TyphoonDefinition withClass:[DetailFilmRouter class] configuration:^(TyphoonDefinition *definition)
     {
-        [definition injectProperty:@selector(filmDetailScrollViewController) with:[_viewControllersAssembly filmDetailScrollViewController]];
+        [definition injectProperty:@selector(viewControllersAssembly) with:_viewControllersAssembly];
     }];
 }
 
@@ -57,7 +56,7 @@
     return [TyphoonDefinition withClass:[DetailListRouter class] configuration:^(TyphoonDefinition *definition)
     {
         [definition injectProperty:@selector(routerAssembly) with:self];
-        [definition injectProperty:@selector(listDetailViewController) with:[_viewControllersAssembly listDetailViewController]];
+        [definition injectProperty:@selector(viewControllersAssembly) with:_viewControllersAssembly];
     }];
 }
 
@@ -66,15 +65,7 @@
     return [TyphoonDefinition withClass:[SearchFilmRouter class] configuration:^(TyphoonDefinition *definition)
     {
         [definition injectProperty:@selector(routerAssembly) with:self];
-        [definition injectProperty:@selector(searchFilmViewController) with:[_viewControllersAssembly searchFilmViewController]];
-    }];
-}
-
-- (SelectListRouter *)selectListRouter
-{
-    return [TyphoonDefinition withClass:[SelectListRouter class] configuration:^(TyphoonDefinition *definition)
-    {
-        [definition injectProperty:@selector(selectListViewController) with:[_viewControllersAssembly selectListViewController]];
+        [definition injectProperty:@selector(viewControllersAssembly) with:_viewControllersAssembly];
     }];
 }
 

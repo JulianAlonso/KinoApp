@@ -45,12 +45,12 @@
     [notificationAlert show];
 }
 
-- (void)application:(UIApplication *)application performFetchWithCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler
-{
-    CheckNextReleasesInteractor *checkNextReleasesInteractor = [CheckNextReleasesInteractor new];
-    
-    [checkNextReleasesInteractor checkNextReleasesWithCompletionHandler:completionHandler];
-}
+//- (void)application:(UIApplication *)application performFetchWithCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler
+//{
+//    CheckNextReleasesInteractor *checkNextReleasesInteractor = [CheckNextReleasesInteractor new];
+//    
+//    [checkNextReleasesInteractor checkNextReleasesWithCompletionHandler:completionHandler];
+//}
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
 {

@@ -11,16 +11,20 @@
 #import "LoadFilmInteractor.h"
 #import "LocalCoreDataFilmsProvider.h"
 #import "ExternalTMDBProvider.h"
-#import "SelectListRouter.h"
 #import "ListDTO.h"
 #import "AddFilmToListInteractor.h"
 #import "LocalCoreDataListsProvider.h"
 #import "FilmDetailScrollViewViewController.h"
+#import "ViewControllersAssembly.h"
 
 @implementation DetailFilmRouter
 
 - (void)presentFilmDetailViewControllerFrom:(UINavigationController *)navigationController withFilmDTO:(FilmDTO *)film
 {
+    FilmDetailScrollViewViewController *filmDetailScrollViewController = [self.viewControllersAssembly filmDetailScrollViewController];
+    filmDetailScrollViewController.router = self;
+    self.filmDetailScrollViewController = filmDetailScrollViewController;
+    
     self.filmDetailScrollViewController.film = film;
     self.filmDetailScrollViewController.hidesBottomBarWhenPushed = YES;
     [navigationController pushViewController:self.filmDetailScrollViewController animated:YES];

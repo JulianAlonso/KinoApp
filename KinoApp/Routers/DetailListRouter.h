@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @class ListDetailViewController;
+@class ViewControllersAssembly;
 @class RouterAssembly;
 @class ListDTO;
 @class FilmDTO;
@@ -16,6 +17,7 @@
 @interface DetailListRouter : NSObject
 
 @property (nonatomic, strong) RouterAssembly *routerAssembly;
+@property (nonatomic, strong) ViewControllersAssembly *viewControllersAssembly;
 @property (nonatomic, weak) ListDetailViewController *listDetailViewController;
 
 - (void)presentDetailListViewControllerFrom:(UIViewController *)fromViewController withList:(ListDTO *)list;

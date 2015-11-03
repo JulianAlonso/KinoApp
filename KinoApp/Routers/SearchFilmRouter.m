@@ -13,11 +13,16 @@
 #import "SearchFilmInteractor.h"
 #import "DetailFilmRouter.h"
 #import "RouterAssembly.h"
+#import "ViewControllersAssembly.h"
 
 @implementation SearchFilmRouter
 
 - (void)presentSearchFrom:(UINavigationController *)fromNavigationController andList:(ListDTO *)list
 {
+    SearchFilmViewController *searchFilmViewController = [self.viewControllersAssembly searchFilmViewController];
+    searchFilmViewController.router = self;
+    self.searchFilmViewController = searchFilmViewController;
+    
     self.searchFilmViewController.fromList = list;
     
     [fromNavigationController pushViewController:self.searchFilmViewController animated:YES];
